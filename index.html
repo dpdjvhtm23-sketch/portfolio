@@ -150,6 +150,16 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .st .ex .exl{display:block;color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.06em;margin-bottom:2px}
 .st .ex strong{font-weight:700;color:var(--navy)}
 
+/* how i work */
+.hw-title{text-align:center;font-size:clamp(36px,5vw,60px);font-weight:800;letter-spacing:-.03em;margin-bottom:48px}
+.hw-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:48px;padding-block:52px;border-top:1px solid var(--line)}
+.hw-row:last-child{border-bottom:1px solid var(--line)}
+.hw-k{font-size:clamp(30px,3.8vw,50px);font-weight:900;letter-spacing:-.03em;line-height:1.05;color:var(--ink)}
+.hw-t{font-size:clamp(19px,1.9vw,23px);font-weight:800;line-height:1.45}
+.hw-b{margin-top:14px;font-size:16px;line-height:1.9;color:var(--sub)}
+.hw-b strong{color:var(--navy);font-weight:700}
+@media (max-width:760px){.hw-row{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:36px}}
+
 /* experience */
 .exp{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
 .exp aside h2{font-size:20px;font-style:italic;font-weight:700;color:var(--sub);line-height:1.35}
@@ -451,17 +461,11 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 
   <section class="sec" id="strengths">
-    <div class="sec-head"><div><span class="eyebrow">Strengths</span><h2>이런 일을 잘합니다</h2></div></div>
-    <div class="strengths">
-      <article class="st"><span class="no">01 · 퍼포먼스 &amp; 캠페인 설계</span><h3>억 단위 퍼포먼스 예산부터 글로벌 캠페인까지 직접 설계합니다</h3>
-        <ul><li>5개 채널(Meta, Google 등) 멀티채널 UA 운영</li><li>국가별 예산 재배분 및 대행사 성과 관리</li><li>게임/앱/컨퍼런스 대규모 캠페인 총괄</li></ul>
-        <p class="ex"><span class="exl">EXAMPLE</span>동남아·남미 중심 Google·Pangle UA 캠페인 설계로 <strong>사전가입 12만 명, CPA 125원 달성</strong></p></article>
-      <article class="st"><span class="no">02 · 데이터 기반 퍼널 병목 진단 &amp; 검증</span><h3>데이터로 퍼널의 병목을 진단하고, 측정 지표를 검증합니다</h3>
-        <ul><li>GA4·MMP·로우 데이터 기반 이탈 구간 진단</li><li>GA4 이벤트/전환 세팅 기획</li><li>플랫폼 수치와 내부 데이터 대조 검증 표준화</li></ul>
-        <p class="ex"><span class="exl">EXAMPLE</span>인앱 광고→가입 페이지 구간 이탈을 진단해 <strong>브릿지 랜딩을 도입, 이탈률 약 20% 감소</strong></p></article>
-      <article class="st"><span class="no">03 · AI·오퍼레이션 자동화</span><h3>반복되는 마케팅 오퍼레이션은 직접 시스템으로 만듭니다</h3>
-        <ul><li>Claude Code·n8n을 활용한 리포팅·모니터링·대량 발송 자동화 12건 구축</li><li>참가자용 웹 프로덕트 직접 기획·배포 (실서비스 채택)</li></ul>
-        <p class="ex"><span class="exl">EXAMPLE</span>200개 이상 KOL 업무방 메시지 발송을 <strong>시트 연동 일괄 개인화 자동화 도구로 대체</strong></p></article>
+    <h2 class="hw-title">How I Work</h2>
+    <div class="hw">
+      <article class="hw-row"><h3 class="hw-k">PERFORMANCE</h3><div><p class="hw-t">억 단위 퍼포먼스 예산부터 글로벌 캠페인까지 직접 설계합니다</p><p class="hw-b">Meta·Google 등 5개 채널의 멀티채널 UA를 운영합니다.<br>국가별 예산을 재배분하고 해외 대행사 성과를 관리합니다.<br>게임, 앱, 글로벌 컨퍼런스의 대규모 캠페인을 총괄했습니다.<br>동남아·남미 Google·Pangle UA로 <strong>사전가입 12만 명, CPA 125원</strong>을 달성했습니다.</p></div></article>
+      <article class="hw-row"><h3 class="hw-k">DATA-DRIVEN</h3><div><p class="hw-t">데이터로 퍼널의 병목을 진단하고, 측정 지표를 검증합니다</p><p class="hw-b">GA4·MMP·로우 데이터로 퍼널의 이탈 구간을 찾아냅니다.<br>GA4 이벤트와 전환 세팅을 직접 기획합니다.<br>플랫폼 수치와 내부 데이터를 대조하는 검증 과정을 표준화했습니다.<br>인앱 광고→가입 구간 이탈을 찾아 브릿지 랜딩을 도입, <strong>이탈률을 약 20% 줄였습니다.</strong></p></div></article>
+      <article class="hw-row"><h3 class="hw-k">AUTOMATION</h3><div><p class="hw-t">반복되는 마케팅 오퍼레이션은 직접 시스템으로 만듭니다</p><p class="hw-b">Claude Code·n8n으로 리포팅·모니터링·대량 발송 자동화 12건을 구축했습니다.<br>반복 업무 월 약 30시간을 시스템으로 대체했습니다.<br>참가자용 웹 프로덕트를 직접 기획·배포해 실서비스로 채택됐습니다.<br>200개 이상 KOL 업무방 발송을 <strong>시트 연동 일괄 개인화 도구로 대체</strong>했습니다.</p></div></article>
     </div>
   </section>
 
