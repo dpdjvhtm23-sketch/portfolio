@@ -179,18 +179,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pfilter button small{font-size:12px;font-weight:700;margin-left:6px;opacity:.55}
 .pgroup.pg-first{border-top:1px solid var(--line)}
 /* project key cards */
-.pscroll{display:flex;gap:28px;align-items:stretch}
+.pscroll{position:relative}
+.pscroll::after{content:"";position:absolute;left:0;right:0;bottom:0;height:72px;background:linear-gradient(rgba(255,255,255,0),#fff);pointer-events:none;opacity:0;transition:opacity .2s}
+.pscroll.more::after{opacity:1}
 .pgrid{flex:1;min-width:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:300px;gap:14px;max-height:calc(600px + 14px + 10px);overflow-y:auto;padding-top:10px;margin-top:-10px;scroll-snap-type:y mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior:contain}
 .pgrid::-webkit-scrollbar{display:none}
 .pgrid .pk{scroll-snap-align:start;scroll-margin-top:10px}
-.pctl{display:flex;flex-direction:column;align-items:center;gap:20px;padding-top:10px}
-.pctl[hidden]{display:none}
-.pbar{flex:1;width:2px;background:var(--line);position:relative;overflow:hidden}
-.pbar span{position:absolute;left:0;top:0;width:100%;background:var(--ink);transition:transform .2s}
-.pbtns{display:flex;gap:10px}
-.pbtns button{width:48px;height:48px;border-radius:50%;border:1px solid #D9DCE1;background:#fff;color:var(--ink);font-size:18px;cursor:pointer;transition:border-color .15s,color .15s}
-.pbtns button:hover:not(:disabled){border-color:var(--ink)}
-.pbtns button:disabled{color:#C4C8CE;border-color:var(--line);cursor:default}
 .pk{position:relative;display:flex;flex-direction:column;height:100%;padding:22px 20px;border-radius:4px;color:#000;background:#F7F7F7;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;isolation:isolate}
 .pk:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,.08);background:#F2F2F2}
 .pk-tags{position:absolute;right:16px;bottom:16px;display:flex;gap:6px}.pk-tags span{font-size:10px;font-weight:700;line-height:1.3;padding:3px 7px;border-radius:6px;background:#fff;color:#555}.pk-tags span:first-child{background:#000;color:#fff}
@@ -200,7 +194,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pk-go{position:absolute;left:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#000;color:#fff;display:grid;place-items:center;font-size:19px;font-weight:700;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s}
 .pk:hover .pk-go,.pk:focus-visible .pk-go{opacity:1;transform:none}
 @media (max-width:980px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:240px;gap:10px;max-height:calc(480px + 10px + 10px)}.pscroll{gap:14px}.pbtns button{width:40px;height:40px}.pk{padding:16px 14px}.pk-t{font-size:15px}.pk-ic{width:64px;height:64px}.pk-go{display:none}}
+@media (max-width:600px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:240px;gap:10px;max-height:calc(480px + 10px + 10px)}.pk{padding:16px 14px}.pk-t{font-size:15px}.pk-ic{width:64px;height:64px}.pk-go{display:none}}
 /* experience cards */
 .xrow{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/4);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
 .xrow::-webkit-scrollbar{display:none}
@@ -780,17 +774,12 @@ const PICON={"crm":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAA
 const PORDER=Object.keys(CO);
 function renderGroups(){
   const list=CASES.filter(c=>PF==="all"||c.tags.includes(PF)).sort((a,b)=>PORDER.indexOf(a.co)-PORDER.indexOf(b.co));
-  $("#grid").innerHTML=`<div class="pscroll"><div class="pgrid" id="pgrid">${list.map(c=>`<a class="pk" href="#case-${c.id}">
+  $("#grid").innerHTML=`<div class="pscroll" id="pscroll"><div class="pgrid" id="pgrid">${list.map(c=>`<a class="pk" href="#case-${c.id}">
     <span class="pk-tags"><span>${esc(c.co)}</span></span>
     <strong class="pk-t">${esc(c.title)}</strong>
-    <img class="pk-ic" src="${PICON[c.id]||""}" alt="" loading="lazy"><span class="pk-go" aria-hidden="true">↗</span></a>`).join("")}</div>
-    <div class="pctl" id="pctl"><div class="pbar" aria-hidden="true"><span id="pthumb"></span></div><div class="pbtns"><button type="button" id="pup" aria-label="위로">↑</button><button type="button" id="pdown" aria-label="아래로">↓</button></div></div></div>`;
-  const g=$("#pgrid"), th=$("#pthumb"), up=$("#pup"), dn=$("#pdown"), ctl=$("#pctl");
-  const step=()=>{const c=g.querySelector(".pk"); return c?c.getBoundingClientRect().height+14:300;};
-  function upd(){const max=g.scrollHeight-g.clientHeight; ctl.hidden=max<=2; if(max<=2) return;
-    const r=g.clientHeight/g.scrollHeight, q=g.scrollTop/max; th.style.height=(r*100)+"%"; th.style.transform=`translateY(${q*(1/r-1)*100}%)`;
-    up.disabled=g.scrollTop<=2; dn.disabled=g.scrollTop>=max-2;}
-  up.addEventListener("click",()=>g.scrollBy({top:-step()})); dn.addEventListener("click",()=>g.scrollBy({top:step()}));
+    <img class="pk-ic" src="${PICON[c.id]||""}" alt="" loading="lazy"><span class="pk-go" aria-hidden="true">↗</span></a>`).join("")}</div></div>`;
+  const g=$("#pgrid"), w=$("#pscroll");
+  function upd(){const max=g.scrollHeight-g.clientHeight; w.classList.toggle("more",max>2&&g.scrollTop<max-2);}
   g.addEventListener("scroll",upd,{passive:true}); window.__pupd=upd; requestAnimationFrame(upd);
 }
 addEventListener("resize",()=>window.__pupd&&window.__pupd());
