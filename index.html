@@ -162,7 +162,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (min-width:1160px){.hw-b{white-space:nowrap}}
 @media (max-width:760px){.hw-row{grid-template-columns:minmax(0,1fr)!important;gap:12px;padding-block:28px}.hw-title{margin-bottom:56px}}
 
-#cmPhone::placeholder{font-size:14px}
+#cmPhone::placeholder{font-size:13px}
 /* experience cards */
 .xrow{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/4);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
 .xrow::-webkit-scrollbar{display:none}
@@ -551,7 +551,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
         <label><span class="lt">회사명<b>*</b></span><input id="cmCo" required autocomplete="organization"></label>
         <label><span class="lt">포지션</span><input id="cmPos" placeholder="예) CRM 마케터"></label>
         <label><span class="lt">성함<b>*</b></span><input id="cmName" required autocomplete="name"></label>
-        <label><span class="lt">연락처 또는 이메일<b>*</b></span><input id="cmPhone" required placeholder="010-0000-0000 / 이메일"></label>
+        <label><span class="lt">연락처 또는 이메일<b>*</b></span><input id="cmPhone" required placeholder="010-0000-0000 / name@company.com"></label>
         <label class="full"><span class="lt">내용<b>*</b></span><textarea id="cmMsg" rows="4" required placeholder="포지션 소개, 일정, 궁금한 점 등을 편하게 적어 주세요."></textarea></label>
       </div>
       <p class="cm-err" id="cmErr" hidden>* 표시된 항목을 채워 주세요.</p>
