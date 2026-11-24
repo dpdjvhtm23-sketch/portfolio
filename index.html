@@ -260,9 +260,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .scratch.done + .scratch-hint{visibility:hidden}
 
 /* marquee */
-.mq{display:block;overflow:hidden;background:linear-gradient(90deg,#00B4F2 0%,#0098E8 50%,#00B4F2 100%);color:var(--navy);text-decoration:none;cursor:pointer}
+.mq{display:block;overflow:hidden;background:var(--navy);color:var(--navy);text-decoration:none;cursor:pointer}
 .mq-track{display:flex;width:max-content;animation:mq 40s linear infinite}
-.mq span{padding:12px 32px;font-size:17px;font-weight:500;letter-spacing:-.01em;white-space:nowrap;color:#fff;text-shadow:0 1px 2px rgba(0,50,110,.3)}
+.mq span{padding:12px 32px;font-size:17px;font-weight:500;letter-spacing:-.01em;white-space:nowrap;color:#fff}
 .mq i{font-style:normal;margin-left:4px}
 .mq:focus-visible{outline:2px solid var(--navy);outline-offset:-2px}
 @keyframes mq{to{transform:translateX(-50%)}}
