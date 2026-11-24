@@ -115,10 +115,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .band .hd{display:flex;align-items:center;gap:6px}
 .blogo{width:24px;height:24px;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;flex:none;align-self:center}
 .blogo img{display:block;width:100%;height:100%;object-fit:cover}
-.blogo.m,.blogo.w{width:auto;border:0;border-radius:0;background:none;overflow:visible}
-.blogo.m img,.blogo.w img{width:auto;object-fit:contain;padding:0}
-.blogo.m img{height:13px}
-.blogo.w img{height:24px}
+.blogo.m img,.blogo.w img{object-fit:contain;padding:2px}
 .blogo.s img{object-fit:contain;padding:3px}
 .band .hd{min-height:24px}
 @media (max-width:1100px){.band .ds{font-size:11.5px}}
