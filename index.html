@@ -155,10 +155,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hw-row{display:grid;grid-template-columns:var(--hw-x,52%) minmax(0,1fr);gap:0;padding-block:44px 48px;border-top:1px solid var(--line)}
 .hw-row:last-child{border-bottom:1px solid var(--line)}
 .hw-k{padding-right:24px;font-size:clamp(24px,2.6vw,32px);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--ink)}
-.hw-t{font-size:17px;font-weight:700;line-height:1.4}
-.hw-b{margin-top:14px;font-size:14px;line-height:1.65;color:var(--sub)}
+.hw-t{font-size:16px;font-weight:700;line-height:1.4}
+.hw-b{margin-top:12px;font-size:13px;line-height:1.7;color:var(--sub)}
 .hw-b strong{color:var(--navy);font-weight:700}
 .hw-b{letter-spacing:-.01em}
+@media (min-width:1160px){.hw-b{white-space:nowrap}}
 @media (max-width:760px){.hw-row{grid-template-columns:minmax(0,1fr)!important;gap:12px;padding-block:28px}.hw-title{margin-bottom:56px}}
 
 /* experience */
