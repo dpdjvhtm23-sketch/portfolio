@@ -22,7 +22,7 @@
   --white:#FFFFFF; --blue:#085EE9; --navy:#042F74; --grey:#B3B3B3;
   --ink:#16191F; --sub:#5C6370; --line:#E9EBEF; --soft:#F5F7FA; --tint:#EDF3FE;
   --font:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-  --nav-h:64px;
+  --nav-h:64px;--mq-h:56px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scrollbar-gutter:stable}
@@ -59,7 +59,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .burger{display:none;border:0;background:none;padding:8px;cursor:pointer;color:var(--ink)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:max-content auto;justify-content:start;gap:clamp(48px,8vw,120px);align-items:center;padding-block:28px 0;scroll-margin-top:var(--nav-h)}
+.hero{display:grid;grid-template-columns:max-content auto;justify-content:start;gap:clamp(48px,8vw,120px);align-items:center;padding-block:28px 0;scroll-margin-top:calc(var(--nav-h) + var(--mq-h))}
 .hero h1{font-size:clamp(24px,4.2vw,50px);line-height:1.5;letter-spacing:-.035em;font-weight:800;margin-top:0}
 .hero h1 .l{display:block;white-space:nowrap}
 @media (max-width:980px){.hero h1{font-size:clamp(20px,calc(6.2vw - 2px),44px)}}
@@ -134,7 +134,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:1120px){.stats{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:24px}.stat:nth-child(4){border-left:0;padding-left:0}.stat span{font-size:13px}}
 
 /* sections */
-.sec{padding-block:96px 0;scroll-margin-top:calc(var(--nav-h) - 8px)}
+.sec{padding-block:96px 0;scroll-margin-top:calc(var(--nav-h) + var(--mq-h) - 8px)}
 .sec-head{margin-bottom:40px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 .sec-head h2{font-size:clamp(28px,3.2vw,38px);font-weight:800;margin-top:10px;line-height:1.3}
 .sec-head p{color:var(--sub);margin-top:10px;max-width:36em}
@@ -261,7 +261,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .scratch.done + .scratch-hint{visibility:hidden}
 
 /* marquee */
-.mq{display:block;overflow:hidden;background:var(--navy);color:var(--navy);text-decoration:none;cursor:pointer}
+.mq{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--nav-h) + 1px);z-index:29;display:block;overflow:hidden;background:var(--navy);color:var(--navy);text-decoration:none;cursor:pointer}
 .mq-track{display:flex;width:max-content;animation:mq 40s linear infinite}
 .mq span{padding:16px 32px;font-size:15px;line-height:1.6;font-weight:500;letter-spacing:-.01em;white-space:nowrap;color:#fff}
 .mq i{font-style:normal;margin-left:4px}
@@ -310,7 +310,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (prefers-reduced-motion:reduce){.cm-panel{animation:none}}
 
 /* contact */
-.contact{margin-top:96px;background:var(--navy);color:#fff;border-radius:24px;padding:clamp(36px,6vw,72px);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;scroll-margin-top:var(--nav-h)}
+.contact{margin-top:96px;background:var(--navy);color:#fff;border-radius:24px;padding:clamp(36px,6vw,72px);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;scroll-margin-top:calc(var(--nav-h) + var(--mq-h))}
 .contact h2{font-size:clamp(24px,2.9vw,36px);font-weight:800;line-height:1.3}
 .contact p{margin-top:12px;opacity:.75}
 .contact .mail{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
@@ -796,7 +796,7 @@ document.addEventListener("click",e=>{if(menu.classList.contains("open")&&!e.tar
 $$(".menu a").forEach(a=>a.dataset.t=a.textContent);
 const links=$$(".menu a"), SPY={about:"about",strengths:"strengths",experience:"experience",projects:"projects",skills:"skills",contact:null};
 function spy(){
-  const line=nav.offsetHeight+Math.min(innerHeight*.3,220); let cur=null;
+  const line=nav.offsetHeight+(document.querySelector(".mq")?.offsetHeight||0)+Math.min(innerHeight*.3,220); let cur=null;
   for(const id of Object.keys(SPY)){const el=document.getElementById(id); if(el&&el.getBoundingClientRect().top<=line) cur=id;}
   if(innerHeight+scrollY>=document.documentElement.scrollHeight-4) cur="contact";
   const key=cur?SPY[cur]:null;
