@@ -152,14 +152,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* how i work */
 .hw-title{text-align:center;font-size:clamp(28px,3vw,38px);font-weight:800;letter-spacing:-.025em;margin:24px 0 96px}
-.hw-row{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:40px;padding-block:44px 48px;border-top:1px solid var(--line)}
+.hw-row{display:grid;grid-template-columns:var(--hw-x,52%) minmax(0,1fr);gap:0;padding-block:44px 48px;border-top:1px solid var(--line)}
 .hw-row:last-child{border-bottom:1px solid var(--line)}
-.hw-k{font-size:clamp(24px,2.6vw,32px);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--ink)}
+.hw-k{padding-right:24px;font-size:clamp(24px,2.6vw,32px);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--ink)}
 .hw-t{font-size:17px;font-weight:700;line-height:1.4}
 .hw-b{margin-top:14px;font-size:14px;line-height:1.65;color:var(--sub)}
 .hw-b strong{color:var(--navy);font-weight:700}
-@media (min-width:1100px){.hw-b{white-space:nowrap;letter-spacing:-.015em}}
-@media (max-width:760px){.hw-row{grid-template-columns:minmax(0,1fr);gap:12px;padding-block:28px}.hw-title{margin-bottom:56px}}
+.hw-b{letter-spacing:-.01em}
+@media (max-width:760px){.hw-row{grid-template-columns:minmax(0,1fr)!important;gap:12px;padding-block:28px}.hw-title{margin-bottom:56px}}
 
 /* experience */
 .exp{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px}
@@ -462,7 +462,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 
   <section class="sec" id="strengths">
-    <h2 class="hw-title">How I work</h2>
+    <h2 class="hw-title">How I <span id="hwW">work</span></h2>
     <div class="hw">
       <article class="hw-row"><h3 class="hw-k">PERFORMANCE</h3><div><p class="hw-t">단순 유입을 넘어, 전환이 완성되는 구조까지 설계합니다</p><p class="hw-b">매체 예산을 집행하는 데 그치지 않고 실제 비즈니스 성과가 나는 구간에 집중합니다.<br>각 채널과 국가의 반응 데이터를 매일 추적해 저효율 지출은 과감히 줄입니다.<br>외부 대행사의 제안도 내부 전환 데이터와 대조해 더 나은 예산 배분 기준을 세웁니다.<br>그렇게 설계한 구조로 <strong>사전가입 12만 명, CPA 125원</strong>이라는 효율을 만들어냈습니다.</p></div></article>
       <article class="hw-row"><h3 class="hw-k">DATA-DRIVEN</h3><div><p class="hw-t">지표의 숫자보다, 그 뒤에 숨은 유저의 병목을 먼저 찾습니다</p><p class="hw-b">플랫폼이 보여주는 표면적 수치와 내부 로우 데이터를 대조해 측정의 빈틈부터 잡습니다.<br>유저가 어느 단계에서 왜 이탈하는지 퍼널을 쪼개어 문제의 진짜 원인을 정의합니다.<br>직관에 의존하기보다 소규모 테스트로 가설을 먼저 검증하고 확신이 설 때 확장합니다.<br>광고와 가입 사이의 이탈 구간을 찾아 브릿지 랜딩을 도입해 <strong>이탈률을 약 20% 줄였습니다.</strong></p></div></article>
@@ -884,6 +884,12 @@ const CLOVER=new Image(); CLOVER.src="data:image/png;base64,iVBORw0KGgoAAAANSUhE
       .catch(()=>{ toast("전송에 실패했어요. 위 이메일로 연락 주세요."); })
       .finally(()=>{ btn.disabled=false; btn.textContent="보내기"; });
   });
+})();
+
+/* align How I work descriptions with the "w" of "work" */
+(()=>{const w=$("#hwW"), box=$(".hw");
+  function al(){ if(!w||!box) return; const x=w.getBoundingClientRect().left-box.getBoundingClientRect().left; box.style.setProperty("--hw-x",Math.max(0,Math.round(x))+"px"); }
+  al(); addEventListener("resize",al); (document.fonts?document.fonts.ready:Promise.resolve()).then(al);
 })();
 
 /* copy email */
