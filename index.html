@@ -867,7 +867,6 @@ function openCase(id){
   $("#case").innerHTML=`
    <span class="who">${logoSq(c.co)}${esc(c.co)} · ${esc(co.org)}</span>
    <h1 id="caseTitle">${esc(c.title)}</h1>
-   ${coverHtml(c,"hero-img")}
    <dl class="props">
      <dt>기간</dt><dd class="num">${esc(co.period)}</dd>
      ${c.facts.map(f=>`<dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd>`).join("")}
