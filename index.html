@@ -77,8 +77,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cta .btn{min-width:150px}
 .portrait{justify-self:start;width:min(330px,calc((100vh - 264px) * .8));max-width:100%;position:relative;padding-top:48px}
 .bub{position:absolute;z-index:1;white-space:nowrap;border-radius:20px;padding:11px 20px;font-size:15px;font-weight:800;letter-spacing:.08em;box-shadow:inset 0 2px 0 rgba(255,255,255,.75),inset 0 -5px 0 rgba(4,47,116,.10),0 16px 30px rgba(4,47,116,.18),0 3px 8px rgba(4,47,116,.10);animation:pop .6s cubic-bezier(.2,.8,.2,1.2) both,bob 4s ease-in-out infinite}
-.bub::after{content:"";position:absolute;bottom:-12px;width:20px;height:13px;background:var(--tail);clip-path:var(--tp)}
-.bub.crm::after{right:22px;--tp:polygon(0 0,100% 0,95% 100%)}.bub.perf::after{left:30%;--tp:polygon(0 0,100% 0,35% 100%)}.bub.auto::after{left:22px;--tp:polygon(0 0,100% 0,5% 100%)}
 .bub.crm{--tail:#064DC2;top:38%;left:calc(-20% + 48px);background:linear-gradient(180deg,#4A86FF 0%,#085EE9 55%,#0652CF 100%);color:#fff;text-shadow:0 1px 1px rgba(4,47,116,.35);animation-delay:.25s,1.2s}
 .bub.perf{--tail:#D3DDF0;top:2%;left:70%;translate:-50% 0;background:linear-gradient(180deg,#FFFFFF 0%,#F6F9FF 55%,#E9F0FD 100%);color:var(--blue);animation-delay:.4s,0s}
 .bub.auto{--tail:#C2D0EC;top:30%;right:-42%;background:linear-gradient(180deg,#F4F8FF 0%,#E6EEFC 55%,#D6E2FA 100%);color:var(--navy);animation-delay:.55s,2s}
