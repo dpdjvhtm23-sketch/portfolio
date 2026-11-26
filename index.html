@@ -392,17 +392,18 @@
 .cn-fmt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
 .cn-fmt>div{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
 .cn-fmt span{font-size:12px;font-weight:800;color:#085EE9}.cn-fmt b{display:block;font-size:15px;margin-top:4px}.cn-fmt small{display:block;font-size:13px;color:#5C6370;margin-top:4px}
-.cn-loop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px;word-break:keep-all;align-items:start}
-.cn-loop-v{background:#F5F7FA;border-radius:14px;padding:20px}
-.cn-lv{display:flex;align-items:flex-end;gap:6px;height:112px}
-.cn-lv>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
-.cn-lv i{display:block;width:100%;height:var(--h);border-radius:6px 6px 2px 2px;background:#C9DAF8;transform-origin:bottom;animation:cnGrow .9s cubic-bezier(.2,.7,.2,1) both}
+.cn-loop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px;word-break:keep-all;align-items:stretch}
+.cn-loop-v{display:flex;flex-direction:column;justify-content:flex-end;background:#F5F7FA;border-radius:14px;padding:20px}
+.cn-lv{flex:1;display:flex;align-items:flex-end;gap:6px;min-height:112px}
+.cn-lv>div{flex:1;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.cn-lv i{display:block;width:100%;height:calc(var(--h) - 18px);border-radius:6px 6px 2px 2px;background:#C9DAF8;transform-origin:bottom;animation:cnGrow .9s cubic-bezier(.2,.7,.2,1) both}
 .cn-lv>div.hi i{background:#085EE9}
 .cn-lv>div:nth-child(2) i{animation-delay:.08s}.cn-lv>div:nth-child(3) i{animation-delay:.16s}.cn-lv>div:nth-child(4) i{animation-delay:.24s}.cn-lv>div:nth-child(5) i{animation-delay:.32s}.cn-lv>div:nth-child(6) i{animation-delay:.4s}.cn-lv>div:nth-child(7) i{animation-delay:.48s}
 @keyframes cnGrow{from{transform:scaleY(0)}}
 .cn-lv span{font-size:11px;font-weight:800;color:#5C6370;margin-top:6px}.cn-lv>div.hi span{color:#085EE9}
 .cn-loop-v p{margin:14px 0 0;font-size:13px;color:#5C6370}
-.cn-learn,.cn-rule{border:1px solid #E9EBEF;border-radius:14px;padding:16px 20px;align-self:start}
+.cn-learn,.cn-rule{border:1px solid #E9EBEF;border-radius:14px;padding:16px 20px}
+.cn-c .cn-rule{align-self:start}
 .cn-learn>span,.cn-rule>span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:8px}
 .cn-learn p,.cn-rule p{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;margin:0!important;padding:10px 0;border-top:1px solid #EEF0F3;font-size:14px;line-height:1.5;color:#1F2329}
 .cn-learn p:first-of-type,.cn-rule p:first-of-type{border-top:0;padding-top:4px}
@@ -1468,7 +1469,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <p>앱에서 바로 끝낼 수 있는 행동만 골라 포맷을 바꿔 가며 열고, 미션을 달성할수록 보상이 커지는 구조로 재참여를 유도했습니다.</p>
 <div class="cn-fmt"><div><span>댓글형</span><b>댓글 하나로 참여</b><small>새해 소망 · 응원 댓글</small></div><div><span>이모티콘형</span><b>이모티콘 사용으로 참여</b><small>신규 이모티콘 출시</small></div><div><span>미션형</span><b>주차별 미션 달성</b><small>럭키박스 · 챌린지</small></div><div><span>XP 교환형</span><b>활동 XP를 혜택으로 교환</b><small>주말 XP 3배</small></div></div>
 <div class="cn-loop">
-<div class="cn-loop-v"><div class="cn-lv" role="img" aria-label="미션 달성에 따라 럭키박스 레벨 1부터 7까지 오르는 구조"><div style="--h:28px" class=""><i></i><span>Lv.1</span></div><div style="--h:40px" class=""><i></i><span>Lv.2</span></div><div style="--h:52px" class=""><i></i><span>Lv.3</span></div><div style="--h:64px" class=""><i></i><span>Lv.4</span></div><div style="--h:76px" class="hi"><i></i><span>Lv.5</span></div><div style="--h:88px" class="hi"><i></i><span>Lv.6</span></div><div style="--h:100px" class="hi"><i></i><span>Lv.7</span></div></div><p>미션 달성 → 럭키박스 레벨 상승 → 푸시로 다음 미션 안내 → 레벨별 추첨</p></div>
+<div class="cn-loop-v"><div class="cn-lv" role="img" aria-label="미션 달성에 따라 럭키박스 레벨 1부터 7까지 오르는 구조"><div style="--h:calc(20% )" class=""><i></i><span>Lv.1</span></div><div style="--h:calc(32% )" class=""><i></i><span>Lv.2</span></div><div style="--h:calc(44% )" class=""><i></i><span>Lv.3</span></div><div style="--h:calc(56% )" class=""><i></i><span>Lv.4</span></div><div style="--h:calc(68% )" class="hi"><i></i><span>Lv.5</span></div><div style="--h:calc(80% )" class="hi"><i></i><span>Lv.6</span></div><div style="--h:calc(92% )" class="hi"><i></i><span>Lv.7</span></div></div><p>미션 달성 → 럭키박스 레벨 상승 → 푸시로 다음 미션 안내 → 레벨별 추첨</p></div>
 <div class="cn-learn"><span>결과 보고에서 확인한 것</span>
 <p><b>참여 방법</b>댓글 한 번으로 끝나는 이벤트가 참여자 목표의 5배</p>
 <p><b>보상</b>포인트보다 실물 경품에 반응이 큼</p>
