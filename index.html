@@ -220,6 +220,9 @@
 @media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
 
 /* automation case */
+.au-k{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;margin:18px 0 10px}
+.au-k span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px}
+.au-sls .au-k{margin-top:0}
 .au-chk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px;margin-top:16px;word-break:keep-all}
 .au-chk-l{display:flex;flex-direction:column;gap:10px}
 .au-mini{flex:1;list-style:none;margin:0;padding:16px;border:1px solid #E9EBEF;border-radius:14px;display:flex;flex-direction:column;justify-content:space-evenly;gap:10px}
@@ -305,7 +308,7 @@
 .au-lr{padding:14px 0;border-top:1px solid #EEF0F3;font-size:15px}.au-lr>span:nth-child(2){color:#5C6370}
 .lv{font-style:normal;justify-self:start;font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
 .lv.hi{background:#FDECEC;color:#D92D20}.lv.md{background:#FEF4E6;color:#B54708}.lv.lo{background:#F1F3F6;color:#8A919C}
-.au-sls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px}
+.au-sls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:18px}.au-sls>div{display:flex;flex-direction:column}.au-sls .au-sl{flex:1}
 .au-sl{margin:0;display:flex;flex-direction:column}.au-sl-w{flex:1}
 .au-sl-w{border:1px solid #E3E6EB;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(16,24,40,.35)}
 .au-sl-h{padding:10px 14px;font-size:13px;font-weight:800;border-bottom:1px solid #EEF0F3;color:#1D1C1D}
@@ -1171,7 +1174,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">12건</span></h3>
-<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-2</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-5</em></li><li class=on>커뮤니티 키워드 감지<em>3-2</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-5</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
+<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-2</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-4</em></li><li class=on>커뮤니티 키워드 감지<em>3-2</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-4</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
 <p class="au-note">파란 표시는 아래에서 자세히 소개하는 사례입니다.</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>매일 아침 브리핑 자동화<span class="cr-tag">문제 A 해결</span></h3>
@@ -1238,20 +1241,17 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="pd-call"><b>실제 사례</b> · 스폰서 등급이 잘못 표기된 게시물을 봇이 잡아내, 정정한 뒤 다시 올렸습니다.</div>
 <p class="au-note">알림 화면 재현 · 샘플 내용</p>
 
-<h3 class="cr-sub"><span class="cr-n">3-4</span>KOL 일괄 DM 도구<span class="cr-tag">문제 C 해결</span></h3>
-<p>원래 제 업무는 아니었지만, 담당자가 업무방마다 메시지를 하나씩 보내는 걸 보고 한 번에 보낼 수 있는 도구를 만들었습니다.</p>
+<h3 class="cr-sub"><span class="cr-n">3-4</span>다른 팀 업무도 자동화로 덜어주기<span class="cr-tag">문제 C 해결</span></h3>
+<p>제 업무는 아니었지만, 다른 팀이 손으로 반복하던 일을 보고 도구를 만들어 리소스를 줄였습니다.</p>
+<h4 class="au-k"><span>1</span>KOL 일괄 DM 도구</h4>
 <div class="pd-ba">
 <div class="b"><span>BEFORE</span><b>업무방마다 직접 입력</b><small>방을 열고, 이름을 바꿔 붙여 넣고, 보냈는지 따로 기록</small></div>
 <i aria-hidden="true">→</i>
-<div class="a"><span>AFTER</span><b>시트에서 대상만 선택</b><small>이름이 들어간 개인화 메시지 일괄 발송 · 국내/해외 분리 · 발송 상태 자동 기록</small></div>
+<div class="a"><span>AFTER</span><b>시트에서 대상만 선택</b><small>개인화 메시지 일괄 발송 · 국내/해외 분리 · 발송 상태 자동 기록 · KOL 업무방 200개 이상 관리</small></div>
 </div>
-<div class="pd-call"><b>운영 규모</b> · KOL 업무방 200개 이상을 이 도구로 관리했습니다.</div>
-
-<h3 class="cr-sub"><span class="cr-n">3-5</span>연사 · 파트너 협업 자동화<span class="cr-tag">추가 자동화</span></h3>
-<p>연사와 파트너사 관련 반복 업무도 Slack 봇으로 옮겼습니다.</p>
 <div class="au-sls">
-<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>📣 연사 발표 게시물 감지 — 리트윗 요청 초안</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker A (Co-Founder, Company C) is confirmed for KBW2026…</span></blockquote><p class="au-sl-ok">✅ 승인 · 발송 완료 → Speaker A</p></div></div></div><figcaption><b>연사 리트윗 요청 발송</b> · 공식 계정에 연사 발표가 올라오면 리트윗 요청 메시지를 자동으로 만들고, 담당 팀이 승인하면 연사에게 발송됩니다.</figcaption></figure>
-<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-monitoring</div><div class="au-sl-m"><i style="background:#ECB22E">M</i><div><div class="au-sl-n"><b>KBW Monitor</b><span>APP</span><small>9:00 AM</small></div><p>🔎 파트너 채널 데일리 점검</p><blockquote><b>▶ YouTube · 파트너 채널 D</b><span>“KBW2026 미리보기” 영상에서 KBW 언급 · 행사 일정과 주요 연사 소개</span></blockquote><small class="au-sl-s">언급이 없는 날에는 “✅ 체크 완료 — 언급 없음” 발송</small></div></div></div><figcaption><b>파트너 채널 언급 감지 · 요약</b> · 파트너사 YouTube · SNS에서 KBW 언급을 매일 찾아 요약합니다. 언급이 없는 날에도 ‘체크 완료’를 보내 시스템이 멈춘 것과 구분했습니다.</figcaption></figure>
+<div><h4 class="au-k"><span>2</span>연사 리트윗 요청 발송</h4><figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>📣 연사 발표 게시물 감지 — 리트윗 요청 초안</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker A (Co-Founder, Company C) is confirmed for KBW2026…</span></blockquote><p class="au-sl-ok">✅ 승인 · 발송 완료 → Speaker A</p></div></div></div><figcaption>공식 계정에 연사 발표가 올라오면 리트윗 요청 메시지를 자동으로 만들고, 담당 팀이 승인하면 연사에게 발송됩니다.</figcaption></figure></div>
+<div><h4 class="au-k"><span>3</span>파트너 채널 언급 감지 · 요약</h4><figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-monitoring</div><div class="au-sl-m"><i style="background:#ECB22E">M</i><div><div class="au-sl-n"><b>KBW Monitor</b><span>APP</span><small>9:00 AM</small></div><p>🔎 파트너 채널 데일리 점검</p><blockquote><b>▶ YouTube · 파트너 채널 D</b><span>“KBW2026 미리보기” 영상에서 KBW 언급 · 행사 일정과 주요 연사 소개</span></blockquote><small class="au-sl-s">언급이 없는 날에는 “✅ 체크 완료 — 언급 없음” 발송</small></div></div></div><figcaption>파트너사 YouTube · SNS에서 KBW 언급을 매일 찾아 요약합니다. 언급이 없는 날에도 ‘체크 완료’를 보내 시스템이 멈춘 것과 구분했습니다.</figcaption></figure></div>
 </div>
 <p class="au-note">메시지 화면 재현 · 샘플 내용</p>
 
