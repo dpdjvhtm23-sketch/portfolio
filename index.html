@@ -502,35 +502,6 @@
 .cad-feat b{display:block;font-size:14px;color:#085EE9}
 @media (max-width:760px){.cad-body,.cad-ops,.cad-feat{grid-template-columns:1fr}}
 
-/* neopin channel case */
-.nc-rule{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:4px 20px;word-break:keep-all}
-.nc-rh,.nc-rr{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:center}
-.nc-rh{padding:12px 0;font-size:12px;font-weight:700;color:#8A919C}
-.nc-rh span{display:flex;align-items:center;gap:6px}
-.nc-rh i{display:grid;place-items:center;width:16px;height:16px;border-radius:50%;font-style:normal;font-size:10px;color:#fff}
-.nc-rh i.x{background:#D92D20}.nc-rh i.o{background:#085EE9}
-.nc-rr{padding:14px 0;border-top:1px solid #EEF0F3;font-size:15px}
-.nc-rr s{color:#B3B3B3;text-decoration-color:#E5484D;text-decoration-thickness:1.5px}
-.nc-rr em{font-style:normal;font-weight:700;color:#042F74}
-.nc-bud{margin-top:10px}
-.nc-cre{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center;margin-top:16px;padding:28px;border-radius:20px;background:radial-gradient(120% 90% at 20% 0%,#DCE8FB 0%,#F0F4FB 55%,#F7F8FA 100%);word-break:keep-all}
-.nc-ads{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.nc-ad{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#0B1220;box-shadow:0 18px 36px -18px rgba(4,47,116,.55);transition:transform .3s}
-.nc-ad:nth-child(2){transform:translateY(-10px)}.nc-ad:hover{transform:translateY(-14px)}
-.nc-ad-s{position:absolute;inset:0;display:flex;flex-direction:column;padding:12px 10px;background:linear-gradient(170deg,var(--c),#042F74 80%);color:#fff}
-.nc-flag{align-self:flex-start;font-size:10px;font-weight:800;background:rgba(255,255,255,.18);border-radius:999px;padding:2px 8px}
-.nc-app{margin:14px auto 0;width:62%;aspect-ratio:9/15;border-radius:8px;background:#fff;padding:6px;display:flex;flex-direction:column;gap:4px;box-shadow:0 8px 18px rgba(0,0,0,.3);transform:rotate(-4deg)}
-.nc-app i{display:block;height:9%;border-radius:3px;background:#E3EBFB}.nc-app i.s{height:28%;background:linear-gradient(135deg,#9FBCEF,#085EE9)}
-.nc-ad-s b{margin-top:auto;font-size:14px;line-height:1.3;letter-spacing:-.01em}
-.nc-ad-s em{align-self:flex-start;margin-top:8px;font-style:normal;font-size:11px;font-weight:800;background:#fff;color:#042F74;border-radius:6px;padding:4px 8px}
-.nc-ad-ui{position:absolute;right:6px;bottom:52px;display:flex;flex-direction:column;gap:8px}
-.nc-ad-ui i{font-style:normal;font-size:12px;color:#fff;opacity:.85;text-align:center}
-.nc-an{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:12px;margin-top:16px;align-items:stretch;word-break:keep-all}
-.nc-fun small{font-size:11.5px;color:#8A919C;font-style:italic}
-.nc-ch p{grid-template-columns:76px minmax(0,1fr)!important}
-.nc-ch p em{grid-column:2;justify-self:start;font-style:normal;font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:3px 10px;margin-top:4px}
-@media (max-width:760px){.nc-cre,.nc-an{grid-template-columns:1fr}}
-
 /* neopin case */
 .np-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;word-break:keep-all}
 .np-map>*{display:block;border:1px solid #E9EBEF;border-radius:12px;padding:14px 16px;color:inherit;text-decoration:none}
@@ -596,6 +567,35 @@
 .np-tl span{font-size:12px;font-weight:800;color:#085EE9}.np-tl b{display:block;font-size:15px;margin-top:4px}.np-tl small{display:block;font-size:13px;color:#5C6370;margin-top:4px}
 .np-tl>div.k span{color:#9FBCEF}.np-tl>div.k b{color:#fff}.np-tl>div.k small{color:#D6E2FA}
 @media (max-width:760px){.np-map,.np-c3,.np-tl,.rk-grid,.np-pts{grid-template-columns:1fr}}
+
+/* neopin channel case */
+.nc-rule{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:4px 20px;word-break:keep-all}
+.nc-rh,.nc-rr{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:center}
+.nc-rh{padding:12px 0;font-size:12px;font-weight:700;color:#8A919C}
+.nc-rh span{display:flex;align-items:center;gap:6px}
+.nc-rh i{display:grid;place-items:center;width:16px;height:16px;border-radius:50%;font-style:normal;font-size:10px;color:#fff}
+.nc-rh i.x{background:#D92D20}.nc-rh i.o{background:#085EE9}
+.nc-rr{padding:14px 0;border-top:1px solid #EEF0F3;font-size:15px}
+.nc-rr s{color:#B3B3B3;text-decoration-color:#E5484D;text-decoration-thickness:1.5px}
+.nc-rr em{font-style:normal;font-weight:700;color:#042F74}
+.nc-bud{margin-top:10px}
+.nc-cre{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center;margin-top:16px;padding:28px;border-radius:20px;background:radial-gradient(120% 90% at 20% 0%,#DCE8FB 0%,#F0F4FB 55%,#F7F8FA 100%);word-break:keep-all}
+.nc-ads{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nc-ad{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#0B1220;box-shadow:0 18px 36px -18px rgba(4,47,116,.55);transition:transform .3s}
+.nc-ad:nth-child(2){transform:translateY(-10px)}.nc-ad:hover{transform:translateY(-14px)}
+.nc-ad-s{position:absolute;inset:0;display:flex;flex-direction:column;padding:12px 10px;background:linear-gradient(170deg,var(--c),#042F74 80%);color:#fff}
+.nc-flag{align-self:flex-start;font-size:10px;font-weight:800;background:rgba(255,255,255,.18);border-radius:999px;padding:2px 8px}
+.nc-app{margin:14px auto 0;width:62%;aspect-ratio:9/15;border-radius:8px;background:#fff;padding:6px;display:flex;flex-direction:column;gap:4px;box-shadow:0 8px 18px rgba(0,0,0,.3);transform:rotate(-4deg)}
+.nc-app i{display:block;height:9%;border-radius:3px;background:#E3EBFB}.nc-app i.s{height:28%;background:linear-gradient(135deg,#9FBCEF,#085EE9)}
+.nc-ad-s b{margin-top:auto;font-size:14px;line-height:1.3;letter-spacing:-.01em}
+.nc-ad-s em{align-self:flex-start;margin-top:8px;font-style:normal;font-size:11px;font-weight:800;background:#fff;color:#042F74;border-radius:6px;padding:4px 8px}
+.nc-ad-ui{position:absolute;right:6px;bottom:52px;display:flex;flex-direction:column;gap:8px}
+.nc-ad-ui i{font-style:normal;font-size:12px;color:#fff;opacity:.85;text-align:center}
+.nc-an{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:12px;margin-top:16px;align-items:stretch;word-break:keep-all}
+.nc-fun small{font-size:11.5px;color:#8A919C;font-style:italic}
+.nc-ch p{grid-template-columns:76px minmax(0,1fr)!important}
+.nc-ch p em{grid-column:2;justify-self:start;font-style:normal;font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:3px 10px;margin-top:4px}
+@media (max-width:760px){.nc-cre,.nc-an{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1969,15 +1969,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>현지어 소재 직접 제작과 교체<span class="cr-tag">소재</span></h3>
 <p>영상 · 이미지 소재를 Canva · Premiere Pro로 직접 만들고, 현지어 카피를 넣어 계속 바꿔 가며 비교했습니다.</p>
-<div class="nc-cre">
-<div class="nc-ads"><div class="nc-ad" style="--c:#3B78E7"><div class="nc-ad-s"><span class="nc-flag">ID · 인도네시아</span><div class="nc-app"><i></i><i></i><i class="s"></i></div><b>Ajak teman,<br>dapat hadiah!</b><em>Daftar sekarang</em></div><div class="nc-ad-ui"><i>♥</i><i>💬</i><i>↗</i></div></div><div class="nc-ad" style="--c:#0A3D9E"><div class="nc-ad-s"><span class="nc-flag">VN · 베트남</span><div class="nc-app"><i></i><i></i><i class="s"></i></div><b>Mời bạn bè,<br>nhận thưởng!</b><em>Đăng ký ngay</em></div><div class="nc-ad-ui"><i>♥</i><i>💬</i><i>↗</i></div></div><div class="nc-ad" style="--c:#5B93F0"><div class="nc-ad-s"><span class="nc-flag">PH · 필리핀</span><div class="nc-app"><i></i><i></i><i class="s"></i></div><b>Invite friends,<br>get rewards!</b><em>Sign up now</em></div><div class="nc-ad-ui"><i>♥</i><i>💬</i><i>↗</i></div></div></div>
-<ol class="cn-pts">
-<li><span>1</span><div><b>현지어 카피</b><small>국가별 언어와 문화에 맞춘 문구로 클릭률을 높였습니다.</small></div></li>
-<li><span>2</span><div><b>소재 교체</b><small>피로도가 쌓이기 전에 새 소재로 바꿨습니다.</small></div></li>
-<li><span>3</span><div><b>소재 유형 비교</b><small>밈처럼 눈길을 끄는 소재는 클릭은 많았지만 설치로 이어지지 않았습니다.</small></div></li>
-</ol>
-</div>
-<p class="au-note">소재 화면 재현 · 샘플 카피</p>
+<div class="np-c3"><div><span>현지어 카피</span><b>국가별 언어 · 문화에 맞춘 문구</b><small>영어 대신 현지어로 클릭률 개선</small></div><div><span>소재 교체</span><b>피로도가 쌓이기 전에 새 소재로</b><small>같은 기간 여러 소재를 돌려 가며 비교</small></div><div><span>소재 유형 비교</span><b>밈형 소재는 클릭만 많고 설치는 저조</b><small>눈길보다 서비스 장면이 설치로 연결</small></div></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-5</span>어디서 끊기는지 찾기<span class="cr-tag">분석</span></h3>
 <p>광고 → 앱 페이지 → 설치 → 가입 순서로 구간별 수치를 보고, 채널별로 맞는 목적을 정리했습니다.</p>
