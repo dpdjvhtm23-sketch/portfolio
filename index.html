@@ -1693,6 +1693,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 }
 
 @media (min-width:601px) and (max-width:980px){main .hero .portrait{justify-self:center!important;margin-inline:auto!important;width:260px!important}}
+
+@media (max-width:760px){.cn-learn p,.cn-rule p,.np-ms p{text-wrap:balance}}
 </style>
 
 <nav class="nav pad" id="nav" aria-label="주 메뉴"><div class="wrap">
@@ -3520,6 +3522,17 @@ window.mCase=()=>{if(!matchMedia("(max-width:760px)").matches)return;const root=
   let a=el,dark=false;while(a&&a!==root){const bg=getComputedStyle(a).backgroundColor.match(/\d+/g);if(bg&&+(bg[3]??1)>.5&&(+bg[0]+ +bg[1]+ +bg[2])<300){dark=true;break;}a=a.parentElement;}if(dark)return;
   if(f<13.5){el.style.fontSize="14px";const c=cs.color.match(/\d+/g);if(c&&(+c[0]+ +c[1]+ +c[2])>300)el.style.color="#4B5563";}});
  {const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const v=n.nodeValue.replace(/(\d)([+%])/g,"$1\u2060$2").replace(/([+%])(?=[가-힣])/g,"$1\u2060");if(v!==n.nodeValue)n.nodeValue=v;}}
+ {const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){if(n.parentElement.closest(".dbw,.nv,svg"))continue;const v=n.nodeValue.replace(/ · /g," · ");if(v!==n.nodeValue)n.nodeValue=v;}}
+ requestAnimationFrame(()=>{const SK=".dbw,.nv,.m-sum,.m-tabs,svg,figure,table,[class*=rk],h1,h2,h3,.cr-sub";
+  const lines=el=>{const rg=document.createRange();rg.selectNodeContents(el);const ts=[];[...rg.getClientRects()].forEach(r=>{if(r.width>1&&!ts.some(t=>Math.abs(t-r.top)<4))ts.push(r.top)});return ts.length;};
+  root.querySelectorAll("small,span,b,em,p,li,dd,div").forEach(el=>{if(el.closest(SK))return;const cs=getComputedStyle(el);if(!/block|flex|grid|list-item/.test(cs.display)||cs.display.includes("inline"))return;
+   if([...el.children].some(c=>/block|flex|grid/.test(getComputedStyle(c).display)))return;const t=el.textContent.trim();if(t.length<6||t.length>140)return;
+   const L=lines(el);if(L<2||L>3)return;const f=parseFloat(cs.fontSize);
+   const avail=el.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);const ws=el.style.whiteSpace,wd=el.style.width;el.style.whiteSpace="nowrap";el.style.width="max-content";const need=el.getBoundingClientRect().width-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);el.style.width=wd;el.style.whiteSpace=ws;
+   if(need<=avail*(L-1)*1.0001)return;const r=avail*(L-1)/need;if(r<.86)return;const nf=f*r*.97;if(nf<12.5)return;
+   const of=el.style.fontSize,ol=el.style.letterSpacing;el.style.fontSize=nf.toFixed(1)+"px";el.style.letterSpacing="-.02em";
+   if(lines(el)<L)el.dataset.fit=1;else{el.style.fontSize=of;el.style.letterSpacing=ol;}});
+  root.querySelectorAll("small,span,b,em,p,li,dd,div").forEach(el=>{if(el.closest(SK)||el.dataset.fit)return;if([...el.children].some(c=>/block|flex|grid/.test(getComputedStyle(c).display)))return;const t=el.textContent.trim();if(t.length>110)return;if(lines(el)===2)el.style.textWrap="balance";});});
  root.querySelectorAll(".mx-hint,.pr-tl-h small,p").forEach(el=>{for(const n of el.childNodes)if(n.nodeType===3&&n.nodeValue.includes("마우스를 올리면"))n.nodeValue=n.nodeValue.replace(/(\S+)에 마우스를 올리면/,"$1을 탭하면").replace("마우스를 올리면","탭하면");});
 };
 if(document.getElementById("sheet")&&!document.getElementById("sheet").hidden)mCase();
