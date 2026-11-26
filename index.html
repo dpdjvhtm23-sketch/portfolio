@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TP3JLZVLJZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-TP3JLZVLJZ");</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>김다은 | Growth Marketer Portfolio</title>
 <link rel="icon" type="image/png" href="favicon.png?v=1">
@@ -2928,6 +2930,7 @@ function openCase(id){
   const i=CASES.findIndex(c=>c.id===id); if(i<0) return closeCase(false);
   const c=CASES[i], prev=CASES[(i-1+CASES.length)%CASES.length], next=CASES[(i+1)%CASES.length], co=CO[c.co];
   if($("#sheet").hidden) lastFocus=document.activeElement;
+  if(window.gtag) gtag("event","page_view",{page_title:"Case · "+c.co+" · "+(c.ct||c.title).replace(/\n/g," "),page_location:location.origin+location.pathname+"case/"+c.id+location.search,case_id:c.id,company:c.co});
   $("#crumb").innerHTML=CRUMB[c.co]?`<img class="crumb-logo" src="${CRUMB[c.co]}" alt="${esc(c.co)}" style="height:${({"KBW2026":30,"코인니스":26,"네오핀":24,"마인워즈":34,"스텔라 판타지":42})[c.co]||28}px">`:esc(c.co);
   const tpl=document.getElementById("tpl-"+c.id);
   if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; }
@@ -2995,7 +2998,7 @@ addEventListener("resize",spy); spy();
   const GM="https://mail.google.com/mail/?view=cm&fs=1&to=dpdjvhtm23@gmail.com";
   function open(e){ if(e) e.preventDefault(); $("#cmForm").hidden=false; $("#cmDone").hidden=true; back=document.activeElement; cm.hidden=false; document.body.style.overflow="hidden"; $("nav.nav").inert=true; $("main").inert=true; if(typeof setMenu==="function") setMenu(false); setTimeout(()=>$("#cmType").focus({preventScroll:true}),50); }
   function close(){ cm.hidden=true; document.body.style.overflow=""; $("nav.nav").inert=false; $("main").inert=false; if(back&&back.focus) back.focus({preventScroll:true}); }
-  $$("[data-contact]").forEach(a=>a.addEventListener("click",open));
+  $$("[data-contact]").forEach(a=>a.addEventListener("click",e=>{ if(window.gtag) gtag("event","contact_open"); open(e); }));
   cm.addEventListener("click",e=>{ if(e.target.closest("[data-close]")) close(); });
   addEventListener("keydown",e=>{ if(e.key==="Escape"&&!cm.hidden) close(); });
   cm.querySelectorAll(".cm-copy").forEach(b=>b.addEventListener("click",()=>{
@@ -3015,7 +3018,7 @@ addEventListener("resize",spy); spy();
     P.set("entry.330430529",v("#cmName")); P.set("entry.1572736987",v("#cmPhone")); P.set("entry.465288426",v("#cmMsg"));
     const btn=$("#cmForm .cm-send"); btn.disabled=true; btn.textContent="보내는 중…";
     fetch("https://docs.google.com/forms/d/e/1FAIpQLSfP4N-1DSxDO-x3RaTtOpSlsmojNsRACz2e35_8JYzYYqx9dA/formResponse",{method:"POST",mode:"no-cors",body:P})
-      .then(()=>{ $("#cmForm").reset(); $("#cmForm").hidden=true; $("#cmDone").hidden=false; })
+      .then(()=>{ if(window.gtag) gtag("event","generate_lead",{form:"contact"}); $("#cmForm").reset(); $("#cmForm").hidden=true; $("#cmDone").hidden=false; })
       .catch(()=>{ toast("전송에 실패했어요. 위 이메일로 연락 주세요."); })
       .finally(()=>{ btn.disabled=false; btn.textContent="보내기"; });
   });
