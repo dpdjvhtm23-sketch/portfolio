@@ -110,6 +110,13 @@
 .db-cv{font-size:4.6px;font-weight:800;text-anchor:middle;fill:#1F2329}.db-cl{font-size:2.6px;text-anchor:middle;fill:#8A919C}
 .db-g11{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}.db-g11>div{min-width:0}.db-g11 .db-t th,.db-g11 .db-t td{padding:7px 6px;font-size:11.5px}
 .db-g11 .db-t th:first-child,.db-g11 .db-t td:first-child{background:#3B78E7;color:#fff;font-weight:700}
+.pd-cmp{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:4px 20px;word-break:keep-all}
+.pd-ch,.pd-cr{display:grid;grid-template-columns:72px 120px minmax(0,1fr) 150px;gap:16px;align-items:center}
+.pd-ch{padding:12px 0;font-size:12px;font-weight:700;color:#8A919C}.pd-ch span:last-child{color:#085EE9}
+.pd-cr{padding:16px 0;border-top:1px solid #EEF0F3}
+.pd-cr b{font-size:16px}.pd-cr p{margin:0;font-size:14px;color:#3B414B;line-height:1.55}.pd-cr em{font-style:normal;font-weight:700;color:#085EE9}
+.pd-cr .pill{justify-self:start;font-size:13px;font-weight:700;border-radius:999px;padding:6px 12px;white-space:nowrap}
+.pill.g{background:#F1F3F6;color:#8A919C}.pill.b{background:#085EE9;color:#fff}
 .pd-res{margin-top:14px;border:1px solid #E9EBEF;border-radius:14px;padding:6px 20px}
 .pd-rh,.pd-rr{display:grid;grid-template-columns:110px 1fr 1.5fr;gap:16px;padding:14px 0}
 .pd-rh{font-size:12px;font-weight:700;color:#8A919C}.pd-rh span:last-child{color:#085EE9}
@@ -181,7 +188,7 @@
 .pd-org{grid-template-columns:1fr}.pd-org>i{transform:rotate(90deg);justify-self:center}
 .pd-ba{grid-template-columns:1fr}.pd-ba>i{transform:rotate(90deg);justify-self:center}
 .pd-flow{flex-direction:column}.pd-step:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-7px;transform:translateX(-50%) rotate(45deg)}
-.pd-vs,.pd-geo,.pd-geo2,.pd-acts{grid-template-columns:1fr}
+.pd-vs,.pd-geo,.pd-geo2,.pd-acts{grid-template-columns:1fr}.pd-ch{display:none}.pd-cr{grid-template-columns:auto 1fr;gap:8px 12px}.pd-cr p{grid-column:1/-1}
 .pd-rh{display:none}.pd-rr{grid-template-columns:1fr;gap:4px}
 .db{padding:16px}.db-g4,.db-g12,.db-g21,.db-g11{grid-template-columns:1fr}.dbw-body{height:560px;padding:16px}.db-jump{margin:12px -16px;padding:10px 16px;top:-16px}.dbw-badge{display:none}.db-g5{grid-template-columns:repeat(2,1fr)}
 .db-meta{align-items:flex-start}
@@ -970,10 +977,10 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="pd-call"><b>결론</b> · 대행사 주장을 데이터로 반박하고, 소재 조정이 아니라 캠페인 구조와 예산 배분을 다시 보기로 했습니다.</div>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>대행사 제안 검증<span class="cr-tag">문제 C 해결</span></h3>
-<div class="pd-vs">
-<div class="c1"><span>대행사 제안</span><b>Meta로 예산 집중</b></div>
-<div class="c2"><span>데이터로 확인</span><ul><li>전년도 Meta 성과는 <em>리타겟팅</em>에서 나왔는데, 올해는 넓은 타깃에 몰려 있었음</li><li>전년도 효율은 <em>Google</em>이 좋았음</li></ul></div>
-<div class="c3"><span>내 대안</span><b>Meta는 리타겟팅으로,<br>Google은 증액</b></div>
+<div class="pd-cmp">
+<div class="pd-ch"><span>채널</span><span>대행사 제안</span><span>데이터로 확인 (전년도 비교)</span><span>내 대안</span></div>
+<div class="pd-cr"><b>Meta</b><span class="pill g">▲ 예산 집중</span><p>전년도 성과는 <em>리타겟팅</em>에서 나왔는데, 올해는 넓은 타깃에 몰려 있었음</p><span class="pill b">리타겟팅으로 전환</span></div>
+<div class="pd-cr"><b>Google</b><span class="pill g">▼ 예산 축소</span><p>전년도 효율이 좋았는데 분석 없이 축소 대상이 됨</p><span class="pill b">▲ 예산 증액</span></div>
 </div>
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>새는 예산 차단<span class="cr-tag">추가 개선</span></h3>
