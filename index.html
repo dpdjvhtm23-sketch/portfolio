@@ -37,118 +37,6 @@
 @media (hover:none){.mx-view{overflow-y:auto}.mx-hint{display:none}.mx-after{transform:none}}
 @media (max-width:640px){.mx-stage{padding:24px 16px 16px;gap:16px}.mx-win,.mx-before{width:100%}.mx-view{height:380px}.mx-pts{grid-template-columns:1fr}}
 
-/* automation case */
-.au-cat li small{display:block;font-size:11.5px;font-weight:700;color:#085EE9;margin-top:1px}
-.au-res3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;word-break:keep-all}
-.au-rc{background:#F5F7FA;border-radius:14px;padding:20px}
-.au-rc b{display:block;font-size:26px;font-weight:800;color:#042F74;line-height:1.2;margin-top:10px}
-.au-rc small{display:block;font-size:14px;color:#5C6370;margin-top:6px;line-height:1.5}
-@media (max-width:760px){.au-res3{grid-template-columns:1fr}}
-.au-tg-b.au-live{position:relative;overflow:hidden;padding:0;min-height:340px}.au-track{position:absolute;left:12px;right:12px;bottom:auto;top:14px;display:flex;flex-direction:column;gap:10px;animation:auChat 8s cubic-bezier(.3,.7,.2,1) infinite}.au-live .au-bub{height:156px;box-sizing:border-box;flex:none;width:100%;max-width:none}.au-tg-b.au-live::after{content:"";position:absolute;left:0;right:0;top:0;height:28px;background:linear-gradient(#C9DCEB,rgba(201,220,235,0));pointer-events:none}@keyframes auChat{0.00%,19.50%{transform:translateY(0px)}25.00%,44.50%{transform:translateY(-166px)}50.00%,69.50%{transform:translateY(-332px)}75.00%,94.50%{transform:translateY(-498px)}100%{transform:translateY(-664px)}}@media (prefers-reduced-motion:reduce){.au-track{animation:none}}
-.au-k{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;margin:18px 0 10px}
-.au-k span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px}
-.au-sls .au-k{margin-top:0}
-.au-chk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px;margin-top:16px;word-break:keep-all}
-.au-chk-l{display:flex;flex-direction:column;gap:10px}
-.au-mini{flex:1;list-style:none;margin:0;padding:16px;border:1px solid #E9EBEF;border-radius:14px;display:flex;flex-direction:column;justify-content:space-evenly;gap:10px}
-.au-mini li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600}
-.au-mini li span{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px;font-weight:800}
-.au-lvl{display:flex;flex-direction:column;gap:2px;background:#F5F7FA;border-radius:14px;padding:16px}
-.au-lvl>span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:8px}
-.au-lvl p{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:14px}
-.au-lvl .lv{min-width:84px;text-align:center}
-.au-chk .au-tg{margin:0;max-width:none}.au-chk .au-tg-b{padding:14px 12px 16px;align-items:flex-start}
-.au-tw{margin-top:8px;border:1px solid #E3E6EB;border-radius:12px;padding:10px 12px;background:#fff}
-.au-tw-h{display:flex;align-items:center;gap:6px}.au-tw-h i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#111;color:#fff;font-size:10px;font-style:normal;font-weight:800}
-.au-tw-h b{font-size:13px}.au-tw-h small{font-size:12px;color:#8A919C}
-.au-tw>p{margin:6px 0 0;font-size:13px;line-height:1.5}
-.au-tw-img{margin-top:8px;border-radius:8px;padding:14px;background:linear-gradient(135deg,#0B1220,#1D3A7A);color:#fff;display:flex;flex-direction:column;gap:2px}
-.au-tw-img small{font-size:10px;letter-spacing:.12em;color:#F2C94C;font-weight:800}.au-tw-img b{font-size:18px;letter-spacing:.02em}
-.au-tw-img span{font-size:11px;color:#C9D3E3}
-.au-res{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:13px}
-.au-res li{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.au-res small{color:#5C6370;font-size:12px}
-.au-res i{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;font-style:normal;font-size:11px;font-weight:800;color:#fff}
-.au-res .ok{background:#1E8E3E}.au-res .ng{background:#D92D20}.au-res .wn{background:#F79009}
-.au-res .lv{margin-left:auto;font-size:11px;padding:2px 8px}
-.au-brief{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
-.au-bc{display:flex;flex-direction:column;border:1px solid #E9EBEF;border-radius:16px;padding:16px}
-.au-bh{display:flex;justify-content:space-between;align-items:center}.au-bh b{font-size:16px}
-.au-bh small{font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:3px 9px}
-.au-flow{margin:6px 0 12px;font-size:13px;color:#5C6370}.au-flow i{font-style:normal;color:#B3B3B3;margin:0 4px}
-.au-bc .au-tg{flex:1;margin:0;max-width:none;box-shadow:none}
-.au-bc .au-tg-b{padding:14px 12px 16px;align-items:flex-start}
-.au-use2{margin-top:10px;background:#F5F7FA;border-radius:12px;padding:12px 16px;font-size:14px;color:#5C6370}.au-use2 b{color:#1F2329}.au-use2 span{font-size:12px;font-weight:700;color:#085EE9;margin-right:10px}.au-use2 em{font-style:normal;margin:0 8px;color:#B3B3B3}
-.au-news{margin-top:16px;word-break:keep-all}
-.au-nl{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
-.au-nl li{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
-.au-nl em{flex:none;font-style:normal;font-size:11px;font-weight:800;border-radius:4px;padding:1px 6px}
-.au-nl em.r{background:#FDECEC;color:#D92D20}.au-nl em.g{background:#E7F6EC;color:#1E8E3E}.au-nl em.n{background:#F1F3F6;color:#8A919C}
-.au-news .au-tg{margin:0 auto}
-.au-tg-b.multi{flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:36px}
-.au-kw{font-size:13px;width:auto;max-width:96%}
-.au-kw p{display:flex;gap:6px;margin-top:4px}.au-kw p span{flex:none;color:#8A919C}
-.au-sum{margin-top:8px;background:#EEF4FF;border-radius:8px;padding:8px 10px;line-height:1.55}.au-sum b{display:block;color:#042F74;font-size:12px}
-.au-sum.neg{background:#FDF1F0}.au-sum.neg b{color:#B42318}
-.au-lk{color:#2481CC}
-.au-use{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:14px}
-.au-use>div{display:flex;flex-direction:column;border-radius:14px;padding:16px 18px;background:#F5F7FA}
-.au-use>div+div{background:#fff;border:1.5px solid #085EE9}
-.au-use span{font-size:12px;font-weight:700;color:#5C6370}.au-use>div+div span{color:#085EE9}
-.au-use b{font-size:16px;margin-top:4px}
-.au-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
-.au-cat{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
-.au-ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.au-ch b{font-size:13px;color:#085EE9}.au-ch span{display:grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:#F1F3F6;color:#5C6370;font-size:12px;font-weight:800}
-.au-cat ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.au-cat li{font-size:14px;line-height:1.45;color:#3B414B;padding:7px 11px;border-radius:999px;background:#F5F7FA}
-.au-cat li.on{background:#EDF3FE;color:#042F74;font-weight:700}
-.au-cat li em{display:inline-block;margin-left:6px;font-style:normal;font-size:11px;font-weight:800;color:#fff;background:#085EE9;border-radius:4px;padding:0 5px;vertical-align:1px}
-.au-note{margin-top:8px;text-align:right;font-size:12px;font-style:italic;color:#8A919C}
-.au-rep{margin-top:16px;word-break:keep-all}
-.au-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.au-steps li{display:flex;flex-direction:column;gap:8px;background:#F5F7FA;border-radius:12px;padding:14px 16px}
-.au-steps li>span{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#085EE9;color:#fff;font-size:13px;font-weight:800}
-.au-steps small{display:block;font-size:12px;font-weight:700;color:#5C6370}.au-steps b{display:block;font-size:15px}
-.au-steps li.dark{background:#042F74}.au-steps li.dark>span{background:#fff;color:#042F74}.au-steps li.dark small{color:#9FBCEF}.au-steps li.dark b{color:#fff}
-.au-tg{position:relative;max-width:560px;margin:20px auto 0;border-radius:16px;overflow:hidden;background:#C9DCEB;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:14px 14px;display:flex;flex-direction:column;box-shadow:0 18px 40px -18px rgba(4,47,116,.4)}
-.au-tg-h{display:flex;align-items:center;gap:10px;background:#fff;padding:10px 14px;border-bottom:1px solid #E3E8EE}
-.au-tg-h i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#3B78E7,#085EE9);color:#fff;font-size:12px;font-weight:800;font-style:normal}
-.au-tg-h b{display:block;font-size:14px}.au-tg-h small{font-size:12px;color:#8A919C}
-.au-tg-b{flex:1;display:flex;align-items:flex-end;padding:18px 16px 40px}
-.au-bub{position:relative;background:#fff;border-radius:14px 14px 14px 4px;padding:12px 14px 22px;max-width:92%;box-shadow:0 1px 1px rgba(0,0,0,.08);font-size:14px;line-height:1.55}
-.au-bt{display:block;margin-bottom:4px}.au-bub p{margin:2px 0 0}.au-bub .mut{color:#5C6370;font-size:13px}.au-bub .warn{margin-top:6px;color:#B54708;font-weight:600}
-.au-bub{width:100%}
-.au-rt{margin-top:8px;font-size:12.5px;font-variant-numeric:tabular-nums}
-.au-rth,.au-rtr{display:grid;grid-template-columns:1.3fr 1fr 1fr .7fr;gap:6px;padding:5px 0}
-.au-rth{font-size:11px;color:#8A919C;border-bottom:1px solid #EEF0F3}.au-rth span:not(:first-child),.au-rtr span:not(:first-child){text-align:right}
-.au-rtr{border-bottom:1px solid #F3F4F6}.au-rtr span:first-child{display:flex;align-items:center;gap:6px;font-weight:700}
-.au-rtr i{width:7px;height:7px;border-radius:50%}.au-rtr.tot{border-bottom:0;font-weight:800}
-.au-ai{margin-top:10px;background:#EEF4FF;border-radius:10px;padding:10px 12px;font-size:13px}
-.au-ai b{display:block;color:#042F74;margin-bottom:2px}.au-ai ul{margin:0;padding-left:16px;color:#1F2329;line-height:1.6}
-.au-time{position:absolute;right:10px;bottom:4px;font-size:11px;color:#8A919C}
-.au-tag{position:absolute;left:12px;bottom:10px;font-size:11px;font-style:italic;color:#4B5F7A}
-.au-lv{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:4px 20px;word-break:keep-all}
-.au-lh,.au-lr{display:grid;grid-template-columns:150px minmax(0,1fr) 110px;gap:16px;align-items:center}
-.au-lh{padding:12px 0;font-size:12px;font-weight:700;color:#8A919C}
-.au-lr{padding:14px 0;border-top:1px solid #EEF0F3;font-size:15px}.au-lr>span:nth-child(2){color:#5C6370}
-.lv{font-style:normal;justify-self:start;font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
-.lv.hi{background:#FDECEC;color:#D92D20}.lv.md{background:#FEF4E6;color:#B54708}.lv.lo{background:#F1F3F6;color:#8A919C}
-.au-sls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:18px}.au-sls>div{display:flex;flex-direction:column}.au-sls .au-sl{flex:1}
-.au-sl{margin:0;display:flex;flex-direction:column}.au-sl-w{flex:1}
-.au-sl-w{border:1px solid #E3E6EB;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(16,24,40,.35)}
-.au-sl-h{padding:10px 14px;font-size:13px;font-weight:800;border-bottom:1px solid #EEF0F3;color:#1D1C1D}
-.au-sl-m{display:flex;gap:10px;padding:14px;font-size:13.5px;line-height:1.5;color:#1D1C1D}
-.au-sl-m>i{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:8px;color:#fff;font-style:normal;font-weight:800;font-size:12px}
-.au-sl-n{display:flex;align-items:center;gap:6px}.au-sl-n b{font-size:14px}
-.au-sl-n span{font-size:10px;font-weight:700;color:#616061;background:#EEE;border-radius:3px;padding:0 4px}.au-sl-n small{font-size:12px;color:#616061}
-.au-sl-m p{margin:2px 0 0}
-.au-sl-m blockquote{margin:8px 0 0;padding:4px 0 4px 10px;border-left:4px solid #DDD;display:flex;flex-direction:column;gap:2px}
-.au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
-.au-sl-ok{margin-top:8px!important;font-weight:600;color:#1E8E3E}
-.au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
-.au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
-@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use,.au-brief,.au-chk{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
-
 /* paid case + dashboard replica */
 .pd-org,.pd-ba,.pd-flow,.pd-vs,.pd-geo,.pd-acts,.pd-res,.pd-call{word-break:keep-all}
 .pd-org{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch;margin-top:20px}
@@ -306,6 +194,118 @@
 .db{padding:16px}.db-g4,.db-g12,.db-g21,.db-g11{grid-template-columns:1fr}.dbw-body{height:560px;padding:16px}.db-jump{margin:12px -16px;padding:10px 16px;top:-16px}.dbw-badge{display:none}.db-g5{grid-template-columns:repeat(2,1fr)}
 .db-meta{align-items:flex-start}
 }
+
+/* automation case */
+.au-cat li small{display:block;font-size:11.5px;font-weight:700;color:#085EE9;margin-top:1px}
+.au-res3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;word-break:keep-all}
+.au-rc{background:#F5F7FA;border-radius:14px;padding:20px}
+.au-rc b{display:block;font-size:26px;font-weight:800;color:#042F74;line-height:1.2;margin-top:10px}
+.au-rc small{display:block;font-size:14px;color:#5C6370;margin-top:6px;line-height:1.5}
+@media (max-width:760px){.au-res3{grid-template-columns:1fr}}
+.au-tg-b.au-live{position:relative;overflow:hidden;padding:0;min-height:340px}.au-track{position:absolute;left:12px;right:12px;bottom:auto;top:14px;display:flex;flex-direction:column;gap:10px;animation:auChat 8s cubic-bezier(.3,.7,.2,1) infinite}.au-live .au-bub{height:156px;box-sizing:border-box;flex:none;width:100%;max-width:none}.au-tg-b.au-live::after{content:"";position:absolute;left:0;right:0;top:0;height:28px;background:linear-gradient(#C9DCEB,rgba(201,220,235,0));pointer-events:none}@keyframes auChat{0.00%,19.50%{transform:translateY(0px)}25.00%,44.50%{transform:translateY(-166px)}50.00%,69.50%{transform:translateY(-332px)}75.00%,94.50%{transform:translateY(-498px)}100%{transform:translateY(-664px)}}@media (prefers-reduced-motion:reduce){.au-track{animation:none}}
+.au-k{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;margin:18px 0 10px}
+.au-k span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px}
+.au-sls .au-k{margin-top:0}
+.au-chk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px;margin-top:16px;word-break:keep-all}
+.au-chk-l{display:flex;flex-direction:column;gap:10px}
+.au-mini{flex:1;list-style:none;margin:0;padding:16px;border:1px solid #E9EBEF;border-radius:14px;display:flex;flex-direction:column;justify-content:space-evenly;gap:10px}
+.au-mini li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600}
+.au-mini li span{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px;font-weight:800}
+.au-lvl{display:flex;flex-direction:column;gap:2px;background:#F5F7FA;border-radius:14px;padding:16px}
+.au-lvl>span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:8px}
+.au-lvl p{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:14px}
+.au-lvl .lv{min-width:84px;text-align:center}
+.au-chk .au-tg{margin:0;max-width:none}.au-chk .au-tg-b{padding:14px 12px 16px;align-items:flex-start}
+.au-tw{margin-top:8px;border:1px solid #E3E6EB;border-radius:12px;padding:10px 12px;background:#fff}
+.au-tw-h{display:flex;align-items:center;gap:6px}.au-tw-h i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#111;color:#fff;font-size:10px;font-style:normal;font-weight:800}
+.au-tw-h b{font-size:13px}.au-tw-h small{font-size:12px;color:#8A919C}
+.au-tw>p{margin:6px 0 0;font-size:13px;line-height:1.5}
+.au-tw-img{margin-top:8px;border-radius:8px;padding:14px;background:linear-gradient(135deg,#0B1220,#1D3A7A);color:#fff;display:flex;flex-direction:column;gap:2px}
+.au-tw-img small{font-size:10px;letter-spacing:.12em;color:#F2C94C;font-weight:800}.au-tw-img b{font-size:18px;letter-spacing:.02em}
+.au-tw-img span{font-size:11px;color:#C9D3E3}
+.au-res{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.au-res li{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.au-res small{color:#5C6370;font-size:12px}
+.au-res i{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;font-style:normal;font-size:11px;font-weight:800;color:#fff}
+.au-res .ok{background:#1E8E3E}.au-res .ng{background:#D92D20}.au-res .wn{background:#F79009}
+.au-res .lv{margin-left:auto;font-size:11px;padding:2px 8px}
+.au-brief{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
+.au-bc{display:flex;flex-direction:column;border:1px solid #E9EBEF;border-radius:16px;padding:16px}
+.au-bh{display:flex;justify-content:space-between;align-items:center}.au-bh b{font-size:16px}
+.au-bh small{font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:3px 9px}
+.au-flow{margin:6px 0 12px;font-size:13px;color:#5C6370}.au-flow i{font-style:normal;color:#B3B3B3;margin:0 4px}
+.au-bc .au-tg{flex:1;margin:0;max-width:none;box-shadow:none}
+.au-bc .au-tg-b{padding:14px 12px 16px;align-items:flex-start}
+.au-use2{margin-top:10px;background:#F5F7FA;border-radius:12px;padding:12px 16px;font-size:14px;color:#5C6370}.au-use2 b{color:#1F2329}.au-use2 span{font-size:12px;font-weight:700;color:#085EE9;margin-right:10px}.au-use2 em{font-style:normal;margin:0 8px;color:#B3B3B3}
+.au-news{margin-top:16px;word-break:keep-all}
+.au-nl{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.au-nl li{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.au-nl em{flex:none;font-style:normal;font-size:11px;font-weight:800;border-radius:4px;padding:1px 6px}
+.au-nl em.r{background:#FDECEC;color:#D92D20}.au-nl em.g{background:#E7F6EC;color:#1E8E3E}.au-nl em.n{background:#F1F3F6;color:#8A919C}
+.au-news .au-tg{margin:0 auto}
+.au-tg-b.multi{flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:36px}
+.au-kw{font-size:13px;width:auto;max-width:96%}
+.au-kw p{display:flex;gap:6px;margin-top:4px}.au-kw p span{flex:none;color:#8A919C}
+.au-sum{margin-top:8px;background:#EEF4FF;border-radius:8px;padding:8px 10px;line-height:1.55}.au-sum b{display:block;color:#042F74;font-size:12px}
+.au-sum.neg{background:#FDF1F0}.au-sum.neg b{color:#B42318}
+.au-lk{color:#2481CC}
+.au-use{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:14px}
+.au-use>div{display:flex;flex-direction:column;border-radius:14px;padding:16px 18px;background:#F5F7FA}
+.au-use>div+div{background:#fff;border:1.5px solid #085EE9}
+.au-use span{font-size:12px;font-weight:700;color:#5C6370}.au-use>div+div span{color:#085EE9}
+.au-use b{font-size:16px;margin-top:4px}
+.au-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
+.au-cat{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
+.au-ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.au-ch b{font-size:13px;color:#085EE9}.au-ch span{display:grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:#F1F3F6;color:#5C6370;font-size:12px;font-weight:800}
+.au-cat ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.au-cat li{font-size:14px;line-height:1.45;color:#3B414B;padding:7px 11px;border-radius:999px;background:#F5F7FA}
+.au-cat li.on{background:#EDF3FE;color:#042F74;font-weight:700}
+.au-cat li em{display:inline-block;margin-left:6px;font-style:normal;font-size:11px;font-weight:800;color:#fff;background:#085EE9;border-radius:4px;padding:0 5px;vertical-align:1px}
+.au-note{margin-top:8px;text-align:right;font-size:12px;font-style:italic;color:#8A919C}
+.au-rep{margin-top:16px;word-break:keep-all}
+.au-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.au-steps li{display:flex;flex-direction:column;gap:8px;background:#F5F7FA;border-radius:12px;padding:14px 16px}
+.au-steps li>span{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#085EE9;color:#fff;font-size:13px;font-weight:800}
+.au-steps small{display:block;font-size:12px;font-weight:700;color:#5C6370}.au-steps b{display:block;font-size:15px}
+.au-steps li.dark{background:#042F74}.au-steps li.dark>span{background:#fff;color:#042F74}.au-steps li.dark small{color:#9FBCEF}.au-steps li.dark b{color:#fff}
+.au-tg{position:relative;max-width:560px;margin:20px auto 0;border-radius:16px;overflow:hidden;background:#C9DCEB;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:14px 14px;display:flex;flex-direction:column;box-shadow:0 18px 40px -18px rgba(4,47,116,.4)}
+.au-tg-h{display:flex;align-items:center;gap:10px;background:#fff;padding:10px 14px;border-bottom:1px solid #E3E8EE}
+.au-tg-h i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#3B78E7,#085EE9);color:#fff;font-size:12px;font-weight:800;font-style:normal}
+.au-tg-h b{display:block;font-size:14px}.au-tg-h small{font-size:12px;color:#8A919C}
+.au-tg-b{flex:1;display:flex;align-items:flex-end;padding:18px 16px 40px}
+.au-bub{position:relative;background:#fff;border-radius:14px 14px 14px 4px;padding:12px 14px 22px;max-width:92%;box-shadow:0 1px 1px rgba(0,0,0,.08);font-size:14px;line-height:1.55}
+.au-bt{display:block;margin-bottom:4px}.au-bub p{margin:2px 0 0}.au-bub .mut{color:#5C6370;font-size:13px}.au-bub .warn{margin-top:6px;color:#B54708;font-weight:600}
+.au-bub{width:100%}
+.au-rt{margin-top:8px;font-size:12.5px;font-variant-numeric:tabular-nums}
+.au-rth,.au-rtr{display:grid;grid-template-columns:1.3fr 1fr 1fr .7fr;gap:6px;padding:5px 0}
+.au-rth{font-size:11px;color:#8A919C;border-bottom:1px solid #EEF0F3}.au-rth span:not(:first-child),.au-rtr span:not(:first-child){text-align:right}
+.au-rtr{border-bottom:1px solid #F3F4F6}.au-rtr span:first-child{display:flex;align-items:center;gap:6px;font-weight:700}
+.au-rtr i{width:7px;height:7px;border-radius:50%}.au-rtr.tot{border-bottom:0;font-weight:800}
+.au-ai{margin-top:10px;background:#EEF4FF;border-radius:10px;padding:10px 12px;font-size:13px}
+.au-ai b{display:block;color:#042F74;margin-bottom:2px}.au-ai ul{margin:0;padding-left:16px;color:#1F2329;line-height:1.6}
+.au-time{position:absolute;right:10px;bottom:4px;font-size:11px;color:#8A919C}
+.au-tag{position:absolute;left:12px;bottom:10px;font-size:11px;font-style:italic;color:#4B5F7A}
+.au-lv{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:4px 20px;word-break:keep-all}
+.au-lh,.au-lr{display:grid;grid-template-columns:150px minmax(0,1fr) 110px;gap:16px;align-items:center}
+.au-lh{padding:12px 0;font-size:12px;font-weight:700;color:#8A919C}
+.au-lr{padding:14px 0;border-top:1px solid #EEF0F3;font-size:15px}.au-lr>span:nth-child(2){color:#5C6370}
+.lv{font-style:normal;justify-self:start;font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
+.lv.hi{background:#FDECEC;color:#D92D20}.lv.md{background:#FEF4E6;color:#B54708}.lv.lo{background:#F1F3F6;color:#8A919C}
+.au-sls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:18px}.au-sls>div{display:flex;flex-direction:column}.au-sls .au-sl{flex:1}
+.au-sl{margin:0;display:flex;flex-direction:column}.au-sl-w{flex:1}
+.au-sl-w{border:1px solid #E3E6EB;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(16,24,40,.35)}
+.au-sl-h{padding:10px 14px;font-size:13px;font-weight:800;border-bottom:1px solid #EEF0F3;color:#1D1C1D}
+.au-sl-m{display:flex;gap:10px;padding:14px;font-size:13.5px;line-height:1.5;color:#1D1C1D}
+.au-sl-m>i{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:8px;color:#fff;font-style:normal;font-weight:800;font-size:12px}
+.au-sl-n{display:flex;align-items:center;gap:6px}.au-sl-n b{font-size:14px}
+.au-sl-n span{font-size:10px;font-weight:700;color:#616061;background:#EEE;border-radius:3px;padding:0 4px}.au-sl-n small{font-size:12px;color:#616061}
+.au-sl-m p{margin:2px 0 0}
+.au-sl-m blockquote{margin:8px 0 0;padding:4px 0 4px 10px;border-left:4px solid #DDD;display:flex;flex-direction:column;gap:2px}
+.au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
+.au-sl-ok{margin-top:8px!important;font-weight:600;color:#1E8E3E}
+.au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
+.au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
+@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use,.au-brief,.au-chk{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
 </style>
 </head>
 <body>
@@ -1143,7 +1143,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </dl>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
-<p>소수 인원으로 글로벌 행사를 운영하려면, 사람이 꼭 판단해야 하는 일에만 시간을 써야 했습니다.<br>3월에 뉴스 모니터링부터 자동화하기 시작해 범위를 넓혀 갔습니다.</p>
+<p>소수 인원으로 글로벌 행사를 운영하려면, 사람이 꼭 판단해야 하는 일에만 시간을 써야 했습니다.<br>3월 뉴스 모니터링 자동화를 시작으로 범위를 넓혀 갔습니다.</p>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
 <div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
@@ -1156,12 +1156,12 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
-<h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">12건</span></h3>
+<h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">전체 목록</span></h3>
 <div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화<small>광고비 0원 · 2개월 만에 일 방문 200명+</small></li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-2</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-4</em></li><li class=on>커뮤니티 키워드 감지<em>3-2</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-4</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
 <p class="au-note">파란 표시는 아래에서 자세히 소개하는 사례입니다.</p>
 
-<h3 class="cr-sub"><span class="cr-n">3-2</span>매일 아침 브리핑 자동화<span class="cr-tag">문제 A 해결</span></h3>
-<p>광고 숫자 취합과 뉴스 · 커뮤니티 확인을 자동화해, 결과가 AI 요약과 함께 텔레그램으로 먼저 도착하게 했습니다.</p>
+<h3 class="cr-sub"><span class="cr-n">3-2</span>매일 리포트 · 실시간 알림 자동화<span class="cr-tag">문제 A 해결</span></h3>
+<p>광고 리포트는 매일 아침, 키워드 알림은 실시간으로 AI 요약과 함께 텔레그램에 도착하게 했습니다.</p>
 <div class="au-brief">
 <div class="au-bc">
 <div class="au-bh"><b>광고 성과 리포트</b><small>매일 08:30</small></div>
@@ -1181,18 +1181,18 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="au-tg-b au-live"><div class="au-track"><div class="au-bub au-kw"><b class="au-bt">🔔 키워드 감지 · 네이버 뉴스</b><div class="au-sum"><b>🤖 AI 요약</b>스폰서 B 신규 서비스 출시 보도가 이어짐. 긍정적 화제성이 높은 시점.</div><p class="au-lk">🔗 원문 링크</p><span class="au-time">08:10</span></div><div class="au-bub au-kw"><b class="au-bt">🔔 키워드 감지 · 커뮤니티 대화방</b><div class="au-sum neg"><b>🤖 AI 요약</b>연사 A 소속사 관련 부정적 언급 확산 중. 공식 보도는 아직 없음.</div><p class="au-lk">🔗 대화방 링크</p><span class="au-time">09:32</span></div><div class="au-bub au-kw"><b class="au-bt">🔔 키워드 감지 · 구글 뉴스</b><div class="au-sum"><b>🤖 AI 요약</b>연사 C 인터뷰 기사에서 KBW2026 참여 언급. 해외 매체 노출.</div><p class="au-lk">🔗 원문 링크</p><span class="au-time">11:05</span></div><div class="au-bub au-kw"><b class="au-bt">🔔 키워드 감지 · 커뮤니티 대화방</b><div class="au-sum"><b>🤖 AI 요약</b>KBW 사이드 이벤트 일정 문의가 늘어나는 중. 안내 공지 필요.</div><p class="au-lk">🔗 대화방 링크</p><span class="au-time">14:45</span></div><div class="au-bub au-kw" aria-hidden="true"><b class="au-bt">🔔 키워드 감지 · 네이버 뉴스</b><div class="au-sum"><b>🤖 AI 요약</b>스폰서 B 신규 서비스 출시 보도가 이어짐. 긍정적 화제성이 높은 시점.</div><p class="au-lk">🔗 원문 링크</p><span class="au-time">08:10</span></div><div class="au-bub au-kw" aria-hidden="true"><b class="au-bt">🔔 키워드 감지 · 커뮤니티 대화방</b><div class="au-sum neg"><b>🤖 AI 요약</b>연사 A 소속사 관련 부정적 언급 확산 중. 공식 보도는 아직 없음.</div><p class="au-lk">🔗 대화방 링크</p><span class="au-time">09:32</span></div><div class="au-bub au-kw" aria-hidden="true"><b class="au-bt">🔔 키워드 감지 · 구글 뉴스</b><div class="au-sum"><b>🤖 AI 요약</b>연사 C 인터뷰 기사에서 KBW2026 참여 언급. 해외 매체 노출.</div><p class="au-lk">🔗 원문 링크</p><span class="au-time">11:05</span></div><div class="au-bub au-kw" aria-hidden="true"><b class="au-bt">🔔 키워드 감지 · 커뮤니티 대화방</b><div class="au-sum"><b>🤖 AI 요약</b>KBW 사이드 이벤트 일정 문의가 늘어나는 중. 안내 공지 필요.</div><p class="au-lk">🔗 대화방 링크</p><span class="au-time">14:45</span></div></div></div></div>
 </div>
 </div>
-<div class="au-use2"><span>키워드 알림 활용</span><b>화제가 된 스폰서</b> → 관심이 높을 때 발표<em>·</em><b>이슈가 있는 연사</b> → 발표 보류 · 조정</div>
-<p class="au-note">알림 화면 재현 · 샘플 수치와 내용</p>
+<div class="au-use2"><span>키워드 알림 활용</span><b>화제가 된 스폰서</b>는 관심이 높을 때 발표하고, <b>이슈가 있는 연사</b>는 발표를 보류 · 조정했습니다.</div>
+<p class="au-note">화면 재현 · 샘플 데이터</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
 <p>공식 게시물의 본문과 이미지 속 글자를 연사 DB · 용어집과 대조해 텔레그램으로 알렸습니다.</p>
 <div class="au-chk">
 <div class="au-chk-l">
 <ol class="au-mini">
-<li><span>1</span>공식 X · LinkedIn · Facebook 새 게시물 (RSS)</li>
-<li><span>2</span>본문 + 이미지 속 글자 추출 (OCR)</li>
+<li><span>1</span>공식 X · LinkedIn · Facebook 새 게시물 수집 (RSS)</li>
+<li><span>2</span>본문 · 이미지 속 글자 추출 (OCR)</li>
 <li><span>3</span>연사 DB · 스폰서 등급 · 용어집과 대조</li>
-<li><span>4</span>원문 + 결과를 텔레그램으로 발송</li>
+<li><span>4</span>원문과 검수 결과를 텔레그램으로 발송</li>
 </ol>
 <div class="au-lvl"><span>알림 수준</span>
 <p><em class="lv hi">높음 · 즉시</em>스폰서 등급 오기 · 계약 사항</p>
@@ -1215,10 +1215,10 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div></div></div>
 </div>
 <div class="pd-call"><b>실제 사례</b> · 스폰서 등급이 잘못 표기된 게시물을 봇이 잡아내, 정정한 뒤 다시 올렸습니다.</div>
-<p class="au-note">알림 화면 재현 · 샘플 내용</p>
+<p class="au-note">화면 재현 · 샘플 데이터</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>다른 팀 업무도 자동화로 덜어주기<span class="cr-tag">문제 C 해결</span></h3>
-<p>제 업무는 아니었지만, 다른 팀이 손으로 반복하던 일을 보고 도구를 만들어 리소스를 줄였습니다.</p>
+<p>제 업무는 아니었지만, 다른 팀이 손으로 반복하던 일을 보고 도구를 만들어 그 팀의 리소스를 줄였습니다.</p>
 <h4 class="au-k"><span>1</span>KOL 일괄 DM 도구</h4>
 <div class="pd-ba">
 <div class="b"><span>BEFORE</span><b>업무방마다 직접 입력</b><small>방을 열고, 이름을 바꿔 붙여 넣고, 보냈는지 따로 기록</small></div>
@@ -1226,10 +1226,10 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="a"><span>AFTER</span><b>시트에서 대상만 선택</b><small>개인화 메시지 일괄 발송 · 국내/해외 분리 · 발송 상태 자동 기록 · KOL 업무방 200개 이상 관리</small></div>
 </div>
 <div class="au-sls">
-<div><h4 class="au-k"><span>2</span>연사 리트윗 요청 발송</h4><figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>📣 연사 발표 게시물 감지 — 리트윗 요청 초안</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker A (Co-Founder, Company C) is confirmed for KBW2026…</span></blockquote><p class="au-sl-ok">✅ 승인 · 발송 완료 → Speaker A</p></div></div></div><figcaption>공식 계정에 연사 발표가 올라오면 리트윗 요청 메시지를 자동으로 만들고, 담당 팀이 승인하면 연사에게 발송됩니다.</figcaption></figure></div>
-<div><h4 class="au-k"><span>3</span>파트너 채널 언급 감지 · 요약</h4><figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-monitoring</div><div class="au-sl-m"><i style="background:#ECB22E">M</i><div><div class="au-sl-n"><b>KBW Monitor</b><span>APP</span><small>9:00 AM</small></div><p>🔎 파트너 채널 데일리 점검</p><blockquote><b>▶ YouTube · 파트너 채널 D</b><span>“KBW2026 미리보기” 영상에서 KBW 언급 · 행사 일정과 주요 연사 소개</span></blockquote><small class="au-sl-s">언급이 없는 날에는 “✅ 체크 완료 — 언급 없음” 발송</small></div></div></div><figcaption>파트너사 YouTube · SNS에서 KBW 언급을 매일 찾아 요약합니다. 언급이 없는 날에도 ‘체크 완료’를 보내 시스템이 멈춘 것과 구분했습니다.</figcaption></figure></div>
+<div><h4 class="au-k"><span>2</span>연사 리트윗 요청 발송</h4><figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>📣 연사 발표 게시물 감지 — 리트윗 요청 초안</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker A (Co-Founder, Company C) is confirmed for KBW2026…</span></blockquote><p class="au-sl-ok">✅ 승인 · 발송 완료 → Speaker A</p></div></div></div><figcaption>공식 계정에 연사 발표가 올라오면 리트윗 요청 메시지를 자동으로 만들고, 담당 팀이 승인하면 연사에게 발송되도록 했습니다.</figcaption></figure></div>
+<div><h4 class="au-k"><span>3</span>파트너 채널 언급 감지 · 요약</h4><figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-monitoring</div><div class="au-sl-m"><i style="background:#ECB22E">M</i><div><div class="au-sl-n"><b>KBW Monitor</b><span>APP</span><small>9:00 AM</small></div><p>🔎 파트너 채널 데일리 점검</p><blockquote><b>▶ YouTube · 파트너 채널 D</b><span>“KBW2026 미리보기” 영상에서 KBW 언급 · 행사 일정과 주요 연사 소개</span></blockquote><small class="au-sl-s">언급이 없는 날에는 “✅ 체크 완료 — 언급 없음” 발송</small></div></div></div><figcaption>파트너사 YouTube · SNS에서 KBW 언급을 매일 찾아 요약했습니다. 언급이 없는 날에도 ‘체크 완료’를 보내 시스템이 멈춘 것과 구분했습니다.</figcaption></figure></div>
 </div>
-<p class="au-note">메시지 화면 재현 · 샘플 내용</p>
+<p class="au-note">화면 재현 · 샘플 데이터</p>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
 <div class="au-res3">
