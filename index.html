@@ -3609,6 +3609,13 @@ window.mCase=()=>{if(!matchMedia("(max-width:760px)").matches)return;const root=
    if(need<=avail*(L-1)*1.0001)return;const r=avail*(L-1)/need;if(r<.86)return;const nf=f*r*.97;if(nf<12.5)return;
    const of=el.style.fontSize,ol=el.style.letterSpacing;el.style.fontSize=nf.toFixed(1)+"px";el.style.letterSpacing="-.02em";
    if(lines(el)<L)el.dataset.fit=1;else{el.style.fontSize=of;el.style.letterSpacing=ol;}});
+  /* same-sector consistency: siblings in the same group share the reduced size */
+  const peers=el=>{const p=el.parentElement;if(!p)return[el];const same=x=>x&&x.tagName===el.tagName&&x.className===el.className;
+   const sib=[...p.children].filter(same);if(sib.length>1)return sib;const gp=p.parentElement;if(!gp)return[el];const idx=[...p.children].indexOf(el);
+   const cous=[...gp.children].filter(c=>c.tagName===p.tagName&&c.className===p.className).map(c=>c.children[idx]).filter(same);return cous.length>1?cous:[el];};
+  const done=new Set();root.querySelectorAll("[data-fit]").forEach(el=>{if(done.has(el))return;const g=peers(el);g.forEach(x=>done.add(x));
+   const fs=g.filter(x=>x.dataset.fit).map(x=>parseFloat(x.style.fontSize)).filter(Boolean);if(!fs.length)return;const m=Math.min(...fs);
+   g.forEach(x=>{x.style.fontSize=m.toFixed(1)+"px";x.style.letterSpacing="-.02em";x.dataset.fit=1;});});
   root.querySelectorAll("small,span,b,em,p,li,dd,div").forEach(el=>{if(el.closest(SK)||el.dataset.fit)return;if([...el.children].some(c=>/block|flex|grid/.test(getComputedStyle(c).display)))return;const t=el.textContent.trim();if(t.length>40||/[다요]\.?$/.test(t))return;if(lines(el)===2)el.style.textWrap="balance";});});
  root.querySelectorAll(".au-note").forEach(el=>{const t=el.textContent.trim();if(t.length>40&&/다\.$/.test(t))el.classList.add("m-body");});
  root.querySelectorAll(".mx-hint,.pr-tl-h small,p").forEach(el=>{for(const n of el.childNodes)if(n.nodeType===3&&n.nodeValue.includes("마우스를 올리면"))n.nodeValue=n.nodeValue.replace(/(\S+)에 마우스를 올리면/,"$1을 탭하면").replace("마우스를 올리면","탭하면");});
