@@ -1075,6 +1075,36 @@ main .pfilter{overflow:visible;justify-content:flex-end!important}
 .pf-dd-menu button[aria-selected="true"]::after{content:"";position:absolute;right:13px;top:50%;width:10px;height:5px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-70%) rotate(-45deg)}
 @keyframes pfdd{from{opacity:0;transform:translateY(-4px)}}
 }
+
+/* contact type chips + mobile compact */
+.cm-grid label.full:has(#cmType){margin-bottom:-4px}
+.cm-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.cm-seg button{height:44px;font:inherit;font-size:14px;font-weight:700;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.28);border-radius:12px;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.cm-seg button:hover{border-color:rgba(255,255,255,.6)}
+.cm-seg button[aria-checked="true"]{background:#fff;color:var(--navy);border-color:#fff}
+@media (max-width:600px){
+.cm{padding:10px!important}
+.cm-panel{padding:22px 18px 18px!important;max-height:calc(100svh - 20px)!important;border-radius:20px!important}
+#cmTitle{font-size:28px!important;margin:0 0 10px!important}
+.cm-x{top:14px!important;right:14px!important;width:40px!important;height:40px!important}
+.cm-info{margin:0 0 12px!important;padding-bottom:12px!important;row-gap:4px!important;font-size:14px}
+.cm-grid{grid-template-columns:1fr 1fr!important;gap:10px 10px!important}
+.cm-grid label{gap:5px!important}
+.cm-grid label:has(#cmPhone),.cm-grid label:has(#cmName),.cm-grid .full{grid-column:1/-1}
+.cm-grid .lt{font-size:12.5px!important}
+.cm-grid input{height:42px!important;font-size:15px!important;padding:0 12px!important}
+.cm-grid textarea{min-height:84px!important;font-size:15px!important;padding:10px 12px!important}
+.cm-seg button{height:40px;font-size:13.5px}
+.cm-send{margin-top:12px!important;height:48px!important}
+}
+
+@media (max-width:760px){
+.mw-media p{grid-template-columns:1fr!important;gap:4px!important}
+.mw-media p em{justify-self:start;background:none!important;padding:0!important;font-size:12.5px!important;color:#5C6370!important;font-weight:600!important;white-space:normal!important}
+.mw-media p em::before{content:"국가 · ";color:#085EE9}
+.np-phase{flex-direction:column;align-items:flex-start!important;gap:4px!important}
+.np-phase b{word-break:keep-all}
+}
 </style>
 </head>
 <body>
@@ -2966,7 +2996,8 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
     <form class="cm-form" id="cmForm" novalidate>
       <div class="cm-grid">
         <label class="full"><span class="lt">제안 유형<b>*</b></span>
-          <select id="cmType" required><option value="">선택</option><option>채용 제안</option><option>커피챗 요청</option><option>기타</option></select></label>
+          <select id="cmType" required hidden tabindex="-1" aria-hidden="true"><option value="">선택</option><option>채용 제안</option><option>커피챗 요청</option><option>기타</option></select></label>
+          <div class="cm-seg full" role="radiogroup" aria-label="제안 유형"><button type="button" role="radio" aria-checked="false" data-v="채용 제안">채용 제안</button><button type="button" role="radio" aria-checked="false" data-v="커피챗 요청">커피챗 요청</button><button type="button" role="radio" aria-checked="false" data-v="기타">기타</button></div>
         <label><span class="lt">회사명<b>*</b></span><input id="cmCo" required autocomplete="organization"></label>
         <label><span class="lt">포지션</span><input id="cmPos" placeholder="예) CRM 마케터"></label>
         <label><span class="lt">성함<b>*</b></span><input id="cmName" required autocomplete="name"></label>
@@ -3370,6 +3401,12 @@ $("#pfilter").addEventListener("click",e=>{const d=e.target.closest(".pf-dd-btn"
   row.addEventListener("scroll",up,{passive:true});up();}
  document.addEventListener("click",e=>{const b=e.target.closest(".db-jump button");if(!b||!mq.matches)return;const body=b.closest(".dbw-body");body.dataset.s=[...b.parentNode.children].indexOf(b)+1;const w=body.closest(".dbw");if(w.getBoundingClientRect().top<0)w.scrollIntoView({block:"start"});});
 })();
+</script>
+<script>
+(()=>{const g=document.querySelector(".cm-seg"),sel=document.getElementById("cmType");if(!g||!sel)return;
+ const sync=()=>g.querySelectorAll("button").forEach(b=>b.setAttribute("aria-checked",b.dataset.v===sel.value));
+ g.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;sel.value=b.dataset.v;sel.dispatchEvent(new Event("change",{bubbles:true}));sync();});
+ document.getElementById("cmForm")?.addEventListener("reset",()=>setTimeout(sync));new MutationObserver(sync).observe(document.getElementById("cm"),{attributes:true,attributeFilter:["hidden"]});})();
 </script>
 <script>
 /* GA4: one delegated ui_click event for every button / link / tab label */
