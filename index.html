@@ -220,13 +220,20 @@
 @media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
 
 /* automation case */
-.au-news{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
+.au-news{margin-top:16px;word-break:keep-all}
 .au-nl{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
 .au-nl li{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
 .au-nl em{flex:none;font-style:normal;font-size:11px;font-weight:800;border-radius:4px;padding:1px 6px}
 .au-nl em.r{background:#FDECEC;color:#D92D20}.au-nl em.g{background:#E7F6EC;color:#1E8E3E}.au-nl em.n{background:#F1F3F6;color:#8A919C}
-.au-use{display:flex;flex-direction:column;gap:10px}
-.au-use>div{flex:1;display:flex;flex-direction:column;justify-content:center;border-radius:14px;padding:16px 18px;background:#F5F7FA}
+.au-news .au-tg{margin:0 auto}
+.au-tg-b.multi{flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:36px}
+.au-kw{font-size:13px;width:auto;max-width:96%}
+.au-kw p{display:flex;gap:6px;margin-top:4px}.au-kw p span{flex:none;color:#8A919C}
+.au-sum{margin-top:8px;background:#EEF4FF;border-radius:8px;padding:8px 10px;line-height:1.55}.au-sum b{display:block;color:#042F74;font-size:12px}
+.au-sum.neg{background:#FDF1F0}.au-sum.neg b{color:#B42318}
+.au-lk{color:#2481CC}
+.au-use{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:14px}
+.au-use>div{display:flex;flex-direction:column;border-radius:14px;padding:16px 18px;background:#F5F7FA}
 .au-use>div+div{background:#fff;border:1.5px solid #085EE9}
 .au-use span{font-size:12px;font-weight:700;color:#5C6370}.au-use>div+div span{color:#085EE9}
 .au-use b{font-size:16px;margin-top:4px}
@@ -281,7 +288,7 @@
 .au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
 .au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
 .au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
-@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-news{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
+@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
 </style>
 </head>
 <body>
@@ -1133,7 +1140,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">12건</span></h3>
-<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-3</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-6</em></li><li>커뮤니티 키워드 감지</li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-6</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-4</em></li><li class=on>KOL 일괄 DM 도구<em>3-5</em></li></ul></div></div>
+<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-3</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-6</em></li><li class=on>커뮤니티 키워드 감지<em>3-3</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-6</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-4</em></li><li class=on>KOL 일괄 DM 도구<em>3-5</em></li></ul></div></div>
 <p class="au-note">파란 표시는 아래에서 자세히 소개하는 사례입니다.</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>일일 광고 성과 리포트<span class="cr-tag">문제 A 해결</span></h3>
@@ -1159,23 +1166,36 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 </div>
 
-<h3 class="cr-sub"><span class="cr-n">3-3</span>연사 · 스폰서 뉴스 모니터링<span class="cr-tag">문제 A 해결</span></h3>
-<p>행사는 신뢰가 중요해서, 매일 네이버 · 구글에서 연사와 스폰서 관련 기사를 모아 이슈와 화제성을 점검하고 발표 일정에 반영했습니다.</p>
+<h3 class="cr-sub"><span class="cr-n">3-3</span>연사 · 스폰서 뉴스 · 커뮤니티 모니터링<span class="cr-tag">문제 A 해결</span></h3>
+<p>행사는 신뢰가 중요해서, 네이버 · 구글 뉴스와 커뮤니티 대화방에서 연사 · 스폰서 관련 언급을 키워드로 감지하고 AI 요약과 함께 텔레그램으로 받았습니다. 이슈성과 화제성을 보고 발표 일정을 조정했습니다.</p>
 <div class="au-news">
-<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-news</div>
-<div class="au-sl-m"><i style="background:#085EE9">N</i><div><div class="au-sl-n"><b>News Monitor</b><span>APP</span><small>8:00 AM</small></div>
-<p>📰 오늘의 연사 · 스폰서 뉴스 · 네이버 · 구글</p>
-<ul class="au-nl">
-<li><em class="r">이슈</em><b>연사 A</b> 소속사 관련 부정 이슈 보도 3건</li>
-<li><em class="g">화제</em><b>스폰서 B</b> 신규 서비스 출시 기사 다수</li>
-<li><em class="n">특이 없음</em><b>연사 C</b> · <b>스폰서 D</b></li>
-</ul></div></div></div></figure>
+<div class="au-tg" role="img" aria-label="텔레그램으로 도착한 키워드 감지 알림 예시 화면">
+<div class="au-tg-h"><i>KM</i><div><b>KBW Keyword Monitor</b><small>bot</small></div></div>
+<div class="au-tg-b multi">
+<div class="au-bub au-kw">
+<b class="au-bt">🔔 키워드 감지</b>
+<p><span>📍 출처</span>네이버 뉴스</p>
+<p><span>📰 기사</span>스폰서 B, 신규 서비스 출시… 업계 관심 집중</p>
+<div class="au-sum"><b>🤖 AI 요약</b>스폰서 B가 신규 서비스를 출시해 주요 매체에 보도가 이어지고 있음. 긍정적 화제성이 높은 시점.</div>
+<p class="au-lk">🔗 원문 링크</p>
+<span class="au-time">08:10</span>
+</div>
+<div class="au-bub au-kw">
+<b class="au-bt">🔔 키워드 감지</b>
+<p><span>📍 출처</span>커뮤니티 대화방</p>
+<p><span>📨 원문</span>“KBW 연사 A 관련 소식 봤어요? …”</p>
+<div class="au-sum neg"><b>🤖 AI 요약</b>연사 A 소속사 관련 부정적 언급이 커뮤니티에서 확산 중. 공식 보도는 아직 없음.</div>
+<p class="au-lk">🔗 대화방 링크</p>
+<span class="au-time">14:45</span>
+</div>
+</div>
+<span class="au-tag">알림 화면 재현 · 샘플 내용</span>
+</div>
 <div class="au-use">
-<div><span>이슈가 있는 연사</span><b>발표를 미루거나 조정</b></div>
 <div><span>화제가 된 스폰서</span><b>관심이 높을 때 맞춰 발표</b></div>
+<div><span>이슈가 있는 연사</span><b>발표를 미루거나 조정</b></div>
 </div>
 </div>
-<p class="au-note">메시지 화면 재현 · 샘플 내용</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
 <p>대행사가 올린 공식 SNS 게시물을 연사 DB · 용어집과 자동 대조하고, 틀리면 안 되는 정도에 따라 알림 수준을 나눴습니다.</p>
