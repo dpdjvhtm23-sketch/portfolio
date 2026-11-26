@@ -1769,6 +1769,20 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .sc-wk>div:not(.a):not(.b){display:none!important}
 .sc-wk small{display:block!important}.sc-wk>div.a small,.sc-wk>div.b small{color:#DCE8FD!important}
 }
+
+/* desktop case TOC */
+.d-toc{display:none}
+@media (min-width:1240px){
+.d-toc{display:flex;flex-direction:column;position:fixed;z-index:3;top:120px;left:max(24px,calc(50% - 410px - 236px));width:196px;max-height:calc(100vh - 160px);overflow:auto;scrollbar-width:none}
+.d-toc-h{font-size:11.5px;font-weight:800;letter-spacing:.12em;color:#5C6370;margin:0 0 12px 12px}
+.d-toc button{font:inherit;text-align:left;background:none;border:0;cursor:pointer;color:#4B5563;border-radius:10px;line-height:1.4;word-break:keep-all}
+.d-toc button.l1{font-size:15px;font-weight:600;padding:9px 12px;margin-top:2px}
+.d-toc button.l1.on{background:#EAF1FE;color:#085EE9;font-weight:800}
+.d-toc button.l2{font-size:13px;padding:5px 8px 5px 14px;margin-left:12px;border-left:1.5px solid #E5E7EB;border-radius:0;color:#6B7280}
+.d-toc button.l2.on{color:#16191F;font-weight:800;border-left-color:#16191F}
+.d-toc button.l2[hidden]{display:none}
+.d-toc button:hover{color:#16191F}
+}
 </style>
 
 <nav class="nav pad" id="nav" aria-label="주 메뉴"><div class="wrap">
@@ -3412,7 +3426,7 @@ function openCase(id){
   if(window.gtag && !(window.__pv && window.__pv.id===c.id && Date.now()-window.__pv.t<1500) && (window.__pv={id:c.id,t:Date.now()})) gtag("event","page_view",{page_title:"Case · "+c.co+" · "+(c.ct||c.title).replace(/\n/g," "),page_location:location.origin+location.pathname+"case/"+c.id+location.search,case_id:c.id,company:c.co});
   $("#crumb").innerHTML=CRUMB[c.co]?`<img class="crumb-logo" src="${CRUMB[c.co]}" alt="${esc(c.co)}" style="height:${({"KBW2026":30,"코인니스":26,"네오핀":24,"마인워즈":34,"스텔라 판타지":42})[c.co]||28}px">`:esc(c.co);
   const tpl=document.getElementById("tpl-"+c.id);
-  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; if(matchMedia("(max-width:760px)").matches) $("#case").querySelectorAll(".case-rich :is(p,small,span,li,dd,b) br").forEach(b=>b.replaceWith(" ")); if(window.mCase) mCase(); }
+  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; if(matchMedia("(max-width:760px)").matches) $("#case").querySelectorAll(".case-rich :is(p,small,span,li,dd,b) br").forEach(b=>b.replaceWith(" ")); if(window.mCase) mCase(); if(window.dToc) dToc(); }
   else $("#case").innerHTML=`
    <span class="who">${logoSq(c.co)}${esc(c.co)} · ${esc(co.org)}</span>
    <h1 id="caseTitle">${esc(c.title)}</h1>
@@ -3600,6 +3614,28 @@ window.mCase=()=>{if(!matchMedia("(max-width:760px)").matches)return;const root=
  root.querySelectorAll(".mx-hint,.pr-tl-h small,p").forEach(el=>{for(const n of el.childNodes)if(n.nodeType===3&&n.nodeValue.includes("마우스를 올리면"))n.nodeValue=n.nodeValue.replace(/(\S+)에 마우스를 올리면/,"$1을 탭하면").replace("마우스를 올리면","탭하면");});
 };
 if(document.getElementById("sheet")&&!document.getElementById("sheet").hidden)mCase();
+</script>
+<script>
+/* desktop case TOC */
+window.dToc=()=>{document.querySelectorAll('.d-toc').forEach(e=>e.remove());if(!matchMedia("(min-width:1240px)").matches)return;
+ const root=document.querySelector("#case .case-rich"),sheet=document.getElementById("sheet");if(!root)return;
+ const h2s=[...root.querySelectorAll(":scope > h2")];if(h2s.length<3)return;
+ const nm=h=>h.textContent.replace(/^\s*\d+\s*/,"").trim();
+ const items=[];h2s.forEach((h,i)=>{items.push({el:h,lvl:1,t:String(i+1).padStart(2,"0")+" "+nm(h)});
+  if(nm(h)==="해결"){let n=h.nextElementSibling;while(n&&n.tagName!=="H2"){if(n.matches("h3.cr-sub")){const c=n.cloneNode(true);c.querySelectorAll(".cr-n,.cr-tag").forEach(x=>x.remove());items.push({el:n,lvl:2,t:c.textContent.trim()});}n=n.nextElementSibling;}}});
+ const nav=document.createElement("nav");nav.className="d-toc";nav.setAttribute("aria-label","목차");
+ nav.innerHTML='<span class="d-toc-h">CONTENTS</span>'+items.map((it,i)=>`<button type="button" class="l${it.lvl}" data-i="${i}"></button>`).join("");
+ nav.querySelectorAll("button").forEach((b,i)=>{b.textContent=items[i].t;b.title=items[i].t;});
+ sheet.appendChild(nav);
+ const off=()=>(sheet.querySelector(".sbar")?.offsetHeight||64)+24;
+ nav.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const el=items[b.dataset.i].el;sheet.scrollTo({top:el.getBoundingClientRect().top-sheet.getBoundingClientRect().top+sheet.scrollTop-off(),behavior:"smooth"});});
+ const spy=()=>{if(!nav.isConnected){sheet.removeEventListener("scroll",spy);return;}let k=0,k1=0;items.forEach((it,i)=>{if(it.el.getBoundingClientRect().top-sheet.getBoundingClientRect().top<off()+60){k=i;if(it.lvl===1)k1=i;}});
+  if(sheet.scrollTop>40&&sheet.scrollTop+sheet.clientHeight>=sheet.scrollHeight-4){k=items.length-1;k1=k;}
+  const solIdx=items.findIndex(it=>it.lvl===1&&it.t.endsWith("해결"));const inSol=k1===solIdx;
+  nav.querySelectorAll("button").forEach((b,i)=>{b.classList.toggle("on",items[i].lvl===1?i===k1:i===k);if(items[i].lvl===2)b.hidden=!inSol;});};
+ sheet.addEventListener("scroll",spy,{passive:true});spy();setTimeout(spy,300);};
+addEventListener("resize",()=>{if(!document.getElementById("sheet").hidden&&window.dToc)dToc();});
+if(!document.getElementById("sheet").hidden&&window.dToc)dToc();
 </script>
 <script>
 /* GA4: one delegated ui_click event for every button / link / tab label */
