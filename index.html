@@ -622,6 +622,27 @@
 .mw-next:hover{background:#F5F9FF}
 .mw-next span{font-size:12px;font-weight:700;color:#085EE9}.mw-next b{display:block;font-size:16px;margin-top:2px}.mw-next small{display:block;font-size:13px;color:#5C6370;margin-top:2px}
 @media (max-width:760px){.mw-daily,.mw-fun{grid-template-columns:1fr}}
+
+/* minewars bridge case */
+.mb-hyp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
+.mb-hyp>div{border:1px solid #E9EBEF;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.mb-hyp span{font-size:15px;font-weight:700}
+.mb-hyp em{align-self:flex-start;font-style:normal;font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px;background:#F1F3F6;color:#8A919C}
+.mb-hyp small{font-size:13px;color:#5C6370}
+.mb-hyp>div.k{border:1.5px solid #085EE9}.mb-hyp>div.k em{background:#085EE9;color:#fff}
+.mb-flows{display:flex;flex-direction:column;gap:8px;margin-top:16px;word-break:keep-all}
+.mb-row{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center}
+.mb-l{font-size:12px;font-weight:800;color:#8A919C}.mb-row.after .mb-l{color:#085EE9}
+.mb-row>div{display:flex;gap:8px}
+.mb-row p{position:relative;flex:1;margin:0!important;background:#F5F7FA;border-radius:10px;padding:12px 14px;min-height:56px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}
+.mb-row p:not(:last-child)::after{content:"→";position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:12px;color:#B3B3B3;z-index:1}
+.mb-row b{font-size:14px}.mb-row small{font-size:12px;color:#5C6370;margin-top:2px}
+.mb-row p.bad{background:#FDF1F0}.mb-row p.bad small{color:#D92D20}
+.mb-row p.new{background:#fff;box-shadow:inset 0 0 0 1.5px #085EE9}.mb-row p.new b{color:#085EE9}
+.mb-row.after+*{margin-top:0}
+.mb-flows+.np-c3{margin-top:10px}
+.mb-cmp{margin-top:12px}.mb-cmp .ci-hb{grid-template-columns:64px minmax(0,1fr) 48px}
+@media (max-width:760px){.mb-hyp{grid-template-columns:1fr}.mb-row>div{flex-direction:column}.mb-row p::after{display:none}}
 </style>
 </head>
 <body>
@@ -2097,6 +2118,63 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="ob-rc"><b>NFT 세일 완판</b><small>사전가입자가 실제 구매로 연결</small></div>
 </div>
 </template>
+<template id="tpl-minewars-bridge">
+<span style="font-size: 14px; color: #5C6370">마인워즈 · 투바이트 웹3 사업실</span>
+<h1 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.35; letter-spacing: -.03em; margin-top: 12px">광고와 가입 사이에 한 단계를 넣어<br>가입 구간 <span style="color: #085EE9">이탈률을 약 20%</span> 줄였습니다</h1>
+<p style="font-size: 18px; color: #5C6370; margin-top: 16px">유입 흐름을 구간별로 점검해 이탈이 몰린 한 곳을 찾고, 그 앞에 소개 페이지를 넣었습니다.</p>
+
+<dl style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; margin: 28px 0 0; font-size: 15px; padding: 24px 0; border-top: 1px solid #E9EBEF; border-bottom: 1px solid #E9EBEF">
+<dt style="color: #5C6370">기간</dt><dd style="margin: 0">2023.09 · 사전가입 캠페인 운영 중</dd>
+<dt style="color: #5C6370">내 역할</dt><dd style="margin: 0">퍼널 분석 · 원인 진단 · 브릿지 페이지 기획</dd>
+<dt style="color: #5C6370">매체</dt><dd style="margin: 0">Pangle 인앱 광고</dd>
+<dt style="color: #5C6370">협업</dt><dd style="margin: 0">디자이너 · 개발자 (기획안을 전달해 제작 요청)</dd>
+</dl>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
+<p>웹3 게임 마인워즈의 사전가입 광고를 운영하고 있었고, 클릭 단가는 목표보다 훨씬 낮았으며 클릭도 충분했습니다.</p>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
+<div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
+<p style="font-size: clamp(19px, 2.6vw, 24px); font-weight: 800; line-height: 1.5; color: #042F74">“광고는 누르는데, 가입 페이지에서 나갔습니다.”</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px">
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">A</span>한 구간에만 몰린 이탈</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">광고에서 가입 페이지로 넘어가는 곳만 유독 이탈이 높았습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">B</span>설명 없이 바로 가입 폼</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">어떤 게임인지 알기 전에 곧바로 가입 화면이 열렸습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">C</span>앱 안에서 열리는 화면</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">인앱 광고라 앱 속 브라우저로 열려 화면과 로딩이 불편했습니다.</span></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
+<h3 class="cr-sub"><span class="cr-n">3-1</span>구간마다 이탈률을 따로 보기<span class="cr-tag">문제 A 해결</span></h3>
+<p>전체 평균만 보면 어디가 문제인지 보이지 않아, 일별 운영 표에 이탈률을 구간별로 나눠 매일 기록했습니다.</p>
+<div class="mw-fun">
+<div><span>광고 클릭</span><b>클릭률 · 클릭 단가</b></div>
+<div class="bad"><span>가입 페이지 도착</span><b>페이지 조회 대비 이탈률</b><small>이탈이 몰린 구간</small></div>
+<div><span>가입 버튼 클릭</span><b>버튼 클릭 대비 이탈률</b></div>
+<div><span>가입 완료</span><b>누적 가입자 수</b></div>
+</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-2</span>원인 좁히기<span class="cr-tag">문제 B · C 해결</span></h3>
+<div class="mb-hyp"><div class=""><span>광고 소재 문제?</span><em>아님</em><small>클릭률과 가입 버튼 클릭률은 높게 유지</small></div><div class=""><span>국가 문제?</span><em>아님</em><small>6개국 모두 같은 구간에서 이탈</small></div><div class="k"><span>도착 화면 문제?</span><em>맞음</em><small>정보 부족 · 인앱 화면 · 로딩이 겹침</small></div></div>
+
+<h3 class="cr-sub"><span class="cr-n">3-3</span>브릿지 랜딩 페이지 넣기<span class="cr-tag">직접 기획</span></h3>
+<p>광고와 가입 페이지 사이에 소개 페이지를 한 장 넣고, 디자이너와 개발자에게 기획안을 전달해 만들었습니다.</p>
+<div class="mb-flows"><div class="mb-row "><span class="mb-l">기존</span><div><p class=""><b>인앱 광고</b></p><p class="bad"><b>가입 페이지</b><small>설명 없이 바로 폼 · 앱 속 브라우저</small></p><p class=""><b>가입 완료</b></p></div></div><div class="mb-row after"><span class="mb-l">변경</span><div><p class=""><b>인앱 광고</b></p><p class="new"><b>브릿지 랜딩</b><small>게임 소개 · 플레이 영상</small></p><p class=""><b>가입 페이지</b><small>웹으로 열림</small></p><p class=""><b>가입 완료</b></p></div></div></div>
+<div class="np-c3"><div><span>게임 소개</span><b>어떤 게임인지 먼저 설명</b><small>가입 전에 알아야 할 내용</small></div><div><span>게임 영상</span><b>플레이 영상으로 바로 이해</b><small>글을 읽지 않아도 전달</small></div><div><span>사전가입 버튼</span><b>누르면 가입 페이지가 웹으로</b><small>앱 속 화면이 아닌 웹에서 가입</small></div></div>
+
+<h3 class="cr-sub"><span class="cr-n">3-4</span>전후 비교<span class="cr-tag">검증</span></h3>
+<div class="ci-hr mb-cmp"><span class="ci-ht">가입 구간 이탈률 · 도입 전을 100으로 둔 상대값</span>
+<div class="ci-hb"><span>도입 전</span><div><i style="width:100%"></i></div><b>100</b></div>
+<div class="ci-hb k"><span>도입 후</span><div><i style="width:80%"></i></div><b>약 80</b></div>
+<p>일별 운영 표 기준, 가입 버튼 클릭 대비 이탈률로 비교했습니다.</p></div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
+<div class="ob-res">
+<div class="ob-rc"><b>이탈률 약 20%↓</b><small>광고 → 브릿지 랜딩 → 가입 페이지로 흐름 변경</small></div>
+<div class="ob-rc"><b>광고비는 그대로</b><small>소재 · 예산 조정이 아니라 도착 화면의 문제로 특정</small></div>
+<div class="ob-rc"><b>사전가입 12만 명</b><small>캠페인 전체 결과 · NFT 세일 완판으로 연결</small></div>
+</div>
+<p class="au-note">유저는 ‘광고는 흥미로운데 바로 가입하기엔 정보가 부족하다’고 느꼈고, 그 한 단계를 채웠습니다.</p>
+</template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
   <div class="sbar pad"><div class="wrap"><span class="crumb" id="crumb"></span><button class="btn ghost sm" id="close" type="button">← 목록으로</button></div></div>
   <div class="pad"><article class="case" id="case"></article></div>
@@ -2223,7 +2301,7 @@ const CASES=[
   results:[["은행권 구매","기존 채널로 닿지 않던 신규 수요층 확인"],["공기업 초청","기관급 포지셔닝을 뒷받침하는 참가자 구성"],["IB → 영업 인계","마케팅이 세일즈 파이프라인을 만듦"]],
   lesson:"매체를 늘리는 대신 사람을 특정했습니다.",card:"담당자 200명+",ct:"금융기관 대상 B2B\n아웃리치 채널 확장"},
  {id:"minewars-bridge",co:"마인워즈",tags:["Paid/UA"],big:"약 20%↓",bl:"랜딩 구간 이탈률",card:"이탈률 약 20%↓",ct:"브릿지 랜딩 도입을 통한\n가입 전환 퍼널 개선",
-  title:"광고와 가입 사이에 한 단계를 넣어 이탈 20%↓",
+  title:"광고와 가입 사이에 한 단계를 넣어 가입 구간 이탈률을 약 20% 줄였습니다",
   sum:"전체 퍼널을 점검하다 광고 → 가입 페이지 구간에서만 이탈이 비정상적으로 높은 것을 찾고, 그 사이에 브릿지 랜딩을 넣었습니다.",
   facts:[["내 역할","퍼널 분석 · 플로우 재설계"],["매체","Pangle 인앱 광고"]],
   problems:[["한 구간에만 몰린 이탈","클릭 → 랜딩 → 스토어 → 가입 → 앱 실행 전 구간을 점검하니 Pangle 인앱 광고 → 가입 페이지 구간에서만 이탈이 비정상적으로 높았습니다. 원인은 UI · 로딩 · 정보 부족이었습니다."]],
