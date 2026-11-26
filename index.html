@@ -1695,6 +1695,41 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media (min-width:601px) and (max-width:980px){main .hero .portrait{justify-self:center!important;margin-inline:auto!important;width:260px!important}}
 
 @media (max-width:760px){.cn-learn p,.cn-rule p,.np-ms p{text-wrap:pretty}}
+
+/* mobile structure pass 4 */
+@media (max-width:760px){
+.au-note.m-body{text-align:left!important;font-size:15px!important;color:#374151!important;font-style:normal!important;line-height:1.7!important;margin-top:14px!important}
+.pd-cmp .pd-ch{display:none!important}
+.pd-cmp .pd-cr{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 10px;padding:16px 0!important;border-top:1px solid #EEF0F3}
+.pd-cmp .pd-cr:first-of-type{border-top:0}
+.pd-cmp .pd-cr>b{font-size:17px}
+.pd-cmp .pd-cr .pill.g{justify-self:end}
+.pd-cmp .pd-cr .pill.g::before{content:"대행사 제안 ";font-weight:600;opacity:.7}
+.pd-cmp .pd-cr p{grid-column:1/-1;margin:0!important}
+.pd-cmp .pd-cr .pill.b{grid-column:1/-1;justify-self:start;color:#fff!important}
+.pd-cmp .pd-cr .pill.b::before{content:"내 대안 → ";font-weight:600;opacity:.8}
+.mb-flows{display:grid!important;grid-template-columns:1fr 1fr;gap:10px}
+.mb-row{display:block!important;padding:12px!important;border-radius:14px;background:#F7F8FA}
+.mb-row.after{background:#EEF4FE}
+.mb-row .mb-l{display:block!important;width:auto!important;margin:0 0 8px!important;font-size:13px;font-weight:800}
+.mb-row>div{display:flex!important;flex-direction:column;gap:14px}
+.mb-row p{position:relative;margin:0!important;padding:9px 10px!important;border-radius:10px;font-size:13px}
+.mb-row p b{font-size:13.5px}
+.mb-row p small{display:block;font-size:12px!important;margin-top:2px;line-height:1.4}
+.mb-row p+p::before{content:"↓";position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:11px;color:#9AA3AF}
+.sc-series{flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none;gap:6px!important}
+.sc-series::-webkit-scrollbar{display:none}
+.sc-series em{flex:none;white-space:nowrap;font-size:12.5px!important;padding:5px 10px!important}
+.sc-series span{flex:none}
+.pd-flow{gap:0!important;display:block!important}
+.pd-flow .pd-step{display:grid!important;grid-template-columns:50px minmax(0,1fr);column-gap:10px;align-items:baseline;padding:12px 4px!important;background:none!important;border:0!important;border-bottom:1px solid #EEF0F3!important;border-radius:0!important}
+.pd-flow .pd-step>span{grid-row:1/3;font-size:13px!important;font-weight:800;color:#085EE9!important;margin:0!important}
+.pd-flow .pd-step>b{margin:0!important;font-size:15.5px}
+.pd-flow .pd-step>small{grid-column:2;margin:2px 0 0!important}
+.pd-flow .pd-step.dark{background:#042F74!important;border-radius:12px!important;border:0!important;padding:12px 10px!important;margin-top:8px}
+.pd-flow .pd-step.dark>span{color:#9FBCEF!important}
+.pd-flow .pd-step::after,.pd-flow .pd-step::before{display:none!important}
+}
 </style>
 
 <nav class="nav pad" id="nav" aria-label="주 메뉴"><div class="wrap">
@@ -2262,7 +2297,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>수신동의자 2,000명+</b><small>‘푸시 = 혜택’ 구조로 마케팅 수신동의자 신규 확보</small></div>
 <div class="ob-rc"><b>커뮤니티 지표 20%+</b><small>이벤트 기간 게시글 · 댓글, 전주 대비</small></div>
 </div>
-<p class="au-note">서비스 전체 지표(참고) · 재직 중 MAU 44만 → 90만, DAU 8만 → 10만</p>
 </template>
 <template id="tpl-coinness-issue">
 <span style="font-size: 14px; color: #5C6370">코인니스 · 아데나소프트웨어 마케팅팀</span>
@@ -2409,7 +2443,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>표준 제안 자료 2종</b><small>지면 → 타깃 → 기대 성과 순의 소개서와 목표별 미디어믹스 1안 · 2안</small></div>
 <div class="ob-rc"><b>같은 양식의 일간 리포트</b><small>캠페인끼리 바로 비교하고 광고주에게 자동으로 공유</small></div>
 </div>
-<p class="au-note">광고주 쪽(퍼포먼스)과 매체 쪽(Ad Ops)을 모두 경험했습니다.</p>
 </template>
 <template id="tpl-neopin-onchain">
 <span style="font-size: 14px; color: #5C6370">네오핀 · 에이치랩코리아 마케팅운영팀</span>
@@ -2586,7 +2619,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>광고 심사 통과</b><small>웹3 표현으로 반려되던 소재를 내부 가이드라인으로 통과</small></div>
 <div class="ob-rc"><b>이탈 지점 특정</b><small>‘규제로 안 된다’가 아니라 클릭 이후 구간의 문제로 정의</small></div>
 </div>
-<p class="au-note">‘규제라 안 된다’고 정의하면 시도가 멈추고, ‘표현 문제’로 정의하면 고칠 대상이 생깁니다.</p>
 </template>
 <template id="tpl-minewars-ua">
 <span style="font-size: 14px; color: #5C6370">마인워즈 · 투바이트 웹3 사업실</span>
@@ -2716,7 +2748,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>광고비는 그대로</b><small>소재 · 예산 조정이 아니라 도착 화면의 문제로 특정</small></div>
 <div class="ob-rc"><b>사전가입 12만 명</b><small>캠페인 전체 결과 · NFT 세일 완판으로 연결</small></div>
 </div>
-<p class="au-note">유저는 ‘광고는 흥미로운데 바로 가입하기엔 정보가 부족하다’고 느꼈고, 그 한 단계를 채웠습니다.</p>
 </template>
 <template id="tpl-minewars-community">
 <span style="font-size: 14px; color: #5C6370">마인워즈 · 투바이트 웹3 사업실</span>
@@ -2786,7 +2817,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>P2E 랭킹 3위</b><small>P2E 게임 랭킹 사이트 기준</small></div>
 <div class="ob-rc"><b>NFT 세일 완판</b><small>커뮤니티 팬덤이 세일 초기 구매로 연결</small></div>
 </div>
-<p class="au-note">광고가 아니라 유저층이 겹치는 파트너를 통해 지속 유입을 만들었습니다.</p>
 </template>
 <template id="tpl-stella-content">
 <span style="font-size: 14px; color: #5C6370">스텔라 판타지 · 링게임즈 마케팅팀</span>
@@ -2855,7 +2885,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>반응률 2 ~ 3배</b><small>게임 콘텐츠 · 참여형 이벤트 중심 운영 후 게시물 반응률</small></div>
 <div class="ob-rc"><b>매일 1건+ 게시</b><small>평균 반응 1만 이상을 꾸준히 유지</small></div>
 </div>
-<p class="au-note">광고보다 콘텐츠로 초기 팬덤을 만들었습니다.</p>
 </template>
 <template id="tpl-stella-event">
 <span style="font-size: 14px; color: #5C6370">스텔라 판타지 · 링게임즈 마케팅팀</span>
@@ -2941,7 +2970,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>지원사업 복수 선정</b><small>해외 전시 부스비 · 참가비 절감</small></div>
 <div class="ob-rc"><b>행사 보도 41건</b><small>KBW2022 현장 체험기 · 태국게임쇼 첫 공개 등</small></div>
 </div>
-<p class="au-note">행사가 하루로 끝나지 않게, 온라인으로 이어지는 동선부터 짭니다.</p>
 </template>
 <template id="tpl-stella-kol">
 <span style="font-size: 14px; color: #5C6370">스텔라 판타지 · 링게임즈 마케팅팀</span>
@@ -2992,7 +3020,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>조회당 33원</b><small>평균 CPV</small></div>
 <div class="ob-rc"><b>6개 언어 참여 영상</b><small>출시 후 크리에이터 프로그램</small></div>
 </div>
-<p class="au-note">숫자로 고르고, 같은 가이드를 주고, 결과를 다음에 씁니다.</p>
 </template>
 <template id="tpl-stella-pr">
 <span style="font-size: 14px; color: #5C6370">스텔라 판타지 · 링게임즈 마케팅팀</span>
@@ -3058,7 +3085,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="ob-rc"><b>한 달 최대 51건</b><small>2022.09 투자 유치 · NFT 세일 보도</small></div>
 <div class="ob-rc"><b>인터뷰 · 기획 기사 7건</b><small>한국경제 · 인벤 · 게임동아 · 경향게임스</small></div>
 </div>
-<p class="au-note">알릴 일을 고르고, 기자가 쓰기 쉽게 만들어, 한 명씩 전합니다.</p>
 </template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
   <div class="sbar pad"><div class="wrap"><span class="crumb" id="crumb"></span><button class="btn ghost sm" id="close" type="button">← 목록으로</button></div></div>
@@ -3533,6 +3559,7 @@ window.mCase=()=>{if(!matchMedia("(max-width:760px)").matches)return;const root=
    const of=el.style.fontSize,ol=el.style.letterSpacing;el.style.fontSize=nf.toFixed(1)+"px";el.style.letterSpacing="-.02em";
    if(lines(el)<L)el.dataset.fit=1;else{el.style.fontSize=of;el.style.letterSpacing=ol;}});
   root.querySelectorAll("small,span,b,em,p,li,dd,div").forEach(el=>{if(el.closest(SK)||el.dataset.fit)return;if([...el.children].some(c=>/block|flex|grid/.test(getComputedStyle(c).display)))return;const t=el.textContent.trim();if(t.length>40||/[다요]\.?$/.test(t))return;if(lines(el)===2)el.style.textWrap="balance";});});
+ root.querySelectorAll(".au-note").forEach(el=>{const t=el.textContent.trim();if(t.length>40&&/다\.$/.test(t))el.classList.add("m-body");});
  root.querySelectorAll(".mx-hint,.pr-tl-h small,p").forEach(el=>{for(const n of el.childNodes)if(n.nodeType===3&&n.nodeValue.includes("마우스를 올리면"))n.nodeValue=n.nodeValue.replace(/(\S+)에 마우스를 올리면/,"$1을 탭하면").replace("마우스를 올리면","탭하면");});
 };
 if(document.getElementById("sheet")&&!document.getElementById("sheet").hidden)mCase();
