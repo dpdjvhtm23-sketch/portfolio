@@ -222,10 +222,10 @@
 /* automation case */
 .au-chk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px;margin-top:16px;word-break:keep-all}
 .au-chk-l{display:flex;flex-direction:column;gap:10px}
-.au-mini{list-style:none;margin:0;padding:16px;border:1px solid #E9EBEF;border-radius:14px;display:flex;flex-direction:column;gap:10px}
+.au-mini{flex:1;list-style:none;margin:0;padding:16px;border:1px solid #E9EBEF;border-radius:14px;display:flex;flex-direction:column;justify-content:space-evenly;gap:10px}
 .au-mini li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600}
 .au-mini li span{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px;font-weight:800}
-.au-lvl{flex:1;display:flex;flex-direction:column;justify-content:center;gap:4px;background:#F5F7FA;border-radius:14px;padding:16px}
+.au-lvl{display:flex;flex-direction:column;gap:2px;background:#F5F7FA;border-radius:14px;padding:16px}
 .au-lvl>span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:8px}
 .au-lvl p{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:14px}
 .au-lvl .lv{min-width:84px;text-align:center}
@@ -1206,7 +1206,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <p class="au-note">알림 화면 재현 · 샘플 수치와 내용</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
-<p>대행사가 올린 공식 게시물을 RSS로 받아 본문과 이미지 속 글자까지 연사 DB · 용어집과 대조하고, 원문과 함께 텔레그램으로 알렸습니다.</p>
+<p>공식 게시물의 본문과 이미지 속 글자를 연사 DB · 용어집과 대조해 텔레그램으로 알렸습니다.</p>
 <div class="au-chk">
 <div class="au-chk-l">
 <ol class="au-mini">
