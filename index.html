@@ -965,6 +965,48 @@
 .pd-flow .pd-step:not(:last-child)::after{display:none}
 .db-g5{grid-template-columns:1fr 1fr}.dbw-body{height:480px}
 }
+
+/* mobile app-style */
+@media (max-width:760px){
+:root{--mq-h:0px}
+.mq{display:none!important}
+.nav{transition:transform .25s ease}
+body.nav-hide .nav{transform:translateY(-100%)}
+.brand{min-height:44px;min-width:44px}
+.brand-logo{height:38px!important}
+main .band a .ds{word-break:keep-all;white-space:normal!important;text-overflow:clip!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+main .pfilter{flex-wrap:nowrap!important;justify-content:flex-start!important;position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--nav-h));z-index:20;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:0 -16px 8px;padding:10px 16px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:top .25s ease}
+.pfilter::-webkit-scrollbar{display:none}
+body.nav-hide .pfilter{top:env(safe-area-inset-top,0px)}
+.pfilter button{flex:none;font-size:13.5px;padding:8px 14px}
+.pscroll{display:block}
+.pbar,.pscroll::after{display:none!important}
+.pgrid{display:flex!important;flex-direction:column;gap:0!important;max-height:none!important;overflow:visible!important;scroll-snap-type:none!important;padding-top:0;margin-top:0}
+.pgrid .pk{display:grid;grid-template-columns:64px minmax(0,1fr);grid-template-areas:"ic co" "ic t" "ic n";column-gap:14px;align-items:center;height:auto;padding:14px 0;border-radius:0;background:none;border-bottom:1px solid var(--line);transform:none!important;box-shadow:none!important}
+.pgrid .pk:active{background:var(--soft)}
+.pk-ic{grid-area:ic;width:64px!important;height:64px!important;padding:8px!important;margin:0!important;box-sizing:border-box!important;border-radius:16px;background:#F1F4F9;align-self:center}
+.pk-tags{grid-area:co;position:static!important;display:block}
+.pk-tags .cat{display:none}
+.pk-tags .co{display:inline;background:none!important;color:var(--sub)!important;padding:0!important;font-size:12.5px!important;font-weight:600}
+.pk-t{grid-area:t;font-size:15.5px!important;line-height:1.4;margin-top:2px}
+.pk-t br{display:none}
+.pk-n{grid-area:n;font-size:13px!important;margin-top:2px}
+.pk-go{display:none!important}
+.tgrid{display:flex!important;flex-wrap:wrap;gap:6px!important}
+.tbx{height:auto!important;padding:7px 12px!important;border-radius:999px!important;place-items:start!important}
+.tlg{gap:6px}.tlg img{width:16px!important;height:16px!important}.tlg b{font-size:13px!important}
+.tct{display:flex!important;gap:6px;align-items:baseline}.tct b{font-size:13.5px}.tct small{font-size:11.5px}
+.tgrp+.tgrp{margin-top:18px}.tgrp h3{font-size:12.5px;margin-bottom:8px}
+.xbtns,.xbar{display:none!important}
+.xdots{display:flex;justify-content:center;gap:8px;width:100%}
+.xdots i{width:7px;height:7px;border-radius:50%;background:#D5D9E0;transition:background .2s,width .2s}
+.xdots i.on{width:20px;border-radius:4px;background:var(--ink)}
+.xctl{margin-top:20px!important}
+.mcta{position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;justify-content:center;gap:6px;height:52px;border-radius:14px;background:var(--navy);color:#fff;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 12px 28px -10px rgba(4,47,116,.55);transition:transform .25s ease,opacity .25s ease}
+.mcta.off{transform:translateY(140%);opacity:0;pointer-events:none}
+footer{padding-bottom:96px!important}
+}
+@media (min-width:761px){.mcta,.xdots{display:none}}
 </style>
 </head>
 <body>
@@ -3080,7 +3122,7 @@ function renderGroups(){
   const list=CASES.filter(c=>PF==="all"||c.tags.includes(PF));
   $("#grid").innerHTML=`<div class="pscroll" id="pscroll"><div class="pgrid" id="pgrid">${list.map(c=>`<a class="pk" href="#case-${c.id}">
     <span class="pk-tags"><span class="cat">${esc(TAGNAME[c.tags[0]]||"")}</span><span class="co">${esc(c.co)}</span></span>
-    <strong class="pk-t">${esc(c.ct||c.title).replace(/\n/g,"<br>")}</strong>${c.card?`<span class="pk-n">${esc(c.card)}</span>`:""}
+    <strong class="pk-t">${esc(c.ct||c.title).replace(/\n/g,"<br> ")}</strong>${c.card?`<span class="pk-n">${esc(c.card)}</span>`:""}
     <img class="pk-ic" src="${PICON[c.id]||PICON[PICON_TMP[c.id]]||""}" alt="" loading="lazy"><span class="pk-go" aria-hidden="true">↗</span></a>`).join("")}</div><div class="pbar" aria-hidden="true"><span id="pthumb"></span></div></div>`;
   const g=$("#pgrid"), w=$("#pscroll"), th=$("#pthumb");
   function upd(){const max=g.scrollHeight-g.clientHeight; w.classList.toggle("more",max>2&&g.scrollTop<max-2); w.classList.toggle("scrollable",max>2); if(max<=2) return;
@@ -3127,7 +3169,7 @@ function openCase(id){
   if(window.gtag && !(window.__pv && window.__pv.id===c.id && Date.now()-window.__pv.t<1500) && (window.__pv={id:c.id,t:Date.now()})) gtag("event","page_view",{page_title:"Case · "+c.co+" · "+(c.ct||c.title).replace(/\n/g," "),page_location:location.origin+location.pathname+"case/"+c.id+location.search,case_id:c.id,company:c.co});
   $("#crumb").innerHTML=CRUMB[c.co]?`<img class="crumb-logo" src="${CRUMB[c.co]}" alt="${esc(c.co)}" style="height:${({"KBW2026":30,"코인니스":26,"네오핀":24,"마인워즈":34,"스텔라 판타지":42})[c.co]||28}px">`:esc(c.co);
   const tpl=document.getElementById("tpl-"+c.id);
-  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; }
+  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; if(matchMedia("(max-width:760px)").matches) $("#case").querySelectorAll(".case-rich :is(p,small,span,li,dd,b) br").forEach(b=>b.replaceWith(" ")); }
   else $("#case").innerHTML=`
    <span class="who">${logoSq(c.co)}${esc(c.co)} · ${esc(co.org)}</span>
    <h1 id="caseTitle">${esc(c.title)}</h1>
@@ -3248,6 +3290,17 @@ $("#pfilter").addEventListener("click",e=>{const b=e.target.closest("button"); i
 
 
 
+<a class="mcta" href="#contact" data-contact>함께 일할 마케터를 찾는다면? 제안하기 <span aria-hidden="true">↗</span></a>
+<script>
+(()=>{const mq=matchMedia("(max-width:760px)");let y=scrollY;
+ addEventListener("scroll",()=>{if(!mq.matches)return;const n=scrollY;document.body.classList.toggle("nav-hide",n>y&&n>120);y=n;
+  const c=document.querySelector(".mcta"),h=document.getElementById("about");if(c&&h)c.classList.toggle("off",n<h.offsetHeight*.6);},{passive:true});
+ const row=document.getElementById("xrow"),ctl=document.querySelector(".xctl");if(row&&ctl){const d=document.createElement("div");d.className="xdots";d.setAttribute("aria-hidden","true");
+  const cs=row.querySelectorAll(".xc");cs.forEach(()=>d.appendChild(document.createElement("i")));ctl.prepend(d);
+  const up=()=>{const w=cs[0]?cs[0].getBoundingClientRect().width+16:1;const k=Math.min(cs.length-1,Math.round(row.scrollLeft/w));d.querySelectorAll("i").forEach((e,i)=>e.classList.toggle("on",i===k));};
+  row.addEventListener("scroll",up,{passive:true});up();}
+})();
+</script>
 <script>
 /* GA4: one delegated ui_click event for every button / link / tab label */
 (()=>{const sec=el=>{const c=el.closest("[id],section,template,.case,.sheet");const sh=document.getElementById("sheet");if(sh&&!sh.hidden&&sh.contains(el)){const m=location.hash.match(/case-([\w-]+)/);return "case:"+(m?m[1]:"")}const s=el.closest("section[id],nav,footer,header");return s?(s.id||s.tagName.toLowerCase()):"page"};
