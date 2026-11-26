@@ -420,6 +420,41 @@
 .cn-tpl{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .cn-tpl em{font-style:normal;font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:4px 10px;white-space:nowrap}
 @media (max-width:760px){.cn-push,.cn-loop,.cn-c{grid-template-columns:1fr}.cn-fmt{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* coinness issue case */
+.ci-pick{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
+.ci-crit{display:flex;flex-direction:column;gap:8px}
+.ci-crit>div{display:grid;grid-template-columns:26px minmax(0,1fr);column-gap:10px;align-items:center;border:1px solid #E9EBEF;border-radius:12px;padding:12px 16px}
+.ci-crit i{grid-row:span 2;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#085EE9;color:#fff;font-style:normal;font-size:13px;font-weight:800}
+.ci-crit b{font-size:15px}.ci-crit small{font-size:13px;color:#5C6370}
+.ci-cases{background:#F5F7FA;border-radius:14px;padding:16px 20px}
+.ci-cases>span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:4px}
+.ci-cases p{display:flex;flex-direction:column;margin:0!important;padding:10px 0;border-top:1px solid #E6E9EE;font-size:13.5px;color:#3B414B}
+.ci-cases p:first-of-type{border-top:0}.ci-cases p b{font-size:14px;color:#085EE9}
+.ci-day{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px;align-items:stretch;word-break:keep-all}
+.ci-post{border:1px solid #E3E6EB;border-radius:14px;padding:18px 20px;background:#fff;box-shadow:0 18px 40px -22px rgba(16,24,40,.35);font-size:14px}
+.ci-ph{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:#085EE9}.ci-ph em{font-style:normal;color:#8A919C;font-weight:600}
+.ci-post>b{display:block;font-size:16px;margin-top:6px}
+.ci-post>p{margin:6px 0 0!important;color:#3B414B;line-height:1.55}
+.ci-ex{margin-top:10px;background:#F5F7FA;border-radius:8px;padding:10px 12px;font-size:13.5px}
+.ci-ex span{display:block;font-size:11px;font-weight:700;color:#8A919C;margin-bottom:2px}.ci-ex u{text-decoration-color:#8A919C}
+.ci-post>small{display:block;margin-top:8px;font-size:12px;color:#8A919C}
+.ci-cm{margin-top:12px;padding-top:12px;border-top:1px solid #EEF0F3;display:flex;flex-direction:column;gap:8px}
+.ci-cm>div{display:flex;align-items:center;gap:8px;font-size:13px;color:#3B414B;animation:ciIn 6s ease infinite both}
+.ci-cm>div:nth-child(2){animation-delay:.6s}.ci-cm>div:nth-child(3){animation-delay:1.2s}
+.ci-cm i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#EDF3FE;color:#085EE9;font-style:normal;font-size:11px;font-weight:800}
+.ci-cm b{color:#085EE9}
+@keyframes ciIn{0%{opacity:0;transform:translateY(6px)}8%,90%{opacity:1;transform:none}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.ci-cm>div{animation:none}}
+.ci-hr{display:flex;flex-direction:column;justify-content:center;gap:12px;background:#F5F7FA;border-radius:14px;padding:20px}
+.ci-ht{font-size:12px;font-weight:700;color:#5C6370}
+.ci-hb{display:grid;grid-template-columns:92px minmax(0,1fr) 40px;gap:10px;align-items:center;font-size:13px;color:#3B414B}
+.ci-hb>div{height:12px;border-radius:6px;background:#E6E9EE;overflow:hidden}
+.ci-hb i{display:block;height:100%;border-radius:6px;background:#9FBCEF;transform-origin:left;animation:dbGrow 1s cubic-bezier(.2,.7,.2,1) both}
+.ci-hb.k i{background:#085EE9}.ci-hb b{text-align:right;color:#042F74}.ci-hb.k b{color:#085EE9;font-size:15px}
+.ci-hr p{margin:2px 0 0!important;font-size:13px;color:#5C6370}
+.ci-learn{margin-top:12px}
+@media (max-width:760px){.ci-pick,.ci-day{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1498,6 +1533,79 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <p class="au-note">서비스 전체 지표(참고) · 재직 중 MAU 44만 → 90만, DAU 8만 → 10만</p>
 </template>
+<template id="tpl-coinness-issue">
+<span style="font-size: 14px; color: #5C6370">코인니스 · 아데나소프트웨어 마케팅팀</span>
+<h1 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.35; letter-spacing: -.03em; margin-top: 12px">이슈가 터진 날 바로 이벤트를 열어<br>하루 만에 <span style="color: #085EE9">1,800명</span>의 참여를 이끌었다</h1>
+<p style="font-size: 18px; color: #5C6370; margin-top: 16px">유입이 몰리는 이슈 당일에 맞춰, 그날 안에 참여형 이벤트를 기획하고 운영했습니다.</p>
+
+<dl style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; margin: 28px 0 0; font-size: 15px; padding: 24px 0; border-top: 1px solid #E9EBEF; border-bottom: 1px solid #E9EBEF">
+<dt style="color: #5C6370">기간</dt><dd style="margin: 0">2024.11 → 2026.02</dd>
+<dt style="color: #5C6370">내 역할</dt><dd style="margin: 0">이벤트 기획 · 운영 · 성과 분석</dd>
+<dt style="color: #5C6370">포맷</dt><dd style="margin: 0">가격 예측 댓글 · 방향 투표</dd>
+<dt style="color: #5C6370">채널</dt><dd style="margin: 0">커뮤니티 공지 · 앱 푸시 · 텔레그램 · X</dd>
+</dl>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
+<p>가상자산 앱은 상장 · 신고가 · 정책 발표가 있는 날 유입이 몰리지만, 이 유저들은 속보만 확인하고 이탈했습니다.</p>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
+<div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
+<p style="font-size: clamp(19px, 2.6vw, 24px); font-weight: 800; line-height: 1.5; color: #042F74">“유입은 몰리는데, 붙잡을 장치가 없었습니다.”</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px">
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">A</span>이슈보다 느린 준비</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">이슈는 하루면 식는데, 이벤트 준비에는 며칠이 걸렸습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">B</span>복잡한 참여 방법</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">기능을 써 보고 의견을 내는 이벤트는 참여가 저조했습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">C</span>신규 유저 전환 장치 부재</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">이슈로 처음 온 유저가 가입할 이유가 없었습니다.</span></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
+<h3 class="cr-sub"><span class="cr-n">3-1</span>이벤트를 열 이슈의 기준<span class="cr-tag">문제 A 해결</span></h3>
+<p>커뮤니티 데이터를 매일 확인하며, 세 가지 기준이 모두 맞는 이슈에만 이벤트를 열었습니다.</p>
+<div class="ci-pick">
+<div class="ci-crit"><div><i>✓</i><b>지금 가장 많이 말하는 주제</b><small>커뮤니티에서 언급이 급증한 코인 · 사건</small></div><div><i>✓</i><b>하루 안에 결과가 나오는 것</b><small>상장가 · 종가 · 발표 후 방향</small></div><div><i>✓</i><b>숫자나 선택으로 답하는 것</b><small>가격 예측 · UP / DOWN</small></div></div>
+<div class="ci-cases"><span>같은 기준으로 연 이벤트</span><p><b>파이코인 상장</b>상장 당일 최고가 · 최저가 예측</p><p><b>백악관 크립토 서밋</b>발표 전 UP / DOWN 투표와 한마디 댓글</p><p><b>크리스마스 시즌</b>관심이 가장 높던 리플 종가 예측</p></div>
+</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-2</span>댓글 한 줄로 끝나는 당일 포맷<span class="cr-tag">문제 A · B 해결</span></h3>
+<p>공지 양식을 미리 만들어 두고 주제만 바꿔 바로 올렸고, 참여는 숫자 두 개를 적는 댓글 한 줄로 끝나게 했습니다.</p>
+<div class="ci-day">
+<div class="ci-post" role="img" aria-label="파이코인 최고가 · 최저가 예측 이벤트 라운지 공지 재현">
+<div class="ci-ph"><span>라운지 공지</span><em>📌 고정</em></div>
+<b>파이코인 최고가 &amp; 최저가 예측 이벤트</b>
+<p>상장 시점부터 24시간 이내 파이코인 최저가 &amp; 최고가를 맞혀주세요!</p>
+<div class="ci-ex"><span>댓글 작성 예시</span>최고가 <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> &amp; 최저가 <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> (숫자만!)</div>
+<small>기간 · 상장 당일 23:59까지</small>
+<div class="ci-cm">
+<div><i>J</i><span>최고가 <b>3.12</b> &amp; 최저가 <b>0.71</b></span></div>
+<div><i>M</i><span>최고가 <b>2.40</b> &amp; 최저가 <b>0.95</b></span></div>
+<div><i>S</i><span>최고가 <b>2.85</b> &amp; 최저가 <b>0.88</b></span></div>
+</div>
+</div>
+<div class="ci-hr"><span class="ci-ht">시간대별 참여 비중 · 파이코인 이벤트 당일</span><div class="ci-hb k"><span>오픈 후 1시간</span><div><i style="width:100%"></i></div><b>51%</b></div><div class="ci-hb"><span>2시간째</span><div><i style="width:35%"></i></div><b>18%</b></div><div class="ci-hb"><span>3 ~ 4시간째</span><div><i style="width:31%"></i></div><b>16%</b></div><div class="ci-hb"><span>이후 ~ 자정</span><div><i style="width:29%"></i></div><b>15%</b></div><p>참여의 절반이 첫 1시간에 몰렸습니다. 이슈 당일 오픈이 중요한 이유입니다.</p></div>
+</div>
+<p class="au-note">실제 공지 문구 · 화면 재현</p>
+
+<h3 class="cr-sub"><span class="cr-n">3-3</span>신규 유저를 위한 가입 보너스<span class="cr-tag">문제 C 해결</span></h3>
+<div class="pd-ba">
+<div class="b"><span>전체 참여자</span><b>정답에 가까운 순으로 경품</b><small>상품권 · 버거 세트</small></div>
+<i aria-hidden="true">+</i>
+<div class="a"><span>당일 신규 가입자</span><b>선착순 100명 초코파이 한 박스</b><small>‘파이’코인에 맞춘 경품으로 가입과 첫 댓글을 유도</small></div>
+</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-4</span>끝난 뒤 다음 이벤트에 반영<span class="cr-tag">개선</span></h3>
+<div class="cn-learn ci-learn"><span>이벤트마다 목표와 실제를 기록하고 다음 예산과 포맷을 조정</span>
+<p><b>참여 방법</b>간단할수록 참여가 많아 댓글 · 투표 포맷으로 고정</p>
+<p><b>보상</b>포인트보다 실물 경품, 소액 다수 당첨으로 조정</p>
+<p><b>예산</b>선착순 · 조건부 경품으로 실제 지출을 예산보다 낮게 유지</p>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
+<div class="ob-res">
+<div class="ob-rc"><b>1,800명</b><small>파이코인 이벤트 하루 동안 댓글 참여</small></div>
+<div class="ob-rc"><b>CPA 88원</b><small>이벤트 중 최저 수준 · 전체 중앙값의 약 1/7</small></div>
+<div class="ob-rc"><b>예산 약 40%</b><small>책정 예산의 약 40%만 쓰고 목표의 약 90% 달성</small></div>
+</div>
+</template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
   <div class="sbar pad"><div class="wrap"><span class="crumb" id="crumb"></span><button class="btn ghost sm" id="close" type="button">← 목록으로</button></div></div>
   <div class="pad"><article class="case" id="case"></article></div>
@@ -1591,7 +1699,7 @@ const CASES=[
   results:[["배분 결정 변경","대행사 제안을 실제 구매 데이터로 검증해 대안 제시"],["검색 중심 재편","저효율 지역 지출 차단 · 검색 채널 전환 비중 확대"],["전환당 비용 개선","예산 재편 이후 (구체 수치는 사내 기준상 비공개)"],["같은 화면","마케팅·영업·경영진의 공통 근거"]],
   lesson:"측정이 맞는지 먼저 확인하고, 그다음에 예산을 움직입니다. 유입량이 큰 채널이 전환을 만들지는 않습니다.",card:"5개 채널 예산 재배분",ct:"광고 매체 통합\n대시보드 구축 및 예산 최적화"},
  {id:"coinness-issue",co:"코인니스",tags:["Growth"],big:"88원",bl:"파이코인 이벤트 CPA (사내 최저 수준)",card:"CPA 88원",ct:"실시간 이슈 대응형\n퀵 캠페인 기획·집행",
-  title:"이슈가 터진 당일 기획해 CPA 88원",
+  title:"이슈가 터진 날 바로 이벤트를 열어 하루 만에 1,800명의 참여를 이끌었다",
   sum:"시즌·이슈로 유입이 몰려도 참여로 이어지는 장치가 없었습니다. 검색량이 급증하는 시점을 잡아 당일 참여형 이벤트를 기획·운영했습니다.",
   facts:[["내 역할","이벤트 기획 · 운영 · 성과 분석"]],
   problems:[["유입이 참여로 이어지지 않음","시즌·이슈로 유입이 몰려도 참여로 이어지는 장치가 없었습니다."]],
