@@ -1040,6 +1040,19 @@ main .hero h1 .l{display:inline!important}
 main .hero h1 .l:nth-child(1)::after,main .hero h1 .l:nth-child(3)::after{content:" "}
 main .hero h1 .l:nth-child(2)::after{content:"\A";white-space:pre}
 }
+
+/* band marquee (mobile) */
+.band-track{display:contents}.band a.dup{display:none}
+@media (max-width:760px){
+main .band{display:block!important;overflow:hidden;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important;margin-inline:-16px;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+main .band .band-track{display:flex;width:max-content;animation:bandmq 24s linear infinite}
+main .band a,main .band a.dup{display:flex!important;flex:none;flex-direction:row;align-items:center;gap:8px;padding:14px 20px!important;border:0!important;grid-column:auto!important}
+main .band .hd strong,main .band .ds{display:none!important}
+main .band .hd{min-height:0}
+main .band b.num{margin:0!important;font-size:20px!important}
+@keyframes bandmq{to{transform:translateX(-50%)}}
+}
+@media (max-width:760px) and (prefers-reduced-motion:reduce){main .band .band-track{animation-duration:60s}}
 </style>
 </head>
 <body>
@@ -3138,7 +3151,7 @@ const BAND=[
  ["스텔라 판타지","서브컬처 IP 기반 웹3 게임","58K+","오가닉 콘텐츠를 통한 팔로워 확보","stella-content"]
 ];
 const bandLogo=n=>{const c=CO[n];return `<span class="blogo${c.mono?" m":""}${n==="스텔라 판타지"?" w":""}${n==="네오핀"?" s":""}"><img src="${c.logo}" alt=""></span>`;};
-$("#band").innerHTML=BAND.map(b=>`<a href="#case-${b[4]}"><span class="hd">${bandLogo(b[0])}<strong>${esc(b[0])}</strong></span><b class="num">${esc(b[2])}</b><span class="ds">${esc(b[3])}</span></a>`).join("");
+{const it=d=>BAND.map(b=>`<a href="#case-${b[4]}"${d?' class="dup" aria-hidden="true" tabindex="-1"':""}><span class="hd">${bandLogo(b[0])}<strong>${esc(b[0])}</strong></span><b class="num">${esc(b[2])}</b><span class="ds">${esc(b[3])}</span></a>`).join(""); $("#band").innerHTML=`<div class="band-track">${it(0)}${it(1)}</div>`;}
 
 /* projects */
 const PDESC={"KBW2026":"아시아 최대 규모(연인원 기준) 블록체인 컨퍼런스 · 티켓 세일즈 · CRM · 유료광고 · 자동화","코인니스":"실시간 크립토 뉴스·이슈를 전달하는 미디어 + 커뮤니티 앱","네오핀":"온체인 자산 관리와 디파이 서비스를 제공하는 웹3 금융 앱","마인워즈":"NFT를 캐릭터·아이템으로 활용하는 마이닝 타이쿤 GameFi","스텔라 판타지":"세계관과 캐릭터 IP 중심의 서브컬처 웹3 게임"};
