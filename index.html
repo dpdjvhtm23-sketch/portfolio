@@ -949,6 +949,9 @@ const CASES=[
   results:[["250건+","한국경제 · 더벨 · 인벤 등 국내외 기사 노출"]],
   rel:["stella-event","stella-content","stella-kol"],mats:["기사 캡처","인터뷰 기사"]}
 ];
+// career order (latest first); stable sort keeps in-company order
+const CO_ORDER=["KBW2026","코인니스","네오핀","마인워즈","스텔라 판타지"];
+CASES.sort((a,b)=>CO_ORDER.indexOf(a.co)-CO_ORDER.indexOf(b.co));
 const INSIGHTS=[
  ["유입량이 큰 채널이 전환을 만들지는 않는다","KBW에서 유입 비중이 큰 유료 채널과 실제 구매 전환 기여가 일치하지 않았습니다. 네오핀에서도 신규 채널로 유입은 만들었지만 실사용으로는 이어지지 않았습니다.","채널 평가 기준을 유입량에서 전환 기여로 옮기고, 예산을 검증된 전환 채널로 재배분합니다."],
  ["CTR이 올라도 설치 뒤에 이탈이 몰릴 수 있다","네오핀 신규 채널 테스트에서 소재를 바꿔 CTR은 개선됐지만, 설치 이후 이탈이 집중됐습니다. 원인은 채널이 아니라 앱 초기 경험이었습니다.","집행 확대를 멈추고 설치 후 행동을 유도하는 프로모션으로 돌렸습니다. 이 경험이 실사용 기반 미션 설계로 이어졌습니다."],
