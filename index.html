@@ -263,15 +263,15 @@
 .rs-line::before{content:"";position:absolute;left:0;right:calc(33.3% - 10px);top:50%;height:2px;background:linear-gradient(90deg,#D5DAE2,#085EE9)}
 .rs-line i{position:relative;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid #B3BCCB}
 .rs-line i.k{background:#085EE9;border-color:#085EE9;box-shadow:0 0 0 4px #EDF3FE}
-.rs-x{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;margin-top:12px;word-break:keep-all}
-.rs-x>div{background:#F5F7FA;border-radius:14px;padding:16px 18px}
-.rs-x>div.k{background:#042F74}
-.rs-x span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:8px}.rs-x .k span{color:#9FBCEF}
-.rs-x ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.rs-x li{font-size:13px;font-weight:600;background:#fff;border-radius:999px;padding:5px 11px}
-.rs-x .k li{background:rgba(255,255,255,.12);color:#fff}
-.rs-x>i{align-self:center;font-style:normal;font-size:20px;color:#B3B3B3}
-@media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}.rs-x>i{justify-self:center;transform:rotate(90deg)}}
+.rs-x{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:12px;word-break:keep-all}
+.rs-x>div{border-radius:14px;padding:18px 20px;background:#F5F7FA}
+.rs-x>div.k{background:#fff;border:1.5px solid #085EE9}
+.rs-x span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:10px}.rs-x .k span{color:#085EE9}
+.rs-x ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.rs-x li{position:relative;padding-left:16px;font-size:15px;font-weight:600;line-height:1.5}
+.rs-x li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:#B3BCCB}
+.rs-x .k li::before{background:#085EE9}
+@media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -964,9 +964,8 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <p>전년도 메일은 콘텐츠 없이 할인만 보냈습니다. 참석자는 시장 정보에 관심이 많다고 보고, 리서치사와 제휴해 메일을 읽을 가치가 있는 리서치로 채우고 그 안에서 KBW에서 무엇을 만날 수 있는지 연결하도록 기획했습니다.</p>
 <div class="rs-grid"><div class="rs-h"><span>페르소나별 리서치 시리즈</span><span><b>6월</b>Data<small>시장 데이터 · 현황</small></span><span><b>7월</b>Insight<small>의미 · 트렌드 분석</small></span><span class="k"><b>8월</b>KBW Mapping<small>리포트 속 플레이어를 KBW 연사 · 트랙과 연결</small></span></div><div class="rs-r"><div><em>P1</em><small>업계 종사자</small><b>한국 시장 진출 실무 가이드</b></div><div class="rs-line" aria-hidden="true"><i></i><i></i><i class="k"></i></div></div><div class="rs-r"><div><em>P2</em><small>핵심 기관</small><b>한국 기관 · 대기업 디지털자산 진입 현황</b></div><div class="rs-line" aria-hidden="true"><i></i><i></i><i class="k"></i></div></div><div class="rs-r"><div><em>P3</em><small>일반</small><b>2026 Web3 핫 내러티브 & 자본 흐름</b></div><div class="rs-line" aria-hidden="true"><i></i><i></i><i class="k"></i></div></div></div>
 <div class="rs-x">
-<div><span>리서치사에 제안한 것</span><ul><li>단독 리서치 파트너 타이틀</li><li>스피커 슬롯</li><li>30% 프로모 코드</li><li>모든 메일에 출처 · 로고 표기</li><li>SNS 태그 · VIP Night 초대</li></ul></div>
-<i aria-hidden="true">⇄</i>
-<div class="k"><span>KBW가 얻는 것</span><ul><li>할인 대신 읽을 이유가 있는 메일</li><li>비용 없이 확보하는 리서치 9편</li><li>페르소나별로 다른 콘텐츠</li><li>행사 전 3개월간 매월 접점</li><li>리포트 안에서 연사 · 트랙 자연 노출</li><li>리서치사 구독자에게 프로모 코드로 신규 도달</li><li>행사 후 공저 리포트</li></ul></div>
+<div><span>리서치사에 제안한 것</span><ul><li>단독 리서치 파트너 타이틀 · 스피커 슬롯</li><li>파트너 구독자용 30% 프로모 코드</li><li>모든 메일 · SNS에 출처와 로고 표기</li></ul></div>
+<div class="k"><span>KBW가 얻는 것</span><ul><li>할인 대신 읽을 이유가 있는 메일</li><li>비용 없이 확보하는 페르소나별 리서치 9편</li><li>리포트 안에서 연사 · 트랙 자연 노출</li></ul></div>
 </div>
 
 
