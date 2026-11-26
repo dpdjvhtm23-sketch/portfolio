@@ -1018,8 +1018,8 @@ footer{padding-bottom:96px!important}
 /* mobile fixes 2 */
 @media (max-width:600px){
 main .portrait .bub{right:auto!important;translate:none!important}
-main .portrait .bub.perf{top:-1%;left:112%}
-main .portrait .bub.auto{top:36%;left:112%}
+main .portrait .bub.perf{top:-1%;left:auto;right:calc(100% + 30px - 100vw)!important}
+main .portrait .bub.auto{top:36%;left:auto;right:calc(100% + 30px - 100vw)!important}
 main .portrait .bub.sys{top:4%;left:-8%}
 main .portrait .bub.crm{top:40%;left:-8%}
 }
@@ -1033,6 +1033,13 @@ main .pfilter{border-bottom:1px solid #EEE}
 @media (min-width:761px){.dbw-hint .hm{display:none}}
 
 @media (min-width:601px){main .portrait .bub.perf{left:80%}}
+
+@media (max-width:600px){
+main .hero h1{text-align:center;font-size:min(19px,4.7vw)!important;line-height:1.55!important;white-space:nowrap;letter-spacing:-.035em}
+main .hero h1 .l{display:inline!important}
+main .hero h1 .l:nth-child(1)::after,main .hero h1 .l:nth-child(3)::after{content:" "}
+main .hero h1 .l:nth-child(2)::after{content:"\A";white-space:pre}
+}
 </style>
 </head>
 <body>
