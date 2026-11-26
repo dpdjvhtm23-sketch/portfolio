@@ -1663,7 +1663,7 @@ function openCase(id){
   if($("#sheet").hidden) lastFocus=document.activeElement;
   $("#crumb").textContent=`Projects / ${c.co}`;
   const tpl=document.getElementById("tpl-"+c.id);
-  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전</span><b>${esc(prev.title)}</b></a><a href="#case-${next.id}"><span>다음 →</span><b>${esc(next.title)}</b></a></nav>`; }
+  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; }
   else $("#case").innerHTML=`
    <span class="who">${logoSq(c.co)}${esc(c.co)} · ${esc(co.org)}</span>
    <h1 id="caseTitle">${esc(c.title)}</h1>
@@ -1684,7 +1684,7 @@ function openCase(id){
    ${c.after?`<p class="after">${esc(c.after[1])} → <a href="#case-${c.after[0]}">${esc(CASES.find(x=>x.id===c.after[0]).title)}</a></p>`:""}
    ${c.lesson?`<div class="lesson"><b>LESSON</b><p>${esc(c.lesson)}</p></div>`:""}
    ${c.rel?`<section class="rel"><h3>같은 서비스의 다른 프로젝트</h3>${c.relNote?`<p>${esc(c.relNote)}</p>`:""}<ul>${c.rel.map(id=>CASES.find(x=>x.id===id)).filter(Boolean).map(x=>`<li><a href="#case-${x.id}"><small>${esc(x.co)}</small>${esc(x.title)}</a></li>`).join("")}</ul></section>`:""}
-   <nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전</span><b>${esc(prev.title)}</b></a><a href="#case-${next.id}"><span>다음 →</span><b>${esc(next.title)}</b></a></nav>`;
+   <nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`;
   $("#sheet").hidden=false; $("#sheet").scrollTop=0; document.body.style.overflow="hidden";
   const r=$("#baRange"); if(r){const set=()=>{$("#ba").style.setProperty("--cut",r.value+"%");r.setAttribute("aria-valuetext",`오른쪽 ${100-r.value}%가 재설계 후`)}; r.addEventListener("input",set); set();}
   $("nav.nav").inert=true; $("main").inert=true;
