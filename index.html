@@ -690,6 +690,16 @@
 @media (max-width:760px){.sc-k,.sc-fmt,.sc-ba{grid-template-columns:1fr}}
 
 .bub.sys{top:74%;right:-34%;background:linear-gradient(180deg,#2F6FE0 0%,#0A3D9E 55%,#042F74 100%);color:#fff;text-shadow:0 1px 1px rgba(4,47,116,.35);animation-delay:.7s,3s}
+
+/* how I work 2x2 */
+.hw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hw .hw-row{display:flex!important;flex-direction:column;gap:0;padding:32px 32px 30px;border:1px solid var(--line)!important;border-radius:20px;background:#fff;transition:border-color .25s,box-shadow .25s,transform .25s}
+.hw .hw-row:hover{border-color:#B9CEF2!important;box-shadow:0 18px 40px -24px rgba(4,47,116,.35);transform:translateY(-2px)}
+.hw .hw-k{padding:0;font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--blue);display:flex;align-items:center;gap:10px}
+.hw .hw-k::before{content:attr(data-n);display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:#EDF3FE;color:var(--blue);font-size:12px;letter-spacing:0}
+.hw .hw-t{margin-top:18px;font-size:clamp(18px,1.6vw,21px);font-weight:800;line-height:1.4;letter-spacing:-.02em;color:var(--ink);word-break:keep-all}
+.hw .hw-b{margin-top:14px;font-size:14px;line-height:1.75;white-space:normal;word-break:keep-all}
+@media (max-width:760px){.hw{grid-template-columns:1fr}.hw .hw-row{padding:24px}}
 </style>
 </head>
 <body>
@@ -1233,10 +1243,10 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
   <section class="sec" id="strengths">
     <h2 class="hw-title">How I <span id="hwW">work</span></h2>
     <div class="hw">
-      <article class="hw-row"><h3 class="hw-k">MEASURE</h3><div><p class="hw-t">정확한 데이터로 마케팅 성과를 판단합니다</p><p class="hw-b">전환 추적 코드를 점검해 실제 성과와 측정 오류를 구분합니다.<br>클릭과 구매 전환을 기준으로 캠페인 성과를 분석합니다.<br>측정 기준을 재정비해 <strong>첫 티켓 캠페인 클릭률을 전년 대비 2배 이상</strong> 높였습니다.</p></div></article>
-      <article class="hw-row"><h3 class="hw-k">FUNNEL</h3><div><p class="hw-t">전환을 막는 병목을 찾아 집중 개선합니다</p><p class="hw-b">유입부터 가입까지 퍼널을 분석해 이탈 지점을 찾습니다.<br>광고 클릭 후 가입 이탈을 줄이기 위해 브릿지 랜딩을 도입했습니다.<br>가입 직전 단계의 <strong>이탈률을 약 20% 줄였습니다.</strong></p></div></article>
-      <article class="hw-row"><h3 class="hw-k">TEST</h3><div><p class="hw-t">빠르게 검증하고, 효율이 높은 곳에 예산을 집중합니다</p><p class="hw-b">소규모 예산으로 채널별 효율을 검증하고 예산을 재배분합니다.<br>초기 효율이 낮은 채널은 4일 만에 중단하고 고효율 국가에 집중했습니다.<br><strong>사전가입 12만 명</strong>을 확보하고 <strong>CPA 125원</strong>을 달성했습니다.</p></div></article>
-      <article class="hw-row"><h3 class="hw-k">SYSTEM</h3><div><p class="hw-t">반복 업무를 자동화해 마케팅 운영 효율을 높입니다</p><p class="hw-b">반복적인 리포팅과 발송을 워크플로우로 자동화합니다.<br>팀에 필요한 마케팅 도구가 없으면 Claude Code로 직접 구현합니다.<br><strong>12건의 업무를 자동화해 월 30시간의 수작업</strong>을 대체했습니다.</p></div></article>
+      <article class="hw-row"><h3 class="hw-k" data-n="01">MEASURE</h3><div><p class="hw-t">정확한 데이터로 마케팅 성과를 판단합니다</p><p class="hw-b">전환 추적 코드를 점검해 실제 성과와 측정 오류를 구분합니다.<br>클릭과 구매 전환을 기준으로 캠페인 성과를 분석합니다.<br>측정 기준을 재정비해 <strong>첫 티켓 캠페인 클릭률을 전년 대비 2배 이상</strong> 높였습니다.</p></div></article>
+      <article class="hw-row"><h3 class="hw-k" data-n="02">FUNNEL</h3><div><p class="hw-t">전환을 막는 병목을 찾아 집중 개선합니다</p><p class="hw-b">유입부터 가입까지 퍼널을 분석해 이탈 지점을 찾습니다.<br>광고 클릭 후 가입 이탈을 줄이기 위해 브릿지 랜딩을 도입했습니다.<br>가입 직전 단계의 <strong>이탈률을 약 20% 줄였습니다.</strong></p></div></article>
+      <article class="hw-row"><h3 class="hw-k" data-n="03">TEST</h3><div><p class="hw-t">빠르게 검증하고, 효율이 높은 곳에 예산을 집중합니다</p><p class="hw-b">소규모 예산으로 채널별 효율을 검증하고 예산을 재배분합니다.<br>초기 효율이 낮은 채널은 4일 만에 중단하고 고효율 국가에 집중했습니다.<br><strong>사전가입 12만 명</strong>을 확보하고 <strong>CPA 125원</strong>을 달성했습니다.</p></div></article>
+      <article class="hw-row"><h3 class="hw-k" data-n="04">SYSTEM</h3><div><p class="hw-t">반복 업무를 자동화해 마케팅 운영 효율을 높입니다</p><p class="hw-b">반복적인 리포팅과 발송을 워크플로우로 자동화합니다.<br>팀에 필요한 마케팅 도구가 없으면 Claude Code로 직접 구현합니다.<br><strong>12건의 업무를 자동화해 월 30시간의 수작업</strong>을 대체했습니다.</p></div></article>
     </div>
   </section>
 
