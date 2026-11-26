@@ -194,6 +194,52 @@
 .db{padding:16px}.db-g4,.db-g12,.db-g21,.db-g11{grid-template-columns:1fr}.dbw-body{height:560px;padding:16px}.db-jump{margin:12px -16px;padding:10px 16px;top:-16px}.dbw-badge{display:none}.db-g5{grid-template-columns:repeat(2,1fr)}
 .db-meta{align-items:flex-start}
 }
+
+/* automation case */
+.au-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
+.au-cat{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
+.au-ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.au-ch b{font-size:13px;color:#085EE9}.au-ch span{display:grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:#F1F3F6;color:#5C6370;font-size:12px;font-weight:800}
+.au-cat ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.au-cat li{font-size:14px;line-height:1.45;color:#3B414B;padding:7px 11px;border-radius:999px;background:#F5F7FA}
+.au-cat li.on{background:#EDF3FE;color:#042F74;font-weight:700}
+.au-cat li em{display:inline-block;margin-left:6px;font-style:normal;font-size:11px;font-weight:800;color:#fff;background:#085EE9;border-radius:4px;padding:0 5px;vertical-align:1px}
+.au-note{margin-top:8px;text-align:right;font-size:12px;font-style:italic;color:#8A919C}
+.au-rep{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px;align-items:stretch;word-break:keep-all}
+.au-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.au-steps li{flex:1;display:flex;gap:12px;align-items:center;background:#F5F7FA;border-radius:12px;padding:14px 16px}
+.au-steps li>span{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#085EE9;color:#fff;font-size:13px;font-weight:800}
+.au-steps small{display:block;font-size:12px;font-weight:700;color:#5C6370}.au-steps b{display:block;font-size:15px}
+.au-steps li.dark{background:#042F74}.au-steps li.dark>span{background:#fff;color:#042F74}.au-steps li.dark small{color:#9FBCEF}.au-steps li.dark b{color:#fff}
+.au-tg{position:relative;border-radius:16px;overflow:hidden;background:#C9DCEB;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:14px 14px;display:flex;flex-direction:column;box-shadow:0 18px 40px -18px rgba(4,47,116,.4)}
+.au-tg-h{display:flex;align-items:center;gap:10px;background:#fff;padding:10px 14px;border-bottom:1px solid #E3E8EE}
+.au-tg-h i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#3B78E7,#085EE9);color:#fff;font-size:12px;font-weight:800;font-style:normal}
+.au-tg-h b{display:block;font-size:14px}.au-tg-h small{font-size:12px;color:#8A919C}
+.au-tg-b{flex:1;display:flex;align-items:flex-end;padding:18px 16px 40px}
+.au-bub{position:relative;background:#fff;border-radius:14px 14px 14px 4px;padding:12px 14px 22px;max-width:92%;box-shadow:0 1px 1px rgba(0,0,0,.08);font-size:14px;line-height:1.55}
+.au-bt{display:block;margin-bottom:4px}.au-bub p{margin:2px 0 0}.au-bub .mut{color:#5C6370;font-size:13px}.au-bub .warn{margin-top:6px;color:#B54708;font-weight:600}
+.au-time{position:absolute;right:10px;bottom:4px;font-size:11px;color:#8A919C}
+.au-tag{position:absolute;left:12px;bottom:10px;font-size:11px;font-style:italic;color:#4B5F7A}
+.au-lv{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:4px 20px;word-break:keep-all}
+.au-lh,.au-lr{display:grid;grid-template-columns:150px minmax(0,1fr) 110px;gap:16px;align-items:center}
+.au-lh{padding:12px 0;font-size:12px;font-weight:700;color:#8A919C}
+.au-lr{padding:14px 0;border-top:1px solid #EEF0F3;font-size:15px}.au-lr>span:nth-child(2){color:#5C6370}
+.lv{justify-self:start;font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
+.lv.hi{background:#FDECEC;color:#D92D20}.lv.md{background:#FEF4E6;color:#B54708}.lv.lo{background:#F1F3F6;color:#8A919C}
+.au-sls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px}
+.au-sl{margin:0;display:flex;flex-direction:column}.au-sl-w{flex:1}
+.au-sl-w{border:1px solid #E3E6EB;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -18px rgba(16,24,40,.35)}
+.au-sl-h{padding:10px 14px;font-size:13px;font-weight:800;border-bottom:1px solid #EEF0F3;color:#1D1C1D}
+.au-sl-m{display:flex;gap:10px;padding:14px;font-size:13.5px;line-height:1.5;color:#1D1C1D}
+.au-sl-m>i{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:8px;color:#fff;font-style:normal;font-weight:800;font-size:12px}
+.au-sl-n{display:flex;align-items:center;gap:6px}.au-sl-n b{font-size:14px}
+.au-sl-n span{font-size:10px;font-weight:700;color:#616061;background:#EEE;border-radius:3px;padding:0 4px}.au-sl-n small{font-size:12px;color:#616061}
+.au-sl-m p{margin:2px 0 0}
+.au-sl-m blockquote{margin:8px 0 0;padding:4px 0 4px 10px;border-left:4px solid #DDD;display:flex;flex-direction:column;gap:2px}
+.au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
+.au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
+.au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
+@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-rep,.au-sls{grid-template-columns:1fr}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
 </style>
 </head>
 <body>
@@ -1010,6 +1056,95 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="pd-rr"><b>논의 근거</b><span>부서마다 다른 숫자</span><span>마케팅 · 영업 · 경영진이 같은 대시보드로 논의</span></div>
 </div>
 </template>
+<template id="tpl-automation">
+<span style="font-size: 14px; color: #5C6370">KBW2026 · 팩트블록 마케팅팀</span>
+<h1 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.35; letter-spacing: -.03em; margin-top: 12px">반복 업무를 직접 자동화해<br><span style="color: #085EE9">월 약 30시간</span>을 기획과 분석에 되돌리다</h1>
+<p style="font-size: 18px; color: #5C6370; margin-top: 16px">개발 리소스 없이 Claude Code와 n8n으로 업무 자동화 12건을 직접 만들고 운영했습니다.</p>
+
+<dl style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; margin: 28px 0 0; font-size: 15px; padding: 24px 0; border-top: 1px solid #E9EBEF; border-bottom: 1px solid #E9EBEF">
+<dt style="color: #5C6370">기간</dt><dd style="margin: 0">2026.03 → 2026.09</dd>
+<dt style="color: #5C6370">내 역할</dt><dd style="margin: 0">12건 전부 직접 기획 · 구축 · 운영</dd>
+<dt style="color: #5C6370">도구</dt><dd style="margin: 0">Claude Code · n8n · Airtable · Slack · 텔레그램 봇</dd>
+</dl>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
+<p>소수 인원으로 글로벌 행사를 운영하려면, 사람이 꼭 판단해야 하는 일에만 시간을 써야 했습니다.<br>3월에 뉴스 모니터링부터 자동화하기 시작해 범위를 넓혀 갔습니다.</p>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
+<div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
+<p style="font-size: clamp(19px, 2.6vw, 24px); font-weight: 800; line-height: 1.5; color: #042F74">“기획에 쓸 시간이 매일 반복되는 확인과 취합에 먼저 쓰이고 있었습니다.”</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px">
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px"><b style="display: block; font-size: 16px"><span class="cr-pl">A</span>매일 반복되는 취합</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">기사 · 커뮤니티 · 파트너 채널 확인과 광고 데이터 취합에 매일 약 1시간 30분이 들었습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px"><b style="display: block; font-size: 16px"><span class="cr-pl">B</span>반복되는 표기 오류</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">대행사가 올린 공식 SNS 게시물에 연사 · 스폰서 표기 오류가 반복됐습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px"><b style="display: block; font-size: 16px"><span class="cr-pl">C</span>손으로 보내는 대량 메시지</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">담당자가 KOL 업무방에 메시지를 하나씩 직접 보내고 있었습니다.</span></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
+<h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">12건</span></h3>
+<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li>국내 · 해외 언론 기사 수집</li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-5</em></li><li>커뮤니티 키워드 감지</li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-5</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
+<p class="au-note">파란 표시는 아래에서 자세히 소개하는 사례입니다.</p>
+
+<h3 class="cr-sub"><span class="cr-n">3-2</span>일일 광고 성과 리포트<span class="cr-tag">문제 A 해결</span></h3>
+<p>광고 플랫폼 다섯 곳과 GA4의 숫자를 옮겨 적던 아침 업무를, 정해진 시각에 자동으로 발행되게 바꿨습니다.</p>
+<div class="au-rep">
+<ol class="au-steps">
+<li><span>1</span><div><small>수집</small><b>Meta · Google · X · LinkedIn · Naver + GA4</b></div></li>
+<li><span>2</span><div><small>정리</small><b>채널별 형식 통일 · 통화 환산</b></div></li>
+<li><span>3</span><div><small>작성</small><b>전일 대비 변화와 점검할 지점 요약</b></div></li>
+<li class=dark><span>4</span><div><small>발행</small><b>매일 아침 텔레그램 · 주 1회 주간 리포트</b></div></li>
+</ol>
+<div class="au-tg" role="img" aria-label="텔레그램으로 도착한 일일 광고 리포트 예시 화면">
+<div class="au-tg-h"><i>AR</i><div><b>Ads Report Bot</b><small>bot</small></div></div>
+<div class="au-tg-b">
+<div class="au-bub">
+<b class="au-bt">📊 일일 광고 리포트 · 전일 기준</b>
+<p>총 지출 <strong>$1,000</strong> · 클릭 <strong>8,000</strong> · 구매 <strong>3</strong></p>
+<p class="mut">Meta $600 · Google $200 · X $120 · Naver $80</p>
+<p class="warn">⚠️ 점검 · 클릭은 많은데 구매가 없는 국가 2곳</p>
+<span class="au-time">08:30 ✓✓</span>
+</div>
+</div>
+<span class="au-tag">알림 화면 재현 · 샘플 수치</span>
+</div>
+</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-3</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
+<p>대행사가 올린 공식 SNS 게시물을 연사 DB · 용어집과 자동 대조하고, 틀리면 안 되는 정도에 따라 알림 수준을 나눴습니다.</p>
+<div class="au-lv">
+<div class="au-lh"><span>오류 유형</span><span>왜 중요한가</span><span>알림 수준</span></div>
+<div class="au-lr"><b>스폰서 등급 오기</b><span>계약 사항이라 틀리면 바로 문제</span><span class="lv hi">높음 · 즉시</span></div>
+<div class="au-lr"><b>연사 이름 · 소속</b><span>연사 DB와 다르면 정정 필요</span><span class="lv md">보통</span></div>
+<div class="au-lr"><b>단순 오타 · 용어</b><span>용어집과 다른 표기</span><span class="lv lo">낮음</span></div>
+</div>
+<div class="pd-call"><b>실제 사례</b> · 스폰서 등급이 잘못 표기된 게시물을 봇이 잡아내, 정정한 뒤 다시 올렸습니다.</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-4</span>KOL 일괄 DM 도구<span class="cr-tag">문제 C 해결</span></h3>
+<p>원래 제 업무는 아니었지만, 담당자가 업무방마다 메시지를 하나씩 보내는 걸 보고 한 번에 보낼 수 있는 도구를 만들었습니다.</p>
+<div class="pd-ba">
+<div class="b"><span>BEFORE</span><b>업무방마다 직접 입력</b><small>방을 열고, 이름을 바꿔 붙여 넣고, 보냈는지 따로 기록</small></div>
+<i aria-hidden="true">→</i>
+<div class="a"><span>AFTER</span><b>시트에서 대상만 선택</b><small>이름이 들어간 개인화 메시지 일괄 발송 · 국내/해외 분리 · 발송 상태 자동 기록</small></div>
+</div>
+<div class="pd-call"><b>운영 규모</b> · KOL 업무방 200개 이상을 이 도구로 관리했습니다.</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-5</span>사람이 확인하는 지점은 남겼다<span class="cr-tag">운영 원칙</span></h3>
+<p>밖으로 나가는 메시지에는 확인 단계를 두고, 봇이 조용할 때 고장인지 아닌지 알 수 있게 했습니다.</p>
+<div class="au-sls">
+<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>✅ 승인 · 발송 완료 — Speaker Name</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker Name (Co-Founder, Company) is confirmed for KBW2026 this fall…</span></blockquote></div></div></div><figcaption><b>연사 리트윗 요청</b> · 초안이 팀 채널에 올라오고, 담당 팀이 승인해야 발송됩니다.</figcaption></figure>
+<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-monitoring</div><div class="au-sl-m"><i style="background:#ECB22E">M</i><div><div class="au-sl-n"><b>KBW Monitor</b><span>APP</span><small>9:00 AM</small></div><p>✅ 데일리 점검 체크 완료 — 오늘은 KBW/팩트블록 언급 없음</p><small class="au-sl-s">Automated with this n8n workflow</small></div></div></div><figcaption><b>파트너 채널 언급 감지</b> · 언급이 없는 날에도 ‘체크 완료’를 보내, 알림이 없는 것과 시스템이 멈춘 것을 구분합니다.</figcaption></figure>
+</div>
+<p class="au-note">메시지 화면 재현 · 샘플 내용</p>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
+<div class="pd-res">
+<div class="pd-rh"><span>항목</span><span>이전</span><span>이후</span></div>
+<div class="pd-rr"><b>아침 업무</b><span>모니터링 · 데이터 취합에 매일 1시간 30분</span><span>리포트와 알림이 먼저 도착, 그 시간을 기획 · 분석에 사용</span></div>
+<div class="pd-rr"><b>게시물 검수</b><span>사람이 발견해야 정정</span><span>봇이 먼저 감지, 계약 사항 오류는 즉시 알림</span></div>
+<div class="pd-rr"><b>대량 발송</b><span>업무방마다 직접 입력</span><span>시트에서 대상 선택 후 일괄 발송</span></div>
+<div class="pd-rr"><b>오가닉 채널</b><span>블로그 채널 없음</span><span>광고비 0원으로 운영 2개월 만에 일 방문 200명 이상</span></div>
+</div>
+</template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
   <div class="sbar pad"><div class="wrap"><span class="crumb" id="crumb"></span><button class="btn ghost sm" id="close" type="button">← 목록으로</button></div></div>
   <div class="pad"><article class="case" id="case"></article></div>
@@ -1119,7 +1254,7 @@ const CASES=[
   results:[["6회+","글로벌 행사 PM"],["복수 선정","해외 전시 지원사업 · 부스비 · 참가비 절감"],["퍼널형 부스","입장 → 체험 → 이벤트 → SNS 공유 동선 설계"],["전 과정 총괄","굿즈 · 제작물 · 모델 · 코스어 인력 운영"]],
   lesson:"행사가 이벤트로 끝나지 않게, 온라인 성과로 잇는 동선을 먼저 설계합니다.",card:"해외 행사 6회+",ct:"글로벌 오프라인 행사부스\n기획 및 현장 운영",rel:["stella-pr","stella-content","stella-kol"],relNote:"PR은 별도 프로젝트로 정리했습니다.",mats:["행사 사진","기사 캡처"]},
  {id:"automation",flow:true,co:"KBW2026",tags:["Growth"],big:"12건",bl:"Claude Code · n8n으로 직접 구축한 자동화",
-  title:"필요한 도구를 직접 만들어 월 30시간을 돌려받다",
+  title:"반복 업무를 직접 자동화해 월 약 30시간을 기획과 분석에 되돌리다",
   sum:"소수 인원으로 글로벌 행사를 운영하려면 사람이 꼭 판단해야 하는 일에만 시간을 써야 했습니다. 개발 리소스 없이 Claude Code와 n8n으로 모니터링·리포팅·발송 업무를 직접 자동화하고 운영했습니다.",
   facts:[["내 역할","12건 전부 직접 기획·구축·운영 (개발 리소스 없음)"],["도구","Claude Code · n8n · Airtable · 텔레그램 봇"],["대체 시간","일 1시간 30분 · 월 약 30시간 (자동화 이전 기준 추정)"]],
   problems:[["매일 반복되는 수작업","커뮤니티 모니터링, 언론 기사 확인, 파트너 채널 확인, 광고 데이터 취합에 매일 1시간 30분이 들었습니다."],["되돌릴 수 없는 외부 발송","연사 메일·한국어 공지처럼 실수하면 되돌릴 수 없는 발송이 섞여 있었습니다."]],
