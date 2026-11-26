@@ -195,7 +195,41 @@
 .db-meta{align-items:flex-start}
 }
 
+/* crm research partnership */
+.rs-grid{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:6px 20px;word-break:keep-all}
+.rs-h,.rs-r{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr);gap:16px;align-items:center}
+.rs-h{grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,.667fr));align-items:start;padding:12px 0;font-size:13px;font-weight:700;color:#1F2329}
+.rs-h>span:first-child{font-size:12px;color:#8A919C}
+.rs-h b{display:block;font-size:12px;color:#8A919C}.rs-h small{display:block;font-size:12px;font-weight:400;color:#5C6370;margin-top:2px;line-height:1.4}
+.rs-h .k,.rs-h .k b{color:#085EE9}
+.rs-r{padding:14px 0;border-top:1px solid #EEF0F3}
+.rs-r em{font-style:normal;font-size:11px;font-weight:800;color:#fff;background:#085EE9;border-radius:4px;padding:1px 6px;margin-right:6px}
+.rs-r small{font-size:12px;color:#5C6370}.rs-r b{display:block;font-size:15px;margin-top:4px}
+.rs-line{position:relative;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;height:20px}
+.rs-line::before{content:"";position:absolute;left:0;right:calc(33.3% - 10px);top:50%;height:2px;background:linear-gradient(90deg,#D5DAE2,#085EE9)}
+.rs-line i{position:relative;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid #B3BCCB}
+.rs-line i.k{background:#085EE9;border-color:#085EE9;box-shadow:0 0 0 4px #EDF3FE}
+.rs-x{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:12px;word-break:keep-all}
+.rs-x>div{border-radius:14px;padding:18px 20px;background:#F5F7FA}
+.rs-x>div.k{background:#fff;border:1.5px solid #085EE9}
+.rs-x span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:10px}.rs-x .k span{color:#085EE9}
+.rs-x ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.rs-x li{position:relative;padding-left:16px;font-size:15px;font-weight:600;line-height:1.5}
+.rs-x li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:#B3BCCB}
+.rs-x .k li::before{background:#085EE9}
+@media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
+
 /* automation case */
+.au-news{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
+.au-nl{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.au-nl li{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.au-nl em{flex:none;font-style:normal;font-size:11px;font-weight:800;border-radius:4px;padding:1px 6px}
+.au-nl em.r{background:#FDECEC;color:#D92D20}.au-nl em.g{background:#E7F6EC;color:#1E8E3E}.au-nl em.n{background:#F1F3F6;color:#8A919C}
+.au-use{display:flex;flex-direction:column;gap:10px}
+.au-use>div{flex:1;display:flex;flex-direction:column;justify-content:center;border-radius:14px;padding:16px 18px;background:#F5F7FA}
+.au-use>div+div{background:#fff;border:1.5px solid #085EE9}
+.au-use span{font-size:12px;font-weight:700;color:#5C6370}.au-use>div+div span{color:#085EE9}
+.au-use b{font-size:16px;margin-top:4px}
 .au-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
 .au-cat{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
 .au-ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
@@ -247,31 +281,7 @@
 .au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
 .au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
 .au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
-@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
-
-/* crm research partnership */
-.rs-grid{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:6px 20px;word-break:keep-all}
-.rs-h,.rs-r{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr);gap:16px;align-items:center}
-.rs-h{grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,.667fr));align-items:start;padding:12px 0;font-size:13px;font-weight:700;color:#1F2329}
-.rs-h>span:first-child{font-size:12px;color:#8A919C}
-.rs-h b{display:block;font-size:12px;color:#8A919C}.rs-h small{display:block;font-size:12px;font-weight:400;color:#5C6370;margin-top:2px;line-height:1.4}
-.rs-h .k,.rs-h .k b{color:#085EE9}
-.rs-r{padding:14px 0;border-top:1px solid #EEF0F3}
-.rs-r em{font-style:normal;font-size:11px;font-weight:800;color:#fff;background:#085EE9;border-radius:4px;padding:1px 6px;margin-right:6px}
-.rs-r small{font-size:12px;color:#5C6370}.rs-r b{display:block;font-size:15px;margin-top:4px}
-.rs-line{position:relative;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;height:20px}
-.rs-line::before{content:"";position:absolute;left:0;right:calc(33.3% - 10px);top:50%;height:2px;background:linear-gradient(90deg,#D5DAE2,#085EE9)}
-.rs-line i{position:relative;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid #B3BCCB}
-.rs-line i.k{background:#085EE9;border-color:#085EE9;box-shadow:0 0 0 4px #EDF3FE}
-.rs-x{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:12px;word-break:keep-all}
-.rs-x>div{border-radius:14px;padding:18px 20px;background:#F5F7FA}
-.rs-x>div.k{background:#fff;border:1.5px solid #085EE9}
-.rs-x span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:10px}.rs-x .k span{color:#085EE9}
-.rs-x ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.rs-x li{position:relative;padding-left:16px;font-size:15px;font-weight:600;line-height:1.5}
-.rs-x li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:#B3BCCB}
-.rs-x .k li::before{background:#085EE9}
-@media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
+@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-news{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
 </style>
 </head>
 <body>
@@ -1123,7 +1133,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">12건</span></h3>
-<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li>국내 · 해외 언론 기사 수집</li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-5</em></li><li>커뮤니티 키워드 감지</li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-5</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
+<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-3</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-6</em></li><li>커뮤니티 키워드 감지</li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-6</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-4</em></li><li class=on>KOL 일괄 DM 도구<em>3-5</em></li></ul></div></div>
 <p class="au-note">파란 표시는 아래에서 자세히 소개하는 사례입니다.</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>일일 광고 성과 리포트<span class="cr-tag">문제 A 해결</span></h3>
@@ -1149,7 +1159,25 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 </div>
 
-<h3 class="cr-sub"><span class="cr-n">3-3</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
+<h3 class="cr-sub"><span class="cr-n">3-3</span>연사 · 스폰서 뉴스 모니터링<span class="cr-tag">문제 A 해결</span></h3>
+<p>행사는 신뢰가 중요해서, 매일 네이버 · 구글에서 연사와 스폰서 관련 기사를 모아 이슈와 화제성을 점검하고 발표 일정에 반영했습니다.</p>
+<div class="au-news">
+<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-news</div>
+<div class="au-sl-m"><i style="background:#085EE9">N</i><div><div class="au-sl-n"><b>News Monitor</b><span>APP</span><small>8:00 AM</small></div>
+<p>📰 오늘의 연사 · 스폰서 뉴스 · 네이버 · 구글</p>
+<ul class="au-nl">
+<li><em class="r">이슈</em><b>연사 A</b> 소속사 관련 부정 이슈 보도 3건</li>
+<li><em class="g">화제</em><b>스폰서 B</b> 신규 서비스 출시 기사 다수</li>
+<li><em class="n">특이 없음</em><b>연사 C</b> · <b>스폰서 D</b></li>
+</ul></div></div></div></figure>
+<div class="au-use">
+<div><span>이슈가 있는 연사</span><b>발표를 미루거나 조정</b></div>
+<div><span>화제가 된 스폰서</span><b>관심이 높을 때 맞춰 발표</b></div>
+</div>
+</div>
+<p class="au-note">메시지 화면 재현 · 샘플 내용</p>
+
+<h3 class="cr-sub"><span class="cr-n">3-4</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
 <p>대행사가 올린 공식 SNS 게시물을 연사 DB · 용어집과 자동 대조하고, 틀리면 안 되는 정도에 따라 알림 수준을 나눴습니다.</p>
 <div class="au-lv">
 <div class="au-lh"><span>오류 유형</span><span>왜 중요한가</span><span>알림 수준</span></div>
@@ -1159,7 +1187,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <div class="pd-call"><b>실제 사례</b> · 스폰서 등급이 잘못 표기된 게시물을 봇이 잡아내, 정정한 뒤 다시 올렸습니다.</div>
 
-<h3 class="cr-sub"><span class="cr-n">3-4</span>KOL 일괄 DM 도구<span class="cr-tag">문제 C 해결</span></h3>
+<h3 class="cr-sub"><span class="cr-n">3-5</span>KOL 일괄 DM 도구<span class="cr-tag">문제 C 해결</span></h3>
 <p>원래 제 업무는 아니었지만, 담당자가 업무방마다 메시지를 하나씩 보내는 걸 보고 한 번에 보낼 수 있는 도구를 만들었습니다.</p>
 <div class="pd-ba">
 <div class="b"><span>BEFORE</span><b>업무방마다 직접 입력</b><small>방을 열고, 이름을 바꿔 붙여 넣고, 보냈는지 따로 기록</small></div>
@@ -1168,7 +1196,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <div class="pd-call"><b>운영 규모</b> · KOL 업무방 200개 이상을 이 도구로 관리했습니다.</div>
 
-<h3 class="cr-sub"><span class="cr-n">3-5</span>사람이 확인하는 지점은 남겼다<span class="cr-tag">운영 원칙</span></h3>
+<h3 class="cr-sub"><span class="cr-n">3-6</span>사람이 확인하는 지점은 남겼다<span class="cr-tag">운영 원칙</span></h3>
 <p>밖으로 나가는 메시지에는 확인 단계를 두고, 봇이 조용할 때 고장인지 아닌지 알 수 있게 했습니다.</p>
 <div class="au-sls">
 <figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>✅ 승인 · 발송 완료 — Speaker Name</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker Name (Co-Founder, Company) is confirmed for KBW2026 this fall…</span></blockquote></div></div></div><figcaption><b>연사 리트윗 요청</b> · 초안이 팀 채널에 올라오고, 담당 팀이 승인해야 발송됩니다.</figcaption></figure>
