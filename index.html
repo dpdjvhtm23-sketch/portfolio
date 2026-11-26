@@ -220,6 +220,12 @@
 @media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
 
 /* automation case */
+.au-cat li small{display:block;font-size:11.5px;font-weight:700;color:#085EE9;margin-top:1px}
+.au-res3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;word-break:keep-all}
+.au-rc{background:#F5F7FA;border-radius:14px;padding:20px}
+.au-rc b{display:block;font-size:26px;font-weight:800;color:#042F74;line-height:1.2;margin-top:10px}
+.au-rc small{display:block;font-size:14px;color:#5C6370;margin-top:6px;line-height:1.5}
+@media (max-width:760px){.au-res3{grid-template-columns:1fr}}
 .au-live .au-bub{animation:auLive1 10s cubic-bezier(.2,.8,.2,1) infinite both}
 .au-live .au-bub:nth-child(2){animation-name:auLive2}
 @keyframes auLive1{0%,4%{opacity:0;transform:translateY(16px) scale(.97)}10%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
@@ -1179,7 +1185,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">12건</span></h3>
-<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-2</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-4</em></li><li class=on>커뮤니티 키워드 감지<em>3-2</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-4</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
+<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화<small>광고비 0원 · 2개월 만에 일 방문 200명+</small></li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-2</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-4</em></li><li class=on>커뮤니티 키워드 감지<em>3-2</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-4</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
 <p class="au-note">파란 표시는 아래에서 자세히 소개하는 사례입니다.</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>매일 아침 브리핑 자동화<span class="cr-tag">문제 A 해결</span></h3>
@@ -1261,12 +1267,10 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <p class="au-note">메시지 화면 재현 · 샘플 내용</p>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
-<div class="pd-res">
-<div class="pd-rh"><span>항목</span><span>이전</span><span>이후</span></div>
-<div class="pd-rr"><b>아침 업무</b><span>모니터링 · 데이터 취합에 매일 1시간 30분</span><span>리포트와 알림이 먼저 도착, 그 시간을 기획 · 분석에 사용</span></div>
-<div class="pd-rr"><b>게시물 검수</b><span>사람이 발견해야 정정</span><span>봇이 먼저 감지, 계약 사항 오류는 즉시 알림</span></div>
-<div class="pd-rr"><b>대량 발송</b><span>업무방마다 직접 입력</span><span>시트에서 대상 선택 후 일괄 발송</span></div>
-<div class="pd-rr"><b>오가닉 채널</b><span>블로그 채널 없음</span><span>광고비 0원으로 운영 2개월 만에 일 방문 200명 이상</span></div>
+<div class="au-res3">
+<div class="au-rc"><span class="cr-pl">A</span><b>월 약 30시간</b><small>매일 1시간 30분이던 확인 · 취합 시간을 기획 · 분석에 사용</small></div>
+<div class="au-rc"><span class="cr-pl">B</span><b>즉시 감지</b><small>스폰서 등급 오기를 발행 직후 잡아 정정</small></div>
+<div class="au-rc"><span class="cr-pl">C</span><b>200개+</b><small>KOL 업무방을 시트 하나로 일괄 발송</small></div>
 </div>
 </template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
