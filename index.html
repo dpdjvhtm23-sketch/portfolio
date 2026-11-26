@@ -1658,6 +1658,8 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 #strengths .hw .hw-t{margin-top:clamp(8px,1.8vh,22px)}
 #strengths .hw .hw-b{margin-top:clamp(6px,1.2vh,12px);line-height:clamp(1.5,0.2vh + 1.45,1.75)}
 }
+
+@media (max-width:640px){.cad-sheet th{white-space:nowrap}.cad-sheet th,.cad-sheet td{padding-left:5px!important;padding-right:5px!important;letter-spacing:-.03em}}
 </style>
 
 <nav class="nav pad" id="nav" aria-label="주 메뉴"><div class="wrap">
@@ -3308,7 +3310,7 @@ function openCase(id){
   id=({dashboard:"paid",attendee:"automation","coinness-launch":"coinness-loop","neopin-referral":"neopin-onchain"})[id]||id;
   const i=CASES.findIndex(c=>c.id===id); if(i<0) return closeCase(false);
   const c=CASES[i], prev=CASES[(i-1+CASES.length)%CASES.length], next=CASES[(i+1)%CASES.length], co=CO[c.co];
-  if($("#sheet").hidden) lastFocus=document.activeElement;
+  if($("#sheet").hidden){ lastFocus=document.activeElement; window.__listY=scrollY; }
   if(window.gtag && !(window.__pv && window.__pv.id===c.id && Date.now()-window.__pv.t<1500) && (window.__pv={id:c.id,t:Date.now()})) gtag("event","page_view",{page_title:"Case · "+c.co+" · "+(c.ct||c.title).replace(/\n/g," "),page_location:location.origin+location.pathname+"case/"+c.id+location.search,case_id:c.id,company:c.co});
   $("#crumb").innerHTML=CRUMB[c.co]?`<img class="crumb-logo" src="${CRUMB[c.co]}" alt="${esc(c.co)}" style="height:${({"KBW2026":30,"코인니스":26,"네오핀":24,"마인워즈":34,"스텔라 판타지":42})[c.co]||28}px">`:esc(c.co);
   const tpl=document.getElementById("tpl-"+c.id);
@@ -3344,7 +3346,7 @@ function closeCase(clear=true){
   $("#sheet").hidden=true; document.body.style.overflow="";
   $("nav.nav").inert=false; $("main").inert=false;
   if(clear) history.replaceState(null,"",location.pathname+location.search+"#projects");
-  if(lastFocus&&lastFocus!==document.body&&lastFocus.isConnected&&lastFocus.focus){lastFocus.scrollIntoView({block:"center",behavior:"instant"});lastFocus.focus({preventScroll:true});}else if(clear) document.getElementById("projects").scrollIntoView();
+  if(window.__listY!=null){scrollTo({top:window.__listY,behavior:"instant"}); if(lastFocus&&lastFocus!==document.body&&lastFocus.isConnected&&lastFocus.focus) lastFocus.focus({preventScroll:true}); window.__listY=null;} else if(lastFocus&&lastFocus!==document.body&&lastFocus.isConnected&&lastFocus.focus){lastFocus.scrollIntoView({block:"center",behavior:"instant"});lastFocus.focus({preventScroll:true});}else if(clear) document.getElementById("projects").scrollIntoView();
 }
 function route(){const h=location.hash.slice(1); if(h.startsWith("case-")) openCase(h.slice(5)); else closeCase(false);}
 $("#close").addEventListener("click",()=>closeCase());
@@ -3428,7 +3430,7 @@ $$("[data-copy]").forEach(b=>b.addEventListener("click",()=>{
 }));
 
 renderFilter(); renderGroups(); route();
-document.addEventListener("click",e=>{if(e.target.closest(".pf-dd"))return;const m=document.querySelector(".pf-dd-menu"); if(m&&!m.hidden){m.hidden=true; document.querySelector(".pf-dd-btn").setAttribute("aria-expanded","false"); document.body.classList.remove("dd-open");}}); $("#pfilter").addEventListener("click",e=>{const d=e.target.closest(".pf-dd-btn"); if(d){const m=d.nextElementSibling,o=m.hidden; m.hidden=!o; d.setAttribute("aria-expanded",o); document.body.classList.toggle("dd-open",o); if(o&&matchMedia("(max-width:760px)").matches){const r=d.getBoundingClientRect(); if(r.top>innerHeight*.35) scrollBy({top:r.top-80,behavior:"smooth"});} return;} const b=e.target.closest("button"); if(!b||!b.dataset.t) return; PF=b.dataset.t; document.body.classList.remove("dd-open"); renderFilter(); renderGroups();});
+document.addEventListener("click",e=>{if(e.target.closest(".pf-dd"))return;const m=document.querySelector(".pf-dd-menu"); if(m&&!m.hidden){e.preventDefault(); e.stopPropagation(); m.hidden=true; document.querySelector(".pf-dd-btn").setAttribute("aria-expanded","false"); document.body.classList.remove("dd-open");}},true); $("#pfilter").addEventListener("click",e=>{const d=e.target.closest(".pf-dd-btn"); if(d){const m=d.nextElementSibling,o=m.hidden; m.hidden=!o; d.setAttribute("aria-expanded",o); document.body.classList.toggle("dd-open",o); if(o&&matchMedia("(max-width:760px)").matches){const r=d.getBoundingClientRect(); if(r.top>innerHeight*.35) scrollBy({top:r.top-80,behavior:"smooth"});} return;} const b=e.target.closest("button"); if(!b||!b.dataset.t) return; PF=b.dataset.t; document.body.classList.remove("dd-open"); renderFilter(); renderGroups();});
 </script>
 
 
