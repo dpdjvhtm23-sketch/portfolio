@@ -506,7 +506,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .case .rel a small{font-size:13px;font-weight:800;color:var(--blue);white-space:nowrap}
 .pk{position:relative;display:flex;flex-direction:column;height:100%;padding:22px 20px;border-radius:4px;color:#000;background:#F7F7F7;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;isolation:isolate}
 .pk:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,.08);background:#F2F2F2}
-.pk-tags{position:absolute;right:16px;bottom:16px;display:flex;gap:6px}.pk-tags span{font-size:10px;font-weight:700;line-height:1.3;padding:3px 7px;border-radius:6px;background:#fff;color:#555}.pk-tags span:first-child{background:#000;color:#fff}
+.pk-tags{position:absolute;right:16px;bottom:16px;display:flex;gap:6px}.pk-tags span{font-size:10px;font-weight:700;line-height:1.3;padding:3px 7px;border-radius:6px;background:#fff;color:#555}.pk-tags .co{background:#000;color:#fff}.pk-tags .cat{background:#E4E6EA;color:#4B5563}
 .pk-t{margin-top:0;font-size:17px;font-weight:800;line-height:1.38;letter-spacing:-.03em;word-break:keep-all}
 .pk-ic{mix-blend-mode:multiply;width:92px;height:92px;margin:auto auto 0;padding:0 0 30px;box-sizing:content-box;transition:transform .35s ease}
 .pk:hover .pk-ic{transform:translateY(-6px) rotate(-4deg) scale(1.04)}
@@ -1487,7 +1487,7 @@ const PICON_TMP={"coinness-launch":"dashboard","minewars-bridge":"attendee","coi
 function renderGroups(){
   const list=CASES.filter(c=>PF==="all"||c.tags.includes(PF));
   $("#grid").innerHTML=`<div class="pscroll" id="pscroll"><div class="pgrid" id="pgrid">${list.map(c=>`<a class="pk" href="#case-${c.id}">
-    <span class="pk-tags"><span>${esc(c.co)}</span></span>
+    <span class="pk-tags"><span class="cat">${esc(TAGNAME[c.tags[0]]||"")}</span><span class="co">${esc(c.co)}</span></span>
     <strong class="pk-t">${esc(c.ct||c.title).replace(/\n/g,"<br>")}</strong>${c.card?`<span class="pk-n">${esc(c.card)}</span>`:""}
     <img class="pk-ic" src="${PICON[c.id]||PICON[PICON_TMP[c.id]]||""}" alt="" loading="lazy"><span class="pk-go" aria-hidden="true">↗</span></a>`).join("")}</div><div class="pbar" aria-hidden="true"><span id="pthumb"></span></div></div>`;
   const g=$("#pgrid"), w=$("#pscroll"), th=$("#pthumb");
