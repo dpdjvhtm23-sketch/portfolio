@@ -220,6 +220,28 @@
 @media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
 
 /* automation case */
+.au-chk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px;margin-top:16px;word-break:keep-all}
+.au-chk-l{display:flex;flex-direction:column;gap:10px}
+.au-mini{list-style:none;margin:0;padding:16px;border:1px solid #E9EBEF;border-radius:14px;display:flex;flex-direction:column;gap:10px}
+.au-mini li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600}
+.au-mini li span{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px;font-weight:800}
+.au-lvl{flex:1;display:flex;flex-direction:column;justify-content:center;gap:4px;background:#F5F7FA;border-radius:14px;padding:16px}
+.au-lvl>span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:8px}
+.au-lvl p{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:14px}
+.au-lvl .lv{min-width:84px;text-align:center}
+.au-chk .au-tg{margin:0;max-width:none}.au-chk .au-tg-b{padding:14px 12px 16px;align-items:flex-start}
+.au-tw{margin-top:8px;border:1px solid #E3E6EB;border-radius:12px;padding:10px 12px;background:#fff}
+.au-tw-h{display:flex;align-items:center;gap:6px}.au-tw-h i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#111;color:#fff;font-size:10px;font-style:normal;font-weight:800}
+.au-tw-h b{font-size:13px}.au-tw-h small{font-size:12px;color:#8A919C}
+.au-tw>p{margin:6px 0 0;font-size:13px;line-height:1.5}
+.au-tw-img{margin-top:8px;border-radius:8px;padding:14px;background:linear-gradient(135deg,#0B1220,#1D3A7A);color:#fff;display:flex;flex-direction:column;gap:2px}
+.au-tw-img small{font-size:10px;letter-spacing:.12em;color:#F2C94C;font-weight:800}.au-tw-img b{font-size:18px;letter-spacing:.02em}
+.au-tw-img span{font-size:11px;color:#C9D3E3}
+.au-res{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.au-res li{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.au-res small{color:#5C6370;font-size:12px}
+.au-res i{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;font-style:normal;font-size:11px;font-weight:800;color:#fff}
+.au-res .ok{background:#1E8E3E}.au-res .ng{background:#D92D20}.au-res .wn{background:#F79009}
+.au-res .lv{margin-left:auto;font-size:11px;padding:2px 8px}
 .au-brief{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
 .au-bc{display:flex;flex-direction:column;border:1px solid #E9EBEF;border-radius:16px;padding:16px}
 .au-bh{display:flex;justify-content:space-between;align-items:center}.au-bh b{font-size:16px}
@@ -281,7 +303,7 @@
 .au-lh,.au-lr{display:grid;grid-template-columns:150px minmax(0,1fr) 110px;gap:16px;align-items:center}
 .au-lh{padding:12px 0;font-size:12px;font-weight:700;color:#8A919C}
 .au-lr{padding:14px 0;border-top:1px solid #EEF0F3;font-size:15px}.au-lr>span:nth-child(2){color:#5C6370}
-.lv{justify-self:start;font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
+.lv{font-style:normal;justify-self:start;font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
 .lv.hi{background:#FDECEC;color:#D92D20}.lv.md{background:#FEF4E6;color:#B54708}.lv.lo{background:#F1F3F6;color:#8A919C}
 .au-sls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px}
 .au-sl{margin:0;display:flex;flex-direction:column}.au-sl-w{flex:1}
@@ -296,7 +318,7 @@
 .au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
 .au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
 .au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
-@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use,.au-brief{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
+@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use,.au-brief,.au-chk{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
 </style>
 </head>
 <body>
@@ -1183,14 +1205,37 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <p class="au-note">알림 화면 재현 · 샘플 수치와 내용</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
-<p>대행사가 올린 공식 SNS 게시물을 연사 DB · 용어집과 자동 대조하고, 틀리면 안 되는 정도에 따라 알림 수준을 나눴습니다.</p>
-<div class="au-lv">
-<div class="au-lh"><span>오류 유형</span><span>왜 중요한가</span><span>알림 수준</span></div>
-<div class="au-lr"><b>스폰서 등급 오기</b><span>계약 사항이라 틀리면 바로 문제</span><span class="lv hi">높음 · 즉시</span></div>
-<div class="au-lr"><b>연사 이름 · 소속</b><span>연사 DB와 다르면 정정 필요</span><span class="lv md">보통</span></div>
-<div class="au-lr"><b>단순 오타 · 용어</b><span>용어집과 다른 표기</span><span class="lv lo">낮음</span></div>
+<p>대행사가 올린 공식 게시물을 RSS로 받아 본문과 이미지 속 글자까지 연사 DB · 용어집과 대조하고, 원문과 함께 텔레그램으로 알렸습니다.</p>
+<div class="au-chk">
+<div class="au-chk-l">
+<ol class="au-mini">
+<li><span>1</span>공식 X · LinkedIn · Facebook 새 게시물 (RSS)</li>
+<li><span>2</span>본문 + 이미지 속 글자 추출 (OCR)</li>
+<li><span>3</span>연사 DB · 스폰서 등급 · 용어집과 대조</li>
+<li><span>4</span>원문 + 결과를 텔레그램으로 발송</li>
+</ol>
+<div class="au-lvl"><span>알림 수준</span>
+<p><em class="lv hi">높음 · 즉시</em>스폰서 등급 오기 · 계약 사항</p>
+<p><em class="lv md">보통</em>연사 이름 · 소속 불일치</p>
+<p><em class="lv lo">낮음</em>단순 오타 · 용어 표기</p>
+</div>
+</div>
+<div class="au-tg"><div class="au-tg-h"><i>PC</i><div><b>KBW Post Checker</b><small>bot</small></div></div>
+<div class="au-tg-b"><div class="au-bub au-kw">
+<b class="au-bt">🔍 게시물 검수 · X</b>
+<div class="au-tw"><div class="au-tw-h"><i>K</i><b>KBW2026</b><small>@kbwofficial</small></div>
+<p>Welcome our Gold Sponsor, Sponsor B! 🎉 Meet Speaker A (CEO, Company C) on the main stage at KBW2026.</p>
+<div class="au-tw-img"><small>GOLD SPONSOR</small><b>SPONSOR B</b><span>KBW2026 · Seuol</span></div></div>
+<ul class="au-res">
+<li><i class="ok">✓</i>연사 이름 · 소속 <small>DB와 일치</small></li>
+<li><i class="ng">✕</i>스폰서 등급 <small>표기 Gold · DB Platinum</small><em class="lv hi">높음 · 즉시</em></li>
+<li><i class="wn">!</i>이미지 글자 <small>“Seuol” 오타 의심</small><em class="lv lo">낮음</em></li>
+</ul>
+<p class="au-lk">🔗 원문 링크</p><span class="au-time">10:02</span>
+</div></div></div>
 </div>
 <div class="pd-call"><b>실제 사례</b> · 스폰서 등급이 잘못 표기된 게시물을 봇이 잡아내, 정정한 뒤 다시 올렸습니다.</div>
+<p class="au-note">알림 화면 재현 · 샘플 내용</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>KOL 일괄 DM 도구<span class="cr-tag">문제 C 해결</span></h3>
 <p>원래 제 업무는 아니었지만, 담당자가 업무방마다 메시지를 하나씩 보내는 걸 보고 한 번에 보낼 수 있는 도구를 만들었습니다.</p>
