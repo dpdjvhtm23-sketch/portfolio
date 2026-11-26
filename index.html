@@ -578,12 +578,15 @@
 .cad-mh span{display:flex;align-items:center;gap:6px}.cad-mh i{width:10px;height:10px;border-radius:3px}
 .cad-mh em{margin-left:auto;font-style:italic;font-weight:400;color:#8A919C}
 .cad-mh .mu,.cad-bar .mu{background:#9FBCEF}.cad-mh .mp,.cad-bar .mp{background:#085EE9}
-.cad-bar{display:flex;gap:3px;margin-top:12px;height:72px;border-radius:10px;overflow:hidden}
+.cad-bar{display:flex;gap:3px;margin-top:12px;height:64px;border-radius:10px;overflow:hidden}
 .cad-bar>div{display:flex;flex-direction:column;justify-content:center;padding:0 10px;min-width:0;color:#fff;transform-origin:left;animation:dbGrow 1s cubic-bezier(.2,.7,.2,1) both}
 .cad-bar>.mu{color:#042F74}
-.cad-bar b{font-size:15px}.cad-bar span{font-size:11.5px;line-height:1.25;word-break:keep-all;opacity:.9}
-.cad-bar>div{padding:0 8px}
-.cad-rule{margin-top:10px}
+.cad-bar b{font-size:15px}.cad-bar span{font-size:12px;white-space:nowrap;opacity:.9}
+.cad-bar>div{padding:0 10px;min-width:92px}
+.cad-pr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid #EEF0F3;word-break:keep-all}
+.cad-pt{grid-column:1/-1;font-size:12px;font-weight:700;color:#5C6370}
+.cad-pr>div{background:#F5F7FA;border-radius:10px;padding:12px 14px}
+.cad-pr b{display:block;font-size:14px;color:#085EE9}.cad-pr small{display:block;font-size:13px;color:#3B414B;margin-top:2px;line-height:1.45}
 .cad-ops{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:12px;margin-top:16px;align-items:stretch;word-break:keep-all}
 .cad-loop{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .cad-loop .pd-step::after{display:none}
@@ -1791,12 +1794,8 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>목표 · 예산에 맞춘 미디어믹스 제안서<span class="cr-tag">문제 C 해결</span></h3>
 <p>단가표 대신 광고주의 목표와 예산을 먼저 받고, 그에 맞는 지면 조합을 짜서 보냈습니다.</p>
-<div class="cad-mix"><div class="cad-mh"><span><i class="mu"></i>페이지 유입</span><span><i class="mp"></i>이벤트 참여</span><em>예산 비중 · 샘플</em></div><div class="cad-bar"><div class="mu" style="flex:25" title="팝업 25%"><b>25%</b><span>팝업</span></div><div class="mu" style="flex:20" title="속보 배너 20%"><b>20%</b><span>속보 배너</span></div><div class="mp" style="flex:5" title="실시간 속보 5%"><b>5%</b><span>실시간 속보</span></div><div class="mp" style="flex:20" title="팝업 + 푸시 20%"><b>20%</b><span>팝업 + 푸시</span></div><div class="mp" style="flex:30" title="참여 경품 30%"><b>30%</b><span>참여 경품</span></div></div></div>
-<div class="cn-learn cad-rule"><span>제안서 작성 원칙</span>
-<p><b>목적별 분리</b>유입용과 참여용 지면을 나눠 예산 배분</p>
-<p><b>1안 · 2안</b>예산 규모에 따라 고를 수 있게 두 가지로 제시</p>
-<p><b>주차별 계획</b>주마다 노출할 소재와 소구점까지 포함</p>
-</div>
+<div class="cad-mix"><div class="cad-mh"><span><i class="mu"></i>페이지 유입</span><span><i class="mp"></i>이벤트 참여</span><em>예산 비중 · 샘플</em></div><div class="cad-bar"><div class="mu" style="flex:25" title="팝업 25%"><b>25%</b><span>팝업</span></div><div class="mu" style="flex:20" title="속보 배너 20%"><b>20%</b><span>속보 배너</span></div><div class="mp" style="flex:5" title="실시간 속보 5%"><b>5%</b><span>실시간 속보</span></div><div class="mp" style="flex:20" title="팝업 + 푸시 20%"><b>20%</b><span>팝업 + 푸시</span></div><div class="mp" style="flex:30" title="참여 경품 30%"><b>30%</b><span>참여 경품</span></div></div><div class="cad-pr"><span class="cad-pt">제안서 작성 원칙</span><div><b>목적별 분리</b><small>유입용과 참여용 지면을 나눠 예산 배분</small></div><div><b>1안 · 2안</b><small>예산 규모에 따라 고를 수 있게 두 가지로 제시</small></div><div><b>주차별 계획</b><small>주마다 노출할 소재와 소구점까지 포함</small></div></div></div>
+
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>캠페인 운영과 광고주용 일간 리포트<span class="cr-tag">운영</span></h3>
 <p>내부 애드매니저로 캠페인을 직접 세팅해 지면별 성과를 매일 확인하고, 하나로 통일한 리포트 양식으로 광고주에게 공유했습니다.</p>
