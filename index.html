@@ -368,6 +368,9 @@
 .ob-rc small{display:block;font-size:14px;color:#5C6370;margin-top:6px;line-height:1.5}
 @media (max-width:760px){.ob-doc,.ob-msg,.ob-res{grid-template-columns:1fr}.ob-doc{padding:20px 20px 20px 44px}.ob-rounds{grid-template-columns:1fr}.ob-rounds li::after{display:none}
 .ob-th{display:none}.ob-tr{grid-template-columns:auto 1fr;gap:4px 12px}.ob-tr>span{grid-column:2}}
+
+/* first screen: hero + band fill the viewport so How I work starts below the fold */
+@media (min-width:901px) and (min-height:620px){.hero{min-height:calc(100svh - var(--nav-h) - var(--mq-h) - 156px);padding-block:12px 24px;box-sizing:border-box}}
 </style>
 </head>
 <body>
