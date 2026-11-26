@@ -1105,6 +1105,25 @@ main .pfilter{overflow:visible;justify-content:flex-end!important}
 .np-phase{flex-direction:column;align-items:flex-start!important;gap:4px!important}
 .np-phase b{word-break:keep-all}
 }
+
+/* mobile case reader */
+@media (max-width:760px){
+.m-sum{margin:20px 0 0;padding:16px 18px;border-radius:14px;background:#F2F6FD}
+.m-sum>span{display:block;font-size:12.5px;font-weight:800;color:#085EE9;margin-bottom:6px}
+.m-sum p{display:grid;grid-template-columns:1fr;gap:2px;margin:0!important;padding:9px 0;border-top:1px solid #DCE6F7}
+.m-sum p:first-of-type{border-top:0}
+.m-sum b{font-size:18px;font-weight:800;color:#042F74;word-break:keep-all}
+.m-sum small{font-size:13.5px;color:#4B5563;line-height:1.45;word-break:keep-all}
+.m-tabs{position:sticky;z-index:1;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin:18px -16px 0;padding:8px 16px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #EEE}
+.m-tabs::-webkit-scrollbar{display:none}
+.m-tabs button{flex:none;font:inherit;font-size:14px;font-weight:700;color:#6B7280;background:none;border:0;border-radius:999px;padding:0 14px;height:36px;cursor:pointer}
+.m-tabs button.on{background:var(--ink);color:#fff}
+.case-rich div[style*="border: 1px solid #E9EBEF; border-radius: 12px"]{border:0!important;border-bottom:1px solid #EEF0F3!important;border-radius:0!important;padding:14px 0!important}
+.case-rich div[style*="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))"]{gap:0!important}
+.ob-res{gap:0!important}.ob-rc,.au-rc{background:none!important;border:0!important;border-bottom:1px solid #EEF0F3!important;border-radius:0!important;padding:14px 0!important}
+.cr-sub .cr-tag{order:-1;flex:0 0 100%;border:0!important;border-radius:0!important;padding:0!important;margin-bottom:-2px;font-size:12.5px!important;color:#085EE9!important;background:none!important}
+.pr-cols{min-width:0!important;gap:2px!important}.pr-cols *{font-size:9.5px!important;letter-spacing:-.04em}.pr-cols>*{flex:1 1 0!important;min-width:0!important;width:auto!important}.pr-cols>* *{white-space:nowrap}.pr-col:not(:nth-child(3n+1))>span{visibility:hidden}.pr-col u{display:none!important}.pr-col>span{overflow:visible}.pr-tl{padding-inline:12px!important}.pr-tl{overflow:visible!important}
+}
 </style>
 </head>
 <body>
@@ -3269,7 +3288,7 @@ function openCase(id){
   if(window.gtag && !(window.__pv && window.__pv.id===c.id && Date.now()-window.__pv.t<1500) && (window.__pv={id:c.id,t:Date.now()})) gtag("event","page_view",{page_title:"Case · "+c.co+" · "+(c.ct||c.title).replace(/\n/g," "),page_location:location.origin+location.pathname+"case/"+c.id+location.search,case_id:c.id,company:c.co});
   $("#crumb").innerHTML=CRUMB[c.co]?`<img class="crumb-logo" src="${CRUMB[c.co]}" alt="${esc(c.co)}" style="height:${({"KBW2026":30,"코인니스":26,"네오핀":24,"마인워즈":34,"스텔라 판타지":42})[c.co]||28}px">`:esc(c.co);
   const tpl=document.getElementById("tpl-"+c.id);
-  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; if(matchMedia("(max-width:760px)").matches) $("#case").querySelectorAll(".case-rich :is(p,small,span,li,dd,b) br").forEach(b=>b.replaceWith(" ")); }
+  if(tpl){ $("#case").innerHTML=`<div class="case-rich">${tpl.innerHTML}</div><nav class="pager" aria-label="다른 프로젝트"><a href="#case-${prev.id}"><span>← 이전 · ${esc(prev.co)}</span><b>${esc((prev.ct||prev.title).replace(/\n/g," "))}</b></a><a href="#case-${next.id}"><span>${esc(next.co)} · 다음 →</span><b>${esc((next.ct||next.title).replace(/\n/g," "))}</b></a></nav>`; if(matchMedia("(max-width:760px)").matches) $("#case").querySelectorAll(".case-rich :is(p,small,span,li,dd,b) br").forEach(b=>b.replaceWith(" ")); if(window.mCase) mCase(); }
   else $("#case").innerHTML=`
    <span class="who">${logoSq(c.co)}${esc(c.co)} · ${esc(co.org)}</span>
    <h1 id="caseTitle">${esc(c.title)}</h1>
@@ -3407,6 +3426,39 @@ $("#pfilter").addEventListener("click",e=>{const d=e.target.closest(".pf-dd-btn"
  const sync=()=>g.querySelectorAll("button").forEach(b=>b.setAttribute("aria-checked",b.dataset.v===sel.value));
  g.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;sel.value=b.dataset.v;sel.dispatchEvent(new Event("change",{bubbles:true}));sync();});
  document.getElementById("cmForm")?.addEventListener("reset",()=>setTimeout(sync));new MutationObserver(sync).observe(document.getElementById("cm"),{attributes:true,attributeFilter:["hidden"]});})();
+</script>
+<script>
+/* mobile case reader: results summary, sticky section tabs, readable text */
+window.mCase=()=>{if(!matchMedia("(max-width:760px)").matches)return;const root=document.querySelector("#case .case-rich");if(!root||root.dataset.m)return;root.dataset.m=1;
+ const sheet=document.getElementById("sheet"),bar=sheet.querySelector(".sbar");
+ const h2s=[...root.querySelectorAll("h2")].filter(h=>h.closest(".case-rich")===root);
+ const name=h=>h.textContent.replace(/^\s*\d+\s*/,"").trim();
+ // results summary
+ const rh=h2s.find(h=>name(h)==="결과");let items=[];
+ if(rh){let c=rh.nextElementSibling;while(c&&!c.querySelector("b"))c=c.nextElementSibling;
+  if(c){const rows=c.querySelectorAll(".pd-rr");
+   if(rows.length)items=[...rows].slice(0,3).map(r=>{const sp=r.querySelectorAll(":scope>span"),v=sp[sp.length-1].cloneNode(true);v.querySelectorAll("small").forEach(x=>x.remove());return [v.textContent.trim(),r.querySelector("b").textContent.trim()]});
+   else items=[...c.children].filter(d=>d.querySelector("b")).slice(0,3).map(d=>{const l=d.querySelector("small")||[...d.querySelectorAll("span")].find(x=>!x.classList.contains("cr-pl"));return [d.querySelector("b").textContent.trim(),l?l.textContent.replace(/\s+/g," ").trim():""]});}}
+ const dl=root.querySelector("dl");
+ if(items.length&&dl){const d=document.createElement("div");d.className="m-sum";d.id="m-sum";d.innerHTML="<span>결과 요약</span>"+items.map(([v,l])=>`<p><b></b><small></small></p>`).join("");d.querySelectorAll("p").forEach((p,i)=>{p.children[0].textContent=items[i][0];p.children[1].textContent=items[i][1];});dl.after(d);}
+ // tabs
+ if(h2s.length>2){const nav=document.createElement("nav");nav.className="m-tabs";nav.setAttribute("aria-label","섹션 이동");
+  const secs=[...(document.getElementById("m-sum")?[["요약",root]]:[]),...h2s.map(h=>[name(h),h])];
+  nav.innerHTML=secs.map(([n],i)=>`<button type="button" data-i="${i}">${n}</button>`).join("");
+  (document.getElementById("m-sum")||dl||root.firstElementChild).after(nav);
+  const top=()=>bar.offsetHeight+nav.offsetHeight+8;nav.style.top=bar.offsetHeight+"px";
+  nav.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const el=secs[b.dataset.i][1];const y=el===root?0:el.getBoundingClientRect().top-sheet.getBoundingClientRect().top+sheet.scrollTop-top();sheet.scrollTo({top:y,behavior:"smooth"});});
+  const spy=()=>{nav.style.top=bar.offsetHeight+"px";let k=0;secs.forEach(([,el],i)=>{if(el!==root&&el.getBoundingClientRect().top-sheet.getBoundingClientRect().top<top()+40)k=i;});nav.querySelectorAll("button").forEach((b,i)=>b.classList.toggle("on",i===k));const on=nav.querySelector(".on");if(on)nav.scrollLeft=on.offsetLeft-16;};
+  sheet.removeEventListener("scroll",sheet._spy||(()=>{}));sheet._spy=spy;sheet.addEventListener("scroll",spy,{passive:true});spy();}
+ // readable text outside mockups
+ const MOCK=".dbw,.nv,.m-sum,.m-tabs,svg,figure,[class*=phone],[class*=tg-],[class*=sl-],[class*=slack],[class*=mail],[class*=rk],[class*=np-rank],[class*=pr-doc],[class*=pr-tl],[class*=ci-h],[class*=chart],[class*=bars],[class*=db-]";
+ root.querySelectorAll("small,span,p,em,li,i").forEach(el=>{if(el.closest(MOCK)||el.children.length>2)return;const t=el.textContent.trim();if(t.length<12)return;const cs=getComputedStyle(el),f=parseFloat(cs.fontSize);
+  if(cs.fontStyle==="italic"){el.style.fontStyle="normal";el.style.color="#6B7280";if(f<13)el.style.fontSize="13px";return;}
+  let a=el.parentElement,dark=false;while(a&&a!==root){const bg=getComputedStyle(a).backgroundColor.match(/\d+/g);if(bg&&+(bg[3]??1)>.5&&(+bg[0]+ +bg[1]+ +bg[2])<300){dark=true;break;}a=a.parentElement;}if(dark)return;
+  if(f<13.5){el.style.fontSize="14px";const c=cs.color.match(/\d+/g);if(c&&(+c[0]+ +c[1]+ +c[2])>300)el.style.color="#4B5563";}});
+ root.querySelectorAll(".mx-hint,.pr-tl-h small,p").forEach(el=>{for(const n of el.childNodes)if(n.nodeType===3&&n.nodeValue.includes("마우스를 올리면"))n.nodeValue=n.nodeValue.replace(/(\S+)에 마우스를 올리면/,"$1을 탭하면").replace("마우스를 올리면","탭하면");});
+};
+if(document.getElementById("sheet")&&!document.getElementById("sheet").hidden)mCase();
 </script>
 <script>
 /* GA4: one delegated ui_click event for every button / link / tab label */
