@@ -370,7 +370,7 @@
 .ob-th{display:none}.ob-tr{grid-template-columns:auto 1fr;gap:4px 12px}.ob-tr>span{grid-column:2}}
 
 /* first screen: hero + band fill the viewport so How I work starts below the fold */
-@media (min-width:901px) and (min-height:620px){.hero{min-height:min(720px,calc(100svh - var(--nav-h) - var(--mq-h) - 200px));padding-block:12px 24px;box-sizing:border-box}main .hero .portrait{width:min(380px,24vw,calc((100svh - 320px) * .7))}main .band{margin-bottom:max(0px,calc(100svh - var(--nav-h) - var(--mq-h) - 980px))}main .hero h1{font-size:min(64px,max(min(4.2vw,50px),min(4.2vw,6svh)))}}
+@media (min-width:901px) and (min-height:620px){.hero{min-height:min(720px,calc(100svh - var(--nav-h) - var(--mq-h) - 200px));padding-block:12px 24px;box-sizing:border-box}main .hero{justify-content:space-between;gap:48px}main .hero .portrait{--pw:min(330px,24vw,calc((100svh - 320px) * .7));width:var(--pw);margin-right:calc(var(--pw) * .42)}main .band{margin-bottom:max(0px,calc(100svh - var(--nav-h) - var(--mq-h) - 980px))}main .hero h1{font-size:min(56px,max(min(4.2vw,50px),min(4.2vw,6svh)))}}
 </style>
 </head>
 <body>
