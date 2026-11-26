@@ -796,6 +796,37 @@
 .se-ev p b{font-size:14px}.se-ev p em{font-style:normal;font-size:15px;font-weight:800;color:#085EE9}
 .se-ev p small{grid-column:1/-1;font-size:12.5px;color:#5C6370;margin-top:2px}
 @media (max-width:760px){.se-ev>div{grid-template-columns:1fr}.se-hero{height:auto}.se-hero .se-ph{height:240px}.se-hero,.se-map,.se-two,.se-prep,.se-tt{grid-template-columns:1fr}.se-map>i{transform:rotate(90deg);justify-self:center}}
+
+/* stella kol case */
+.kl-crit{display:grid;grid-template-columns:minmax(0,.8fr) auto minmax(0,1.6fr);gap:12px;align-items:stretch;margin-top:16px;word-break:keep-all}
+.kl-crit>div{border-radius:14px;padding:18px 20px}
+.kl-crit .x{background:#F5F7FA;display:flex;flex-direction:column;justify-content:center}
+.kl-crit .x b{font-size:20px;color:#8A919C;text-decoration:line-through;text-decoration-color:#E5484D;text-decoration-thickness:2px;margin-top:4px}
+.kl-crit .x small{font-size:13px;color:#5C6370;margin-top:6px}
+.kl-crit span{display:block;font-size:12px;font-weight:700;color:#5C6370}
+.kl-crit .o{border:1.5px solid #085EE9}.kl-crit .o span{color:#085EE9;margin-bottom:4px}
+.kl-crit .o p{display:grid;grid-template-columns:22px 92px minmax(0,1fr);gap:10px;align-items:center;margin:0!important;padding:8px 0;border-top:1px solid #EEF0F3;font-size:14px}
+.kl-crit .o p:first-of-type{border-top:0}
+.kl-crit .o em{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-style:normal;font-size:12px;font-weight:800}
+.kl-crit .o small{color:#5C6370;font-size:13.5px}
+.kl-crit>i{align-self:center;font-style:normal;color:#B3B3B3;font-weight:700}
+.kl-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
+.kl-guide>div{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
+.kl-guide span{font-size:12px;font-weight:800;color:#085EE9}.kl-guide .no span{color:#D92D20}
+.kl-guide b{display:block;font-size:15px;margin-top:4px;line-height:1.45}.kl-guide small{display:block;font-size:13px;color:#5C6370;margin-top:4px}
+.kl-q{margin:10px 0 0;padding:18px 22px;border-radius:14px;background:#042F74;color:#fff;font-size:17px;font-weight:700;line-height:1.5;word-break:keep-all}
+.kl-q cite{display:block;margin-top:6px;font-size:12px;font-style:normal;font-weight:600;color:#9FBCEF}
+.kl-rec{margin-top:10px}
+.kl-cp{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:12px;margin-top:16px;align-items:stretch;word-break:keep-all}
+.kl-plat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kl-plat>div{background:#F5F7FA;border-radius:14px;padding:18px}
+.kl-plat span{font-size:12px;font-weight:800;color:#5C6370}.kl-plat b{display:block;font-size:30px;font-weight:800;color:#085EE9;letter-spacing:-.02em;margin-top:4px}
+.kl-plat small{display:block;font-size:13px;color:#5C6370;margin-top:2px}
+.kl-lang{display:flex;flex-wrap:wrap;align-content:center;gap:6px;border:1px solid #E9EBEF;border-radius:14px;padding:16px 18px}
+.kl-lang>span{width:100%;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:2px}
+.kl-lang em{font-style:normal;font-size:13px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:4px 10px}
+.kl-lang small{width:100%;font-size:11.5px;color:#8A919C;margin-top:4px}
+@media (max-width:760px){.kl-crit,.kl-guide,.kl-cp,.kl-plat{grid-template-columns:1fr}.kl-crit>i{transform:rotate(90deg);justify-self:center}}
 </style>
 </head>
 <body>
@@ -2554,6 +2585,65 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <p class="au-note">행사가 하루로 끝나지 않게, 온라인으로 이어지는 동선부터 짭니다.</p>
 </template>
+<template id="tpl-stella-kol">
+<span style="font-size: 14px; color: #5C6370">스텔라 판타지 · 링게임즈 마케팅팀</span>
+<h1 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.35; letter-spacing: -.03em; margin-top: 12px">팔로워 수가 아니라 반응으로 골라<br><span style="color: #085EE9">4개국 영상 조회 50만+</span>를 확보했습니다</h1>
+<p style="font-size: 18px; color: #5C6370; margin-top: 16px">인플루언서를 숫자로 고르고 같은 가이드를 줬으며, 출시 뒤에는 유저가 직접 영상을 만드는 프로그램으로 넓혔습니다.</p>
+
+<dl style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; margin: 28px 0 0; font-size: 15px; padding: 24px 0; border-top: 1px solid #E9EBEF; border-bottom: 1px solid #E9EBEF">
+<dt style="color: #5C6370">기간</dt><dd style="margin: 0">2022.02 → 2023.07</dd>
+<dt style="color: #5C6370">국가</dt><dd style="margin: 0">태국 · 베트남 · 싱가포르 · 브라질</dd>
+<dt style="color: #5C6370">내 역할</dt><dd style="margin: 0">인플루언서 선정 · 가이드 전달 · 제작과 업로드 관리 · 성과 집계</dd>
+<dt style="color: #5C6370">게임</dt><dd style="margin: 0">스텔라 판타지 · 애니메이션풍 캐릭터 수집형 RPG (웹3)</dd>
+</dl>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
+<p>출시 전 게임을 해외 유저에게 알려야 했는데 공식 계정만으로는 닿는 범위가 좁아, 나라별 인플루언서와 영상을 만들기로 했습니다.</p>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
+<div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
+<p style="font-size: clamp(19px, 2.6vw, 24px); font-weight: 800; line-height: 1.5; color: #042F74">“팔로워가 많다고 우리 게임을 할 사람이 보는 것은 아니었습니다.”</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px">
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">A</span>팔로워 수로는 알 수 없는 성과</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">팔로워가 많아도 실제 반응이 낮은 계정이 있었습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">B</span>사람마다 다른 게임 소개</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">광고처럼 보이는 영상은 반응이 약했습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">C</span>끝나면 남지 않는 결과</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">무엇이 통했는지 다음 협업에 쓰지 못했습니다.</span></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
+<h3 class="cr-sub"><span class="cr-n">3-1</span>세 가지 숫자로 고르기<span class="cr-tag">문제 A 해결</span></h3>
+<div class="kl-crit"><div class="x"><span>기존 기준</span><b>팔로워 수</b><small>많아도 실제 반응이 낮은 계정이 섞임</small></div><i aria-hidden="true">→</i><div class="o"><span>바꾼 기준 · 세 가지 숫자</span><p><em>1</em><b>실제 반응률</b><small>팔로워 대비 좋아요 · 댓글 · 공유</small></p><p><em>2</em><b>퍼지는 방식</b><small>팔로워 밖으로 얼마나 공유되는지</small></p><p><em>3</em><b>국가별 반응</b><small>노리는 나라의 시청자가 반응하는지</small></p></div></div>
+<p class="au-note">같은 장르 경쟁작이 베타테스트 때 인플루언서와 협업한 방식도 네 가지로 정리하고, 연락할 길드와 후보를 뽑았습니다.</p>
+
+<h3 class="cr-sub"><span class="cr-n">3-2</span>같은 가이드 주기<span class="cr-tag">문제 B 해결</span></h3>
+<p>비공개 베타테스트(2022.09) 때 사전 접속권과 함께 제작 가이드를 전달하고, 캐릭터별 특징 · 공통 해시태그 · 말투까지 정해 영상마다 게임이 다르게 보이지 않게 했습니다.</p>
+<div class="kl-guide"><div><span>주는 것</span><b>베타테스트 사전 접속권</b><small>라이브 방송 · 녹화 영상 사용 허용</small></div><div><span>꼭 담을 것</span><b>직접 플레이 화면 · 무료 시작 · 출시 시기</b><small>공식 디스코드 · X 링크, 다음 NFT 세일 안내</small></div><div class="no"><span>하지 않을 것</span><b>공식 영상만 잘라 올리기</b><small>개발 중인 밸런스에 대한 단정적 평가</small></div></div><blockquote class="kl-q">“광고 영상이 아니라, 직접 해 보고 좋아서 소개하는 후기로 보여야 합니다.”<cite>가이드의 핵심 한 줄</cite></blockquote>
+
+<h3 class="cr-sub"><span class="cr-n">3-3</span>선정부터 기록까지 한 흐름<span class="cr-tag">문제 C 해결</span></h3>
+<p>모든 영상을 같은 표에 기록해 순위를 정하고, 다음에 누구와 어떤 조건으로 할지 판단했습니다.</p>
+<div class="pd-flow"><div class="pd-step"><span>1</span><b>선정</b><small>세 가지 숫자로 후보 검토</small></div><div class="pd-step"><span>2</span><b>가이드 전달</b><small>접속권과 제작 가이드</small></div><div class="pd-step"><span>3</span><b>제작 · 업로드</b><small>일정과 업로드 확인</small></div><div class="pd-step"><span>4</span><b>성과 집계</b><small>같은 표에 영상별 기록</small></div><div class="pd-step dark"><span>5</span><b>리포트</b><small>다음 협업 조건에 반영</small></div></div>
+<div class="cn-learn kl-rec"><span>영상마다 같은 항목으로 기록</span>
+<p><b>조회 · 좋아요</b>반응 크기 비교</p>
+<p><b>품질</b>상 · 중 · 하로 직접 보고 매긴 완성도</p>
+<p><b>언어</b>어느 나라 유저에게 닿았는지</p>
+<p><b>메모</b>공식 계정 태그 누락, 편집 수준 등</p>
+</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-4</span>출시 뒤에는 유저가 만드는 영상으로<span class="cr-tag">확장</span></h3>
+<p>글로벌 출시(2023.04) 뒤에는 크리에이터 프로그램을 열어, 유저와 소규모 크리에이터가 만든 영상을 모으고 순위를 매겨 보상했습니다.</p>
+<div class="kl-cp">
+<div class="kl-plat"><div><span>유튜브</span><b>22편</b><small>리뷰 · 공략 · 보스전</small></div><div><span>X(트위터)</span><b>20건+</b><small>플레이 영상 · 링크 공유</small></div><div><span>틱톡</span><b>3편</b><small>짧은 플레이 영상</small></div></div>
+<div class="kl-lang"><span>참여 영상 언어</span><em>영어</em><em>포르투갈어</em><em>스페인어</em><em>프랑스어</em><em>인도네시아어</em><em>일본어</em><small>2023.04 ~ 05 집계</small></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
+<div class="ob-res">
+<div class="ob-rc"><b>영상 조회 50만+</b><small>4개국 인플루언서 협업 누적</small></div>
+<div class="ob-rc"><b>조회당 33원</b><small>평균 CPV</small></div>
+<div class="ob-rc"><b>6개 언어 참여 영상</b><small>출시 후 크리에이터 프로그램</small></div>
+</div>
+<p class="au-note">숫자로 고르고, 같은 가이드를 주고, 결과를 다음에 씁니다.</p>
+</template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
   <div class="sbar pad"><div class="wrap"><span class="crumb" id="crumb"></span><button class="btn ghost sm" id="close" type="button">← 목록으로</button></div></div>
   <div class="pad"><article class="case" id="case"></article></div>
@@ -2688,7 +2778,7 @@ const CASES=[
   results:[["약 20%↓","랜딩 구간 이탈률"]],
   rel:["minewars-ua","minewars-community"],mats:["플로우 전후 비교"]},
  {id:"stella-kol",co:"스텔라 판타지",tags:["Community"],big:"50만+",bl:"글로벌 누적 조회",card:"조회수 50만+",ct:"글로벌 인플루언서 협업\n콘텐츠 기획 및 성과 관리",
-  title:"4개국 인플루언서 협업으로 조회 50만+",
+  title:"팔로워 수가 아니라 반응으로 골라 4개국 영상 조회 50만+를 확보했습니다",
   sum:"인플루언서를 데이터로 고르고, 캐릭터 가이드를 줘서 외부 콘텐츠까지 같은 세계관으로 맞췄습니다.",
   facts:[["내 역할","인플루언서 선별 · 가이드 · 성과 분석"],["국가","태국 · 베트남 · 싱가포르 · 브라질"]],
   problems:[],
