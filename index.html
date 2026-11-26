@@ -837,6 +837,62 @@
 .kl-lang em{font-style:normal;font-size:13px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:4px 10px}
 .kl-lang small{width:100%;font-size:11.5px;color:#8A919C;margin-top:4px}
 @media (max-width:760px){.kl-shots{grid-template-columns:1fr;height:auto}.kl-shots figure{height:280px}.kl-crit,.kl-guide,.kl-cp,.kl-plat{grid-template-columns:1fr}.kl-crit>i{transform:rotate(90deg);justify-self:center}}
+
+/* stella pr case */
+.pr-ticker{margin-top:24px;display:flex;flex-direction:column;gap:8px;padding:16px 0;border-radius:16px;background:#0B1220;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.pr-lane>div{display:flex;gap:10px;width:max-content;animation:prRun 60s linear infinite}
+.pr-lane:nth-child(2)>div{animation-direction:reverse;animation-duration:70s}
+.pr-ticker:hover .pr-lane>div{animation-play-state:paused}
+@keyframes prRun{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.pr-lane>div{animation:none}}
+.pr-h{flex:none;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:#152038;color:#E6ECF8;font-size:13.5px;white-space:nowrap}
+.pr-h em{font-style:normal;font-size:11px;font-weight:800;color:#0B1220;background:#9FBCEF;border-radius:999px;padding:2px 8px}
+.pr-cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
+.pr-cats>div{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
+.pr-cats i{display:block;width:22px;height:6px;border-radius:3px;margin-bottom:10px}
+.pr-cats span{font-size:13px;font-weight:700;color:#5C6370}.pr-cats b{display:block;font-size:24px;font-weight:800;margin-top:2px;color:#1F2329}
+.pr-cats small{display:block;font-size:12px;color:#8A919C;margin-top:4px;line-height:1.45}
+.cI{background:#042F74}.cN{background:#5B93F0}.cL{background:#085EE9}.cE{background:#B9CEF2}
+.pr-cats .cI i{background:#042F74}.pr-cats .cN i{background:#5B93F0}.pr-cats .cL i{background:#085EE9}.pr-cats .cE i{background:#B9CEF2}
+.pr-cats>div.cI,.pr-cats>div.cN,.pr-cats>div.cL,.pr-cats>div.cE{background:#fff}
+.pr-tl{margin-top:10px;border:1px solid #E9EBEF;border-radius:14px;padding:18px 20px 12px}
+.pr-tl-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}.pr-tl-h b{font-size:14px}.pr-tl-h small{font-size:12px;color:#8A919C}
+.pr-cols{display:flex;align-items:flex-end;gap:6px;height:200px;margin-top:28px}
+.pr-col{position:relative;flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;cursor:default}
+.pr-bar{width:100%;max-width:30px;height:calc(100% - 38px);display:flex;flex-direction:column;justify-content:flex-end;border-radius:6px 6px 2px 2px;overflow:hidden;transform-origin:bottom;animation:cnGrow 1s cubic-bezier(.2,.7,.2,1) both}
+.pr-bar i{display:block;width:100%}
+.pr-col:hover .pr-bar{filter:brightness(1.1);box-shadow:0 0 0 2px #EDF3FE}
+.pr-col em{font-style:normal;font-size:11px;font-weight:800;color:#5C6370;margin-bottom:4px}
+.pr-col.k em{color:#085EE9}
+.pr-col span{font-size:10.5px;color:#8A919C;margin-top:6px;white-space:nowrap}
+.pr-col u{position:absolute;top:-22px;text-decoration:none;font-size:10.5px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:6px;padding:2px 6px;white-space:nowrap}
+.pr-doc{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center;margin-top:16px;padding:28px;border-radius:20px;background:radial-gradient(120% 90% at 20% 0%,#DCE8FB 0%,#F0F4FB 55%,#F7F8FA 100%);word-break:keep-all}
+.pr-paper{background:#fff;border-radius:8px;padding:22px 24px;box-shadow:0 2px 4px rgba(16,24,40,.06),0 30px 60px -24px rgba(4,47,116,.45)}
+.pr-ph{display:flex;justify-content:space-between;font-size:10px;font-weight:800;letter-spacing:.14em;color:#8A919C;padding-bottom:10px;border-bottom:2px solid #1F2329}
+.pr-z{position:relative;margin-top:10px;padding:8px 10px 8px 34px;border-radius:8px;transition:background .25s,box-shadow .25s}
+.pr-z>i{position:absolute;left:8px;top:9px;display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#C9DAF8;color:#fff;font-style:normal;font-size:10px;font-weight:800;transition:background .25s}
+.pr-z b{display:block;font-size:15px;line-height:1.45}.pr-z small{display:block;font-size:12px;color:#085EE9;font-weight:700;margin-top:4px}
+.pr-z p{height:7px;border-radius:4px;background:#EEF1F5;margin:6px 0 0!important}.pr-z p.s{width:62%}
+.pr-z p.q{height:auto;background:none;font-size:22px;line-height:1;color:#C9DAF8;font-weight:800}
+.pr-z span{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:700;color:#5C6370}
+.pr-doc:has(li[data-z="1"]:hover) .z1,.pr-doc:has(li[data-z="2"]:hover) .z2,.pr-doc:has(li[data-z="3"]:hover) .z3,.pr-doc:has(li[data-z="4"]:hover) .z4,.pr-doc:has(li[data-z="5"]:hover) .z5{background:#EDF3FE;box-shadow:inset 0 0 0 1.5px #085EE9}
+.pr-doc:has(li[data-z="1"]:hover) .z1>i,.pr-doc:has(li[data-z="2"]:hover) .z2>i,.pr-doc:has(li[data-z="3"]:hover) .z3>i,.pr-doc:has(li[data-z="4"]:hover) .z4>i,.pr-doc:has(li[data-z="5"]:hover) .z5>i{background:#085EE9}
+.pr-z.z1>i{background:#085EE9}
+.pr-legend{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.pr-legend li{display:flex;gap:12px;align-items:center;background:#fff;border-radius:12px;padding:12px 14px;cursor:default;transition:transform .2s,box-shadow .2s}
+.pr-legend li:hover{transform:translateX(-4px);box-shadow:0 10px 24px -16px rgba(4,47,116,.45)}
+.pr-legend li>span{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px;font-weight:800}
+.pr-legend b{display:block;font-size:15px}.pr-legend small{display:block;font-size:13px;color:#5C6370}
+.pr-two{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px;margin-top:10px;align-items:stretch;word-break:keep-all}
+.pr-top .ci-hb{grid-template-columns:96px minmax(0,1fr) 40px}
+.pr-kbw{display:flex;flex-direction:column;justify-content:center;border-radius:14px;padding:20px 22px;background:#042F74;color:#fff}
+.pr-kbw span{font-size:12px;font-weight:800;color:#9FBCEF}.pr-kbw b{font-size:22px;margin-top:4px}.pr-kbw small{font-size:13px;color:#D6E2FA;margin-top:8px;line-height:1.55}
+.pr-ov{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;align-items:center;margin-top:16px;padding:20px 24px;border-radius:16px;background:#F5F7FA}
+.pr-ov-n b{display:block;font-size:40px;font-weight:800;color:#085EE9;letter-spacing:-.03em;line-height:1}.pr-ov-n span{font-size:13px;color:#5C6370}
+.pr-ov-c{display:flex;flex-wrap:wrap;gap:6px}
+.pr-ov-c em{font-style:normal;font-size:13px;font-weight:700;color:#042F74;background:#fff;border:1px solid #DCE4F0;border-radius:999px;padding:5px 12px}
+.pr-ov-c em.more{background:none;border-color:transparent;color:#8A919C}
+@media (max-width:760px){.pr-cats{grid-template-columns:1fr 1fr}.pr-doc,.pr-two,.pr-ov{grid-template-columns:1fr}.pr-col u{display:none}}
 </style>
 </head>
 <body>
@@ -2646,6 +2702,83 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <p class="au-note">숫자로 고르고, 같은 가이드를 주고, 결과를 다음에 씁니다.</p>
 </template>
+<template id="tpl-stella-pr">
+<span style="font-size: 14px; color: #5C6370">스텔라 판타지 · 링게임즈 마케팅팀</span>
+<h1 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.35; letter-spacing: -.03em; margin-top: 12px">알릴 일이 생길 때마다 보도자료를 내<br><span style="color: #085EE9">기사 250건+</span>을 노출했습니다</h1>
+<p style="font-size: 18px; color: #5C6370; margin-top: 16px">PR 전담 부서가 없는 스타트업에서 보도자료 작성, 배포, 기자 응대를 직접 맡았습니다.</p>
+
+<dl style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; margin: 28px 0 0; font-size: 15px; padding: 24px 0; border-top: 1px solid #E9EBEF; border-bottom: 1px solid #E9EBEF">
+<dt style="color: #5C6370">기간</dt><dd style="margin: 0">2022.02 → 2023.07</dd>
+<dt style="color: #5C6370">매체</dt><dd style="margin: 0">국내외 150곳 · 한국경제 · 인벤 · 경향게임스 · MarketWatch 등</dd>
+<dt style="color: #5C6370">내 역할</dt><dd style="margin: 0">기사가 될 이슈 선정 · 보도자료 작성과 배포 · 기자 개별 연락 · 인터뷰 일정 조율</dd>
+<dt style="color: #5C6370">협업</dt><dd style="margin: 0">해외 매체는 PR 대행사와 진행</dd>
+</dl>
+<div class="pr-ticker" aria-label="실제 보도 기사 제목"><div class="pr-lane"><div><span class="pr-h"><em>인벤</em>링게임즈, P2E 게임 '스텔라 판타지' 6월 공개한다</span><span class="pr-h"><em>TOKENPOST</em>링게임즈, NFT게임 '스텔라판타지'로 65억 규모 투자 유치</span><span class="pr-h"><em>MMORPG.com</em>Stella Fantasy, a 'Premium Character Collectible RPG'</span><span class="pr-h"><em>지디넷코리아</em>링 게임즈, NFT RPG ‘스텔라 판타지’ 블록체인 안정성 입증</span><span class="pr-h"><em>경향게임스</em>‘스텔라 판타지’ 투자에 크러스트 유니버스 참여 총 6백만 달러 투자 유치</span><span class="pr-h"><em>게임동아</em>미소녀가 가득! KBW2022서 만난 NFT RPG '스텔라판타지'</span><span class="pr-h"><em>Morningstar</em>Ring Games' STELLA FANTASY Completed US$6M Fund Raising</span><span class="pr-h"><em>인벤</em>링게임즈, P2E 게임 '스텔라 판타지' 6월 공개한다</span><span class="pr-h"><em>TOKENPOST</em>링게임즈, NFT게임 '스텔라판타지'로 65억 규모 투자 유치</span><span class="pr-h"><em>MMORPG.com</em>Stella Fantasy, a 'Premium Character Collectible RPG'</span><span class="pr-h"><em>지디넷코리아</em>링 게임즈, NFT RPG ‘스텔라 판타지’ 블록체인 안정성 입증</span><span class="pr-h"><em>경향게임스</em>‘스텔라 판타지’ 투자에 크러스트 유니버스 참여 총 6백만 달러 투자 유치</span><span class="pr-h"><em>게임동아</em>미소녀가 가득! KBW2022서 만난 NFT RPG '스텔라판타지'</span><span class="pr-h"><em>Morningstar</em>Ring Games' STELLA FANTASY Completed US$6M Fund Raising</span></div></div><div class="pr-lane"><div><span class="pr-h"><em>한국경제</em>링게임즈 스텔라 판타지, 태국게임쇼 2022서 일반인에게 공개</span><span class="pr-h"><em>디스이즈게임</em>Web3 기반 ARPG 스텔라 판타지, 4월 13일 글로벌 출시 확정</span><span class="pr-h"><em>뉴스탭</em>웹3 RPG ‘스텔라 판타지’, 글로벌 출시와 동시에 역대급 리텐션</span><span class="pr-h"><em>메디팜헬스</em>북미 최대 웹3 엑스포 3XP 선정 ‘베스트 RPG 게임’</span><span class="pr-h"><em>게임포커스</em>일본 최대 웹3 게임 핏칭 콘테스트 'SHAKE!' 파이널리스트 선정</span><span class="pr-h"><em>인벤</em>[체험기] '다음 세대의 P2E 게임', 스텔라 판타지의 첫인상은?</span><span class="pr-h"><em>스타트업엔</em>미국, 인도네시아, 일본 잇는 대규모 홍보투어 완료</span><span class="pr-h"><em>한국경제</em>링게임즈 스텔라 판타지, 태국게임쇼 2022서 일반인에게 공개</span><span class="pr-h"><em>디스이즈게임</em>Web3 기반 ARPG 스텔라 판타지, 4월 13일 글로벌 출시 확정</span><span class="pr-h"><em>뉴스탭</em>웹3 RPG ‘스텔라 판타지’, 글로벌 출시와 동시에 역대급 리텐션</span><span class="pr-h"><em>메디팜헬스</em>북미 최대 웹3 엑스포 3XP 선정 ‘베스트 RPG 게임’</span><span class="pr-h"><em>게임포커스</em>일본 최대 웹3 게임 핏칭 콘테스트 'SHAKE!' 파이널리스트 선정</span><span class="pr-h"><em>인벤</em>[체험기] '다음 세대의 P2E 게임', 스텔라 판타지의 첫인상은?</span><span class="pr-h"><em>스타트업엔</em>미국, 인도네시아, 일본 잇는 대규모 홍보투어 완료</span></div></div></div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
+<p>스텔라 판타지는 출시 전이었고 회사에는 PR 전담 부서가 없었지만, 투자 · NFT 세일 · 해외 행사처럼 알릴 일은 계속 생겼습니다.</p>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
+<div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
+<p style="font-size: clamp(19px, 2.6vw, 24px); font-weight: 800; line-height: 1.5; color: #042F74">“알릴 일은 많은데, 기사로 만들 사람이 없었습니다.”</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px">
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">A</span>PR 담당자 없음</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">보도자료를 쓰고 기자와 연락할 사람이 따로 없었습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">B</span>매체마다 다른 관심사</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">게임 매체와 블록체인 · 경제 매체가 궁금해하는 내용이 달랐습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px; word-break: keep-all"><b style="display: block; font-size: 16px"><span class="cr-pl">C</span>해외 매체의 벽</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">국내 보도자료를 번역만 해서는 해외 매체에 실리기 어려웠습니다.</span></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
+<h3 class="cr-sub"><span class="cr-n">3-1</span>기사가 될 일 고르기<span class="cr-tag">문제 A 해결</span></h3>
+<p>모든 소식을 내지 않고, 기사로 쓸 만한 네 가지 이슈에 맞춰 보도자료를 냈습니다.</p>
+<div class="pr-cats"><div class="cI"><i></i><span>투자 · 사업</span><b>79건</b><small>투자 유치 · 지원사업 선정 · 대표 인터뷰</small></div><div class="cN"><i></i><span>NFT · 블록체인</span><b>27건</b><small>보안 감사 · P2E 랭킹</small></div><div class="cL"><i></i><span>게임 공개 · 출시</span><b>113건</b><small>트레일러 · 출시일 · 파트너십 · 신규 캐릭터</small></div><div class="cE"><i></i><span>행사 · 수상</span><b>55건</b><small>KBW · 태국게임쇼 · 3XP · IVS</small></div></div>
+<div class="pr-tl"><div class="pr-tl-h"><b>월별 보도 기사 수</b><small>PR 진행 내역 기준 · 막대에 마우스를 올리면 월별 건수</small></div><div class="pr-cols"><div class="pr-col k" title="2022.02 · 21건"><u>파트너십 · 공개 예고</u><em>21</em><div class="pr-bar"><i class="cL" style="height:41.2%"></i></div><span>22.02</span></div><div class="pr-col" title="2022.03 · 0건"><div class="pr-bar"></div><span>22.03</span></div><div class="pr-col" title="2022.04 · 0건"><div class="pr-bar"></div><span>22.04</span></div><div class="pr-col" title="2022.05 · 10건"><em>10</em><div class="pr-bar"><i class="cI" style="height:19.6%"></i></div><span>22.05</span></div><div class="pr-col" title="2022.06 · 20건"><em>20</em><div class="pr-bar"><i class="cN" style="height:19.6%"></i><i class="cI" style="height:19.6%"></i></div><span>22.06</span></div><div class="pr-col" title="2022.07 · 17건"><em>17</em><div class="pr-bar"><i class="cL" style="height:27.5%"></i><i class="cI" style="height:5.9%"></i></div><span>22.07</span></div><div class="pr-col" title="2022.08 · 44건"><em>44</em><div class="pr-bar"><i class="cE" style="height:19.6%"></i><i class="cL" style="height:33.3%"></i><i class="cN" style="height:33.3%"></i></div><span>22.08</span></div><div class="pr-col k" title="2022.09 · 51건"><u>투자 유치 · NFT 세일</u><em>51</em><div class="pr-bar"><i class="cI" style="height:100.0%"></i></div><span>22.09</span></div><div class="pr-col" title="2022.10 · 12건"><em>12</em><div class="pr-bar"><i class="cE" style="height:19.6%"></i><i class="cI" style="height:3.9%"></i></div><span>22.10</span></div><div class="pr-col" title="2022.11 · 4건"><em>4</em><div class="pr-bar"><i class="cE" style="height:7.8%"></i></div><span>22.11</span></div><div class="pr-col" title="2022.12 · 5건"><em>5</em><div class="pr-bar"><i class="cE" style="height:9.8%"></i></div><span>22.12</span></div><div class="pr-col" title="2023.01 · 16건"><em>16</em><div class="pr-bar"><i class="cE" style="height:2.0%"></i><i class="cL" style="height:29.4%"></i></div><span>23.01</span></div><div class="pr-col" title="2023.02 · 0건"><div class="pr-bar"></div><span>23.02</span></div><div class="pr-col" title="2023.03 · 10건"><em>10</em><div class="pr-bar"><i class="cL" style="height:19.6%"></i></div><span>23.03</span></div><div class="pr-col" title="2023.04 · 9건"><em>9</em><div class="pr-bar"><i class="cL" style="height:17.6%"></i></div><span>23.04</span></div><div class="pr-col" title="2023.05 · 11건"><em>11</em><div class="pr-bar"><i class="cL" style="height:21.6%"></i></div><span>23.05</span></div><div class="pr-col k" title="2023.06 · 38건"><u>글로벌 투어 · 수상</u><em>38</em><div class="pr-bar"><i class="cE" style="height:37.3%"></i><i class="cL" style="height:31.4%"></i><i class="cI" style="height:5.9%"></i></div><span>23.06</span></div><div class="pr-col" title="2023.07 · 6건"><em>6</em><div class="pr-bar"><i class="cE" style="height:11.8%"></i></div><span>23.07</span></div></div></div>
+
+<h3 class="cr-sub"><span class="cr-n">3-2</span>한 번에 읽히는 보도자료 구조<span class="cr-tag">문제 A 해결</span></h3>
+<p>기자가 제목만 보고도 기사를 쓸 수 있게 순서를 고정했습니다. 오른쪽 항목에 마우스를 올리면 해당 위치가 표시됩니다.</p>
+<div class="pr-doc">
+<div class="pr-paper">
+<div class="pr-ph"><span>PRESS RELEASE</span><span>즉시 배포</span></div>
+<div class="pr-z z1"><i>1</i><b>링게임즈의 캐릭터 콜렉터블 RPG ‘스텔라 판타지’, 미국 · 인도네시아 · 일본 잇는 대규모 홍보투어 완료</b><small>북미 3XP ‘베스트 RPG’ 선정 · IVS ‘SHAKE!’ 파이널리스트</small></div>
+<div class="pr-z z2"><i>2</i><p></p><p></p><p class="s"></p></div>
+<div class="pr-z z3"><i>3</i><p></p><p></p><p></p><p class="s"></p><p></p><p class="s"></p></div>
+<div class="pr-z z4"><i>4</i><p class="q">“ ”</p><p class="s"></p></div>
+<div class="pr-z z5"><i>5</i><p class="s"></p><span>▶ 영상 링크 · 문의처</span></div>
+</div>
+<ol class="pr-legend">
+<li data-z="1"><span>1</span><div><b>제목</b><small>성과를 숫자나 수상으로 한 줄에</small></div></li>
+<li data-z="2"><span>2</span><div><b>첫 문단</b><small>누가 무엇을 했는지</small></div></li>
+<li data-z="3"><span>3</span><div><b>본문</b><small>이슈별로 문단 나누기</small></div></li>
+<li data-z="4"><span>4</span><div><b>대표 코멘트</b><small>다음 계획 한마디</small></div></li>
+<li data-z="5"><span>5</span><div><b>자료 · 문의</b><small>영상 링크와 담당자 연락처</small></div></li>
+</ol>
+</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-3</span>기자에게 한 명씩 연락하기<span class="cr-tag">문제 B 해결</span></h3>
+<p>일괄 배포에 그치지 않고, 게임 기자와 블록체인 기자를 나눠 따로 연락했습니다.</p>
+<div class="pd-flow">
+<div class="pd-step"><span>1</span><b>명단 만들기</b><small>기존 기자 + NFT · 게임 담당 기자</small></div>
+<div class="pd-step"><span>2</span><b>메일 먼저, 전화 다음</b><small>답이 없으면 편집국으로 2차 연락</small></div>
+<div class="pd-step"><span>3</span><b>취재 자리 만들기</b><small>부스 방문과 게임 시연을 묶어 초청</small></div>
+<div class="pd-step dark"><span>4</span><b>인터뷰 일정 조율</b><small>방문 날짜와 시간까지 확정</small></div>
+</div>
+<div class="pr-two">
+<div class="ci-hr pr-top"><span class="ci-ht">가장 많이 실린 매체</span><div class="ci-hb k"><span>경향게임스</span><div><i style="width:100%"></i></div><b>18건</b></div><div class="ci-hb"><span>뉴스탭</span><div><i style="width:83%"></i></div><b>15건</b></div><div class="ci-hb"><span>더게임스데일리</span><div><i style="width:72%"></i></div><b>13건</b></div><div class="ci-hb"><span>게임포커스</span><div><i style="width:72%"></i></div><b>13건</b></div><div class="ci-hb"><span>인벤</span><div><i style="width:67%"></i></div><b>12건</b></div><div class="ci-hb"><span>게임조선</span><div><i style="width:61%"></i></div><b>11건</b></div></div>
+<div class="pr-kbw"><span>KBW2022</span><b>10개 매체 · 기자 12명</b><small>부스 방문을 잡아 인벤 · 게임동아 현장 체험기로 이어졌습니다.</small></div>
+</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-4</span>해외 매체는 현지에 맞게<span class="cr-tag">문제 C 해결</span></h3>
+<p>해외는 PR 대행사와 진행하되, 국내 보도자료를 그대로 옮기지 않고 그 나라 독자에게 맞는 내용으로 바꿔 냈습니다. 나온 기사는 후속 콘텐츠로 만들어 공식 계정과 커뮤니티에 다시 알렸습니다.</p>
+<div class="pr-ov"><div class="pr-ov-n"><b>66건</b><span>해외 매체 기사</span></div><div class="pr-ov-c"><em>MMORPG.com</em><em>Morningstar</em><em>MarketWatch</em><em>AP News</em><em>Benzinga</em><em>MMORPGBR</em><em>GameSanookTH</em><em>Coin News (일본)</em><em>Mobidictum</em><em>MMO Culture</em><em class="more">외</em></div></div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
+<div class="ob-res">
+<div class="ob-rc"><b>기사 250건+</b><small>국내외 150개 매체 · 26개 이슈</small></div>
+<div class="ob-rc"><b>해외 기사 66건</b><small>미국 · 태국 · 브라질 · 일본 등</small></div>
+<div class="ob-rc"><b>PR 창구 일원화</b><small>작성 · 배포 · 기자 응대를 직접</small></div>
+</div>
+<p class="au-note">알릴 일을 고르고, 기자가 쓰기 쉽게 만들어, 한 명씩 전합니다.</p>
+</template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
   <div class="sbar pad"><div class="wrap"><span class="crumb" id="crumb"></span><button class="btn ghost sm" id="close" type="button">← 목록으로</button></div></div>
   <div class="pad"><article class="case" id="case"></article></div>
@@ -2812,7 +2945,7 @@ const CASES=[
   results:[["40K+","오픈 2달 만에 팔로워"],["3위","P2E(플레이하면 보상받는 게임) 랭킹 사이트"],["NFT 세일","커뮤니티 팬덤이 세일 초기 모멘텀으로"]],
   lesson:"광고가 아니라 유저 풀이 겹치는 파트너를 통해 지속 유입을 만들었습니다.",card:"팔로워 40K+",ct:"글로벌 파트너십 제휴로\n론칭 전 초기 팬덤 구축",rel:["minewars-ua","minewars-bridge"],mats:["파트너 발표 이미지","완판 공지"]},
  {id:"stella-pr",co:"스텔라 판타지",tags:["Event/PR"],big:"250건+",bl:"한국경제 · 더벨 · 인벤 등 기사 노출",card:"기사 250건+",ct:"국내외 보도자료 작성 및\n인터뷰 기사 기획·진행",
-  title:"보도자료와 인터뷰로 기사 250건+",
+  title:"알릴 일이 생길 때마다 보도자료를 내 기사 250건+을 노출했습니다",
   sum:"행사 전후 보도자료와 기자 피칭, 인터뷰로 국내외 매체 노출을 넓혔습니다.",
   facts:[["내 역할","PR 기획 · 보도자료 작성 · 기자 피칭 · 인터뷰 조율"]],
   problems:[],
