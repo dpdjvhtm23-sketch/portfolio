@@ -392,7 +392,7 @@
 .cn-fmt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px;word-break:keep-all}
 .cn-fmt>div{border:1px solid #E9EBEF;border-radius:14px;padding:16px}
 .cn-fmt span{font-size:12px;font-weight:800;color:#085EE9}.cn-fmt b{display:block;font-size:15px;margin-top:4px}.cn-fmt small{display:block;font-size:13px;color:#5C6370;margin-top:4px}
-.cn-loop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px;word-break:keep-all}
+.cn-loop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px;word-break:keep-all;align-items:start}
 .cn-loop-v{background:#F5F7FA;border-radius:14px;padding:20px}
 .cn-lv{display:flex;align-items:flex-end;gap:6px;height:112px}
 .cn-lv>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
@@ -402,21 +402,22 @@
 @keyframes cnGrow{from{transform:scaleY(0)}}
 .cn-lv span{font-size:11px;font-weight:800;color:#5C6370;margin-top:6px}.cn-lv>div.hi span{color:#085EE9}
 .cn-loop-v p{margin:14px 0 0;font-size:13px;color:#5C6370}
-.cn-learn,.cn-rule{border:1px solid #E9EBEF;border-radius:14px;padding:18px 20px}
+.cn-learn,.cn-rule{border:1px solid #E9EBEF;border-radius:14px;padding:16px 20px;align-self:start}
 .cn-learn>span,.cn-rule>span{display:block;font-size:12px;font-weight:700;color:#5C6370;margin-bottom:8px}
-.cn-learn p,.cn-rule p{display:flex;gap:10px;margin:6px 0 0;font-size:14px;line-height:1.5}
-.cn-learn p b,.cn-rule p b{flex:none;width:64px;color:#085EE9}
+.cn-learn p,.cn-rule p{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;margin:0!important;padding:10px 0;border-top:1px solid #EEF0F3;font-size:14px;line-height:1.5;color:#1F2329}
+.cn-learn p:first-of-type,.cn-rule p:first-of-type{border-top:0;padding-top:4px}
+.cn-learn p b,.cn-rule p b{color:#085EE9;font-size:13px}
 .cn-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
-.cn-fun{display:flex;flex-direction:column;gap:12px;background:#F5F7FA;border-radius:14px;padding:20px}
+.cn-fun{display:flex;flex-direction:column;gap:10px;background:#F5F7FA;border-radius:14px;padding:16px 20px}
 .cn-fun>div{display:grid;grid-template-columns:1fr auto;align-items:baseline;row-gap:4px}
-.cn-fun span{font-size:13px;color:#5C6370}.cn-fun b{font-size:20px;font-weight:800;color:#042F74}
-.cn-fun i{grid-column:1/-1;display:block;height:10px;border-radius:5px;background:#9FBCEF}
+.cn-fun span{font-size:13px;color:#5C6370}.cn-fun b{font-size:18px;font-weight:800;color:#042F74}
+.cn-fun i{grid-column:1/-1;display:block;height:8px;border-radius:5px;background:#9FBCEF}
 .cn-fun .k i{background:#085EE9}.cn-fun .k span{color:#085EE9;font-weight:700}
 .cn-fun small{grid-column:1/-1;font-size:12px;color:#8A919C}
 .cn-cap{margin:8px 0 0;font-size:12px;font-style:italic;color:#8A919C}
-.cn-tpl{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid #EEF0F3}
-.cn-tpl span{font-size:12px;font-weight:700;color:#5C6370;margin-right:4px}
-.cn-tpl em{font-style:normal;font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:4px 10px}
+.cn-tl{display:block;margin-top:12px;padding-top:12px;border-top:1px solid #EEF0F3;font-size:12px;font-weight:700;color:#5C6370}
+.cn-tpl{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.cn-tpl em{font-style:normal;font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:4px 10px;white-space:nowrap}
 @media (max-width:760px){.cn-push,.cn-loop,.cn-c{grid-template-columns:1fr}.cn-fmt{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
@@ -1469,10 +1470,10 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="cn-loop">
 <div class="cn-loop-v"><div class="cn-lv" role="img" aria-label="미션 달성에 따라 럭키박스 레벨 1부터 7까지 오르는 구조"><div style="--h:28px" class=""><i></i><span>Lv.1</span></div><div style="--h:40px" class=""><i></i><span>Lv.2</span></div><div style="--h:52px" class=""><i></i><span>Lv.3</span></div><div style="--h:64px" class=""><i></i><span>Lv.4</span></div><div style="--h:76px" class="hi"><i></i><span>Lv.5</span></div><div style="--h:88px" class="hi"><i></i><span>Lv.6</span></div><div style="--h:100px" class="hi"><i></i><span>Lv.7</span></div></div><p>미션 달성 → 럭키박스 레벨 상승 → 푸시로 다음 미션 안내 → 레벨별 추첨</p></div>
 <div class="cn-learn"><span>결과 보고에서 확인한 것</span>
-<p><b>참여 방법</b>댓글 한 번으로 끝나는 이벤트는 참여자가 목표의 5배</p>
-<p><b>보상</b>포인트보다 실물 경품에 반응이 컸음</p>
-<p><b>미션</b>퀴즈는 신규 유저 참여율이 가장 높고, 글쓰기는 보상을 높여도 저조</p>
-<p><b>다음 설계</b>퀴즈를 맨 앞에, 부담 큰 미션은 선택형 고보상으로 변경</p>
+<p><b>참여 방법</b>댓글 한 번으로 끝나는 이벤트가 참여자 목표의 5배</p>
+<p><b>보상</b>포인트보다 실물 경품에 반응이 큼</p>
+<p><b>미션</b>퀴즈는 신규 참여율 최고, 글쓰기는 저조</p>
+<p><b>다음 설계</b>퀴즈를 앞에, 부담 큰 미션은 선택형으로</p>
 </div>
 </div>
 
@@ -1482,9 +1483,9 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div><div class="cn-fun"><div><span>댓글 수</span><b>100</b><i style="width:100%"></i><small>겉으로 보이는 참여</small></div><div><span>유효 참여자</span><b>약 60</b><i style="width:60%"></i><small>중복 · 조건 미달 제외</small></div><div class="k"><span>조건까지 지킨 참여자</span><b>약 10</b><i style="width:10%"></i><small>수신 동의 유지</small></div></div><p class="cn-cap">크리스마스 이벤트 기준 · 댓글 수를 100으로 둔 상대값</p></div>
 <div class="cn-rule"><span>집계 원칙</span>
 <p><b>대조</b>GA 수치와 참여 로우 데이터를 맞춰 보고 확정</p>
-<p><b>보정</b>비트코인 거래량에 따른 증감을 걷어내고 비교</p>
-<p><b>판단</b>성공 · 실패가 아닌 포맷 · 보상 · 허들 단위로 평가</p>
-<div class="cn-tpl"><span>템플릿</span><em>기획안</em><em>사전 공지글</em><em>푸시 문구</em><em>배너 기획안</em><em>결과 보고</em></div>
+<p><b>보정</b>비트코인 거래량에 따른 증감을 빼고 비교</p>
+<p><b>판단</b>성공 · 실패가 아닌 포맷 · 보상 · 허들 단위 평가</p>
+<span class="cn-tl">템플릿으로 남긴 것</span><div class="cn-tpl"><em>기획안</em><em>사전 공지글</em><em>푸시 문구</em><em>배너 기획안</em><em>결과 보고</em></div>
 </div>
 </div>
 
