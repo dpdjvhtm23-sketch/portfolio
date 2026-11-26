@@ -220,6 +220,11 @@
 @media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
 
 /* automation case */
+.au-live .au-bub{animation:auLive1 10s cubic-bezier(.2,.8,.2,1) infinite both}
+.au-live .au-bub:nth-child(2){animation-name:auLive2}
+@keyframes auLive1{0%,4%{opacity:0;transform:translateY(16px) scale(.97)}10%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+@keyframes auLive2{0%,38%{opacity:0;transform:translateY(16px) scale(.97)}44%,88%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+@media (prefers-reduced-motion:reduce){.au-live .au-bub{animation:none}}
 .au-k{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;margin:18px 0 10px}
 .au-k span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#085EE9;color:#fff;font-size:12px}
 .au-sls .au-k{margin-top:0}
@@ -1195,7 +1200,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 <div class="au-bh"><b>연사 · 스폰서 키워드 알림</b><small>실시간</small></div>
 <p class="au-flow">네이버 · 구글 뉴스 + 커뮤니티 <i>→</i> 키워드 감지 <i>→</i> AI 요약</p>
 <div class="au-tg"><div class="au-tg-h"><i>KM</i><div><b>KBW Keyword Monitor</b><small>bot</small></div></div>
-<div class="au-tg-b multi">
+<div class="au-tg-b multi au-live">
 <div class="au-bub au-kw"><b class="au-bt">🔔 키워드 감지 · 네이버 뉴스</b>
 <div class="au-sum"><b>🤖 AI 요약</b>스폰서 B 신규 서비스 출시 보도가 이어짐. 긍정적 화제성이 높은 시점.</div>
 <p class="au-lk">🔗 원문 링크</p><span class="au-time">08:10</span></div>
