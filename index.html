@@ -1732,6 +1732,18 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 }
 
 @media (min-width:761px){.ob-res:has(>.ob-rc:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* bridge flow alignment */
+.mb-row p.gap{display:none}
+@media (max-width:760px){
+.mb-flows{align-items:stretch}
+.mb-row{margin:0!important}
+.mb-row>div{gap:18px!important}
+.mb-row p{min-height:0!important;height:78px!important;flex:none!important;justify-content:center;overflow:visible!important}
+.mb-row p.gap{display:flex;background:none!important;border:1.5px dashed #D5D9E0;box-shadow:none!important}
+.mb-row p.gap b{font-size:12px!important;font-weight:600;color:#9AA3AF}
+.mb-row p+p::before{top:-18px!important;height:18px;display:flex!important;align-items:center;justify-content:center;line-height:1}
+}
 </style>
 
 <nav class="nav pad" id="nav" aria-label="주 메뉴"><div class="wrap">
@@ -2734,7 +2746,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>브릿지 랜딩 페이지 도입<span class="cr-tag">직접 기획</span></h3>
 <p>광고와 가입 페이지 사이에 소개 페이지를 한 장 넣고, 디자이너와 개발자에게 기획안을 전달해 만들었습니다.</p>
-<div class="mb-flows"><div class="mb-row "><span class="mb-l">기존</span><div><p class=""><b>인앱 광고</b></p><p class="bad"><b>가입 페이지</b><small>설명 없이 바로 폼 · 일부 기기 오류</small></p><p class=""><b>가입 완료</b></p></div></div><div class="mb-row after"><span class="mb-l">변경</span><div><p class=""><b>인앱 광고</b></p><p class="new"><b>브릿지 랜딩</b><small>게임 소개 · 플레이 영상</small></p><p class=""><b>가입 페이지</b><small>웹으로 열림</small></p><p class=""><b>가입 완료</b></p></div></div></div>
+<div class="mb-flows"><div class="mb-row "><span class="mb-l">기존</span><div><p class=""><b>인앱 광고</b></p><p class="gap"><b>소개 단계 없음</b></p><p class="bad"><b>가입 페이지</b><small>설명 없이 바로 폼 · 일부 기기 오류</small></p><p class=""><b>가입 완료</b></p></div></div><div class="mb-row after"><span class="mb-l">변경</span><div><p class=""><b>인앱 광고</b></p><p class="new"><b>브릿지 랜딩</b><small>게임 소개 · 플레이 영상</small></p><p class=""><b>가입 페이지</b><small>웹으로 열림</small></p><p class=""><b>가입 완료</b></p></div></div></div>
 <div class="np-c3"><div><span>게임 소개</span><b>어떤 게임인지 먼저 설명</b><small>가입 전에 알아야 할 내용</small></div><div><span>게임 영상</span><b>플레이 영상으로 바로 이해</b><small>글을 읽지 않아도 전달</small></div><div><span>사전가입 버튼</span><b>누르면 가입 페이지가 웹으로</b><small>인앱 브라우저 오류 없이 가입</small></div></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>전후 비교<span class="cr-tag">검증</span></h3>
