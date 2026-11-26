@@ -36,6 +36,125 @@
 .mx-n{flex:none;width:24px;height:24px;border-radius:50%;background:#085EE9;color:#fff;display:grid;place-items:center;font-weight:800;font-size:12px}
 @media (hover:none){.mx-view{overflow-y:auto}.mx-hint{display:none}.mx-after{transform:none}}
 @media (max-width:640px){.mx-stage{padding:24px 16px 16px;gap:16px}.mx-win,.mx-before{width:100%}.mx-view{height:380px}.mx-pts{grid-template-columns:1fr}}
+
+/* paid case + dashboard replica */
+.pd-org,.pd-ba,.pd-flow,.pd-vs,.pd-geo,.pd-acts,.pd-res,.pd-call{word-break:keep-all}
+.pd-org{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:stretch;margin-top:20px}
+.pd-org>div{border:1px solid #E9EBEF;border-radius:12px;padding:14px 16px}
+.pd-org span,.pd-ba span,.pd-step span,.pd-vs span{display:block;font-size:12px;font-weight:700;color:#5C6370;letter-spacing:.02em}
+.pd-org b{display:block;font-size:15px;margin-top:2px}.pd-org small{display:block;font-size:13px;color:#5C6370;margin-top:2px}
+.pd-org>i,.pd-ba>i{align-self:center;font-style:normal;color:#B3B3B3;font-weight:700}
+.pd-org .me{grid-column:1/-1;background:#042F74;border-color:#042F74;display:flex;gap:12px;align-items:center}
+.pd-org .me span{color:#9FBCEF}.pd-org .me b{color:#fff;margin:0}
+.pd-ba{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;margin-top:16px}
+.pd-ba>div{border-radius:14px;padding:20px}.pd-ba .b{background:#F5F7FA}.pd-ba .a{border:1.5px solid #085EE9}
+.pd-ba .a span{color:#085EE9}.pd-ba b{display:block;font-size:17px;margin-top:4px}.pd-ba small{display:block;font-size:14px;color:#5C6370;margin-top:4px;line-height:1.55}
+.pd-q{margin:14px 0;padding:16px 20px;border-left:3px solid #B3B3B3;background:#F7F8FA;border-radius:0 12px 12px 0;font-size:16px;color:#3B414B;font-style:italic}
+.pd-q cite{display:block;font-size:12px;font-style:normal;color:#8A919C;margin-top:6px}
+.pd-flow{display:flex;gap:8px;margin-top:16px;align-items:stretch}
+.pd-step{flex:1 1 0;min-width:0;position:relative;background:#F5F7FA;border-radius:12px;padding:16px 14px}
+.pd-step:not(:last-child)::after{content:"";position:absolute;right:-7px;top:50%;width:10px;height:10px;background:inherit;transform:translateY(-50%) rotate(45deg);border-radius:2px;z-index:1}
+.pd-step b{display:block;font-size:15px;line-height:1.4;margin-top:4px}.pd-step small{display:block;font-size:13px;color:#5C6370;margin-top:6px;line-height:1.5}
+.pd-step.dark{background:#042F74}.pd-step.dark span{color:#9FBCEF}.pd-step.dark b{color:#fff}.pd-step.dark small{color:#D6E2FA}
+.pd-call{margin-top:12px;background:#EDF3FE;border-radius:12px;padding:16px 20px;font-size:15px}.pd-call b{color:#042F74}
+.pd-call.dark{background:#042F74;color:#D6E2FA}.pd-call.dark b{color:#fff}
+.pd-call.grey{background:#F5F7FA;color:#5C6370}.pd-call.grey b{color:#1F2329}
+.pd-vs{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:10px;margin-top:16px}
+.pd-vs>div{border-radius:14px;padding:18px}
+.pd-vs .c1{background:#F5F7FA}.pd-vs .c1 b{font-size:16px;color:#5C6370}
+.pd-vs .c2{border:1px solid #E9EBEF}.pd-vs .c3{border:1.5px solid #085EE9}.pd-vs .c3 span{color:#085EE9}
+.pd-vs b{display:block;font-size:16px;margin-top:4px;line-height:1.45}.pd-vs small{display:block;font-size:13px;color:#5C6370;margin-top:6px}
+.pd-vs ul{margin:8px 0 0;padding-left:18px;font-size:14px;color:#3B414B;line-height:1.6}.pd-vs li+li{margin-top:6px}.pd-vs em{font-style:normal;font-weight:700;color:#085EE9}
+.pd-geo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.pd-geo>div{border:1px solid #E9EBEF;border-radius:14px;padding:18px 20px}
+.pd-k{display:inline-block;font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:6px;padding:2px 8px;margin-bottom:6px}
+.pd-geo-l p{font-size:14px;color:#3B414B;margin-top:8px;line-height:1.6}
+.pd-gh,.pd-gr{display:grid;grid-template-columns:78px repeat(3,1fr);gap:8px;align-items:center;font-size:12px;color:#8A919C}
+.pd-gr{position:relative;margin-top:10px;color:#1F2329;font-weight:700}
+.pd-gr>span:not(:first-child){height:14px;background:#F1F3F6;border-radius:4px;overflow:hidden}
+.pd-gr i{display:block;height:100%;background:#085EE9;border-radius:4px}
+.pd-gr.off i{background:#E5484D}.pd-gr.off>span:first-child{color:#E5484D}
+.pd-gr em{display:inline-block;margin-left:4px;font-size:10px;font-style:normal;font-weight:800;color:#fff;background:#E5484D;border-radius:4px;padding:0 6px}
+.pd-geo-r small{display:block;margin-top:12px;font-size:11px;color:#8A919C;text-align:right;font-style:italic}
+.pd-acts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.pd-acts>div{background:#F5F7FA;border-radius:12px;padding:16px}
+.pd-acts span{font-weight:800;color:#085EE9}.pd-acts b{display:block;font-size:15px;margin-top:2px}.pd-acts small{display:block;font-size:13px;color:#5C6370;margin-top:2px}
+.pd-res{margin-top:14px;border:1px solid #E9EBEF;border-radius:14px;padding:6px 20px}
+.pd-rh,.pd-rr{display:grid;grid-template-columns:110px 1fr 1.5fr;gap:16px;padding:14px 0}
+.pd-rh{font-size:12px;font-weight:700;color:#8A919C}.pd-rh span:last-child{color:#085EE9}
+.pd-rr{border-top:1px solid #EEF0F3;font-size:15px}.pd-rr span:nth-child(2){color:#8A919C}.pd-rr span:last-child{font-weight:600}
+
+.db{margin-top:18px;background:#DCEAF6;border-radius:20px;padding:24px;font-size:13px;color:#1F2329}
+.db-r{position:absolute;opacity:0;pointer-events:none}
+.db-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.db-brand b{display:block;font-size:26px;font-weight:900;letter-spacing:-.04em;line-height:1}.db-brand b span{letter-spacing:-.06em}
+.db-brand strong{display:block;font-size:20px;font-weight:700;margin-top:6px}
+.db-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.db-badge{font-size:11px;font-weight:700;color:#5C6370;background:#fff;border:1px solid #C9D6E6;border-radius:999px;padding:3px 10px}
+.db-date{background:#fff;border-radius:10px;padding:8px 14px;font-size:13px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.db-tabs{display:flex;gap:6px;margin:18px 0 14px;flex-wrap:wrap}
+.db-tabs label{cursor:pointer;background:rgba(255,255,255,.6);border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px;color:#3B414B;transition:background .2s}
+.db-tabs label:hover{background:#fff}
+#dbt1:checked~.db-tabs label[for=dbt1],#dbt2:checked~.db-tabs label[for=dbt2],#dbt3:checked~.db-tabs label[for=dbt3],#dbt4:checked~.db-tabs label[for=dbt4]{background:#111827;color:#fff}
+.db-r:focus-visible~.db-tabs{outline:2px solid #085EE9;outline-offset:4px;border-radius:999px}
+.db-p{display:none;animation:dbIn .35s ease}
+#dbt1:checked~.db-panels .db-p1,#dbt2:checked~.db-panels .db-p2,#dbt3:checked~.db-panels .db-p3,#dbt4:checked~.db-panels .db-p4{display:block}
+@keyframes dbIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.db-sec{background:#111;color:#fff;font-weight:800;font-size:14px;padding:9px 14px;border-radius:4px;margin-bottom:12px}
+.db-c{background:#fff;border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(16,24,40,.06);border:1px solid #CFE0F0;min-width:0}
+.db-ct{display:block;font-weight:800;font-size:13px;margin-bottom:10px}
+.db-g4{display:grid;grid-template-columns:repeat(3,1fr) 1.4fr;gap:10px}
+.db-g5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.db-g12{display:grid;grid-template-columns:1fr 1.9fr;gap:10px}
+.db-g21{display:grid;grid-template-columns:1.9fr 1fr;gap:10px;margin-top:10px}
+.db-stack{display:flex;flex-direction:column;gap:10px;min-width:0}
+.db-wide{margin-top:10px}
+.db-kpi b{display:block;font-size:26px;font-weight:500;letter-spacing:-.02em;margin:4px 0 8px;white-space:nowrap}
+.db-g5 .db-kpi b{font-size:20px}
+.db-kpi small{display:block;font-size:12px;color:#2E8B57}.db-kpi .up{font-weight:800}
+.db-prog{display:block;height:5px;background:#EEF1F5;border-radius:3px;margin-top:8px;overflow:hidden}.db-prog i{display:block;height:100%;background:#2E8B57;border-radius:3px}
+.db-hbars{display:flex;flex-direction:column;gap:8px}
+.db-hb{display:grid;grid-template-columns:108px 1fr;gap:8px;align-items:center}
+.db-hb>span{text-align:right;font-size:12px;color:#3B414B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.db-hb>div{display:flex;align-items:center;gap:6px}
+.db-hb b{display:block;height:24px;background:#3B78E7;border-radius:2px;color:#fff;font-size:11px;font-weight:700;text-align:right;padding-right:6px;line-height:24px}
+.db-hb em{font-style:normal;font-size:11px;color:#3B78E7;font-weight:700}
+.db-hbars.sm .db-hb{grid-template-columns:84px 1fr}.db-hbars.sm .db-hb b{height:10px}
+.db-hbars.sm{gap:6px}
+.db-donut{display:flex;align-items:center;gap:14px}
+.db-donut svg{flex:none;transform:rotate(0)}
+.db-dl{font-size:3px;fill:#fff;font-weight:800;text-anchor:middle}
+.db-donut ul{list-style:none;margin:0;padding:0;font-size:11px;color:#3B414B;display:grid;gap:3px;min-width:0}
+.db-donut li,.db-leg li{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.db-donut li i,.db-leg li i{width:8px;height:8px;border-radius:50%;flex:none}
+.db-tw{overflow-x:auto}
+.db-t{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}
+.db-t th{background:#3B78E7;color:#fff;font-weight:700;text-align:left;padding:7px 8px}
+.db-t td{padding:7px 8px;border-bottom:1px solid #EEF0F3}
+.db-t .n{text-align:right}.db-t tr.tot td{font-weight:800;border-bottom:0}
+.db-note{font-size:12px;color:#5C6370;margin-top:10px}
+.db-area{display:block;width:100%;height:150px}
+.db-dead{stroke:#B3B3B3;stroke-dasharray:3 3}
+.db-ax{font-size:10px;fill:#8A919C}
+.db-leg{list-style:none;display:flex;gap:14px;justify-content:flex-end;margin:0 0 6px;padding:0;font-size:11px;color:#3B414B}
+.db-leg li i{border-radius:2px}
+.db-group{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;height:190px;border-bottom:1px solid #D5DAE2;padding-top:18px}
+.db-gcol{display:flex;flex-direction:column;min-width:0}
+.db-gbars{flex:1;display:flex;align-items:flex-end;justify-content:center;gap:3px}
+.db-gb{position:relative;width:18%;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.db-gb i{display:block;width:100%;border-radius:2px 2px 0 0}
+.db-gb em{font-style:normal;font-size:9px;color:#3B414B;text-align:center;white-space:nowrap;margin-bottom:2px}
+.db-gcol>span{font-size:11px;color:#3B414B;text-align:center;margin-top:-22px;transform:translateY(28px)}
+.db-group+*{margin-top:18px}
+@media (max-width:760px){
+.pd-org{grid-template-columns:1fr}.pd-org>i{transform:rotate(90deg);justify-self:center}
+.pd-ba{grid-template-columns:1fr}.pd-ba>i{transform:rotate(90deg);justify-self:center}
+.pd-flow{flex-direction:column}.pd-step:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-7px;transform:translateX(-50%) rotate(45deg)}
+.pd-vs,.pd-geo,.pd-acts{grid-template-columns:1fr}
+.pd-rh{display:none}.pd-rr{grid-template-columns:1fr;gap:4px}
+.db{padding:16px}.db-g4,.db-g12,.db-g21{grid-template-columns:1fr}.db-g5{grid-template-columns:repeat(2,1fr)}
+.db-meta{align-items:flex-start}
+}
 </style>
 </head>
 <body>
@@ -768,6 +887,107 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 
 </template>
+<template id="tpl-paid">
+<span style="font-size: 14px; color: #5C6370">KBW2026 · 팩트블록 마케팅팀</span>
+<h1 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.35; letter-spacing: -.03em; margin-top: 12px">측정부터 검증하고<br><span style="color: #085EE9">전환 기여</span>로 광고 예산을 다시 나누다</h1>
+<p style="font-size: 18px; color: #5C6370; margin-top: 16px">5개 채널의 리포트 기준을 통일하고, 전환 측정이 맞는지부터 확인한 뒤, 실제 티켓 구매 데이터로 대행사 제안을 검증해 예산을 재배분했습니다.</p>
+
+<dl style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px 16px; margin: 28px 0 0; font-size: 15px; padding: 24px 0; border-top: 1px solid #E9EBEF; border-bottom: 1px solid #E9EBEF">
+<dt style="color: #5C6370">기간</dt><dd style="margin: 0">2026.03 → 2026.09</dd>
+<dt style="color: #5C6370">내 역할</dt><dd style="margin: 0">예산 배분 · 해외 대행사 성과 관리 · 리포트 및 대시보드 설계</dd>
+<dt style="color: #5C6370">채널</dt><dd style="margin: 0">Meta · Google · X · LinkedIn · Naver</dd>
+<dt style="color: #5C6370">도구</dt><dd style="margin: 0">Looker Studio · GA4 · Conversions API</dd>
+</dl>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
+<p>KBW2026 티켓 판매를 위해 억 원 단위 연간 광고 예산을 5개 채널에 집행했고, 운영은 해외 퍼포먼스 대행사가 맡았습니다. 제 역할은 그 예산이 어디에 쓰여야 하는지 데이터로 판단하고 대행사의 성과를 관리하는 것이었습니다.</p>
+<div class="pd-org">
+<div><span>운영</span><b>해외 퍼포먼스 대행사</b><small>캠페인 운영</small></div>
+<i aria-hidden="true">→</i>
+<div><span>집행</span><b>5개 채널</b><small>Meta · Google · X · LinkedIn · Naver</small></div>
+<i aria-hidden="true">→</i>
+<div><span>목표</span><b>티켓 구매</b><small>티어별 마감 전 전환</small></div>
+<div class="me"><span>내 역할</span><b>예산이 어디에 쓰여야 하는지 판단하고, 대행사 성과를 관리</b></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
+<div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
+<p style="font-size: clamp(19px, 2.6vw, 24px); font-weight: 800; line-height: 1.5; color: #042F74">“어느 채널에 예산을 더 써야 하는지 판단할 근거가 없었습니다.”</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px">
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px"><b style="display: block; font-size: 16px"><span class="cr-pl">A</span>비교 불가</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">채널마다 리포트 형식과 국가 · 기간 · 통화 기준이 달라 나란히 볼 수 없었습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px"><b style="display: block; font-size: 16px"><span class="cr-pl">B</span>유입은 큰데 전환이 없는 채널</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">예산이 가장 큰 Meta는 유입이 가장 많았지만 구매가 거의 잡히지 않았습니다. 성과 부진인지 측정 누락인지부터 가려야 했습니다.</span></div>
+<div style="border: 1px solid #E9EBEF; border-radius: 12px; padding: 16px 20px"><b style="display: block; font-size: 16px"><span class="cr-pl">C</span>검증 없는 증액 제안</b><span style="display: block; color: #5C6370; font-size: 15px; margin-top: 2px">대행사는 다른 채널을 줄이고 전환이 나지 않는 Meta로 예산을 몰자고 했지만, 그 제안을 확인할 자체 데이터가 없었습니다.</span></div>
+</div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
+<h3 class="cr-sub"><span class="cr-n">3-1</span>채널 간 비교 기준 통일<span class="cr-tag">문제 A 해결</span></h3>
+<div class="pd-ba">
+<div class="b"><span>BEFORE</span><b>채널별 리포트 5종</b><small>국가 구분, 집계 기간, 통화가 채널마다 달라 합쳐 볼 수 없음</small></div>
+<i aria-hidden="true">→</i>
+<div class="a"><span>AFTER</span><b>일 · 주 단위 표준 리포트 1종</b><small>캠페인 · 소재 · 지역 단위로 통합하고 GA4 유입 · 티켓 구매 데이터와 연결</small></div>
+</div>
+<p style="margin-top: 14px">광고 플랫폼이 보고하는 전환과 GA가 잡는 전환은 집계 기준이 달라 수치가 어긋납니다. 둘 중 하나를 고르지 않고 같은 화면에 나란히 두어, 차이 자체를 대행사와 논의할 주제로 만들었습니다.</p>
+
+<h3 class="cr-sub"><span class="cr-n">3-2</span>전환 측정부터 검증<span class="cr-tag">문제 B 해결</span></h3>
+<p>Meta는 유입이 가장 많았는데 구매가 거의 잡히지 않았습니다. 대행사의 설명은 이랬습니다.</p>
+<blockquote class="pd-q">“외부 결제창으로 넘어가며 추적이 끊긴 것이고, 오가닉 · 직접 유입 구매도 Meta 광고를 보고 온 것입니다.”<cite>대행사</cite></blockquote>
+<p>그 주장이 맞는지부터 확인하기로 했습니다.</p>
+<div class="pd-flow">
+<div class="pd-step"><span>질문</span><b>성과 부진인가,<br>측정 누락인가?</b></div>
+<div class="pd-step"><span>조치 ①</span><b>Conversions API 구축</b><small>개발팀과 결제 완료를 서버에서 직접 전송해 브라우저 누락 가능성 제거</small></div>
+<div class="pd-step"><span>조치 ②</span><b>국가 · 날짜별 대조</b><small>Meta 지출과 실제 티켓 구매가 같이 움직이는지 확인</small></div>
+<div class="pd-step"><span>확인</span><b>측정은 정상,<br>실제 성과 이슈</b><small>서버 전송을 붙인 뒤에도 Meta 구매 전환은 늘지 않음</small></div>
+<div class="pd-step dark"><span>결정</span><b>캠페인 구조와<br>예산 배분 재검토</b><small>소재 미세 조정이 아니라 구조 자체를 다시 봄</small></div>
+</div>
+<div class="pd-call"><b>결과</b> · 대조 결과를 내부에 공유해, “오가닉으로 잡힌 구매도 Meta 효과”라는 대행사의 주장을 데이터로 반박했습니다.</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-3</span>대행사 제안 검증과 예산 재배분<span class="cr-tag">문제 C 해결</span></h3>
+<div class="pd-vs">
+<div class="c1"><span>대행사 제안</span><b>“다른 채널을 줄이고 Meta로 예산을 몰자”</b></div>
+<div class="c2"><span>데이터로 확인</span><b>전년도 데이터까지 비교</b><ul><li>전년도 Meta 성과는 <em>리타겟팅 캠페인</em>에서 나왔는데, 올해는 리타겟팅 없이 넓은 타깃 캠페인에 예산이 몰려 있었습니다.</li><li>Google은 전년도에 효율이 좋았지만, 대행사는 전년도 성과를 분석하지 않은 채 Meta 집중을 제안하고 있었습니다.</li></ul></div>
+<div class="c3"><span>내 대안</span><b>Meta는 리타겟팅으로 전환,<br>Google 예산은 증액</b><small>전년도 성과를 근거로 제안</small></div>
+</div>
+<div class="pd-call dark"><b>배분 결정 변경</b> · Meta 리타겟팅과 Google에서 구매 전환이 나오기 시작했고, 성과가 좋았던 네이버 검색광고는 계속 유지했습니다.</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-4</span>새는 예산 차단과 검색 중심 재편<span class="cr-tag">추가 개선</span></h3>
+<p>GA4 퍼널을 채널별로 분해하니 유입 비중이 큰 유료 채널과 실제 구매 기여가 일치하지 않았고, 유입 비중이 낮은 오가닉 검색이 전환의 상당 부분을 만들고 있었습니다.</p>
+<div class="pd-geo">
+<div class="pd-geo-l">
+<span class="pd-k">저효율 국가 특정</span>
+<p><b>관찰</b> · 클릭은 대량으로 나오는데 폼 입력도 구매도 없는 국가가 있었습니다.</p>
+<p><b>확인</b> · 국가별로 클릭 → 폼 입력 → 구매를 대조해, 광고비만 소진되는 국가를 특정했습니다.</p>
+<p><b>결정</b> · 해당 국가 집행을 중단하고, 실제 구매가 나오는 국가로 재배분을 요청했습니다.</p>
+</div>
+<div class="pd-geo-r" role="img" aria-label="국가별 클릭, 폼 입력, 구매 대조 예시">
+<div class="pd-gh"><span></span><span>클릭</span><span>폼 입력</span><span>구매</span></div>
+<div class="pd-gr"><span>국가 A</span><span><i style="width:62%"></i></span><span><i style="width:44%"></i></span><span><i style="width:30%"></i></span></div>
+<div class="pd-gr"><span>국가 B</span><span><i style="width:48%"></i></span><span><i style="width:34%"></i></span><span><i style="width:22%"></i></span></div>
+<div class="pd-gr off"><span>국가 C<em>차단</em></span><span><i style="width:100%"></i></span><span><i style="width:2%"></i></span><span><i style="width:0"></i></span></div>
+<small>예시 도식 · 실제 수치 아님</small>
+</div>
+</div>
+<div class="pd-acts">
+<div><span>①</span><b>저효율 지역 예산 차단</b><small>구매가 없는 국가 집행 중단</small></div>
+<div><span>②</span><b>검색 채널 중심 재편</b><small>Google · 네이버 검색 비중 확대</small></div>
+<div><span>③</span><b>광고 유입의 자체 퍼널화</b><small>리드폼 → 이메일 시퀀스로 연결</small></div>
+</div>
+<div class="pd-call grey"><b>그 외</b> · X는 인증 구독에 포함된 광고 크레딧으로 운영했는데, 대행사가 소진 속도를 관리하지 않고 있었습니다. 크레딧 소진 속도를 기준으로 일예산을 조절하도록 기준을 정해 요청했습니다.</div>
+
+<h3 class="cr-sub"><span class="cr-n">3-5</span>판단 근거가 된 통합 대시보드<span class="cr-tag">Looker Studio</span></h3>
+<p>판매 · 트래픽 · 광고 데이터를 Looker Studio 한 화면에 모았습니다. 티켓 페이지와 홈페이지는 방문 목적이 달라 퍼널을 분리했고, 핵심 지표에는 목표 대비 달성률을 붙였습니다. 아래는 실제 대시보드의 구조를 재현한 것으로, 탭을 눌러 볼 수 있습니다.</p>
+<div class="db"><input type="radio" name="dbt" id="dbt1" class="db-r" checked><input type="radio" name="dbt" id="dbt2" class="db-r"><input type="radio" name="dbt" id="dbt3" class="db-r"><input type="radio" name="dbt" id="dbt4" class="db-r"><div class="db-top"><div class="db-brand"><b>KBW<span>2026</span></b><strong>Marketing Dashboard</strong></div><div class="db-meta"><span class="db-badge">구조 재현용 샘플 데이터 · 실제 수치 아님</span><span class="db-date">2026. 1. 1. – 2026. 9. 7. ▾</span></div></div><div class="db-tabs" role="tablist"><label for="dbt1" role="tab">티켓 판매</label><label for="dbt2" role="tab">티켓 페이지 GA</label><label for="dbt3" role="tab">홈페이지 GA</label><label for="dbt4" role="tab">광고 성과</label></div><div class="db-panels"><section class="db-p db-p1"><div class="db-sec">티켓 판매</div><div class="db-g4"><div class="db-c db-kpi"><span class="db-ct">💰 총 매출</span><b>$120,000</b><small>목표 달성률 <span class="up">60%</span></small><span class="db-prog"><i style="width:60%"></i></span></div><div class="db-c db-kpi"><span class="db-ct">🎟️ 총 판매 수량</span><b>300장</b><small>목표 달성률 <span class="up">60%</span></small><span class="db-prog"><i style="width:60%"></i></span></div><div class="db-c db-kpi"><span class="db-ct">🏷️ Promo Code 사용</span><b>90장</b><small>전체 판매의 30%</small></div><div class="db-c "><span class="db-ct">🌐 국가별 구매</span><div class="db-hbars sm"><div class="db-hb"><span>South Korea</span><div><b style="width:100.0%"></b><em>150</em></div></div><div class="db-hb"><span>United States</span><div><b style="width:40.0%"></b><em>60</em></div></div><div class="db-hb"><span>Singapore</span><div><b style="width:30.0%"></b><em>45</em></div></div><div class="db-hb"><span>Japan</span><div><b style="width:16.7%"></b><em>25</em></div></div><div class="db-hb"><span>기타</span><div><b style="width:13.3%"></b><em>20</em></div></div></div></div></div><div class="db-c db-wide"><span class="db-ct">📈 일별 판매 추이</span><svg viewBox="0 0 600 150" class="db-area" preserveAspectRatio="none" role="img" aria-label="티어 마감마다 판매가 급증하는 일별 판매 추이(샘플)"><defs><linearGradient id="dbg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#085EE9" stop-opacity=".28"/><stop offset="1" stop-color="#085EE9" stop-opacity="0"/></linearGradient></defs><line x1="140.0" x2="140.0" y1="10" y2="138" class="db-dead"/><text x="144.0" y="20" class="db-ax">Super Early 마감</text><line x1="340.0" x2="340.0" y1="10" y2="138" class="db-dead"/><text x="344.0" y="20" class="db-ax">Early 마감</text><line x1="520.0" x2="520.0" y1="10" y2="138" class="db-dead"/><text x="524.0" y="20" class="db-ax">Select 마감</text><polygon points="0,138 0.0,116.7 10.0,114.1 20.0,111.6 30.0,109.5 40.0,107.8 50.0,106.6 60.0,106.1 70.0,106.2 80.0,107.0 90.0,108.4 100.0,109.4 110.0,105.6 120.0,85.8 130.0,48.6 140.0,28.2 150.0,53.5 160.0,95.4 170.0,119.2 180.0,126.2 190.0,127.3 200.0,126.9 210.0,125.9 220.0,124.2 230.0,122.1 240.0,119.7 250.0,117.1 260.0,114.4 270.0,111.9 280.0,109.7 290.0,107.9 300.0,105.8 310.0,99.1 320.0,76.8 330.0,37.6 340.0,16.0 350.0,40.8 360.0,82.9 370.0,107.8 380.0,116.6 390.0,120.0 400.0,122.5 410.0,124.5 420.0,126.1 430.0,127.0 440.0,127.4 450.0,127.0 460.0,126.0 470.0,124.4 480.0,121.5 490.0,113.0 500.0,88.0 510.0,45.5 520.0,20.0 530.0,40.7 540.0,78.8 550.0,99.8 560.0,105.2 570.0,106.1 580.0,106.8 590.0,108.0 600.0,109.8 600,138" fill="url(#dbg)"/><polyline points="0.0,116.7 10.0,114.1 20.0,111.6 30.0,109.5 40.0,107.8 50.0,106.6 60.0,106.1 70.0,106.2 80.0,107.0 90.0,108.4 100.0,109.4 110.0,105.6 120.0,85.8 130.0,48.6 140.0,28.2 150.0,53.5 160.0,95.4 170.0,119.2 180.0,126.2 190.0,127.3 200.0,126.9 210.0,125.9 220.0,124.2 230.0,122.1 240.0,119.7 250.0,117.1 260.0,114.4 270.0,111.9 280.0,109.7 290.0,107.9 300.0,105.8 310.0,99.1 320.0,76.8 330.0,37.6 340.0,16.0 350.0,40.8 360.0,82.9 370.0,107.8 380.0,116.6 390.0,120.0 400.0,122.5 410.0,124.5 420.0,126.1 430.0,127.0 440.0,127.4 450.0,127.0 460.0,126.0 470.0,124.4 480.0,121.5 490.0,113.0 500.0,88.0 510.0,45.5 520.0,20.0 530.0,40.7 540.0,78.8 550.0,99.8 560.0,105.2 570.0,106.1 580.0,106.8 590.0,108.0 600.0,109.8" fill="none" stroke="#085EE9" stroke-width="2"/><line x1="0" x2="600" y1="138" y2="138" stroke="#D5DAE2"/></svg></div></section><section class="db-p db-p2"><div class="db-sec">[티켓 페이지] GA 트래픽 전환</div><div class="db-g12"><div class="db-c "><span class="db-ct">💬 국가별 트래픽</span><div class="db-donut"><svg viewBox="0 0 42 42" width="132" height="132" role="img" aria-label="도넛 차트"><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#085EE9" stroke-width="7" stroke-dasharray="30 70" stroke-dashoffset="25"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#F2B84B" stroke-width="7" stroke-dasharray="14 86" stroke-dashoffset="-5"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#9B8AF0" stroke-width="7" stroke-dasharray="9 91" stroke-dashoffset="-19"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#8CC97A" stroke-width="7" stroke-dasharray="7 93" stroke-dashoffset="-28"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#5BB8D6" stroke-width="7" stroke-dasharray="6 94" stroke-dashoffset="-35"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#E8A0BF" stroke-width="7" stroke-dasharray="5 95" stroke-dashoffset="-41"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#6B6FC8" stroke-width="7" stroke-dasharray="29 71" stroke-dashoffset="-46"/><text x="33.9" y="12.9" class="db-dl">30%</text><text x="32.6" y="33.1" class="db-dl">14%</text><text x="22.5" y="38.0" class="db-dl">9%</text><text x="8.4" y="12.5" class="db-dl">29%</text></svg><ul><li><i style="background:#085EE9"></i>South Korea</li><li><i style="background:#F2B84B"></i>United States</li><li><i style="background:#9B8AF0"></i>Singapore</li><li><i style="background:#8CC97A"></i>Japan</li><li><i style="background:#5BB8D6"></i>UAE</li><li><i style="background:#E8A0BF"></i>France</li><li><i style="background:#6B6FC8"></i>기타</li></ul></div></div><div class="db-c "><span class="db-ct">💬 채널별 트래픽</span><div class="db-tw"><table class="db-t"><thead><tr><th>채널</th><th class=n>활성 사용자</th><th class=n>새 사용자</th><th class=n>세션</th><th class=n>평균 세션</th></tr></thead><tbody><tr><td>메타(광고)</td><td class=n>72,000</td><td class=n>70,500</td><td class=n>80,200</td><td class=n>00:01:21</td></tr><tr><td>직접 유입</td><td class=n>6,100</td><td class=n>4,800</td><td class=n>8,900</td><td class=n>00:03:40</td></tr><tr><td>구글 검색(광고)</td><td class=n>5,200</td><td class=n>4,900</td><td class=n>6,700</td><td class=n>00:01:52</td></tr><tr><td>구글(오가닉)</td><td class=n>3,900</td><td class=n>520</td><td class=n>6,400</td><td class=n>00:02:58</td></tr><tr class="tot"><td>총합계</td><td class=n>87,200</td><td class=n>80,720</td><td class=n>102,200</td><td class=n>00:01:34</td></tr></tbody></table></div></div></div><div class="db-g21"><div class="db-c "><span class="db-ct">👤 구매 전환 퍼널</span><div class="db-hbars "><div class="db-hb"><span>page_view</span><div><b style="width:100.0%">200,000</b></div></div><div class="db-hb"><span>session_start</span><div><b style="width:80.0%">160,000</b></div></div><div class="db-hb"><span>form_start</span><div><b style="width:7.5%"></b><em>15,000</em></div></div><div class="db-hb"><span>form_submit</span><div><b style="width:0.6%"></b><em>800</em></div></div><div class="db-hb"><span>purchase_success</span><div><b style="width:0.6%"></b><em>300</em></div></div></div></div><div class="db-stack"><div class="db-c "><span class="db-ct">📱 디바이스별 세션</span><div class="db-donut"><svg viewBox="0 0 42 42" width="104" height="104" role="img" aria-label="도넛 차트"><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#085EE9" stroke-width="7" stroke-dasharray="70 30" stroke-dashoffset="25"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#F2B84B" stroke-width="7" stroke-dasharray="27 73" stroke-dashoffset="-45"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#9B8AF0" stroke-width="7" stroke-dasharray="3 97" stroke-dashoffset="-72"/><text x="33.9" y="31.5" class="db-dl">70%</text><text x="7.3" y="14.1" class="db-dl">27%</text></svg><ul><li><i style="background:#085EE9"></i>mobile</li><li><i style="background:#F2B84B"></i>desktop</li><li><i style="background:#9B8AF0"></i>tablet</li></ul></div></div><div class="db-c "><span class="db-ct">⚙️ 구매 유입 경로</span><div class="db-tw"><table class="db-t"><thead><tr><th>경로</th><th class=n>구매</th></tr></thead><tbody><tr><td>구글(오가닉)</td><td class=n>150</td></tr><tr><td>직접 유입</td><td class=n>95</td></tr><tr><td>광고 (5개 채널)</td><td class=n>30</td></tr><tr><td>기타</td><td class=n>25</td></tr></tbody></table></div></div></div></div></section><section class="db-p db-p3"><div class="db-sec">[홈페이지] GA 트래픽 전환</div><div class="db-g12"><div class="db-c "><span class="db-ct">💬 국가별 트래픽</span><div class="db-donut"><svg viewBox="0 0 42 42" width="132" height="132" role="img" aria-label="도넛 차트"><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#085EE9" stroke-width="7" stroke-dasharray="36 64" stroke-dashoffset="25"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#F2B84B" stroke-width="7" stroke-dasharray="12 88" stroke-dashoffset="-11"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#9B8AF0" stroke-width="7" stroke-dasharray="8 92" stroke-dashoffset="-23"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#8CC97A" stroke-width="7" stroke-dasharray="6 94" stroke-dashoffset="-31"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#5BB8D6" stroke-width="7" stroke-dasharray="5 95" stroke-dashoffset="-37"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#E8A0BF" stroke-width="7" stroke-dasharray="33 67" stroke-dashoffset="-42"/><text x="35.4" y="15.4" class="db-dl">36%</text><text x="28.7" y="36.1" class="db-dl">12%</text><text x="7.3" y="14.1" class="db-dl">33%</text></svg><ul><li><i style="background:#085EE9"></i>South Korea</li><li><i style="background:#F2B84B"></i>United States</li><li><i style="background:#9B8AF0"></i>Singapore</li><li><i style="background:#8CC97A"></i>France</li><li><i style="background:#5BB8D6"></i>Hong Kong</li><li><i style="background:#E8A0BF"></i>기타</li></ul></div></div><div class="db-c "><span class="db-ct">💬 채널별 트래픽</span><div class="db-tw"><table class="db-t"><thead><tr><th>채널</th><th class=n>활성 사용자</th><th class=n>새 사용자</th><th class=n>세션</th><th class=n>평균 세션</th></tr></thead><tbody><tr><td>구글(오가닉)</td><td class=n>18,000</td><td class=n>31,000</td><td class=n>38,000</td><td class=n>00:05:48</td></tr><tr><td>직접 유입</td><td class=n>21,000</td><td class=n>36,500</td><td class=n>30,100</td><td class=n>00:03:12</td></tr><tr><td>X(광고)</td><td class=n>14,200</td><td class=n>28,900</td><td class=n>15,800</td><td class=n>00:00:41</td></tr><tr><td>기타</td><td class=n>9,300</td><td class=n>15,100</td><td class=n>13,000</td><td class=n>00:02:05</td></tr><tr class="tot"><td>총합계</td><td class=n>62,500</td><td class=n>111,500</td><td class=n>96,900</td><td class=n>00:03:37</td></tr></tbody></table></div></div></div><div class="db-g21"><div class="db-c "><span class="db-ct">👤 홈페이지 방문 유저 퍼널</span><div class="db-hbars "><div class="db-hb"><span>page_view</span><div><b style="width:100.0%">250,000</b></div></div><div class="db-hb"><span>session_start</span><div><b style="width:76.0%">190,000</b></div></div><div class="db-hb"><span>first_visit</span><div><b style="width:52.0%">130,000</b></div></div><div class="db-hb"><span>user_engagement</span><div><b style="width:32.0%">80,000</b></div></div><div class="db-hb"><span>scroll</span><div><b style="width:16.0%"></b><em>40,000</em></div></div><div class="db-hb"><span>form_start</span><div><b style="width:11.2%"></b><em>28,000</em></div></div></div></div><div class="db-stack"><div class="db-c "><span class="db-ct">📱 디바이스별 세션</span><div class="db-donut"><svg viewBox="0 0 42 42" width="104" height="104" role="img" aria-label="도넛 차트"><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#085EE9" stroke-width="7" stroke-dasharray="54 46" stroke-dashoffset="25"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#F2B84B" stroke-width="7" stroke-dasharray="44 56" stroke-dashoffset="-29"/><circle r="15.9155" cx="21" cy="21" fill="none" stroke="#9B8AF0" stroke-width="7" stroke-dasharray="2 98" stroke-dashoffset="-73"/><text x="36.8" y="24.2" class="db-dl">54%</text><text x="5.1" y="21.2" class="db-dl">44%</text></svg><ul><li><i style="background:#085EE9"></i>desktop</li><li><i style="background:#F2B84B"></i>mobile</li><li><i style="background:#9B8AF0"></i>tablet</li></ul></div></div><div class="db-c "><span class="db-ct">🎟️ 채널별 티켓 구매 버튼 클릭</span><div class="db-tw"><table class="db-t"><thead><tr><th>채널</th><th class=n>클릭</th></tr></thead><tbody><tr><td>구글(오가닉)</td><td class=n>3,800</td></tr><tr><td>직접 유입</td><td class=n>1,500</td></tr><tr><td>네이버 검색(광고)</td><td class=n>1,000</td></tr><tr><td>기타</td><td class=n>700</td></tr></tbody></table></div></div></div></div></section><section class="db-p db-p4"><div class="db-sec">광고 성과</div><div class="db-g5"><div class="db-c db-kpi"><span class="db-ct">💰 총 광고비</span><b>$50,000</b><small>5개 채널 합계</small></div><div class="db-c db-kpi"><span class="db-ct">📊 ROAS</span><b>24.0%</b><small>매출 / 광고비</small></div><div class="db-c db-kpi"><span class="db-ct">👀 노출</span><b>32,000,000</b><small>CPM $1.56</small></div><div class="db-c db-kpi"><span class="db-ct">🖱️ 클릭</span><b>280,000</b><small>CPC $0.18</small></div><div class="db-c db-kpi"><span class="db-ct">🎟️ 구매 티켓</span><b>30장</b><small>CTR 0.88%</small></div></div><div class="db-c db-wide"><span class="db-ct">📈 채널별 성과 · 플랫폼 보고 vs GA 구매</span><div class="db-tw"><table class="db-t"><thead><tr><th>채널</th><th class=n>광고비</th><th class=n>노출</th><th class=n>클릭</th><th class=n>CTR</th><th class=n>플랫폼 전환</th><th class=n>GA 구매</th></tr></thead><tbody><tr><td>Meta</td><td class=n>$30,000</td><td class=n>12,000,000</td><td class=n>200,000</td><td class=n>1.67%</td><td class=n>4</td><td class=n>3</td></tr><tr><td>Google</td><td class=n>$8,000</td><td class=n>300,000</td><td class=n>25,000</td><td class=n>8.33%</td><td class=n>12</td><td class=n>11</td></tr><tr><td>X</td><td class=n>$6,000</td><td class=n>19,000,000</td><td class=n>50,000</td><td class=n>0.26%</td><td class=n>0</td><td class=n>0</td></tr><tr><td>Naver</td><td class=n>$4,000</td><td class=n>5,000</td><td class=n>2,000</td><td class=n>40.0%</td><td class=n>14</td><td class=n>13</td></tr><tr><td>LinkedIn</td><td class=n>$2,000</td><td class=n>695,000</td><td class=n>3,000</td><td class=n>0.43%</td><td class=n>0</td><td class=n>0</td></tr><tr class="tot"><td>총합계</td><td class=n>$50,000</td><td class=n>32,000,000</td><td class=n>280,000</td><td class=n>0.88%</td><td class=n>30</td><td class=n>27</td></tr></tbody></table></div><p class="db-note">플랫폼이 보고하는 전환과 GA가 잡은 구매를 같은 표에 나란히 둬, 차이 자체를 대행사와 논의했습니다.</p></div><div class="db-c db-wide"><span class="db-ct">👥 (GA) 매체별 퍼널</span><ul class="db-leg"><li><i style="background:#111827"></i>Meta</li><li><i style="background:#085EE9"></i>Google</li><li><i style="background:#8CC97A"></i>Naver</li><li><i style="background:#9B8AF0"></i>LinkedIn</li></ul><div class="db-group"><div class="db-gcol"><div class="db-gbars"><div class="db-gb"><em>96,000</em><i style="height:100.0%;background:#111827"></i></div><div class="db-gb"><em>18,000</em><i style="height:18.8%;background:#085EE9"></i></div><div class="db-gb"><em>1,700</em><i style="height:1.8%;background:#8CC97A"></i></div><div class="db-gb"><em>2,600</em><i style="height:2.7%;background:#9B8AF0"></i></div></div><span>page_view</span></div><div class="db-gcol"><div class="db-gbars"><div class="db-gb"><em>88,000</em><i style="height:91.7%;background:#111827"></i></div><div class="db-gb"><em>16,500</em><i style="height:17.2%;background:#085EE9"></i></div><div class="db-gb"><em>1,600</em><i style="height:1.7%;background:#8CC97A"></i></div><div class="db-gb"><em>2,300</em><i style="height:2.4%;background:#9B8AF0"></i></div></div><span>session_start</span></div><div class="db-gcol"><div class="db-gbars"><div class="db-gb"><em>1,400</em><i style="height:1.5%;background:#111827"></i></div><div class="db-gb"><em>2,100</em><i style="height:2.2%;background:#085EE9"></i></div><div class="db-gb"><em>520</em><i style="height:0.8%;background:#8CC97A"></i></div><div class="db-gb"><em>90</em><i style="height:0.8%;background:#9B8AF0"></i></div></div><span>form_start</span></div><div class="db-gcol"><div class="db-gbars"><div class="db-gb"><em>30</em><i style="height:0.8%;background:#111827"></i></div><div class="db-gb"><em>160</em><i style="height:0.8%;background:#085EE9"></i></div><div class="db-gb"><em>60</em><i style="height:0.8%;background:#8CC97A"></i></div><div class="db-gb"><em>4</em><i style="height:0.8%;background:#9B8AF0"></i></div></div><span>form_submit</span></div><div class="db-gcol"><div class="db-gbars"><div class="db-gb"><em>3</em><i style="height:0.8%;background:#111827"></i></div><div class="db-gb"><em>11</em><i style="height:0.8%;background:#085EE9"></i></div><div class="db-gb"><em>13</em><i style="height:0.8%;background:#8CC97A"></i></div><div class="db-gb"><em>0</em><i style="height:0.8%;background:#9B8AF0"></i></div></div><span>purchase</span></div></div></div></section></div></div>
+
+<h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
+<p>예산을 쓰는 방식이 어떻게 달라졌는지 이전과 이후로 정리했습니다.</p>
+<div class="pd-res">
+<div class="pd-rh"><span>항목</span><span>이전</span><span>이후</span></div>
+<div class="pd-rr"><b>비교 기준</b><span>채널별로 제각각인 리포트</span><span>5개 채널을 같은 기준으로 보는 일 · 주 단위 표준 리포트</span></div>
+<div class="pd-rr"><b>전환 측정</b><span>누락인지 부진인지 알 수 없음</span><span>서버 전송으로 검증해 ‘측정은 정상’임을 확정</span></div>
+<div class="pd-rr"><b>예산 배분</b><span>대행사 제안대로 Meta 집중</span><span>Meta 리타겟팅 + Google · 네이버 검색 중심, 구매 없는 지역은 차단</span></div>
+<div class="pd-rr"><b>논의 근거</b><span>부서마다 다른 숫자</span><span>마케팅 · 영업 · 경영진이 같은 대시보드를 보고 논의</span></div>
+</div>
+</template>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="caseTitle">
   <div class="sbar pad"><div class="wrap"><span class="crumb" id="crumb"></span><button class="btn ghost sm" id="close" type="button">← 목록으로</button></div></div>
   <div class="pad"><article class="case" id="case"></article></div>
@@ -853,7 +1073,7 @@ const CASES=[
   results:[["58K+","트위터 팔로워 (유료 광고 · 토큰 보상 없이)"],["2~3배","트위터 반응률 (이미지 포맷 정리 후)"]],
   lesson:"광고가 아니라 콘텐츠로 초기 팬덤을 만들었습니다.",card:"팔로워 58K+",ct:"서브컬처 세계관 기반\n팬덤 참여 콘텐츠 기획",rel:["stella-kol","stella-event","stella-pr"],relNote:"인플루언서 협업은 별도 프로젝트로 정리했습니다.",mats:["콘텐츠 예시"]},
  {id:"paid",co:"KBW2026",tags:["Paid/UA"],big:"CPA 개선",bl:"5개 채널 예산을 전환 기여 기준으로 재배분",
-  title:"측정부터 검증하고, 전환 기여로 광고 예산을 다시 나누다",
+  title:"측정부터 검증하고 전환 기여로 광고 예산을 다시 나누다",
   sum:"Meta·Google·X·LinkedIn·Naver 5개 채널의 리포트가 제각각이라 어디에 예산을 써야 할지 판단할 근거가 부족했습니다. 비교 기준을 통일하고 전환 측정부터 검증한 뒤, 데이터로 대행사 제안을 검증하고 예산을 재배분했습니다.",
   facts:[["내 역할","예산 배분 · 대행사 성과 관리 · 리포트 설계를 직접 담당"],["채널","Meta · Google · X · LinkedIn · Naver"],["도구","Looker Studio · GA4"]],
   problems:[["비교할 수 없는 채널 리포트","채널마다 국가·기간·통화 기준이 달라 채널 간 비교가 불가능했습니다."],["낮게 잡히는 전환","예산 비중이 가장 큰 채널의 전환이 기대보다 낮아, 성과 부진인지 측정 누락인지 먼저 가려야 했습니다."]],
