@@ -692,7 +692,8 @@
 .bub.sys{top:74%;right:-34%;background:linear-gradient(180deg,#2F6FE0 0%,#0A3D9E 55%,#042F74 100%);color:#fff;text-shadow:0 1px 1px rgba(4,47,116,.35);animation-delay:.7s,3s}
 
 /* how I work 2x2 */
-.hw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:0!important}
+.hw .hw-row:last-child{border-bottom:0!important}
 .hw .hw-row{display:flex!important;flex-direction:column;gap:0;padding:48px 48px 52px;border:0!important}
 .hw .hw-row:nth-child(odd){border-right:1px solid var(--line)!important}
 .hw .hw-row:nth-child(-n+2){border-bottom:1px solid var(--line)!important}
