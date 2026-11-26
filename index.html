@@ -220,6 +220,14 @@
 @media (max-width:760px){.rs-h{display:none}.rs-r{grid-template-columns:1fr}.rs-line{display:none}.rs-x{grid-template-columns:1fr}}
 
 /* automation case */
+.au-brief{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px;word-break:keep-all}
+.au-bc{display:flex;flex-direction:column;border:1px solid #E9EBEF;border-radius:16px;padding:16px}
+.au-bh{display:flex;justify-content:space-between;align-items:center}.au-bh b{font-size:16px}
+.au-bh small{font-size:12px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:3px 9px}
+.au-flow{margin:6px 0 12px;font-size:13px;color:#5C6370}.au-flow i{font-style:normal;color:#B3B3B3;margin:0 4px}
+.au-bc .au-tg{flex:1;margin:0;max-width:none;box-shadow:none}
+.au-bc .au-tg-b{padding:14px 12px 16px;align-items:flex-start}
+.au-use2{margin-top:10px;background:#F5F7FA;border-radius:12px;padding:12px 16px;font-size:14px;color:#5C6370}.au-use2 b{color:#1F2329}.au-use2 span{font-size:12px;font-weight:700;color:#085EE9;margin-right:10px}.au-use2 em{font-style:normal;margin:0 8px;color:#B3B3B3}
 .au-news{margin-top:16px;word-break:keep-all}
 .au-nl{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
 .au-nl li{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
@@ -261,7 +269,7 @@
 .au-bt{display:block;margin-bottom:4px}.au-bub p{margin:2px 0 0}.au-bub .mut{color:#5C6370;font-size:13px}.au-bub .warn{margin-top:6px;color:#B54708;font-weight:600}
 .au-bub{width:100%}
 .au-rt{margin-top:8px;font-size:12.5px;font-variant-numeric:tabular-nums}
-.au-rth,.au-rtr{display:grid;grid-template-columns:1.3fr 1fr 1fr .9fr .7fr;gap:6px;padding:5px 0}
+.au-rth,.au-rtr{display:grid;grid-template-columns:1.3fr 1fr 1fr .7fr;gap:6px;padding:5px 0}
 .au-rth{font-size:11px;color:#8A919C;border-bottom:1px solid #EEF0F3}.au-rth span:not(:first-child),.au-rtr span:not(:first-child){text-align:right}
 .au-rtr{border-bottom:1px solid #F3F4F6}.au-rtr span:first-child{display:flex;align-items:center;gap:6px;font-weight:700}
 .au-rtr i{width:7px;height:7px;border-radius:50%}.au-rtr.tot{border-bottom:0;font-weight:800}
@@ -288,7 +296,7 @@
 .au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
 .au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
 .au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
-@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
+@media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use,.au-brief{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
 </style>
 </head>
 <body>
@@ -1140,64 +1148,41 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>자동화 12건 한눈에 보기<span class="cr-tag">12건</span></h3>
-<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-3</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-6</em></li><li class=on>커뮤니티 키워드 감지<em>3-3</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-6</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-4</em></li><li class=on>KOL 일괄 DM 도구<em>3-5</em></li></ul></div></div>
+<div class="au-cats"><div class="au-cat"><div class="au-ch"><b>콘텐츠 · 유입</b><span>3</span></div><ul><li>네이버 블로그 발행 자동화</li><li>공식 X → 텔레그램 공지 동기화</li><li>리드폼 → 이메일 시퀀스 연동</li></ul></div><div class="au-cat"><div class="au-ch"><b>모니터링</b><span>3</span></div><ul><li class=on>국내 · 해외 언론 기사 수집<em>3-2</em></li><li class=on>파트너사 채널 언급 감지 · 요약<em>3-5</em></li><li class=on>커뮤니티 키워드 감지<em>3-2</em></li></ul></div><div class="au-cat"><div class="au-ch"><b>협업 · 리포팅</b><span>4</span></div><ul><li class=on>일일 광고 성과 리포트<em>3-2</em></li><li class=on>연사 리트윗 요청 발송<em>3-5</em></li><li>연사 정보 동기화</li><li>티켓 구매자 → 이메일 리스트 동기화</li></ul></div><div class="au-cat"><div class="au-ch"><b>검수 · 발송 도구</b><span>2</span></div><ul><li class=on>발행물 오류 검수 봇<em>3-3</em></li><li class=on>KOL 일괄 DM 도구<em>3-4</em></li></ul></div></div>
 <p class="au-note">파란 표시는 아래에서 자세히 소개하는 사례입니다.</p>
 
-<h3 class="cr-sub"><span class="cr-n">3-2</span>일일 광고 성과 리포트<span class="cr-tag">문제 A 해결</span></h3>
-<p>광고 플랫폼 다섯 곳과 GA4의 숫자를 옮겨 적던 아침 업무를, 정해진 시각에 자동으로 발행되게 바꿨습니다.</p>
-<div class="au-rep">
-<ol class="au-steps">
-<li><span>1</span><div><small>수집</small><b>Meta · Google · X · LinkedIn · Naver + GA4</b></div></li>
-<li><span>2</span><div><small>정리</small><b>채널별 형식 통일 · 통화 환산</b></div></li>
-<li><span>3</span><div><small>AI 요약</small><b>전일 대비 변화와 점검할 지점 정리</b></div></li>
-<li class=dark><span>4</span><div><small>발행</small><b>매일 아침 텔레그램 · 주 1회 주간 리포트</b></div></li>
-</ol>
-<div class="au-tg" role="img" aria-label="텔레그램으로 도착한 일일 광고 리포트 예시 화면">
-<div class="au-tg-h"><i>AR</i><div><b>Ads Report Bot</b><small>bot</small></div></div>
-<div class="au-tg-b">
-<div class="au-bub">
+<h3 class="cr-sub"><span class="cr-n">3-2</span>매일 아침 브리핑 자동화<span class="cr-tag">문제 A 해결</span></h3>
+<p>광고 숫자 취합과 뉴스 · 커뮤니티 확인을 자동화해, 결과가 AI 요약과 함께 텔레그램으로 먼저 도착하게 했습니다.</p>
+<div class="au-brief">
+<div class="au-bc">
+<div class="au-bh"><b>광고 성과 리포트</b><small>매일 08:30</small></div>
+<p class="au-flow">5개 플랫폼 + GA4 <i>→</i> 형식 통일 · 통화 환산 <i>→</i> AI 요약</p>
+<div class="au-tg"><div class="au-tg-h"><i>AR</i><div><b>Ads Report Bot</b><small>bot</small></div></div>
+<div class="au-tg-b"><div class="au-bub au-kw">
 <b class="au-bt">📊 일일 광고 리포트 · 전일 기준</b>
-<div class="au-rt"><div class="au-rth"><span>채널</span><span>지출</span><span>클릭</span><span>CTR</span><span>구매</span></div><div class="au-rtr"><span><i style="background:#111827"></i>Meta</span><span>$560</span><span>4,100</span><span>1.7%</span><span>1</span></div><div class="au-rtr"><span><i style="background:#3B78E7"></i>Google</span><span>$200</span><span>820</span><span>8.4%</span><span>2</span></div><div class="au-rtr"><span><i style="background:#6B7280"></i>X</span><span>$120</span><span>1,050</span><span>0.26%</span><span>0</span></div><div class="au-rtr"><span><i style="background:#0A66C2"></i>LinkedIn</span><span>$40</span><span>70</span><span>0.39%</span><span>0</span></div><div class="au-rtr"><span><i style="background:#03C75A"></i>Naver</span><span>$80</span><span>64</span><span>40%</span><span>0</span></div><div class="au-rtr tot"><span>합계</span><span>$1,000</span><span>6,104</span><span>0.9%</span><span>3</span></div></div>
-<div class="au-ai"><b>🤖 AI 요약</b><ul><li>구매당 비용은 Google이 가장 낮음 ($100)</li><li>Meta는 클릭 4,100 대비 구매 1건 · 국가별 점검 필요</li><li>X CTR 0.26%로 전주 대비 하락</li></ul></div>
-<span class="au-time">08:30 ✓✓</span>
+<div class="au-rt"><div class="au-rth"><span>채널</span><span>지출</span><span>클릭</span><span>구매</span></div><div class="au-rtr"><span><i style="background:#111827"></i>Meta</span><span>$560</span><span>4,100</span><span>1</span></div><div class="au-rtr"><span><i style="background:#3B78E7"></i>Google</span><span>$200</span><span>820</span><span>2</span></div><div class="au-rtr"><span><i style="background:#6B7280"></i>X</span><span>$120</span><span>1,050</span><span>0</span></div><div class="au-rtr"><span><i style="background:#0A66C2"></i>LinkedIn</span><span>$40</span><span>70</span><span>0</span></div><div class="au-rtr"><span><i style="background:#03C75A"></i>Naver</span><span>$80</span><span>64</span><span>0</span></div><div class="au-rtr tot"><span>합계</span><span>$1,000</span><span>6,104</span><span>3</span></div></div>
+<div class="au-sum"><b>🤖 AI 요약</b>구매당 비용은 Google이 가장 낮음. Meta는 클릭 대비 구매가 적어 국가별 점검 필요.</div>
+<span class="au-time">08:30</span>
+</div></div></div>
 </div>
-</div>
-<span class="au-tag">알림 화면 재현 · 샘플 수치</span>
-</div>
-</div>
-
-<h3 class="cr-sub"><span class="cr-n">3-3</span>연사 · 스폰서 뉴스 · 커뮤니티 모니터링<span class="cr-tag">문제 A 해결</span></h3>
-<p>행사는 신뢰가 중요해서, 네이버 · 구글 뉴스와 커뮤니티 대화방에서 연사 · 스폰서 관련 언급을 키워드로 감지하고 AI 요약과 함께 텔레그램으로 받았습니다. 이슈성과 화제성을 보고 발표 일정을 조정했습니다.</p>
-<div class="au-news">
-<div class="au-tg" role="img" aria-label="텔레그램으로 도착한 키워드 감지 알림 예시 화면">
-<div class="au-tg-h"><i>KM</i><div><b>KBW Keyword Monitor</b><small>bot</small></div></div>
+<div class="au-bc">
+<div class="au-bh"><b>연사 · 스폰서 키워드 알림</b><small>실시간</small></div>
+<p class="au-flow">네이버 · 구글 뉴스 + 커뮤니티 <i>→</i> 키워드 감지 <i>→</i> AI 요약</p>
+<div class="au-tg"><div class="au-tg-h"><i>KM</i><div><b>KBW Keyword Monitor</b><small>bot</small></div></div>
 <div class="au-tg-b multi">
-<div class="au-bub au-kw">
-<b class="au-bt">🔔 키워드 감지</b>
-<p><span>📍 출처</span>네이버 뉴스</p>
-<p><span>📰 기사</span>스폰서 B, 신규 서비스 출시… 업계 관심 집중</p>
-<div class="au-sum"><b>🤖 AI 요약</b>스폰서 B가 신규 서비스를 출시해 주요 매체에 보도가 이어지고 있음. 긍정적 화제성이 높은 시점.</div>
-<p class="au-lk">🔗 원문 링크</p>
-<span class="au-time">08:10</span>
-</div>
-<div class="au-bub au-kw">
-<b class="au-bt">🔔 키워드 감지</b>
-<p><span>📍 출처</span>커뮤니티 대화방</p>
-<p><span>📨 원문</span>“KBW 연사 A 관련 소식 봤어요? …”</p>
-<div class="au-sum neg"><b>🤖 AI 요약</b>연사 A 소속사 관련 부정적 언급이 커뮤니티에서 확산 중. 공식 보도는 아직 없음.</div>
-<p class="au-lk">🔗 대화방 링크</p>
-<span class="au-time">14:45</span>
+<div class="au-bub au-kw"><b class="au-bt">🔔 키워드 감지 · 네이버 뉴스</b>
+<div class="au-sum"><b>🤖 AI 요약</b>스폰서 B 신규 서비스 출시 보도가 이어짐. 긍정적 화제성이 높은 시점.</div>
+<p class="au-lk">🔗 원문 링크</p><span class="au-time">08:10</span></div>
+<div class="au-bub au-kw"><b class="au-bt">🔔 키워드 감지 · 커뮤니티 대화방</b>
+<div class="au-sum neg"><b>🤖 AI 요약</b>연사 A 소속사 관련 부정적 언급 확산 중. 공식 보도는 아직 없음.</div>
+<p class="au-lk">🔗 대화방 링크</p><span class="au-time">14:45</span></div>
+</div></div>
 </div>
 </div>
-<span class="au-tag">알림 화면 재현 · 샘플 내용</span>
-</div>
-<div class="au-use">
-<div><span>화제가 된 스폰서</span><b>관심이 높을 때 맞춰 발표</b></div>
-<div><span>이슈가 있는 연사</span><b>발표를 미루거나 조정</b></div>
-</div>
-</div>
+<div class="au-use2"><span>키워드 알림 활용</span><b>화제가 된 스폰서</b> → 관심이 높을 때 발표<em>·</em><b>이슈가 있는 연사</b> → 발표 보류 · 조정</div>
+<p class="au-note">알림 화면 재현 · 샘플 수치와 내용</p>
 
-<h3 class="cr-sub"><span class="cr-n">3-4</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
+<h3 class="cr-sub"><span class="cr-n">3-3</span>발행물 오류 검수 봇<span class="cr-tag">문제 B 해결</span></h3>
 <p>대행사가 올린 공식 SNS 게시물을 연사 DB · 용어집과 자동 대조하고, 틀리면 안 되는 정도에 따라 알림 수준을 나눴습니다.</p>
 <div class="au-lv">
 <div class="au-lh"><span>오류 유형</span><span>왜 중요한가</span><span>알림 수준</span></div>
@@ -1207,7 +1192,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <div class="pd-call"><b>실제 사례</b> · 스폰서 등급이 잘못 표기된 게시물을 봇이 잡아내, 정정한 뒤 다시 올렸습니다.</div>
 
-<h3 class="cr-sub"><span class="cr-n">3-5</span>KOL 일괄 DM 도구<span class="cr-tag">문제 C 해결</span></h3>
+<h3 class="cr-sub"><span class="cr-n">3-4</span>KOL 일괄 DM 도구<span class="cr-tag">문제 C 해결</span></h3>
 <p>원래 제 업무는 아니었지만, 담당자가 업무방마다 메시지를 하나씩 보내는 걸 보고 한 번에 보낼 수 있는 도구를 만들었습니다.</p>
 <div class="pd-ba">
 <div class="b"><span>BEFORE</span><b>업무방마다 직접 입력</b><small>방을 열고, 이름을 바꿔 붙여 넣고, 보냈는지 따로 기록</small></div>
@@ -1216,7 +1201,7 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <div class="pd-call"><b>운영 규모</b> · KOL 업무방 200개 이상을 이 도구로 관리했습니다.</div>
 
-<h3 class="cr-sub"><span class="cr-n">3-6</span>사람이 확인하는 지점은 남겼다<span class="cr-tag">운영 원칙</span></h3>
+<h3 class="cr-sub"><span class="cr-n">3-5</span>사람이 확인하는 지점은 남겼다<span class="cr-tag">운영 원칙</span></h3>
 <p>밖으로 나가는 메시지에는 확인 단계를 두고, 봇이 조용할 때 고장인지 아닌지 알 수 있게 했습니다.</p>
 <div class="au-sls">
 <figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>✅ 승인 · 발송 완료 — Speaker Name</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker Name (Co-Founder, Company) is confirmed for KBW2026 this fall…</span></blockquote></div></div></div><figcaption><b>연사 리트윗 요청</b> · 초안이 팀 채널에 올라오고, 담당 팀이 승인해야 발송됩니다.</figcaption></figure>
