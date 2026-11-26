@@ -316,6 +316,7 @@
 .au-sl-m p{margin:2px 0 0}
 .au-sl-m blockquote{margin:8px 0 0;padding:4px 0 4px 10px;border-left:4px solid #DDD;display:flex;flex-direction:column;gap:2px}
 .au-sl-m blockquote b{font-size:13px}.au-sl-m blockquote span{color:#454245}
+.au-sl-ok{margin-top:8px!important;font-weight:600;color:#1E8E3E}
 .au-sl-s{display:block;margin-top:6px;font-size:12px;color:#616061}
 .au-sl figcaption{margin-top:10px;font-size:14px;color:#5C6370;line-height:1.55;word-break:keep-all}.au-sl figcaption b{color:#1F2329}
 @media (max-width:760px){.au-cats{grid-template-columns:1fr}.au-sls,.au-use,.au-brief,.au-chk{grid-template-columns:1fr}.au-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.au-lh{display:none}.au-lr{grid-template-columns:1fr auto;gap:4px 12px}.au-lr>span:nth-child(2){grid-column:1/-1;grid-row:2}}
@@ -1246,11 +1247,11 @@ footer{padding-block:32px 48px;display:flex;justify-content:space-between;gap:12
 </div>
 <div class="pd-call"><b>운영 규모</b> · KOL 업무방 200개 이상을 이 도구로 관리했습니다.</div>
 
-<h3 class="cr-sub"><span class="cr-n">3-5</span>사람이 확인하는 지점은 남겼다<span class="cr-tag">운영 원칙</span></h3>
-<p>밖으로 나가는 메시지에는 확인 단계를 두고, 봇이 조용할 때 고장인지 아닌지 알 수 있게 했습니다.</p>
+<h3 class="cr-sub"><span class="cr-n">3-5</span>연사 · 파트너 협업 자동화<span class="cr-tag">추가 자동화</span></h3>
+<p>연사와 파트너사 관련 반복 업무도 Slack 봇으로 옮겼습니다.</p>
 <div class="au-sls">
-<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>✅ 승인 · 발송 완료 — Speaker Name</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker Name (Co-Founder, Company) is confirmed for KBW2026 this fall…</span></blockquote></div></div></div><figcaption><b>연사 리트윗 요청</b> · 초안이 팀 채널에 올라오고, 담당 팀이 승인해야 발송됩니다.</figcaption></figure>
-<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-monitoring</div><div class="au-sl-m"><i style="background:#ECB22E">M</i><div><div class="au-sl-n"><b>KBW Monitor</b><span>APP</span><small>9:00 AM</small></div><p>✅ 데일리 점검 체크 완료 — 오늘은 KBW/팩트블록 언급 없음</p><small class="au-sl-s">Automated with this n8n workflow</small></div></div></div><figcaption><b>파트너 채널 언급 감지</b> · 언급이 없는 날에도 ‘체크 완료’를 보내, 알림이 없는 것과 시스템이 멈춘 것을 구분합니다.</figcaption></figure>
+<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-rt-approvals</div><div class="au-sl-m"><i style="background:#2EB67D">RT</i><div><div class="au-sl-n"><b>KBW2026 RT Bot</b><span>APP</span><small>12:29 PM</small></div><p>📣 연사 발표 게시물 감지 — 리트윗 요청 초안</p><blockquote><b>KBW2026 (@kbwofficial) on X</b><span>Speaker A (Co-Founder, Company C) is confirmed for KBW2026…</span></blockquote><p class="au-sl-ok">✅ 승인 · 발송 완료 → Speaker A</p></div></div></div><figcaption><b>연사 리트윗 요청 발송</b> · 공식 계정에 연사 발표가 올라오면 리트윗 요청 메시지를 자동으로 만들고, 담당 팀이 승인하면 연사에게 발송됩니다.</figcaption></figure>
+<figure class="au-sl"><div class="au-sl-w"><div class="au-sl-h"># kbw-monitoring</div><div class="au-sl-m"><i style="background:#ECB22E">M</i><div><div class="au-sl-n"><b>KBW Monitor</b><span>APP</span><small>9:00 AM</small></div><p>🔎 파트너 채널 데일리 점검</p><blockquote><b>▶ YouTube · 파트너 채널 D</b><span>“KBW2026 미리보기” 영상에서 KBW 언급 · 행사 일정과 주요 연사 소개</span></blockquote><small class="au-sl-s">언급이 없는 날에는 “✅ 체크 완료 — 언급 없음” 발송</small></div></div></div><figcaption><b>파트너 채널 언급 감지 · 요약</b> · 파트너사 YouTube · SNS에서 KBW 언급을 매일 찾아 요약합니다. 언급이 없는 날에도 ‘체크 완료’를 보내 시스템이 멈춘 것과 구분했습니다.</figcaption></figure>
 </div>
 <p class="au-note">메시지 화면 재현 · 샘플 내용</p>
 
