@@ -1166,6 +1166,21 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .mw-col>div:not(.x2)::after{content:"";display:block;height:20px;margin-top:6px}
 #case .mw-cr2 p.mw-cr-n{margin-top:16px!important}
 @media (max-width:760px){#case .mw-col{gap:4px;height:200px}#case .mw-col b{font-size:12.5px}#case .mw-col span{font-size:11.5px}#case .mw-col u{font-size:10px;padding:0 4px}}
+/* minewarz-ua 3-4: stepper + result hero */
+#case .mw-xt{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:12px;margin-top:16px}
+#case .mw-xt-s{list-style:none;margin:0;padding:22px 20px;border:1px solid #E9EBEF;border-radius:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;word-break:keep-all}
+#case .mw-xt-s li{position:relative}
+#case .mw-xt-s li::before{content:"";position:absolute;left:30px;right:-16px;top:11px;height:2px;background:#DCE6FB}
+#case .mw-xt-s li:last-child::before{display:none}
+#case .mw-xt-s i{position:relative;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;font-style:normal;font-size:12px;font-weight:800;color:#085EE9;background:#EDF3FE;border:2px solid #fff;box-shadow:0 0 0 1px #C9DAFB}
+#case .mw-xt-s li:last-child i{color:#fff;background:#085EE9;box-shadow:none}
+#case .mw-xt-s b{display:block;margin-top:12px;font-size:16px;font-weight:800}
+#case .mw-xt-s small{display:block;margin-top:4px;font-size:14px;color:#5C6370;line-height:1.5}
+#case .mw-xt-r{border-radius:14px;background:#085EE9;color:#fff;padding:20px;display:flex;flex-direction:column;justify-content:center}
+#case .mw-xt-r span{font-size:13px!important;font-weight:700;color:#fff!important;opacity:.85}
+#case .mw-xt-r b{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-top:6px}
+#case .mw-xt-r small{font-size:13px!important;color:#fff!important;opacity:.85;margin-top:2px}
+@media (max-width:760px){#case .mw-xt{grid-template-columns:1fr}#case .mw-xt-s{grid-template-columns:1fr;gap:14px;padding:18px 16px}#case .mw-xt-s li{padding-left:36px}#case .mw-xt-s li::before{left:11px;right:auto;top:28px;bottom:-14px;width:2px;height:auto}#case .mw-xt-s i{position:absolute;left:0;top:0}#case .mw-xt-s b{margin-top:2px}#case .mw-xt-r{flex-direction:row;align-items:baseline;justify-content:flex-start;flex-wrap:wrap;gap:4px 10px;padding:16px 18px;text-align:left}#case .mw-xt-r span{flex-basis:100%}#case .mw-xt-r b{font-size:32px;margin-top:0}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2939,12 +2954,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <div class="mw-daily2"><div class="mw-ph"><div class="c1"><div class="mw-ph-h"><em>확장</em><small>1 ~ 5일차</small></div><ul><li class=""><span>1일차</span>태국 · 말레이시아 · 필리핀 3개국으로 시작</li><li class=""><span>2일차</span>브라질 추가</li><li class=""><span>3 ~ 5일차</span>효율 유지 확인하며 매일 예산 20% 증액</li><li class=""><span>5일차</span>인도네시아 · 베트남 추가, 6개국으로 확대</li></ul></div><div class="c2"><div class="mw-ph-h"><em>점검</em><small>8일차</small></div><ul><li class=""><span>8일차</span>전환율 하락 → 전체 일시 중지 후 점검</li></ul></div><div class="c3"><div class="mw-ph-h"><em>재배분</em><small>11일차 ~</small></div><ul><li class=""><span>11일차 ~</span>일 예산을 낮춰 재개, 안정적으로 운영</li><li class="k"><span>17일차 ~</span>저효율 국가 중단, 필리핀 · 인도네시아 예산 2배</li></ul></div></div><div class="mw-cr2"><span class="ci-ht">국가별 가입 버튼 전환율 · 광고 클릭 대비</span><div class="mw-col"><div class="k"><b>16.9%</b><i style="--h:100%"></i><span>브라질</span></div><div class="k"><b>16.9%</b><i style="--h:100%"></i><span>태국</span></div><div class="k x2"><b>14.6%</b><i style="--h:86%"></i><span>인도네시아</span><u>예산 2배</u></div><div class=""><b>13.5%</b><i style="--h:80%"></i><span>말레이시아</span></div><div class=""><b>12.8%</b><i style="--h:76%"></i><span>베트남</span></div><div class=" x2"><b>10.6%</b><i style="--h:63%"></i><span>필리핀</span><u>예산 2배</u></div></div><p class="mw-cr-n">필리핀은 전환율이 가장 낮지만 클릭 단가도 가장 낮아, 전환율이 아니라 가입 1건당 비용으로 판단했습니다.</p></div></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>X 광고 국가 · 소재 테스트<span class="cr-tag">커뮤니티 확산</span></h3>
-<div class="pd-flow">
-<div class="pd-step"><span>1단계</span><b>국가별 테스트</b><small>국가별 1일 단위 테스트</small></div>
-<div class="pd-step"><span>2단계</span><b>소재 교체</b><small>영상 + 사전 참여 안내 문구로 변경</small></div>
-<div class="pd-step dark"><span>3단계</span><b>국가 제한 해제</b><small>반응이 좋은 유저에게 자동 노출</small></div>
-</div>
-<div class="pd-call"><b>결과</b> · 참여 1건당 비용이 초기의 약 1/5로 감소했습니다.</div>
+<div class="mw-xt"><ol class="mw-xt-s"><li><i>1</i><b>국가별 테스트</b><small>국가별 1일 단위 테스트</small></li><li><i>2</i><b>소재 교체</b><small>영상 + 사전 참여 안내 문구로&nbsp;변경</small></li><li><i>3</i><b>국가 제한 해제</b><small>반응이 좋은 유저에게 자동 노출</small></li></ol><div class="mw-xt-r"><span>결과 · 참여 1건당 비용</span><b>약 1/5</b><small>초기 대비</small></div></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-5</span>클릭 후 이탈 구간 발견<span class="cr-tag">문제 C 해결</span></h3>
 <p>일별 리포트에 이탈률 항목을 추가해 추적한 결과, 가입 페이지에 도착한 뒤 버튼을 누르기 전 이탈이 특히 많았습니다.</p>
