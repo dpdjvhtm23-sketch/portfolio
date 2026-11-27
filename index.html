@@ -1042,6 +1042,18 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .nc-ch2-g em{font-style:normal;font-size:14px;font-weight:700;color:#042F74;border-top:1px dashed #DDE3EC;padding-top:10px}
 #case .nc-ch2-g em u{text-decoration:none;display:inline-block;margin-right:6px;font-size:11.5px;font-weight:700;color:#fff;background:#085EE9;border-radius:6px;padding:2px 6px;vertical-align:1px}
 @media (max-width:760px){#case .nc-flow-r{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}#case .nc-flow-r>em{display:none}#case .nc-flow-r>div{padding:10px 10px 12px}#case .nc-flow-r>div span{font-size:12.5px}#case .nc-flow-r>div b{font-size:18px;margin:2px 0 8px}#case .nc-ch2-g{grid-template-columns:1fr}#case .nc-flow,#case .nc-ch2{padding:16px}}
+/* neopin-channel 3-5: tapered funnel */
+#case .nc-fz{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;height:84px}
+#case .nc-fz i{display:block}
+#case .nc-fz .a{background:#085EE9;clip-path:polygon(0 0,100% 16%,100% 84%,0 100%)}
+#case .nc-fz .b{background:#6E9BF2;clip-path:polygon(0 16%,100% 45%,100% 55%,0 84%)}
+#case .nc-fz .c{background:#E07070;clip-path:polygon(0 45%,100% 49%,100% 51%,0 55%)}
+#case .nc-fz em{position:absolute;left:66.6%;top:50%;transform:translate(-50%,-50%);font-style:normal;font-size:12.5px;font-weight:800;color:#D64545;background:#fff;border:1px solid #F3C9C9;border-radius:999px;padding:4px 10px;white-space:nowrap;box-shadow:0 2px 6px rgba(214,69,69,.12)}
+#case .nc-fl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;margin-top:12px}
+#case .nc-fl span{display:block;font-size:13px;font-weight:600;color:#5C6370}
+#case .nc-fl b{display:block;font-size:22px;font-weight:800;color:#042F74;margin-top:2px}
+#case .nc-fl .x b{color:#D64545}
+@media (max-width:760px){#case .nc-fz{height:64px}#case .nc-fz em{font-size:11.5px;padding:3px 8px}#case .nc-fl b{font-size:18px}#case .nc-fl span{font-size:12.5px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2759,7 +2771,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <h3 class="cr-sub"><span class="cr-n">3-5</span>퍼널 이탈 구간 분석</h3>
 <p>광고 → 앱 페이지 → 설치 → 가입 순서로 구간별 수치를 분석해 채널별 집행 목적을 재정의했습니다.</p>
 <div class="nc-an2">
-<div class="nc-flow"><span class="nc-flow-t">틱톡 유입 흐름</span><div class="nc-flow-r"><div><span>광고 노출</span><b>100</b><i style="--w:100%"></i></div><em aria-hidden="true">→</em><div><span>광고 클릭</span><b>8%</b><i style="--w:34%"></i></div><em class="drop">99.9% 이탈</em><div class="x"><span>앱 설치</span><b>극소수</b><i style="--w:2%"></i></div></div><p>클릭한 유저의 99.9%가 앱 페이지에서 이탈했습니다.</p><small>막대 길이는 흐름을 표현한 것으로, 실제 비율과 다릅니다.</small></div>
+<div class="nc-flow"><span class="nc-flow-t">틱톡 유입 흐름</span><div class="nc-fz" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><em>99.9% 이탈</em></div><div class="nc-fl"><div><span>광고 노출</span><b>100</b></div><div><span>광고 클릭</span><b>8%</b></div><div class="x"><span>앱 설치</span><b>극소수</b></div></div><p>클릭한 유저의 99.9%가 앱 페이지에서 이탈했습니다.</p><small>도형 폭은 흐름을 표현한 것으로, 실제 비율과 다릅니다.</small></div>
 <div class="nc-ch2"><span class="nc-ch2-t">채널별 분석 → 판단</span><div class="nc-ch2-g"><div><b>틱톡 · 팽글</b><p>클릭 단가는 매우 낮지만 설치 단가는 지역 평균의 약 2배</p><em><u>판단</u>신규 가입보다 트래픽 확보용</em></div><div><b>메타</b><p>인도네시아 앱 설치 캠페인이 가장 효율적, 웹 참여 · 인지도 캠페인은 클릭만 발생</p><em><u>판단</u>앱 설치 목표 · 국가별 소재</em></div><div><b>공통</b><p>광고 · 앱 페이지 메시지 불일치로 이탈</p><em><u>판단</u>가입할 이유가 되는 이벤트 필요</em></div></div></div>
 </div>
 
