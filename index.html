@@ -1204,6 +1204,37 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 /* results: two cards fill the row */
 #case .ob-res:has(>.ob-rc:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:760px){#case .ob-res:has(>.ob-rc:nth-child(2):last-child){grid-template-columns:1fr}}
+/* minewarz-bridge: measurement journey (all steps reached) + diagnosis checklist */
+#case .mb-meas li::before{background:#085EE9!important}
+#case .mb-meas li.bad::before{background:repeating-linear-gradient(90deg,#E07070 0 8px,transparent 8px 14px)!important}
+#case .mb-meas li.bad b{color:#D64545}
+#case .mb-meas li.bad small{color:#D64545;font-weight:700}
+@media (max-width:760px){
+#case .mb-meas ol{grid-template-columns:1fr!important;row-gap:16px}
+#case .mb-meas li{padding:0 0 0 40px!important}
+#case .mb-meas li i{position:absolute;left:0;top:0}
+#case .mb-meas li::before{left:12px!important;right:auto!important;top:30px!important;bottom:-16px;width:3px;height:auto!important}
+#case .mb-meas li.bad::before{background:repeating-linear-gradient(180deg,#E07070 0 6px,transparent 6px 11px)!important}
+#case .mb-meas li:last-child::before{display:none}
+#case .mb-meas b{margin-top:2px!important;font-size:15px!important}
+#case .mb-meas small{font-size:13px!important}
+#case .mb-meas li.bad small{color:#D64545!important}
+#case .mb-meas li.bad em{position:static!important;transform:none!important;display:inline-block;margin-top:6px}
+}
+#case .mb-dx{list-style:none;margin:16px 0 0;padding:4px 20px;border:1px solid #E9EBEF;border-radius:14px;word-break:keep-all}
+#case .mb-dx li{display:grid;grid-template-columns:28px 160px minmax(0,1fr) auto;align-items:center;gap:12px;padding:14px 0;border-top:1px solid #EEF0F3}
+#case .mb-dx li:first-child{border-top:0}
+#case .mb-dx i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;font-style:normal;font-size:12px;font-weight:800;color:#9AA3B2;background:#F1F3F6}
+#case .mb-dx b{font-size:15px;font-weight:800;color:#1B1F27}
+#case .mb-dx span{font-size:14px;color:#5C6370}
+#case .mb-dx em{font-style:normal;font-size:12.5px;font-weight:800;color:#8A919C;background:#F1F3F6;border-radius:999px;padding:4px 10px;white-space:nowrap}
+#case .mb-dx li.no b{color:#8A919C;text-decoration:line-through;text-decoration-color:#C4CAD3}
+#case .mb-dx li.yes{margin:0 -20px;padding:14px 20px;background:#EDF3FE;border-top-color:#DCE6FB;border-radius:0 0 13px 13px}
+#case .mb-dx li.yes i{color:#fff;background:#085EE9}
+#case .mb-dx li.yes b{color:#042F74}
+#case .mb-dx li.yes span{color:#1B1F27;font-weight:600}
+#case .mb-dx li.yes em{color:#fff;background:#085EE9}
+@media (max-width:760px){#case .mb-dx{padding:2px 14px}#case .mb-dx li{grid-template-columns:24px minmax(0,1fr) auto;gap:4px 10px}#case .mb-dx li span{grid-column:2/-1;grid-row:2}#case .mb-dx li em{grid-column:3;grid-row:1}#case .mb-dx li.yes{margin:0 -14px;padding:14px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -3016,15 +3047,10 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>구간별 이탈률 분리 측정<span class="cr-tag">문제 A 해결</span></h3>
 <p>전체 평균만으로는 문제 구간을 특정할 수 없어, 일별 운영 표에 이탈률을 구간별로 나눠 매일 기록했습니다.</p>
-<div class="mw-fun">
-<div><span>광고 클릭</span><b>클릭률 · 클릭 단가</b></div>
-<div class="bad"><span>가입 페이지 도착</span><b>페이지 조회 대비 이탈률</b><small>이탈 집중 구간</small></div>
-<div><span>가입 버튼 클릭</span><b>버튼 클릭 대비 이탈률</b></div>
-<div><span>가입 완료</span><b>누적 가입자 수</b></div>
-</div>
+<div class="mw-jr mb-meas" role="img" aria-label="단계별 측정 지표. 가입 페이지 도착 단계에 이탈 집중"><ol><li><i>1</i><b>광고 클릭</b><small>클릭률 · 클릭 단가</small></li><li class="bad"><i>2</i><b>가입 페이지 도착</b><small>페이지 조회 대비 이탈률</small><em>이탈 집중</em></li><li><i>3</i><b>가입 버튼 클릭</b><small>버튼 클릭 대비 이탈률</small></li><li><i>4</i><b>가입 완료</b><small>누적 가입자 수</small></li></ol></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>원인 진단<span class="cr-tag">문제 B · C 해결</span></h3>
-<div class="mb-hyp"><div class=""><span>광고 소재 문제?</span><em>해당 없음</em><small>광고 클릭률은 높게 유지</small></div><div class=""><span>국가 문제?</span><em>해당 없음</em><small>6개국 모두 같은 구간에서 이탈</small></div><div class="k"><span>도착 화면 문제?</span><em>원인 확인</em><small>정보 부족 + 일부 기기 인앱 브라우저 오류</small></div></div>
+<ul class="mb-dx"><li class="no"><i aria-hidden="true">✕</i><b>광고 소재 문제?</b><span>광고 클릭률은 높게 유지</span><em>해당 없음</em></li><li class="no"><i aria-hidden="true">✕</i><b>국가 문제?</b><span>6개국 모두 같은 구간에서 이탈</span><em>해당 없음</em></li><li class="yes"><i aria-hidden="true">✓</i><b>도착 화면 문제?</b><span>정보 부족 + 일부 기기 인앱 브라우저 오류</span><em>원인 확인</em></li></ul>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>브릿지 랜딩 페이지 도입<span class="cr-tag">직접 기획</span></h3>
 <p>기획안을 작성해 디자이너 · 개발자와 제작했습니다.</p>
