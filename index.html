@@ -1069,6 +1069,11 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .ct-line b{display:block;font-size:15px;font-weight:800;margin-top:2px;white-space:nowrap}
 #case .ct-line small{display:block;font-size:13px;color:#5C6370;margin-top:2px;white-space:nowrap}
 @media (max-width:760px){#case .ct-line{grid-template-columns:minmax(0,1fr) max-content;row-gap:16px}#case .ct-line li:nth-child(2){padding-right:0}#case .ct-line b{font-size:14px}#case .ct-line small{font-size:12.5px}}
+/* minewarz-ua 3-1: column headers */
+#case .mw-media .mw-mh{display:grid;grid-template-columns:88px minmax(0,1fr) 190px;column-gap:12px;font-size:12px;font-weight:700;color:#8A919C;padding-bottom:10px;border-bottom:1px solid #EEF0F3}
+#case .mw-media p{grid-template-columns:88px minmax(0,1fr) 190px!important}
+#case .mw-media p em{justify-self:start}
+@media (max-width:760px){#case .mw-media .mw-mh{display:block;border:0;padding-bottom:4px}#case .mw-media .mw-mh span:not(:last-child)::after{content:" · "}#case .mw-media p{grid-template-columns:1fr!important}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2828,7 +2833,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>매체별 역할 및 목표 설정<span class="cr-tag">집행 전</span></h3>
-<div class="cn-learn mw-media"><span>매체 · 역할 · 대상</span>
+<div class="cn-learn mw-media"><div class="mw-mh"><span>매체</span><span>역할</span><span>대상</span></div>
 <p><b>Pangle</b>웹3 소재로 가입 전환 · 틱톡 계열 앱 광고 네트워크<em>태국 · 필리핀 · 말레이시아부터</em></p>
 <p><b>Google Ads</b>게임에 관심 있는 유저 확보 · 게임 키워드 · 관심사 타깃<em>브라질 · 인도네시아 · 베트남</em></p>
 <p><b>X 광고</b>주요 공지 게시물 확산과 커뮤니티 성장<em>동남아 · 남미</em></p>
