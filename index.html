@@ -958,6 +958,8 @@ main .hero h1 .l:nth-child(1)::after,main .hero h1 .l:nth-child(3)::after{conten
 main .hero h1 .l:nth-child(2)::after{content:"\A";white-space:pre}
 }
 
+/* Korean: break between words, not inside them (all widths) */
+html body{word-break:keep-all;overflow-wrap:break-word}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
