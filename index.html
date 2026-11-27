@@ -1020,6 +1020,28 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .nc-cad .wk.w u{background:#DCE6FB}#case .nc-cad .wk.w u:last-child{background:#085EE9}
 #case .nc-cad-g p{margin:10px 0 0!important;font-size:15px;color:#1B1F27;line-height:1.5;word-break:keep-all}
 @media (max-width:760px){#case .nc-cad{padding:16px}#case .nc-cad-g{grid-template-columns:1fr}}
+/* neopin-channel 3-5: funnel strip + channel decision cards */
+#case .nc-an2{margin-top:14px;display:flex;flex-direction:column;gap:12px}
+#case .nc-flow{background:#F5F8FD;border-radius:14px;padding:18px 20px}
+#case .nc-flow-t,#case .nc-ch2-t{display:block;font-size:13px;font-weight:700;color:#5C6370;margin-bottom:12px}
+#case .nc-flow-r{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px}
+#case .nc-flow-r>div{background:#fff;border:1px solid #E3EAF7;border-radius:12px;padding:12px 14px}
+#case .nc-flow-r>div span{display:block;font-size:13px;color:#5C6370;font-weight:600}
+#case .nc-flow-r>div b{display:block;font-size:22px;font-weight:800;color:#042F74;margin:2px 0 8px}
+#case .nc-flow-r>div i{display:block;height:6px;border-radius:3px;background:linear-gradient(90deg,#085EE9 var(--w),#E6ECF5 var(--w))}
+#case .nc-flow-r>div.x{border-color:#F3C9C9}#case .nc-flow-r>div.x b{color:#D64545}
+#case .nc-flow-r>em{font-style:normal;color:#8A919C;font-weight:700}
+#case .nc-flow-r>em.drop{font-size:12px;color:#D64545;background:#FDECEC;border-radius:999px;padding:4px 9px;white-space:nowrap}
+#case .nc-flow p{margin:12px 0 0!important;font-size:15px;color:#1B1F27}
+#case .nc-flow small{display:block;margin-top:4px;font-size:12px;color:#8A919C}
+#case .nc-ch2{border:1px solid #E9EBEF;border-radius:14px;padding:18px 20px 20px}
+#case .nc-ch2-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#case .nc-ch2-g>div{display:flex;flex-direction:column;border:1px solid #EEF0F3;border-radius:12px;padding:14px 16px;word-break:keep-all}
+#case .nc-ch2-g b{font-size:15px;font-weight:800;color:#085EE9}
+#case .nc-ch2-g p{margin:6px 0 12px!important;font-size:14px;color:#3B414B;line-height:1.55;flex:1}
+#case .nc-ch2-g em{font-style:normal;font-size:14px;font-weight:700;color:#042F74;border-top:1px dashed #DDE3EC;padding-top:10px}
+#case .nc-ch2-g em u{text-decoration:none;display:inline-block;margin-right:6px;font-size:11.5px;font-weight:700;color:#fff;background:#085EE9;border-radius:6px;padding:2px 6px;vertical-align:1px}
+@media (max-width:760px){#case .nc-flow-r{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}#case .nc-flow-r>em{display:none}#case .nc-flow-r>div{padding:10px 10px 12px}#case .nc-flow-r>div span{font-size:12.5px}#case .nc-flow-r>div b{font-size:18px;margin:2px 0 8px}#case .nc-ch2-g{grid-template-columns:1fr}#case .nc-flow,#case .nc-ch2{padding:16px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2736,13 +2758,9 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h3 class="cr-sub"><span class="cr-n">3-5</span>퍼널 이탈 구간 분석</h3>
 <p>광고 → 앱 페이지 → 설치 → 가입 순서로 구간별 수치를 분석해 채널별 집행 목적을 재정의했습니다.</p>
-<div class="nc-an">
-<div class="ci-hr nc-fun"><span class="ci-ht">틱톡 유입 흐름</span><div class="ci-hb"><span>광고 노출</span><div><i style="width:100%"></i></div><b>100</b></div><div class="ci-hb k"><span>광고 클릭</span><div><i style="width:34%"></i></div><b>8%</b></div><div class="ci-hb"><span>앱 설치</span><div><i style="width:1.5%"></i></div><b>극소수</b></div><p>클릭한 유저의 99.9%가 앱 페이지에서 이탈했습니다.</p><small>막대 길이는 흐름을 표현한 것으로, 실제 비율과 다릅니다.</small></div>
-<div class="cn-learn nc-ch"><span>채널별 분석 → 판단</span>
-<p><b>틱톡 · 팽글</b>클릭 단가는 매우 낮지만 설치 단가는 지역 평균의 약 2배<em>신규 가입보다 트래픽 확보용</em></p>
-<p><b>메타</b>인도네시아 앱 설치 캠페인이 가장 효율적, 웹 참여 · 인지도 캠페인은 클릭만 발생<em>앱 설치 목표 · 국가별 소재</em></p>
-<p><b>공통</b>광고 · 앱 페이지 메시지 불일치로 이탈<em>가입할 이유가 되는 이벤트 필요</em></p>
-</div>
+<div class="nc-an2">
+<div class="nc-flow"><span class="nc-flow-t">틱톡 유입 흐름</span><div class="nc-flow-r"><div><span>광고 노출</span><b>100</b><i style="--w:100%"></i></div><em aria-hidden="true">→</em><div><span>광고 클릭</span><b>8%</b><i style="--w:34%"></i></div><em class="drop">99.9% 이탈</em><div class="x"><span>앱 설치</span><b>극소수</b><i style="--w:2%"></i></div></div><p>클릭한 유저의 99.9%가 앱 페이지에서 이탈했습니다.</p><small>막대 길이는 흐름을 표현한 것으로, 실제 비율과 다릅니다.</small></div>
+<div class="nc-ch2"><span class="nc-ch2-t">채널별 분석 → 판단</span><div class="nc-ch2-g"><div><b>틱톡 · 팽글</b><p>클릭 단가는 매우 낮지만 설치 단가는 지역 평균의 약 2배</p><em><u>판단</u>신규 가입보다 트래픽 확보용</em></div><div><b>메타</b><p>인도네시아 앱 설치 캠페인이 가장 효율적, 웹 참여 · 인지도 캠페인은 클릭만 발생</p><em><u>판단</u>앱 설치 목표 · 국가별 소재</em></div><div><b>공통</b><p>광고 · 앱 페이지 메시지 불일치로 이탈</p><em><u>판단</u>가입할 이유가 되는 이벤트 필요</em></div></div></div>
 </div>
 
 <h3 class="cr-sub"><span class="cr-n">3-6</span>예산 증액 대신 전환 프로모션에 집중</h3>
@@ -2755,8 +2773,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
 <div class="ob-res">
-<div class="ob-rc"><b>신규 채널 3곳 집행</b><small>시도한 적 없던 틱톡 · 팽글 · 메타에서 광고 집행</small></div>
-<div class="ob-rc"><b>광고 심사 통과</b><small>플랫폼 정책에 맞춘 내부 가이드라인으로 소재 제작</small></div>
+<div class="ob-rc"><b>신규 채널 3곳 집행</b><small>처음 시도한 틱톡 · 팽글 · 메타</small></div>
+<div class="ob-rc"><b>광고 심사 통과</b><small>내부 소재 가이드라인으로 통과</small></div>
 <div class="ob-rc"><b>이탈 지점 특정</b><small>클릭의 99.9%가 앱 페이지에서 이탈</small></div>
 </div>
 </template>
