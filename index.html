@@ -958,6 +958,8 @@ main .hero h1 .l:nth-child(1)::after,main .hero h1 .l:nth-child(3)::after{conten
 main .hero h1 .l:nth-child(2)::after{content:"\A";white-space:pre}
 }
 
+/* band labels: never truncate on desktop */
+@media (min-width:761px){main .band .ds{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;word-break:keep-all}}
 /* band marquee (mobile) */
 .band-track{display:contents}.band a.dup{display:none}
 @media (max-width:760px){
@@ -3377,8 +3379,8 @@ const tn=t=>TAGNAME[t]||t;
 
 /* brands + jobs */
 const BAND=[
- ["KBW2026","아시아 최대 규모 블록체인 컨퍼런스","2배+","슈퍼 얼리버드 메일 클릭률 (전년 대비)","crm"],
- ["코인니스","실시간 크립토 뉴스 · 커뮤니티 앱","22.1만","월평균 커뮤니티 댓글","coinness-loop"],
+ ["KBW2026","아시아 최대 규모 블록체인 컨퍼런스","2배+","슈퍼 얼리버드 메일 클릭률 (전년\u00a0대비)","crm"],
+ ["코인니스","실시간 크립토 뉴스 · 커뮤니티 앱","90만","재직 중 MAU (44만\u00a0→\u00a090만)","coinness-loop"],
  ["네오핀","온체인 자산 관리 웹3 금융 앱","2,850명","레퍼럴 신규 가입","neopin-onchain"],
  ["마인워즈","NFT 마이닝 타이쿤 GameFi","12만 명","글로벌 사전가입","minewarz-ua"],
  ["스텔라 판타지","서브컬처 IP 기반 웹3 게임","58K+","토큰·경품 없이 모은 X 팔로워","stella-content"]
