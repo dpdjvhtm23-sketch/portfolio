@@ -1272,6 +1272,20 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .mc-stair li.k b,#case .mc-stair li.k small{color:#fff}
 #case .mc-grow .mc-ax{display:block!important;margin-top:8px;font-style:normal;font-size:12px!important;font-weight:700;color:#8A919C!important;text-align:right;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;width:auto!important;height:auto!important}
 @media (max-width:760px){#case .mc-stair{min-height:0;height:150px;flex:none}#case .mc-stair b{font-size:14px}#case .mc-stair small{font-size:12px}}
+/* minewarz-community 3-2: collaboration depth list (signal meter) */
+#case .mc-grow{justify-content:flex-start!important}
+#case .mc-depth{list-style:none;margin:2px 0 0!important;padding:0}
+#case .mc-grow>span{margin-bottom:0!important}
+#case .mc-grow{gap:0!important}
+#case .mc-depth li{display:grid;grid-template-columns:34px 96px minmax(0,1fr);align-items:center;gap:10px;padding:12px 0;border-top:1px solid #E3E8F0}
+#case .mc-depth li:first-child{border-top:0}
+#case .mc-depth i{display:flex;align-items:flex-end;gap:3px;height:18px}
+#case .mc-depth u{display:block;width:6px;border-radius:2px;background:#D5DEEC}
+#case .mc-depth u:nth-child(1){height:7px}#case .mc-depth u:nth-child(2){height:12px}#case .mc-depth u:nth-child(3){height:18px}
+#case .mc-depth .d1 u:nth-child(1),#case .mc-depth .d2 u:nth-child(-n+2),#case .mc-depth .d3 u{background:#085EE9}
+#case .mc-depth b{font-size:15px;font-weight:800;color:#1B1F27}
+#case .mc-depth .d3 b{color:#085EE9}
+#case .mc-depth small{font-size:14px;color:#5C6370}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -3149,7 +3163,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <p><b>보상</b>양측 보상</p>
 <p><b>일정</b>게시 가이드 · 일정</p>
 </div>
-<div class="mc-grow"><span>성과가 좋은 파트너와 협업 확장</span><ol class="mc-stair"><li style="--h:46%"><b>AMA</b><small>공개 질의응답</small></li><li style="--h:70%"><b>미션형</b><small>공동 미션</small></li><li class="k" style="--h:94%"><b>NFT 연동형</b><small>NFT 연동 이벤트</small></li></ol><em class="mc-ax">협업 깊이 →</em></div>
+<div class="mc-grow"><span>성과가 좋은 파트너와 협업 확장</span><ol class="mc-depth"><li class="d1"><i aria-hidden="true"><u></u><u></u><u></u></i><b>AMA</b><small>공개 질의응답</small></li><li class="d2"><i aria-hidden="true"><u></u><u></u><u></u></i><b>미션형</b><small>공동 미션</small></li><li class="d3"><i aria-hidden="true"><u></u><u></u><u></u></i><b>NFT 연동형</b><small>NFT 연동 이벤트</small></li></ol></div>
 </div>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>활동 레벨 기반 참여 조건 설계<span class="cr-tag">문제 C 해결</span></h3>
