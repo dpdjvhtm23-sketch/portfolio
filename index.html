@@ -1057,17 +1057,17 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 /* intro text → block spacing */
 #case .case-rich p+.np-map{margin-top:16px}
 /* CRM tiers: slim timeline */
-#case .ct-line{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-#case .ct-line li{position:relative;padding-right:12px}
-#case .ct-line li:last-child::before{background:linear-gradient(90deg,#DCE6FB,#085EE9)}
-#case .ct-line li::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:#DCE6FB}
+#case .ct-line{--g:clamp(48px,9vw,150px);list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,max-content);column-gap:var(--g)}
+#case .ct-line li{position:relative}
+#case .ct-line li::before{content:"";position:absolute;left:0;right:calc(-1 * var(--g));top:6px;height:2px;background:#DCE6FB}
 #case .ct-line li:first-child::before{left:6px}
+#case .ct-line li:last-child::before{right:0;background:linear-gradient(90deg,#DCE6FB,#085EE9)}
 #case .ct-line i{position:relative;display:block;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid #9DBDF7;box-sizing:border-box}
 #case .ct-line .t2 i{border-color:#6E9BF2}#case .ct-line .t3 i{border-color:#3B7BEF}#case .ct-line .t4 i{border-color:#085EE9;background:#085EE9}
 #case .ct-line span{display:block;margin-top:12px;font-size:12px;font-weight:800;color:#085EE9;letter-spacing:.02em}
 #case .ct-line b{display:block;font-size:15px;font-weight:800;margin-top:2px}
 #case .ct-line small{display:block;font-size:13px;color:#5C6370;margin-top:2px}
-@media (max-width:760px){#case .ct-line{grid-template-columns:1fr 1fr;row-gap:16px}#case .ct-line b{font-size:14px}#case .ct-line small{font-size:12.5px}}
+@media (max-width:760px){#case .ct-line{--g:40px;grid-template-columns:repeat(2,max-content);row-gap:16px}#case .ct-line li:nth-child(2)::before{right:0;background:#DCE6FB}#case .ct-line b{font-size:14px}#case .ct-line small{font-size:12.5px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
