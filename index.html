@@ -1260,6 +1260,18 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .mc-rm p u{display:block;text-decoration:none;font-size:12px;font-weight:700;color:#8A919C}
 }
 #case .mb-meas li.bad em{font-size:12px!important}
+/* minewarz-community 3-2: collaboration depth stairs */
+#case .mc-two{align-items:stretch}
+#case .mc-grow{display:flex!important;flex-direction:column}
+#case .mc-stair{list-style:none;margin:12px 0 0;padding:0;flex:1;min-height:150px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;align-items:end}
+#case .mc-stair li{height:var(--h);min-height:62px;box-sizing:border-box;border-radius:10px 10px 4px 4px;padding:10px 12px;display:flex;flex-direction:column;justify-content:flex-start;background:#DCE6FB;word-break:keep-all}
+#case .mc-stair li:nth-child(2){background:#A9C3F5}
+#case .mc-stair li.k{background:#085EE9}
+#case .mc-stair b{font-size:15px;font-weight:800;color:#042F74;line-height:1.3}
+#case .mc-stair small{font-size:12.5px;color:#3B414B;margin-top:2px;line-height:1.4}
+#case .mc-stair li.k b,#case .mc-stair li.k small{color:#fff}
+#case .mc-grow .mc-ax{display:block!important;margin-top:8px;font-style:normal;font-size:12px!important;font-weight:700;color:#8A919C!important;text-align:right;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;width:auto!important;height:auto!important}
+@media (max-width:760px){#case .mc-stair{min-height:0;height:150px;flex:none}#case .mc-stair b{font-size:14px}#case .mc-stair small{font-size:12px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -3137,10 +3149,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <p><b>보상</b>양측 보상</p>
 <p><b>일정</b>게시 가이드 · 일정</p>
 </div>
-<div class="mc-grow"><span>성과가 좋은 파트너와 협업 확장</span>
-<div><em>AMA</em><i>→</i><em>미션형</em><i>→</i><em class="k">NFT 연동형</em></div>
-<small>공개 질의응답으로 시작해 공동 미션, NFT 연동 이벤트까지</small>
-</div>
+<div class="mc-grow"><span>성과가 좋은 파트너와 협업 확장</span><ol class="mc-stair"><li style="--h:46%"><b>AMA</b><small>공개 질의응답</small></li><li style="--h:70%"><b>미션형</b><small>공동 미션</small></li><li class="k" style="--h:94%"><b>NFT 연동형</b><small>NFT 연동 이벤트</small></li></ol><em class="mc-ax">협업 깊이 →</em></div>
 </div>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>활동 레벨 기반 참여 조건 설계<span class="cr-tag">문제 C 해결</span></h3>
