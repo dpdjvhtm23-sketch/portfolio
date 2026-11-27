@@ -1125,6 +1125,35 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .mw-cr .ci-hb>span u{text-decoration:none;display:inline-block;margin-left:6px;font-size:11px;font-weight:800;color:#fff;background:#042F74;border-radius:5px;padding:1px 6px;vertical-align:1px}
 #case .mw-cr p.mw-cr-n{margin-top:14px!important;padding:10px 12px;border-left:3px solid #085EE9;background:#F5F8FD;border-radius:0 8px 8px 0;color:#3B414B;font-size:13.5px}
 @media (max-width:760px){#case .mw-cr .ci-hb{grid-template-columns:132px minmax(0,1fr) 44px!important}}
+/* minewarz-ua 3-3 v2: horizontal phases + full-width chart */
+#case .mw-daily2{margin-top:16px;display:flex;flex-direction:column;gap:12px;word-break:keep-all}
+#case .mw-ph{display:grid;grid-template-columns:1.45fr .85fr 1.2fr;border:1px solid #E9EBEF;border-radius:14px;overflow:hidden}
+#case .mw-ph>div{padding:0 18px 16px}
+#case .mw-ph>div+div{border-left:1px solid #EEF0F3}
+#case .mw-ph-h{display:flex;align-items:center;gap:8px;margin:0 -18px 12px;padding:10px 18px;border-bottom:3px solid #8DB3F7;background:#F5F8FD}
+#case .mw-ph .c2 .mw-ph-h{border-color:#E07070;background:#FDF5F5}
+#case .mw-ph .c3 .mw-ph-h{border-color:#085EE9;background:#EDF3FE}
+#case .mw-ph-h em{font-style:normal;font-size:13px;font-weight:800;color:#085EE9}
+#case .mw-ph .c2 .mw-ph-h em{color:#D64545}#case .mw-ph .c3 .mw-ph-h em{color:#042F74}
+#case .mw-ph-h small{font-size:12px;font-weight:600;color:#8A919C}
+#case .mw-ph ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+#case .mw-ph li{font-size:14px;line-height:1.5;color:#1F2329}
+#case .mw-ph li span{display:block;font-size:12px;font-weight:800;color:#085EE9}
+#case .mw-ph .c2 li span{color:#D64545}
+#case .mw-ph li.k{font-weight:700;color:#042F74}
+#case .mw-cr2{border:1px solid #E9EBEF;border-radius:14px;padding:16px 20px 18px}
+#case .mw-cr2 .ci-ht{display:block;margin-bottom:10px}
+#case .mw-cr2-g{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:20px;align-items:center}
+#case .mw-cr2 .mw-cr{border:0!important;padding:0!important;background:none!important;margin:0!important}
+#case .mw-cr2 .ci-hb{margin:0!important;padding:4px 0!important}
+#case .mw-cr2 p.mw-cr-n{margin:0!important}
+#case .mw-ph{grid-template-columns:2fr .9fr 1.25fr!important}
+#case .mw-ph .c1 ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+#case .mw-cr2 .mw-cr{display:flex!important;flex-direction:column;gap:2px!important}
+#case .mw-cr2 .ci-hb{padding:5px 0!important;min-height:0!important;row-gap:0!important}
+#case .mw-cr2 p.mw-cr-n{padding:12px 14px!important;border-left:3px solid #085EE9;background:#F5F8FD;border-radius:0 8px 8px 0;color:#3B414B;font-size:14px;line-height:1.6}
+@media (max-width:760px){#case .mw-ph .c1 ul{grid-template-columns:1fr}}
+@media (max-width:760px){#case .mw-ph{grid-template-columns:1fr!important}#case .mw-ph>div+div{border-left:0;border-top:1px solid #EEF0F3}#case .mw-cr2{padding:14px}#case .mw-cr2-g{grid-template-columns:1fr;gap:12px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2895,10 +2924,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>국가별로 매일 조정<span class="cr-tag">문제 B 해결</span></h3>
 <p>국가별 캠페인을 분리 운영하며, 일 단위 성과를 확인해 예산을 조정했습니다.</p>
-<div class="mw-daily">
-<ol class="mw-log"><li class="ph"><em>확장</em><small>1 ~ 5일차</small></li><li class=""><span>1일차</span><b>태국 · 말레이시아 · 필리핀 3개국으로 시작</b></li><li class=""><span>2일차</span><b>브라질 추가</b></li><li class="up"><span>3 ~ 5일차</span><b>효율 유지 확인하며 매일 예산 20% 증액</b></li><li class=""><span>5일차</span><b>인도네시아 · 베트남 추가, 6개국으로 확대</b></li><li class="ph"><em class="r">점검</em><small>8일차</small></li><li class="stop"><span>8일차</span><b>전환율 하락 → 전체 일시 중지 후 점검</b></li><li class="ph"><em class="d">재배분</em><small>11일차 ~</small></li><li class=""><span>11일차 ~</span><b>일 예산을 낮춰 재개, 안정적으로 운영</b></li><li class="k"><span>17일차 ~</span><b>저효율 국가 중단, 필리핀 · 인도네시아 예산 2배</b></li></ol>
-<div class="ci-hr mw-cr"><span class="ci-ht">국가별 가입 버튼 전환율 · 광고 클릭 대비</span><div class="ci-hb k"><span>브라질</span><div><i style="width:100%"></i></div><b>16.9%</b></div><div class="ci-hb k"><span>태국</span><div><i style="width:100%"></i></div><b>16.9%</b></div><div class="ci-hb k"><span>인도네시아<u>예산 2배</u></span><div><i style="width:86%"></i></div><b>14.6%</b></div><div class="ci-hb"><span>말레이시아</span><div><i style="width:80%"></i></div><b>13.5%</b></div><div class="ci-hb"><span>베트남</span><div><i style="width:76%"></i></div><b>12.8%</b></div><div class="ci-hb"><span>필리핀<u>예산 2배</u></span><div><i style="width:63%"></i></div><b>10.6%</b></div><p class="mw-cr-n">필리핀은 전환율이 가장 낮지만 클릭 단가도 가장 낮아, 전환율이 아니라 가입 1건당 비용으로 판단했습니다.</p></div>
-</div>
+<div class="mw-daily2"><div class="mw-ph"><div class="c1"><div class="mw-ph-h"><em>확장</em><small>1 ~ 5일차</small></div><ul><li class=""><span>1일차</span>태국 · 말레이시아 · 필리핀 3개국으로 시작</li><li class=""><span>2일차</span>브라질 추가</li><li class=""><span>3 ~ 5일차</span>효율 유지 확인하며 매일 예산 20% 증액</li><li class=""><span>5일차</span>인도네시아 · 베트남 추가, 6개국으로 확대</li></ul></div><div class="c2"><div class="mw-ph-h"><em>점검</em><small>8일차</small></div><ul><li class=""><span>8일차</span>전환율 하락 → 전체 일시 중지 후 점검</li></ul></div><div class="c3"><div class="mw-ph-h"><em>재배분</em><small>11일차 ~</small></div><ul><li class=""><span>11일차 ~</span>일 예산을 낮춰 재개, 안정적으로 운영</li><li class="k"><span>17일차 ~</span>저효율 국가 중단, 필리핀 · 인도네시아 예산 2배</li></ul></div></div><div class="mw-cr2"><span class="ci-ht">국가별 가입 버튼 전환율 · 광고 클릭 대비</span><div class="mw-cr2-g"><div class="ci-hr mw-cr"><div class="ci-hb k"><span>브라질</span><div><i style="width:100%"></i></div><b>16.9%</b></div><div class="ci-hb k"><span>태국</span><div><i style="width:100%"></i></div><b>16.9%</b></div><div class="ci-hb k"><span>인도네시아<u>예산 2배</u></span><div><i style="width:86%"></i></div><b>14.6%</b></div><div class="ci-hb"><span>말레이시아</span><div><i style="width:80%"></i></div><b>13.5%</b></div><div class="ci-hb"><span>베트남</span><div><i style="width:76%"></i></div><b>12.8%</b></div><div class="ci-hb"><span>필리핀<u>예산 2배</u></span><div><i style="width:63%"></i></div><b>10.6%</b></div></div><p class="mw-cr-n">필리핀은 전환율이 가장 낮지만 클릭 단가도 가장 낮아, 전환율이 아니라 가입 1건당 비용으로 판단했습니다.</p></div></div></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-4</span>X 광고 국가 · 소재 테스트<span class="cr-tag">커뮤니티 확산</span></h3>
 <div class="pd-flow">
