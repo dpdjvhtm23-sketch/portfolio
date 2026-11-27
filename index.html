@@ -1235,6 +1235,31 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .mb-dx li.yes span{color:#1B1F27;font-weight:600}
 #case .mb-dx li.yes em{color:#fff;background:#085EE9}
 @media (max-width:760px){#case .mb-dx{padding:2px 14px}#case .mb-dx li{grid-template-columns:24px minmax(0,1fr) auto;gap:4px 10px}#case .mb-dx li span{grid-column:2/-1;grid-row:2}#case .mb-dx li em{grid-column:3;grid-row:1}#case .mb-dx li.yes{margin:0 -14px;padding:14px}}
+/* minewarz-community 3-1: stage roadmap matrix (chevron header + goal/tactic/role rows) */
+#case .mc-rm{display:grid;grid-template-columns:76px repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto auto;column-gap:6px;margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:16px 18px 6px;word-break:keep-all}
+#case .mc-rm>div{grid-row:span 4;display:grid;grid-template-rows:subgrid}
+#case .mc-rm-lab span{font-size:12px;font-weight:700;color:#8A919C;padding:12px 0;align-self:start}
+#case .mc-rm-lab span:not(:first-child){border-top:1px solid #EEF0F3}
+#case .mc-rm-chev{display:flex;align-items:center;height:36px;padding:0 22px 0 16px;font-size:14px;font-weight:800;color:#fff;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%);margin-bottom:4px}
+#case .mc-rm .s1 .mc-rm-chev{background:#8DB3F7;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
+#case .mc-rm .s2 .mc-rm-chev{background:#4D86F0;padding-left:24px}
+#case .mc-rm .s3 .mc-rm-chev{background:#085EE9;padding-left:24px}
+#case .mc-rm p{margin:0!important;padding:12px 0;border-top:1px solid #EEF0F3;font-size:14px;line-height:1.5}
+#case .mc-rm p u{display:none}
+#case .mc-rm p.g{font-weight:800;font-size:15px;color:#042F74}
+#case .mc-rm p.e .ev{display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start}
+#case .mc-rm p.e em{font-style:normal;font-size:13px;font-weight:600;color:#1B1F27;background:#F1F4F9;border-radius:6px;padding:3px 8px}
+#case .mc-rm .s3 p.e em{background:#EDF3FE;color:#042F74}
+#case .mc-rm p.rl{color:#5C6370}
+@media (max-width:760px){
+#case .mc-rm{display:flex;flex-direction:column;gap:12px;padding:14px}
+#case .mc-rm-lab{display:none!important}
+#case .mc-rm>div{display:block}
+#case .mc-rm-chev{margin-bottom:6px}
+#case .mc-rm p{display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px;padding:8px 0;border-top:0}
+#case .mc-rm p u{display:block;text-decoration:none;font-size:12px;font-weight:700;color:#8A919C}
+}
+#case .mb-meas li.bad em{font-size:12px!important}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -3097,7 +3122,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">3</span>해결</h2>
 <h3 class="cr-sub"><span class="cr-n">3-1</span>단계별 운영 목표 수립<span class="cr-tag">운영 계획</span></h3>
-<div class="np-c3"><div><span>초기 · 커뮤니티 확장</span><b>오프닝 · 친구 초대 · 파트너 이벤트</b><small>첫 유입 동기</small></div><div><span>중기 · 커뮤니티 활성화</span><b>위클리 기브어웨이 · 퀴즈 · AMA</b><small>지속 참여 동기</small></div><div><span>후기 · 게임 · 세일로 유입</span><b>런치패드 연계 · NFT 구매 인증</b><small>구매와 출시로 연결</small></div></div>
+<div class="mc-rm"><div class="mc-rm-lab" aria-hidden="true"><span></span><span>목표</span><span>주요 이벤트</span><span>역할</span></div><div class="mc-rm-col s1"><b class="mc-rm-chev">초기</b><p class="g"><u>목표</u>커뮤니티 확장</p><p class="e"><u>주요 이벤트</u><span class="ev"><em>오프닝</em><em>친구 초대</em><em>파트너 이벤트</em></span></p><p class="rl"><u>역할</u>첫 유입 동기</p></div><div class="mc-rm-col s2"><b class="mc-rm-chev">중기</b><p class="g"><u>목표</u>커뮤니티 활성화</p><p class="e"><u>주요 이벤트</u><span class="ev"><em>위클리 기브어웨이</em><em>퀴즈</em><em>AMA</em></span></p><p class="rl"><u>역할</u>지속 참여 동기</p></div><div class="mc-rm-col s3"><b class="mc-rm-chev">후기</b><p class="g"><u>목표</u>게임 · 세일로 유입</p><p class="e"><u>주요 이벤트</u><span class="ev"><em>런치패드 연계</em><em>NFT 구매 인증</em></span></p><p class="rl"><u>역할</u>구매와 출시로 연결</p></div></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>타깃이 겹치는 파트너와의 상호 홍보<span class="cr-tag">문제 B 해결</span></h3>
 <p>광고비 없이 상호 게시 방식으로, 파트너 범위를 세 단계로 넓혔습니다.</p>
