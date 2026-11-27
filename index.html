@@ -1185,7 +1185,8 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .mw-ph li .mw-why{display:block;margin-top:6px;padding:8px 10px;font-size:13px;font-weight:500;line-height:1.5;color:#3B414B;background:#F5F8FD;border-left:3px solid #085EE9;border-radius:0 8px 8px 0}
 /* minewarz-ua 3-4: journey with drop point */
 #case .mw-jr{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:24px 22px 22px}
-#case .mw-jr ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));word-break:keep-all}
+#case .mw-jr ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) max-content;word-break:keep-all}
+#case .mw-jr li:last-child{padding-right:0}
 #case .mw-jr li{position:relative;padding-right:12px}
 #case .mw-jr li::before{content:"";position:absolute;left:28px;right:0;top:13px;height:3px;border-radius:2px;background:#085EE9}
 #case .mw-jr li:last-child::before{display:none}
