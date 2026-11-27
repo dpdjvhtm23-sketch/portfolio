@@ -1074,6 +1074,25 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 #case .mw-media p{grid-template-columns:88px minmax(0,1fr) 190px!important}
 #case .mw-media p em{justify-self:start}
 @media (max-width:760px){#case .mw-media .mw-mh{display:block;border:0;padding-bottom:4px}#case .mw-media .mw-mh span:not(:last-child)::after{content:" · "}#case .mw-media p{grid-template-columns:1fr!important}}
+/* minewarz-ua 3-2: budget shift */
+#case .mw-re{margin-top:16px;border:1px solid #E9EBEF;border-radius:14px;padding:18px 20px 20px}
+#case .mw-re-t{display:block;font-size:13px;font-weight:700;color:#5C6370;margin-bottom:12px}
+#case .mw-re-r{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:center;gap:12px;margin-top:8px}
+#case .mw-re-r em{font-style:normal;font-size:13px;font-weight:600;color:#5C6370}
+#case .mw-re-bar{display:flex;gap:3px;height:34px}
+#case .mw-re-bar i{flex:1;display:flex;align-items:center;padding:0 12px;border-radius:8px;font-style:normal;font-size:13px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+#case .mw-re-bar .g{background:#9AA3B2}
+#case .mw-re-bar .p{background:#085EE9}
+#case .mw-re-bar .off{flex:0 0 auto;color:#D64545;background:repeating-linear-gradient(135deg,#FDECEC 0 6px,#F8DADA 6px 12px)}
+#case .mw-re-c{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid #EEF0F3}
+#case .mw-re-c>div{border-radius:12px;padding:14px 16px;word-break:keep-all}
+#case .mw-re-c .x{background:#FBF5F5}#case .mw-re-c .o{background:#EDF3FE}
+#case .mw-re-c span{display:block;font-size:13px;font-weight:700;color:#5C6370}
+#case .mw-re-c .o span{color:#085EE9}
+#case .mw-re-c b{display:block;font-size:17px;font-weight:800;margin-top:2px}
+#case .mw-re-c .x b{color:#D64545}#case .mw-re-c .o b{color:#042F74}
+#case .mw-re-c small{display:block;font-size:14px;color:#3B414B;margin-top:4px;line-height:1.5}
+@media (max-width:760px){#case .mw-re{padding:16px}#case .mw-re-r{grid-template-columns:64px minmax(0,1fr);gap:8px}#case .mw-re-c{grid-template-columns:1fr}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2819,7 +2838,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 </dl>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
-<p>마인워즈는 출시를 앞둔 채굴형 웹3 게임이었습니다. NFT 세일의 구매층을 만들려면,<br>세일 전까지 글로벌 사전가입자를 대규모로 모아야 했습니다.</p>
+<p>마인워즈는 출시를 앞둔 채굴형 웹3 게임이었습니다. NFT 세일의 구매층을 만들려면, 세일 전까지 글로벌 사전가입자를 대규모로 모아야 했습니다.</p>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
 <div style="background: #EDF3FE; border-radius: 14px; padding: 26px 28px">
@@ -2840,12 +2859,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 </div>
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>첫 주 데이터 기반 매체 재편<span class="cr-tag">문제 A 해결</span></h3>
-<div class="pd-ba">
-<div class="b"><span>Google Ads</span><b>4일 만에 중단</b><small>클릭 단가가 Pangle의 약 60배, 가입 전환은 거의 없음</small></div>
-<i aria-hidden="true">→</i>
-<div class="a"><span>Pangle</span><b>예산 집중</b><small>클릭 단가가 목표의 약 1/10, 클릭률 22% <span style="white-space:nowrap">(Pangle 인앱 지면 광고)</span></small></div>
-</div>
-<p class="au-note">초기 계획은 두 매체에 동일 예산이었으나, 첫 주 성과를 근거로 Pangle에 집중했습니다.</p>
+<div class="mw-re"><div class="mw-re-b"><span class="mw-re-t">예산 배분</span><div class="mw-re-r"><em>초기 계획</em><div class="mw-re-bar"><i class="g">Google Ads</i><i class="p">Pangle</i></div></div><div class="mw-re-r"><em>첫 주 이후</em><div class="mw-re-bar"><i class="off">중단</i><i class="p">Pangle 집중</i></div></div></div><div class="mw-re-c"><div class="x"><span>Google Ads</span><b>4일 만에 중단</b><small>클릭 단가가 Pangle의 약 60배, 가입 전환은 거의 없음</small></div><div class="o"><span>Pangle</span><b>예산 집중</b><small>클릭 단가가 목표의 약 1/10, 클릭률 22% <span style="white-space:nowrap">(Pangle 인앱 지면 광고)</span></small></div></div></div>
 
 <h3 class="cr-sub"><span class="cr-n">3-3</span>국가별로 매일 조정<span class="cr-tag">문제 B 해결</span></h3>
 <p>국가별 캠페인을 분리 운영하며, 일 단위 성과를 확인해 예산을 조정했습니다.</p>
