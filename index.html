@@ -1056,21 +1056,18 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 @media (max-width:760px){#case .nc-fz{height:64px}#case .nc-fz em{font-size:11.5px;padding:3px 8px}#case .nc-fl b{font-size:18px}#case .nc-fl span{font-size:12.5px}}
 /* intro text → block spacing */
 #case .case-rich p+.np-map{margin-top:16px}
-/* CRM tiers: price staircase */
-#case .ct-wrap{margin-top:20px;border:1px solid #E9EBEF;border-radius:14px;padding:18px 20px 16px}
-#case .ct-cap{display:block;font-size:13px;font-weight:700;color:#5C6370;margin-bottom:14px}
-#case .ct-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:end;height:200px}
-#case .ct{display:flex;flex-direction:column;justify-content:flex-end;height:100%}
-#case .ct-bar{height:var(--h);border-radius:10px 10px 4px 4px;padding:12px 14px;display:flex;flex-direction:column;justify-content:flex-start;box-sizing:border-box}
-#case .ct-bar span{font-size:12px;font-weight:800;letter-spacing:.02em}
-#case .ct-bar b{display:block;font-size:15px;font-weight:800;margin-top:2px;line-height:1.3}
-#case .t1 .ct-bar{background:#EAF1FE;color:#042F74}#case .t1 .ct-bar span{color:#085EE9}
-#case .t2 .ct-bar{background:#C9DAFB;color:#042F74}#case .t2 .ct-bar span{color:#085EE9}
-#case .t3 .ct-bar{background:#6E9BF2;color:#fff}
-#case .t4 .ct-bar{background:#085EE9;color:#fff}
-#case .t3 .ct-bar span,#case .t4 .ct-bar span{color:rgba(255,255,255,.85)}
-#case .ct small{display:block;margin-top:8px;font-size:13px;color:#5C6370;text-align:left}
-@media (max-width:760px){#case .ct-wrap{padding:16px}#case .ct-g{grid-template-columns:1fr;height:auto;gap:10px}#case .ct{height:auto}#case .ct-bar{height:auto;width:var(--w);border-radius:4px 10px 10px 4px;padding:9px 12px;flex-direction:row;align-items:baseline;gap:8px}#case .ct-bar b{margin-top:0;font-size:14px;white-space:nowrap}#case .ct-bar span{font-size:11.5px;white-space:nowrap}#case .ct small{margin-top:3px;font-size:12.5px}}
+/* CRM tiers: slim timeline */
+#case .ct-line{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+#case .ct-line li{position:relative;padding-right:12px}
+#case .ct-line li::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:#DCE6FB}
+#case .ct-line li:last-child::before{right:auto;width:0}
+#case .ct-line li:first-child::before{left:6px}
+#case .ct-line i{position:relative;display:block;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid #9DBDF7;box-sizing:border-box}
+#case .ct-line .t2 i{border-color:#6E9BF2}#case .ct-line .t3 i{border-color:#3B7BEF}#case .ct-line .t4 i{border-color:#085EE9;background:#085EE9}
+#case .ct-line span{display:block;margin-top:12px;font-size:12px;font-weight:800;color:#085EE9;letter-spacing:.02em}
+#case .ct-line b{display:block;font-size:15px;font-weight:800;margin-top:2px}
+#case .ct-line small{display:block;font-size:13px;color:#5C6370;margin-top:2px}
+@media (max-width:760px){#case .ct-line{grid-template-columns:1fr 1fr;row-gap:16px}#case .ct-line li:nth-child(2)::before{right:auto;width:0}#case .ct-line b{font-size:14px}#case .ct-line small{font-size:12.5px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -1998,7 +1995,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">1</span>배경</h2>
 <p>KBW(Korea Blockchain Week)는 매년 가을 서울에서 열리는 블록체인 컨퍼런스입니다. 티켓 가격이 티어마다 오르는 구조라, <br>각 티어 마감 시점에 맞춰 메시지를 전달해 구매 시점을 앞당기는 것이 관건이었고, 이메일은 티어 마감을 직접 알릴 수 있는 자사 채널이었습니다.</p>
-<div class="ct-wrap"><span class="ct-cap">티어별 티켓 가격 · 판매 시점</span><div class="ct-g" role="img" aria-label="티어가 오를수록 티켓 가격이 오르는 구조"><div class="ct t1" style="--h:38%;--w:58%"><div class="ct-bar"><span>TIER 1</span><b>Super Early Bird</b></div><small>최저가 · 봄</small></div><div class="ct t2" style="--h:56%;--w:72%"><div class="ct-bar"><span>TIER 2</span><b>Early Bird</b></div><small>봄 → 여름</small></div><div class="ct t3" style="--h:74%;--w:86%"><div class="ct-bar"><span>TIER 3</span><b>Select Pass</b></div><small>8월</small></div><div class="ct t4" style="--h:92%;--w:100%"><div class="ct-bar"><span>TIER 4</span><b>General Pass</b></div><small>행사 직전 · 최고가</small></div></div></div>
+<ol class="ct-line" aria-label="티켓 티어와 판매 시점 · 티어가 오를수록 가격 인상"><li class="t1"><i aria-hidden="true"></i><span>TIER 1</span><b>Super Early Bird</b><small>최저가 · 봄</small></li><li class="t2"><i aria-hidden="true"></i><span>TIER 2</span><b>Early Bird</b><small>봄 → 여름</small></li><li class="t3"><i aria-hidden="true"></i><span>TIER 3</span><b>Select Pass</b><small>8월</small></li><li class="t4"><i aria-hidden="true"></i><span>TIER 4</span><b>General Pass</b><small>행사 직전 · 최고가</small></li></ol>
 
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">2</span>문제</h2>
