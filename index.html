@@ -962,6 +962,8 @@ main .hero h1 .l:nth-child(2)::after{content:"\A";white-space:pre}
 html body{word-break:keep-all;overflow-wrap:break-word}
 /* paid 3-2: long step labels stack above title on mobile */
 @media (max-width:760px){#case .pd-flow.pd-flow-q .pd-step{grid-template-columns:minmax(0,1fr)!important}#case .pd-flow.pd-flow-q .pd-step>*{grid-column:1/-1!important}#case .pd-flow.pd-flow-q .pd-step>span{grid-row:auto!important;margin:0 0 4px!important}}
+/* paid 3-4: chart and action list share one height (desktop) */
+@media (min-width:761px){#case .pd-geo2{align-items:stretch!important}#case .pd-geo2>.pd-chips{display:flex!important;flex-direction:column!important;margin-top:0!important;margin-bottom:0!important}#case .pd-geo2>.pd-chips>li{flex:1 1 0!important;display:flex!important;align-items:center!important;margin:0!important}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2090,7 +2092,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 <h3 class="cr-sub"><span class="cr-n">3-2</span>전환 측정 정확도 검증<span class="cr-tag">문제 B 해결</span></h3>
 <p>Meta의 구매 전환이 낮은 이유에 대해 대행사는 이렇게 설명했습니다.</p>
-<blockquote class="pd-q">“외부 결제창에서 추적이 끊긴 것이고, 오가닉 구매도 Meta 광고 효과입니다.”<cite>대행사 설명</cite></blockquote>
+<blockquote class="pd-q">“외부 결제창에서 추적이 끊긴 것이고, 오가닉 구매도 Meta 광고 효과입니다.”</blockquote>
 <div class="pd-flow pd-flow-q">
 <div class="pd-step"><span>검증 ① · 추적이 끊겼는가</span><b>Conversions API 구축</b><small>개발팀과 결제 완료 데이터를 서버에서 직접 전송</small></div>
 <div class="pd-step"><span>검증 ② · 오가닉 구매도 광고 효과인가</span><b>국가 · 날짜별 대조</b><small>Meta 지출이 늘어난 국가 · 날짜에 구매도 늘었는지 대조</small></div>
