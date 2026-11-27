@@ -986,6 +986,19 @@ html body{word-break:keep-all;overflow-wrap:break-word}
 /* coinness-loop 3-3: reuse link */
 #case .cn-reuse{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:#085EE9;text-decoration:none}
 #case .cn-reuse:hover{text-decoration:underline}
+/* neopin 3-6: phase timeline */
+#case .np-tl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #E9EBEF;border-radius:14px;margin-top:16px;overflow:hidden}
+#case .np-tl>div{padding:20px 22px 22px!important;border:0!important;border-left:1px solid #EEF0F3!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;margin:0!important;word-break:keep-all}
+#case .np-tl>div:first-child{border-left:0!important}
+#case .np-tl-p{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#5C6370}
+#case .np-tl-p em{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;font-style:normal;font-size:12px;font-weight:800;color:#fff;background:#085EE9}
+#case .np-tl>div>i{display:block;height:6px;border-radius:3px;margin:14px 0 16px;background:#085EE9}
+#case .np-tl .s1>i{background:#C9DAFB}#case .np-tl .s1 em{background:#8DB3F7}
+#case .np-tl .s2>i{background:#7FA8F5}#case .np-tl .s2 em{background:#4D86F0}
+#case .np-tl-g{display:inline-block;font-size:12.5px;font-weight:700;color:#085EE9;background:#EDF3FE;border-radius:999px;padding:4px 10px}
+#case .np-tl b{display:block;font-size:17px;font-weight:800;margin-top:10px}
+#case .np-tl small{display:block;font-size:14px;color:#5C6370;margin-top:4px;line-height:1.5}
+@media (max-width:760px){#case .np-tl{grid-template-columns:1fr}#case .np-tl>div{border-left:0!important;border-top:1px solid #EEF0F3!important;padding:16px 18px 18px!important}#case .np-tl>div:first-child{border-top:0!important}#case .np-tl>div>i{margin:10px 0 12px}}
 /* CRM problem eyebrows */
 .cr-eb{display:block;color:#085EE9;font-size:13px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
 /* band labels: never truncate on desktop */
@@ -2644,7 +2657,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 <p class="au-note">화면 재현 · 샘플 데이터</p>
 
 <h3 class="cr-sub"><span class="cr-n">3-6</span>단계별 목표에 따른 이벤트 운영<span class="cr-tag">10주</span></h3>
-<div class="np-c3"><div><span>초기 · 노출 확대</span><b>콘텐츠 제작 이벤트</b><small>소개 영상 SNS 업로드 시 추가 포인트</small></div><div><span>중기 · 참여 활성화</span><b>랭킹 경쟁 이벤트</b><small>랭킹 인증 시 주간 상위 유저 보상</small></div><div><span>후기 · 앱 내 거래 유도</span><b>랜덤 토큰 선물 · 퀘스트</b><small>초대받은 친구가 거래해야 참여 자격 부여</small></div></div>
+<div class="np-tl"><div class="s1"><span class="np-tl-p"><em>1</em>초기</span><i aria-hidden="true"></i><span class="np-tl-g">노출 확대</span><b>콘텐츠 제작 이벤트</b><small>소개 영상 SNS 업로드 시 추가 포인트</small></div><div class="s2"><span class="np-tl-p"><em>2</em>중기</span><i aria-hidden="true"></i><span class="np-tl-g">참여 활성화</span><b>랭킹 경쟁 이벤트</b><small>랭킹 인증 시 주간 상위 유저 보상</small></div><div class="s3"><span class="np-tl-p"><em>3</em>후기</span><i aria-hidden="true"></i><span class="np-tl-g">앱 내 거래 유도</span><b>랜덤 토큰 선물 · 퀘스트</b><small>초대받은 친구가 거래해야 참여 자격 부여</small></div></div>
 
 <h2 style="font-size: 22px; font-weight: 800; margin: 56px 0 14px"><span style="display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50% 50% 0 50%; background: #085EE9; color: #fff; font-size: 17px; font-weight: 800; line-height: 1; margin-right: 12px; vertical-align: middle">4</span>결과</h2>
 <div class="ob-res">
